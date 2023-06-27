@@ -1,0 +1,1410 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
+    <meta name="robots" content="" />    
+    <meta name="description" content="" />
+    
+    <!-- FAVICONS ICON -->
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-icon" href="images/Fav_Sm.png"/>
+    
+    <!-- PAGE TITLE HERE -->
+    <title>Sergent Menuiserie</title>
+    
+    <!-- MOBILE SPECIFIC -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    
+    <!-- BOOTSTRAP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <!-- FONTAWESOME STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
+    <!-- OWL CAROUSEL STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
+  
+    <!-- MAGNIFIC POPUP STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
+   
+    <!-- MAIN STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!-- FLATICON STYLE SHEET -->
+    <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
+    <!-- Lc light box popup -->
+    <link rel="stylesheet" href="css/lc_lightbox.css" /> 
+    <!-- Price Range Slider -->
+    <link rel="stylesheet" href="css/bootstrap-slider.min.css" />
+
+
+    <!-- THEME COLOR CHANGE STYLE SHEET -->
+    <link rel="stylesheet" class="skin" type="text/css" href="css/skin-1.css">
+    
+
+        
+
+    <!-- REVOLUTION SLIDER CSS -->
+    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
+    <!-- REVOLUTION NAVIGATION STYLE -->
+    <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
+    
+ <!-- JQUERY LINK   -->
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+ <script>
+     function clearForm(){
+         document.getElementById('mobile').value="";
+     }
+     function showSpin(){
+         let x= document.getElementById('mobile').value;
+         if(x.length==10){
+             document.getElementById('spinner').style.display = 'block';
+             document.getElementById('spin-content').style.display = 'block';
+         }
+        
+     }
+     function showOffSpin(){
+         // let x= document.getElementById('mobile').value;
+       //  if(x.length==10)
+         document.getElementById('spinner').style.display = 'none';
+         document.getElementById('spin-content').style.display = 'none';
+     }
+     $(document).ready(function(){
+         $("#modal").click(function(){
+          $("#myModal").modal({backdrop: "static"});
+         });
+     })
+ </script>
+
+</head>
+<style>
+ #spinner{
+     display: none;
+     position: absolute;
+     left: 15rem;
+     top: 11rem;
+     bottom: 0;
+     right: 0;
+ }
+ #spin-content{
+     display: none;
+     margin-left: 11rem;
+ }
+</style>
+
+<body>
+<!-- LOADING AREA START ===== -->
+<div class="loading-area">
+ <div class="loading-box"></div>
+ <div class="loading-pic">
+     <div class="cssload-spinner">
+         <div class="cssload-ball cssload-ball-1"></div>
+         <div class="cssload-ball cssload-ball-2"></div>
+         <div class="cssload-ball cssload-ball-3"></div>
+         <div class="cssload-ball cssload-ball-4"></div>
+     </div>
+ </div>
+</div>
+<!-- LOADING AREA  END ====== -->
+ <!-- POPUP START  -->
+<div class="modal fade" id="myModal" role="dialog">
+ <div class="modal-dialog modal-md">
+ 
+   <!-- Modal content-->
+   <div class="modal-content">
+     <div class="modal-header">
+         <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+         <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+     </div>
+     <div class="modal-body">
+         <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
+         <form action="mail.php" method="post">
+             <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
+             <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+             <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+         </form>
+         <div>
+             <div class="spinner-border text-success my-3 " id="spinner"></div>
+             <div id="spin-content" class="mt-3">please wait...</div>
+         </div>
+     </div>
+     <!-- <div class="modal-footer">
+       <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+     </div> -->
+   </div>
+   
+ </div>
+</div>
+   
+<!-- POPUP END  -->
+ <div class="page-wraper">
+    <!-- HEADER START -->
+    <header class="site-header header-style-3 mobile-sider-drawer-menu">
+                    
+        <div class="top-bar site-bg-primary">
+            <div class="container">
+
+                    <div class="d-flex justify-content-between">
+                        <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                            <ul class="wt-topbar-info e-p-bx text-white">
+                                <li><i class="fa fa-phone"></i>+33 659966202</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                            <ul class="wt-topbar-info-2 e-p-bx text-white">
+                                <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>Rappeler</a></li>
+                                <li><i class="fa fa-envelope"></i>Prendre rendez-vous</li>
+                            </ul> 
+            
+                            <ul class="social-icons">
+                                <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                            </ul> 
+                                                                      
+                        </div>
+                    </div>
+
+            </div>
+        </div>  
+                
+
+            <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+                <div class="main-bar">  
+                                    
+                    <div class="container clearfix"> 
+                
+                        <div class="logo-header">
+                            <div class="logo-header-inner logo-header-one">
+                                <a href="index.html">
+                                    <img src="images/SM_258x74.svg" alt="">
+
+                                </a>
+                            </div>
+                        </div>  
+                            <!-- NAV Toggle Button -->
+                            <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar icon-bar-first"></span>
+                                <span class="icon-bar icon-bar-two"></span>
+                                <span class="icon-bar icon-bar-three"></span>
+                            </button> 
+
+                              <!-- MAIN Vav -->
+                              <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
+                                
+                                <ul class=" nav navbar-nav menu-size">
+                                    <li class="has-child"><a href="javascript:;">les fenêtres</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="EcleaRange.html">Gamme eclia</a>
+                                                <ul class="sub-menu">
+                                                   
+                                                    <li><a href="compositeWindow.html">Fenêtre composite</a></li>
+                                                    <li><a href="AluStrikeWindow.html">Gâche fenêtre ALU</a></li>
+                                                    <li><a href="AluSlidingWindow.html">ALU coulissant</a></li>
+                                                    <li><a href="AluBrickPartition.html">Cloison en brique</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="TrendRange.html">Gamme de tendance</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="PVCWindow.html">Fenêtre PVC</a></li>
+                                                    <li><a href="RangeAluStrike.html">Gâche fenêtre ALU</a></li>
+                                                    <li><a href="AluSlidingWindow.html">ALU coulissant</a></li>
+                                                </ul>
+                                            </li>
+                                            <li><a href="WoodWindowRange.html">Gamme fenêtre bois</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="WoodenWindow.html">Fenêtre en bois</a></li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+
+                                    <li class="has-child">
+                                        <a href="javascript:;">Volets</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="swing Shutter.html">Volet battant</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="aluSwing.html">Volet battant ALU</a></li>
+                                                    <li><a href="woodenShutters.html">Volet à charnière en bois</a></li>
+                                                    <li><a href="pvcShutters.html">Volet pvc</a></li>
+                                                </ul>
+                                            </li>
+
+                                            <li><a href="rollerShutters.html">Volet roulant</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="zenithShutter.html">Obturateur 2.0 Zénith </a></li>
+                                                    <li><a href="zibaie component.html">Composante izibaie</a></li>
+                                                    <li><a href="vr4a component.html">Composant VR4A</a></li>
+                                                </ul>
+                                            </li>                                           
+                                        </ul>                                
+                                    </li>
+
+                                    <li class="has-child"><a href="javascript:;">Portes d'entrée</a>
+                                        <ul class="sub-menu">
+                                           
+                                            <li><a href="one-pieceAluEntranceDoors.html">Portes d'entrée ALU monobloc</a></li>
+                                            <li><a href="alu-parclosedEntranceDoors.html">Portes d'entrée cloisonnées ALU</a></li>
+                                            <li><a href="alu-glazedEntranceDoors.html">Portes d'entrée vitrées ALU</a></li>
+                                            <li><a href="steel-EntranceDoors.html">Portes d'entrée en acier</a></li>
+                                            <li><a href="pvc-parclosedEntranceDoor.html">Portes d'entrée cloisonnées en PVC</a></li>
+                                            <li><a href="harmony-product.html">Exclusivité du produit HARMONY</a></li>
+                                        </ul>                                                                 
+                                    </li>
+                           
+                                    <li class="has-child"><a href="javascript:;">Portes de garage</a>
+                                        <ul class="sub-menu">
+                                           
+                                            <li><a href="sideGarageDoor.html">porte de garage latérale</a></li>                                        
+                                            <li><a href="rollUpGarageDoor.html">Porte de garage enroulable</a></li>
+                                            <li><a href="slidingGarageDoor.html">Porte de garage coulissante</a></li>
+                                            <li><a href="sectionalGarageDoor.html">Porte de garage sectionnelle</a></li>                                       
+                                        </ul>                                
+                                    </li>
+
+                                    
+                            
+                                    <li class="has-child"><a href="javascript:;">Portails</a>
+                                        <ul class="sub-menu">
+                                            
+                                            <li><a href="portalPVC.html">Portail window</a></li>                                        
+                                            <li><a href="portalALU.html">Porte de cri</a></li>
+                                            <li><a href="portalIron.html">Portail de travail iorn</a></li>
+                                        </ul>
+                                                                    
+                                    </li>
+                                    <li class="has-child"><a href="javascript:;">Auvents & Pergolas</a>
+                                        <ul class="sub-menu">
+                                           
+                                                    <li><a href="interior blind.html">store intérieur</a></li>                                        
+                                                    <li><a href="awning.html">Auvents</a></li>
+                                                    <li><a href="pergola.html">Pergolas</a></li>
+                                        </ul>                                
+                                    </li>                                                                
+                                </ul>
+                            </div> 
+                        </div>    
+                    </div>
+
+
+                    <!-- SITE Search -->
+                    <div id="search"> 
+                        <span class="close"></span>
+                        <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                            <div class="input-group">
+                                <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
+                                <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
+                            </div> 
+                        </form>
+                    </div> 
+                </div>
+
+            
+        </header>
+        <!-- HEADER END -->
+        
+     
+        <!-- HEADER START -->
+        <!-- <header class="site-header header-style-2 mobile-sider-drawer-menu">
+            <div class="header-style-2-content">
+                <div class="top-bar site-bg-gray-light">
+                    <div class="container">
+    
+                            <div class="d-flex justify-content-between">
+                                <div class="wt-topbar-left d-flex flex-wrap align-content-start">
+                                    <ul class="wt-topbar-left-info">
+                                        <li>Our company has 20 years' experience!</li>
+                                    </ul>
+                                </div>
+                                
+                                <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                                    <div class="wt-topbar-right-info">
+                                        <ul class="social-icons">
+                                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                            <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                                            <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
+                                        </ul>
+                                    </div> 
+                                </div>
+                            </div>
+                           
+    
+                    </div>
+                </div>
+                
+                 <div class="header-middle-wraper">     
+                    <div class="container">
+                        <div class="header-middle d-flex justify-content-between align-items-center">
+                            <div class="logo-header">
+                                <div class="logo-header-inner logo-header-one">
+                                    <a href="index.html">
+                                    <img src="images/logo-dark.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                            
+                            <div class="header-info-wraper">
+                                
+                                <div class="header-info">
+                                    <ul>
+                                        <li>
+                                            <div class="wt-icon-box-wraper  left">
+                                                <div class="wt-icon-box-xs site-bg-primary radius">
+                                                    <span class="icon-cell site-text-white"><i class="flaticon-location"></i></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <p>Maxvilla , Tx USA</p>
+                                                    <h5 class="wt-tilte">121 King Street</h5>
+                                                </div>
+                                            </div>
+                                        </li> 
+
+                                        <li>
+                                            <div class="wt-icon-box-wraper  left">
+                                                <div class="wt-icon-box-xs site-bg-primary radius">
+                                                    <span class="icon-cell site-text-white"><i class="flaticon-mail"></i></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <p>Send Us Email</p>
+                                                    <h5 class="wt-tilte">support@max.com</h5>
+                                                </div>
+                                            </div>
+                                        </li>                                
+                                        
+                                        <li>
+                                            <div class="wt-icon-box-wraper left">
+                                                <div class="wt-icon-box-xs site-bg-primary radius">
+                                                    <span class="icon-cell site-text-white"><i class="flaticon-phone-call"></i></span>
+                                                </div>
+                                                <div class="icon-content">
+                                                    <p>Get Quick Support</p>
+                                                    <h5 class="wt-tilte">246-899-4600</h5>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                <div class="header-bottom"> 
+                    <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+                    
+                        <div class="main-bar header-bottom">
+                            <div class="container-block clearfix">
+
+                                <div class="navigation-bar">
+                                    NAV Toggle Button -->
+                                    <!-- <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                                        <span class="sr-only">Toggle navigation</span>
+                                        <span class="icon-bar icon-bar-first"></span>
+                                        <span class="icon-bar icon-bar-two"></span>
+                                        <span class="icon-bar icon-bar-three"></span>
+                                    </button> 
+             -->
+                                    <!-- MAIN Vav -->
+                                    <!-- <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-between">
+                                
+                                        <ul class=" nav navbar-nav">
+                                            <li class="has-child"><a href="javascript:;">Home</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="index.html">Home 1</a></li>
+                                                    <li><a href="index-2.html">Home 2</a></li>
+                                                    <li><a href="index-3.html">Home 3</a></li>
+                                                    <li><a href="index-4.html">Home 4</a></li>
+                                                </ul>
+                                            </li>
+
+
+                                            <li class="has-child">
+                                                <a href="javascript:;">Pages</a>
+                                                <ul class="sub-menu">
+
+                                                    <li><a href="javascript:;">About</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="about-1.html">About us 1</a></li>
+                                                            <li><a href="about-2.html">About us 2</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li><a href="javascript:;">Team</a>
+                                                        <ul class="sub-menu">
+                                                            <li><a href="our-team.html">Team</a></li>
+                                                            <li><a href="our-team-detail.html">Team Detail</a></li>
+                                                        </ul>
+                                                    </li>
+
+                                                    <li><a href="faq.html">Faq</a></li>
+                                                    <li><a href="pricing.html">Pricing</a></li>
+                                                    <li><a href="error-404.html">Error-404</a></li>
+                                                    <li><a href="icon-font.html">Icon Font</a></li>                                              
+                                                </ul>                                
+                                            </li>
+
+                                            <li class="has-child"><a href="javascript:;">Services</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="services.html">Services 1</a></li>
+                                                    <li><a href="services-2.html">Services 2</a></li>
+                                                    <li><a href="service-detail.html">Services Detail</a></li>
+                                                </ul>                                                                 
+                                            </li>
+                                   
+                                            <li class="has-child"><a href="javascript:;">Project</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="project-1.html">Projects 1</a></li>                                        
+                                                    <li><a href="project-2.html">Projects 2</a></li>
+                                                    <li><a href="project-single.html">Projects Single</a></li>                                        
+                                                </ul>                                
+                                            </li>
+
+                                            
+                                    
+                                            <li class="has-child"><a href="javascript:;">News</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="blog-grid.html">Blog Grid</a></li>                                        
+                                                    <li><a href="blog-list.html">Blog List</a></li>
+                                                    <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                    <li><a href="blog-single.html">Blog Single</a></li>
+                                                </ul>                                
+                                            </li>
+                                            <li class="has-child"><a href="javascript:;">Shop</a>
+                                                <ul class="sub-menu">
+                                                    <li><a href="shop.html">Shop</a></li>                                        
+                                                    <li><a href="shop-detail.html">Shop Detail</a></li>
+                                                </ul>                                
+                                            </li>                                                                
+                                            <li><a href="contact.html">Contact</a></li>  
+                                    
+                                        </ul>
+            
+                                    </div>
+                                    
+                                    Header Right Section -->
+                                    <!-- <div class="extra-nav header-1-nav">
+                                        <div class="extra-cell one">
+                                            <div class="header-search">
+                                                <a href="#search" class="header-search-icon"><i class="fa fa-search"></i></a>
+                                            </div>    
+                                        </div>
+                                        <div class="extra-cell two">
+                                            <a href="javascript:;" class="wt-cart cart-btn" title="Your Cart">
+                                                <span class="link-inner">
+                                                    <span class="woo-cart-total"> </span>
+                                                    <span class="woo-cart-count">
+                                                        <i class="fa fa-shopping-bag"></i>
+                                                        <span class="shopping-bag wcmenucart-count ">2</span>
+                                                    </span>
+                                                </span>
+                                            </a>
+                                            
+                                            <div class="cart-dropdown-item-wraper clearfix">
+                                                <div class="nav-cart-content">
+                                                    
+                                                    <div class="nav-cart-items p-a15">
+                                                        <div class="nav-cart-item clearfix">
+                                                            <div class="nav-cart-item-image">
+                                                                <a href="shop-detail.html"><img src="images/cart/pic-1.jpg" alt="p-1"></a>
+                                                            </div>
+                                                            <div class="nav-cart-item-desc">
+                                                                <span class="nav-cart-item-price"><strong>2</strong> x $19.99</span>
+                                                                <a href="shop-detail.html">Heavy helmet</a>
+                                                                <a href="shop-detail.html" class="nav-cart-item-quantity radius-sm">x</a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="nav-cart-item clearfix">
+                                                            <div class="nav-cart-item-image">
+                                                                <a href="shop-detail.html"><img src="images/cart/pic-2.jpg" alt="p-2"></a>
+                                                            </div>
+                                                            <div class="nav-cart-item-desc">
+                                                                <span class="nav-cart-item-price"><strong>1</strong> x $24.99</span>
+                                                                <a href="shop-detail.html">Power drill</a>
+                                                                <a href="shop-detail.html" class="nav-cart-item-quantity radius-sm">x</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="nav-cart-title p-tb10 p-lr15 d-flex">
+                                                        <h4  class="m-a0">Subtotal:</h4>
+                                                        <h5 class="m-a0">$67.97</h5>
+                                                    </div>
+                                                    <div class="nav-cart-action p-a15 d-flex justify-content-start">
+                                                        <a href="shop-detail.html" class="site-button">View Cart</a>
+                                                        <a href="shop-detail.html" class="site-button-secondry" >Checkout </a>
+                                                    </div>
+                                                </div>
+                                            </div>                            
+                                        </div>                                
+                                    </div> 
+
+                                </div>
+                                
+                            </div>   
+                        </div>
+ -->
+
+                        <!-- SITE Search -->
+                        <!-- <div id="search"> 
+                            <span class="close"></span>
+                            <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                                <div class="input-group">
+                                    <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
+                                    <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
+                                </div> 
+                            </form>
+                        </div> 
+                
+                    </div>
+                </div>
+            </div>                
+            
+        </header> -->
+        <!-- HEADER END -->
+
+      
+        <!-- CONTENT START -->
+        <div class="page-content">
+
+            <!-- INNER PAGE BANNER -->
+            <!-- <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(images/banner/1.jpg);">
+            	<div class="overlay-main site-bg-black opacity-07"></div>
+                <div class="container">
+                    <div class="wt-bnr-inr-entry">
+                    	<div class="banner-title-outer">
+                        	<div class="banner-title-name">
+                        		<h2 class="wt-title">Shop Detail</h2>
+                            </div>
+                        </div> -->
+                        <!-- BREADCRUMB ROW -->                            
+<!--                         
+                            <div>
+                                <ul class="wt-breadcrumb breadcrumb-style-2">
+                                    <li><a href="index.html">Shop Detail</a></li>
+                                    <li>Item Detail</li>
+                                </ul>
+                            </div> -->
+                        
+                        <!-- BREADCRUMB ROW END -->                        
+                    <!-- </div>
+                </div>
+            </div> -->
+            <!-- INNER PAGE BANNER END -->
+
+            <!-- SECTION CONTENT START -->
+            <div class="section-full  p-b90 site-bg-white">
+            
+                <!-- PRODUCT DETAILS -->
+                <div class="container woo-entry">
+                
+                    <div class="row m-b30">
+                        <div class="col-lg-5 col-md-5  m-b30">
+                            <div class="wt-box wt-product-gallery on-show-slider"> 
+                            
+                                <div id="sync1" class="owl-carousel owl-theme owl-btn-vertical-center m-b5">
+                                    <!--Large Pic 1-->
+                                    <div class="item">
+                                        <div class="mfp-gallery">
+                                            <div class="wt-box">
+                                                <div class="wt-thum-bx wt-img-overlay1 ">
+                                                    <img src="images/product-2/VR-VR4A-SLIDER31.jpg" alt="">
+                                                    <div class="product-view">
+                                                        <a class="elem pic-long product-view-btn" href="images/products/pic-1.jpg" title="Nh-16 Highway Bridge" 
+                                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-1.jpg">
+                                                        <i class="fa fa-search-plus"></i>     
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Large Pic 2-->
+                                    <div class="item">
+                                        <div class="mfp-gallery">
+                                            <div class="wt-box">
+                                                <div class="wt-thum-bx wt-img-overlay1 ">
+                                                    <img src="images/product-2/VR-IZIBAIE-SLIDER1 (11).jpg" alt="">
+                                                    <div class="product-view">
+                                                        <a class="elem pic-long product-view-btn" href="images/products/pic-8.jpg" title="Nh-16 Highway Bridge" 
+                                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-8.jpg">
+                                                        <i class="fa fa-search-plus"></i>     
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Large Pic 3-->
+                                    <div class="item">
+                                        <div class="mfp-gallery">
+                                            <div class="wt-box">
+                                                <div class="wt-thum-bx wt-img-overlay1 ">
+                                                    <img src="images/product-2/VR-IZIBAIE-SLIDER3 (11).jpg" alt="">
+                                                    <div class="product-view">
+                                                        <a class="elem pic-long product-view-btn" href="images/products/pic-9.jpg" title="Nh-16 Highway Bridge" 
+                                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-9.jpg">
+                                                        <i class="fa fa-search-plus"></i>     
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Large Pic 4-->
+                                    <div class="item">
+                                        <div class="mfp-gallery">
+                                            <div class="wt-box">
+                                                <div class="wt-thum-bx wt-img-overlay1 ">
+                                                    <img src="images/product-2/Volet demi linteau Izibaie (31).jpg" alt="">
+                                                    <div class="product-view">
+                                                        <a class="elem pic-long product-view-btn" href="images/products/pic-13.jpg" title="Nh-16 Highway Bridge" 
+                                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-13.jpg">
+                                                        <i class="fa fa-search-plus"></i>     
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Large Pic 5-->
+                                    <div class="item">
+                                        <div class="mfp-gallery">
+                                            <div class="wt-box">
+                                                <div class="wt-thum-bx wt-img-overlay1 ">
+                                                    <img src="images/product-2/VR-ZENITH-SLIDER2 113.jpg" alt="">
+                                                    <div class="product-view">
+                                                        <a class="elem pic-long product-view-btn" href="images/products/pic-14.jpg" title="Nh-16 Highway Bridge" 
+                                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-14.jpg">
+                                                        <i class="fa fa-search-plus"></i>     
+                                                        </a> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div id="sync2" class="owl-carousel owl-theme">
+                                    <div class="item">
+                                        <div class="wt-media">
+                                            <img src="images/product-2/VR-VR4A-SLIDER31.jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wt-media">
+                                            <img src="images/product-2/VR-IZIBAIE-SLIDER1 (11).jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wt-media">
+                                            <img src="images/product-2/VR-IZIBAIE-SLIDER3 (11).jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wt-media">
+                                            <img src="images/product-2/Volet demi linteau Izibaie (31).jpg" alt="">
+                                        </div>
+                                    </div>
+                                    <div class="item">
+                                        <div class="wt-media">
+                                            <img src="images/product-2/VR-ZENITH-SLIDER2 113.jpg" alt="">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="col-lg-7 col-md-7">
+                        	<div class="product-detail-info">
+                                
+                                <div class="single-product-title ">
+                                    <h2 class="post-title"><a href="javascript:void(0);">ROLLER SHUTTER VR4A</a></h2>
+                                </div>
+                                <!-- <div class="product-single-price">
+                                	<span class="p-single-old-price">$45</span>
+                                    <span class="p-single-new-price">$39.99</span>
+                                </div> -->
+                                <!-- <div class="product-single-rating">
+                                    <span class="rating-bx site-text-primary">
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star"></i>
+                                        <i class="fa fa-star-o"></i>
+                                    </span>
+                                    <span class="font-weight-600 text-black">(4 customer reviews)</span>
+                                </div> -->
+    
+                                <div class="wt-product-text">
+
+                                <p>Ut tristique et egestas quis ipsum suspendisse ultrices gravida. Porttitor rhoncus dolor purus non. Eros donec ac odio tempor orci dapibus. Varius vel pharetra vel turpis nunc eget lorem dolor. Tristique nulla aliquet enim tortor at auctor odio pellentesque diam.</p>
+                                <p>
+                                    Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante.
+                                </p>                                
+
+                                </div>
+
+                                <div class="product_meta"> 
+                                    <div class="sku_wrapper">SKU: 
+                                        <span class="sku">05</span>
+                                    </div> 
+                                    <div class="posted_in">Categories: 
+                                        <a href="#" rel="tag">Constrction Tools</a>
+                                    </div>
+                                </div>
+                                <div class="product-single-availability">
+                                    Availability: <span>500 In Stock</span>
+                                </div> 
+
+                                <form method="post" class="cart clearfix m-t30">
+                                    <div class="quantity btn-quantity m-b20">
+                                        <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
+                                    </div>
+                                    <button class="site-button btn-hover-animation m-b30"><i class="flaticon-right"></i>Add to Cart</button>
+                                </form>
+
+                            </div>
+                        </div>
+                    </div>
+                        
+
+                    <!-- Detail SECTION START -->
+                    <div class="product-detail-full"> 
+
+                        <div class="wt-accordion " id="accordion">
+                            <!--one-->
+                            <div class="panel wt-panel">
+
+                                <div class="acod-head" id="headingOne">
+                                    <h5 class="acod-title">
+                                    <a data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        Description
+                                        <span class="indicator"><i class="fa"></i></span>
+                                    </a>
+                                    </h5>
+                                </div>
+                            
+                                <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                                    <div class="acod-content p-tb15">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <!--two-->
+                            <div class="panel wt-panel">
+                                <!-- <div class="acod-head acc-actives" id="headingTwo">
+                                    <h5 class="acod-title">
+                                    <a class="collapsed" data-toggle="collapse" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                                        Review
+                                        <span class="indicator"><i class="fa"></i></span>
+                                    </a>
+                                    </h5>
+                                 
+                                    
+                                <div id="collapseTwo" class="collapse " aria-labelledby="headingTwo" data-parent="#accordion">
+                                    <div class="acod-content p-tb15">
+                                        <div class="clear" id="comment-list">
+                                            <div class="comments-area" id="comments">
+                                                <h3 class="comments-title m-t0">3 Comments</h3> -->
+                                                <div>
+                                                    <!-- COMMENT LIST START -->
+                                                    <ol class="comment-list">
+                                                        <li class="comment">
+                                                            <!-- COMMENT BLOCK -->
+                                                            <!-- <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <img class="avatar photo" src="images/testimonials/pic1.jpg" alt="">
+                                                                    <cite class="fn">Janice Brown</cite>
+                                                                    <div class="reply">
+                                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
+                                                                    </div>
+                                                                </div>                                                
+                                                                <div class="comment-meta">
+                                                                    <a href="javascript:void(0);">Mar 15, 2021</a>
+                                                                </div>                                        
+                                                                <p>The example about the mattress sizing page you mentioned in the last WBF can be a perfect example of new keywords and content, and broadening the funnel as well. I can only imagine the sale numbers if that was the site of a mattress selling company.</p>
+        
+                                                            </div> -->
+                                                            <!-- SUB COMMENT BLOCK -->
+                                                            <ol class="children">
+                                                                <li class="comment odd parent">
+                                                                
+                                                                    <!-- <div class="comment-body">
+                                                                        <div class="comment-author">
+                                                                            <img class="avatar photo" src="images/testimonials/pic2.jpg" alt="">
+                                                                            <cite class="fn">Betty Riley</cite>
+                                                                            <div class="reply">
+                                                                                <a href="javscript:;" class="comment-reply-link">Reply</a>
+                                                                            </div>
+                                                                        </div>                                                        
+                                                                        <div class="comment-meta">
+                                                                            <a href="javascript:void(0);">Mar 15, 2021</a>
+                                                                        </div>                                                
+                                                                        <p>Along with your plans, you should consider developing an action orientation that
+                                                                        will keep you motivated to move forward at all times.</p>
+        
+                                                                    </div>                                                         -->
+                                                                    
+                                                                </li>
+                                                            </ol>
+                                                        </li>
+                                                        
+                                                        <!-- <li class="comment"> -->
+                                                            <!-- COMMENT BLOCK -->
+                                                            <!-- <div class="comment-body">
+                                                                <div class="comment-author">
+                                                                    <img class="avatar photo" src="images/testimonials/pic3.jpg" alt="">
+                                                                    <cite class="fn">Janice Brown</cite>
+                                                                    <div class="reply">
+                                                                        <a href="javscript:;" class="comment-reply-link">Reply</a>
+                                                                    </div>
+                                                                </div>                                                
+                                                                <div class="comment-meta">
+                                                                    <a href="javascript:void(0);">Jun 12 2020</a>
+                                                                </div>                                        
+                                                                <p>Cras sit amet est eget dui viverra scelerisque. Duis semper 
+                                                                pulvinar dui, nec mollis libero tincidunt quis. In hac habitasse
+                                                                platea dictumst.</p>
+        
+                                                            </div> -->
+        
+                                                        </li>                                                
+                                                    </ol>
+                                                    <!-- COMMENT LIST END -->
+                                                    
+                                                    <!-- LEAVE A REPLY START -->
+                                                    <!-- <div class="comment-respond m-t30" id="respond">
+                        
+                                                        <h2 class="comment-reply-title" id="reply-title">Add a Review
+                                                            <small>
+                                                                <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
+                                                            </small>
+                                                        </h2>
+                        
+                                                        <form class="comment-form" id="commentform" method="post">
+                                                    
+                                                            <p class="comment-form-author">
+                                                                <label>Name <span class="required">*</span></label>
+                                                                <input class="form-control" type="text" value="" name="user-comment" placeholder="Author" id="author">
+                                                            </p>
+                                                            
+                                                            <p class="comment-form-email">
+                                                                <label>Email <span class="required">*</span></label>
+                                                                <input class="form-control" type="text" value="" name="email" placeholder="Email">
+                                                            </p>
+                                                            
+                                                            <p class="comment-form-url">
+                                                                <label>Website</label>
+                                                                <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
+                                                            </p>
+                                                            
+                                                            <p class="comment-form-comment">
+                                                                <label>Comment</label>
+                                                                <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
+                                                            </p>
+                                                            
+                                                            <p class="form-submit">
+                                                                <button class="site-button btn-hover-animation" type="button"><i class="flaticon-right"></i>Submit</button>
+                                                            </p>
+                                                            
+                                                        </form>
+                        
+                                                    </div> -->
+                                                    <!-- LEAVE A REPLY END -->
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                        </div> 
+
+                    </div> 
+                    <!-- Detail SECTION END -->                    
+                    
+                </div>
+                <!-- PRODUCT DETAILS -->    
+                    
+            </div>
+            <!-- CONTENT CONTENT END -->
+
+            <div class="container px-5">
+                <div class="clear" id="comment-list">
+                    <div class="comments-area" id="comments">
+                        <div>
+                            <!-- COMMENT LIST END -->
+                                                    
+                                                    <!-- LEAVE A REPLY START -->
+                                                    <div class="comment-respond m-t30" id="respond">
+                        
+                                                        <h2 class="comment-reply-title" id="reply-title">Add a Review
+                                                            <small>
+                                                                <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
+                                                            </small>
+                                                        </h2>
+                        
+                                                        <form class="comment-form" id="commentform" method="post">
+                                                            <p class="comment-form-comment">
+                                                                <label>Comment</label>
+                                                                <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
+                                                            </p>
+                                                            <p class="comment-form-author">
+                                                                <label>Name <span class="required">*</span></label>
+                                                                <input class="form-control" type="text" value="" name="user-comment" placeholder="Author" id="author">
+                                                            </p>
+                                                            
+                                                            <p class="comment-form-email">
+                                                                <label>Email <span class="required">*</span></label>
+                                                                <input class="form-control" type="text" value="" name="email" placeholder="Email">
+                                                            </p>
+                                                            
+                                                            <p class="comment-form-url">
+                                                                <label>Website</label>
+                                                                <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
+                                                            </p>
+                                                            
+                                                            
+                                                            
+                                                            <p class="form-submit">
+                                                                <button class="site-button btn-hover-animation"  type="button"><i class="flaticon-right"></i>Submit</button>
+                                                            </p>
+                                                            
+                                                        </form>
+                        
+                                                    </div>
+                                                    <!-- LEAVE A REPLY END -->
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>                             
+                                </div> 
+                                
+                        </div>
+        
+            </div>  
+    
+        
+            <!-- SECTION CONTENT START -->
+            <div class="section-full p-t120 p-b90 site-bg-gray-light">
+                <div class="container">
+                    <div class="section-content">
+                       
+                        <!-- TITLE START -->
+                        <div class="wt-separator-two-part">
+                            <div class="row wt-separator-two-part-row">
+                                <div class="col-lg-8 col-md-6 wt-separator-two-part-left">
+                                    <!-- TITLE START-->
+                                    <div class="section-head left wt-small-separator-outer">
+                                        <h2>Related products</h2>
+                                    </div>
+                                    <!-- TITLE END-->
+                                </div>
+                            </div>
+                        </div>                        
+                        <!-- TITLE END -->
+                    
+                        <div class="featured-products">
+                             
+                            <div class="row">
+                                <!-- COLUMNS 1 -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
+                                    <div class="wt-box wt-product-box   overflow-hide">
+                                        <div class="wt-thum-bx wt-img-overlay1">
+                                            <img src="images/product-2/wooden Shutter.jpg" alt="">
+                                            <div class="item-cart-view">
+                                                <div class="item-btn">
+                                                     <a href="javascript:void(0);">
+                                                         <i class="fa fa-cart-plus"></i>
+                                                     </a>
+                                                 </div>
+                                                 <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="wt-info text-center">
+                                            <h4 class="wt-title">
+                                                <a href="product-detail.html">Wooden Shutters</a>
+                                            </h4>
+                                            <span class="price">
+                                                <del><span><span class="Price-currencySymbol">$ </span>45.00</span></del>
+                                                <ins>
+                                                    <span><span class="Price-currencySymbol">$ </span>36.00</span>
+                                                </ins>
+                                            </span>
+
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                
+                                <!-- COLUMNS 2 -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
+                                    <div class="wt-box wt-product-box   overflow-hide">
+                                        <div class="wt-thum-bx wt-img-overlay1">
+                                            <img src="images/product-2/Alu.jpg" alt="">
+                                            <div class="item-cart-view">
+                                                <div class="item-btn">
+                                                     <a href="javascript:void(0);">
+                                                         <i class="fa fa-cart-plus"></i>
+                                                     </a>
+                                                 </div>
+                                                 <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                        <div class="wt-info text-center">
+                                            <h4 class="wt-title">
+                                                <a href="product-detail.html">Swing Shutter</a>
+                                            </h4>
+                                            <span class="price">
+                                                <del><span><span class="Price-currencySymbol">$ </span>45.00</span></del>
+                                                <ins>
+                                                    <span><span class="Price-currencySymbol">$ </span>36.00</span>
+                                                </ins>
+                                            </span>
+
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                
+                                <!-- COLUMNS 3 -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
+                                    <div class="wt-box wt-product-box   overflow-hide">
+                                        <div class="wt-thum-bx wt-img-overlay1">
+                                            <img src="images/product-2/PVC6 (1).jpg" alt="">
+                                            <div class="item-cart-view">
+                                                <div class="item-btn">
+                                                     <a href="javascript:void(0);">
+                                                         <i class="fa fa-cart-plus"></i>
+                                                     </a>
+                                                 </div>
+                                                 <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="wt-info text-center">
+                                            <h4 class="wt-title">
+                                                <a href="product-detail.html">Pvc Shutter</a>
+                                            </h4>
+                                            <span class="price">
+                                                <del><span><span class="Price-currencySymbol">$ </span>45.00</span></del>
+                                                <ins>
+                                                    <span><span class="Price-currencySymbol">$ </span>36.00</span>
+                                                </ins>
+                                            </span>
+
+                                        </div>
+                                       
+                                    </div>
+                                </div>
+                                
+                                <!-- COLUMNS 4 -->
+                                <div class="col-lg-3 col-md-6 col-sm-6 m-b30">
+                                    <div class="wt-box wt-product-box   overflow-hide">
+                                        <div class="wt-thum-bx wt-img-overlay1">
+                                            <img src="images/product-2/ZENITH (1).jpg" alt="">
+                                            <div class="item-cart-view">
+                                                <div class="item-btn">
+                                                     <a href="javascript:void(0);">
+                                                         <i class="fa fa-cart-plus"></i>
+                                                     </a>
+                                                 </div>
+                                                 <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-heart"></i>
+                                                    </a>
+                                                </div>
+                                                <div class="item-btn">
+                                                    <a href="javascript:void(0);">
+                                                        <i class="fa fa-eye"></i>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="wt-info text-center">
+                                            <h4 class="wt-title">
+                                                <a href="product-detail.html">Zenit 2.0</a>
+                                            </h4>
+                                            <span class="price">
+                                                <del><span><span class="Price-currencySymbol">$ </span>45.00</span></del>
+                                                <ins>
+                                                    <span><span class="Price-currencySymbol">$ </span>36.00</span>
+                                                </ins>
+                                            </span>
+
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                           
+                        </div>
+                    </div>
+                </div>
+            </div>
+             <!-- SECTION CONTENT END -->  
+          
+            
+     
+        </div>
+        <!-- CONTENT END -->
+
+    
+ <!-- FOOTER START -->
+ <footer class="site-footer footer-dark " >
+
+    <!-- FOOTER BLOCKES START -->  
+    <div class="footer-top">
+        <div class="container mt-5">
+            <div class="row">
+
+                <div class="col-lg-3 col-md-6">
+                    
+                    <div class="widget widget_about">
+                        <div class="logo-footer clearfix bg-white">
+                            <a href="index.html"><img src="images/logo11.png"  alt=""></a>
+                        </div>
+                        <p>
+                            Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à votre expertise, vous nous avez livrés.</p>
+                        <div class="call-us">
+                            <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+                        </div>
+
+                    </div>                            
+                    
+                </div>
+
+                <div class="col-lg-3 col-md-6">  
+                    <div class="widget n-letter">
+                       <h3 class="widget-title"> Bulletin</h3>
+                       <div class="n-letter-content">
+                            <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
+                            <div class="nl-type">
+                                <form role="search" method="post">
+                                    <div class="nl-form">
+                                        <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
+                                        <button type="submit" class="s-btn">
+                                            S'abonner</button>
+                                    </div>
+                                </form>
+                            </div>                                    
+                       </div> 
+                       <ul class="social-icons">
+                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                        <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
+                    </ul>
+                    </div>
+                </div>                                                
+            
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget">
+                        <h3 class="widget-title">Contactez-nous</h3>
+                        <p>Notre support disponible pour vous aider
+                            24 heures sur 24, sept jours sur sept.</p>                            
+                        <ul class="widget_address"> 
+                            <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
+                            <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
+                        </ul>  
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-6">
+                    <div class="widget widget_services">
+                        <h3 class="widget-title">Liens d'entreprise</h3>
+                        <ul>
+                            <li><a href="about-1.html"> À propos</a></li>
+                            <li><a href="project-1.html">Projets</a></li>
+                            <li><a href="blog-grid.html">Blog</a></li>
+                            <li><a href="faq.html">FAQ</a></li>
+                            <li><a href="contact.html">Contactez-nous</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+    <!-- FOOTER COPYRIGHT -->
+                        
+    <div class="footer-bottom bg-light p-2">
+        <div class="container">
+            <div class="footer-bottom-light">
+
+                <div class="footer-copy-right">
+                    <div class="row">
+                            <div class="col-sm-9">
+                                <span class="copyrights-text text-dark align-content-center">© 2023 Sergent Menuiserie Entreprise.</span>
+                            </div>
+                          
+                            <div class="col-sm-3">
+                                <span class="float-end text-dark "style="margin-left:40px">Conçu par</span>  <span class="site-text-primary float-end"><img src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px" width="100px"></span>
+                            </div>
+                        </div>  
+                </div>
+                
+            </div>
+        </div>   
+    </div>  
+
+</footer>
+<!-- FOOTER END -->
+    <!-- BUTTON TOP START -->
+    <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+ </div>
+
+
+
+<!-- JAVASCRIPT  FILES ========================================= --> 
+<script  src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+<script  src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
+<script  src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+
+<script  src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+<script  src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+<script  src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
+<script  src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+<script  src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+<script  src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+<script  src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+<script  src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+<script  src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+<script src="js/lc_lightbox.lite.js" ></script><!-- IMAGE POPUP -->
+<script  src="js/bootstrap-slider.min.js"></script><!-- Form js -->
+<script  src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+
+
+<!-- Product thumbnail carousel-->
+<script>
+    $(document).ready(function() {
+    
+      var sync1 = $("#sync1");
+      var sync2 = $("#sync2");
+      var slidesPerPage = 4; //globaly define number of elements per page
+      var syncedSecondary = true;
+    
+          sync1.owlCarousel({
+            items : 1,
+            slideSpeed : 2000,
+            nav: true,
+            autoplay: false,
+            dots: false,
+            loop: true,
+            responsiveRefreshRate : 200,
+            navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+          }).on('changed.owl.carousel', syncPosition);
+    
+          sync2
+            .on('initialized.owl.carousel', function () {
+              sync2.find(".owl-item").eq(0).addClass("current");
+            })
+            .owlCarousel({
+            items : slidesPerPage,
+            dots: false,
+            nav: false,
+            margin:30,
+            smartSpeed: 200,
+            slideSpeed : 500,
+            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate : 100
+          }).on('changed.owl.carousel', syncPosition2);
+    
+      function syncPosition(el) {
+        //if you set loop to false, you have to restore this next line
+        //var current = el.item.index;
+        
+        //if you disable loop you have to comment this block
+        var count = el.item.count-1;
+        var current = Math.round(el.item.index - (el.item.count/2) - .5);
+        
+        if(current < 0) {
+          current = count;
+        }
+        if(current > count) {
+          current = 0;
+        }
+        
+        //end block
+    
+        sync2
+          .find(".owl-item")
+          .removeClass("current")
+          .eq(current)
+          .addClass("current");
+        var onscreen = sync2.find('.owl-item.active').length - 1;
+        var start = sync2.find('.owl-item.active').first().index();
+        var end = sync2.find('.owl-item.active').last().index();
+        
+        if (current > end) {
+          sync2.data('owl.carousel').to(current, 100, true);
+        }
+        if (current < start) {
+          sync2.data('owl.carousel').to(current - onscreen, 100, true);
+        }
+      }
+      
+      function syncPosition2(el) {
+        if(syncedSecondary) {
+          var number = el.item.index;
+          sync1.data('owl.carousel').to(number, 100, true);
+        }
+      }
+      
+      sync2.on("click", ".owl-item", function(e){
+        e.preventDefault();
+        var number = $(this).index();
+        sync1.data('owl.carousel').to(number, 300, true);
+      });
+    });
+</script>
+
+
+
+
+</body>
+
+</html>
