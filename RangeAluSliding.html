@@ -54,261 +54,271 @@
  <!-- JQUERY LINK   -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
  <script>
-     function clearForm(){
-         document.getElementById('mobile').value="";
-     }
-     function showSpin(){
-         let x= document.getElementById('mobile').value;
-         if(x.length==10){
-             document.getElementById('spinner').style.display = 'block';
-             document.getElementById('spin-content').style.display = 'block';
-         }
-        
-     }
-     function showOffSpin(){
-         // let x= document.getElementById('mobile').value;
-       //  if(x.length==10)
-         document.getElementById('spinner').style.display = 'none';
-         document.getElementById('spin-content').style.display = 'none';
-     }
-     $(document).ready(function(){
-         $("#modal").click(function(){
-          $("#myModal").modal({backdrop: "static"});
-         });
-     })
- </script>
+    function clearForm(){
+       document.getElementById('fname').value="";
+       document.getElementById('lname').value="";
+       document.getElementById('mobile').value="";
+       document.getElementById('location').value="";
+   }
+   function showSpin(){
+       let x= document.getElementById('mobile').value;
+       if(x.length==10){
+           document.getElementById('spinner').style.display = 'block';
+           document.getElementById('spin-content').style.display = 'block';
+       }
+      
+   }
+   function showOffSpin(){
+       // let x= document.getElementById('mobile').value;
+     //  if(x.length==10)
+       document.getElementById('spinner').style.display = 'none';
+       document.getElementById('spin-content').style.display = 'none';
+   }
+   $(document).ready(function(){
+       $("#modal").click(function(){
+        $("#myModal").modal({backdrop: "static"});
+       });
+   })
+</script>
 
 </head>
 <style>
- #spinner{
-     display: none;
-     position: absolute;
-     left: 15rem;
-     top: 11rem;
-     bottom: 0;
-     right: 0;
- }
- #spin-content{
-     display: none;
-     margin-left: 11rem;
- }
+#spinner{
+   display: none;
+   position: absolute;
+   left: 15rem;
+   top: 11rem;
+   bottom: 0;
+   right: 0;
+}
+#spin-content{
+   display: none;
+   margin-left: 11rem;
+}
 </style>
 
 <body>
 <!-- LOADING AREA START ===== -->
 <div class="loading-area">
- <div class="loading-box"></div>
- <div class="loading-pic">
-     <div class="cssload-spinner">
-         <div class="cssload-ball cssload-ball-1"></div>
-         <div class="cssload-ball cssload-ball-2"></div>
-         <div class="cssload-ball cssload-ball-3"></div>
-         <div class="cssload-ball cssload-ball-4"></div>
-     </div>
- </div>
+<div class="loading-box"></div>
+<div class="loading-pic">
+   <div class="cssload-spinner">
+       <div class="cssload-ball cssload-ball-1"></div>
+       <div class="cssload-ball cssload-ball-2"></div>
+       <div class="cssload-ball cssload-ball-3"></div>
+       <div class="cssload-ball cssload-ball-4"></div>
+   </div>
+</div>
 </div>
 <!-- LOADING AREA  END ====== -->
- <!-- POPUP START  -->
+<!-- POPUP START  -->
 <div class="modal fade" id="myModal" role="dialog">
- <div class="modal-dialog modal-md">
- 
-   <!-- Modal content-->
-   <div class="modal-content">
-     <div class="modal-header">
-         <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-         <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+   <div class="modal-dialog modal-md">
+   
+     <!-- Modal content-->
+     <div class="modal-content">
+       <div class="modal-header">
+           <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+           <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+       </div>
+       <div class="modal-body">
+           <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
+           <form action="mail.php" method="post">
+               <label for="fname" class="pb-2">Prénom</label><br>
+               <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
+               <label for="lname" class="pb-2">nom de famille</label><br>
+               <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
+               <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
+               <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+               <label for="location" class="pb-2">emplacement</label><br>
+               <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
+               <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+           </form>
+           <div>
+               <div class="spinner-border text-success my-3 " id="spinner"></div>
+               <div id="spin-content" class="mt-3">please wait...</div>
+           </div>
+       </div>
+       <!-- <div class="modal-footer">
+         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+       </div> -->
      </div>
-     <div class="modal-body">
-         <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
-         <form action="mail.php" method="post">
-             <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-             <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-             <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
-         </form>
-         <div>
-             <div class="spinner-border text-success my-3 " id="spinner"></div>
-             <div id="spin-content" class="mt-3">please wait...</div>
-         </div>
-     </div>
-     <!-- <div class="modal-footer">
-       <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-     </div> -->
+     
    </div>
-   
  </div>
-</div>
-   
+     
 <!-- POPUP END  -->
- <div class="page-wraper">
-  
+<div class="page-wraper">
+
    <!-- HEADER START -->
    <header class="site-header header-style-3 mobile-sider-drawer-menu">
-                    
-    <div class="top-bar site-bg-primary">
-        <div class="container">
+               
+       <div class="top-bar site-bg-primary">
+           <div class="container">
 
-                <div class="d-flex justify-content-between">
-                    <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
-                        <ul class="wt-topbar-info e-p-bx text-white">
-                            <li><i class="fa fa-phone"></i>+33 659966202</li>
-                        </ul>
-                    </div>
-                    
-                    <div class="wt-topbar-right d-flex flex-wrap align-content-center">
-                        <ul class="wt-topbar-info-2 e-p-bx text-white">
-                            <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>Rappeler</a></li>
-                            <li><i class="fa fa-envelope"></i>Prendre rendez-vous</li>
-                        </ul> 
-        
-                        <ul class="social-icons">
-                            <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                        </ul> 
-                                                                  
-                    </div>
-                </div>
+                   <div class="d-flex justify-content-between">
+                       <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                           <ul class="wt-topbar-info e-p-bx text-white">
+                               <li><span> LUNDI SAMEDI</span><span>8H-19H</span></li>
+                           </ul>
+                       </div>
+                       
+                       <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                           <ul class="wt-topbar-info-2 e-p-bx text-white">
+                               <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
+                               <li><i class="fa fa-envelope"></i>PRENDRE RENDEZ-VOUS</li>
+                           </ul> 
+           
+                           <ul class="social-icons">
+                               <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
+                               <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
+                               <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                               <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                               <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                           </ul> 
+                                                                     
+                       </div>
+                   </div>
 
-        </div>
-    </div>  
-            
+           </div>
+       </div>  
+               
 
-        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-            <div class="main-bar">  
-                                
-                <div class="container clearfix"> 
-            
-                    <div class="logo-header">
-                        <div class="logo-header-inner logo-header-one">
-                            <a href="index.html">
-                                <img src="images/SM_258x74.svg" alt="">
+           <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+               <div class="main-bar">  
+                                   
+                   <div class="container clearfix"> 
+               
+                       <div class="logo-header">
+                           <div class="logo-header-inner logo-header-one">
+                               <a href="index.html">
+                                   <img src="images/SM_258x74.svg" alt="">
 
-                            </a>
-                        </div>
-                    </div>  
-                            
-                            <!-- NAV Toggle Button -->
-                            <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar icon-bar-first"></span>
-                                <span class="icon-bar icon-bar-two"></span>
-                                <span class="icon-bar icon-bar-three"></span>
-                            </button> 
+                               </a>
+                           </div>
+                       </div>  
+                       
+                       <!-- NAV Toggle Button -->
+                       <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
+                           <span class="sr-only">Toggle navigation</span>
+                           <span class="icon-bar icon-bar-first"></span>
+                           <span class="icon-bar icon-bar-two"></span>
+                           <span class="icon-bar icon-bar-three"></span>
+                       </button> 
 
-                             <!-- MAIN Vav -->
-                             <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
-                                
-                                <ul class=" nav navbar-nav menu-size">
-                                    <li class="has-child"><a href="javascript:;">les fenêtres</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="EcleaRange.html">Gamme eclia</a>
-                                                <ul class="sub-menu">
-                                                   
-                                                    <li><a href="compositeWindow.html">Fenêtre composite</a></li>
-                                                    <li><a href="AluStrikeWindow.html">Gâche fenêtre ALU</a></li>
-                                                    <li><a href="AluSlidingWindow.html">ALU coulissant</a></li>
-                                                    <li><a href="AluBrickPartition.html">Cloison en brique</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="TrendRange.html">Gamme de tendance</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="PVCWindow.html">Fenêtre PVC</a></li>
-                                                    <li><a href="RangeAluStrike.html">Gâche fenêtre ALU</a></li>
-                                                    <li><a href="AluSlidingWindow.html">ALU coulissant</a></li>
-                                                </ul>
-                                            </li>
-                                            <li><a href="WoodWindowRange.html">Gamme fenêtre bois</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="WoodenWindow.html">Fenêtre en bois</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </li>
-
-                                    <li class="has-child">
-                                        <a href="javascript:;">Volets</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="swing Shutter.html">Volet battant</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="aluSwing.html">Volet battant ALU</a></li>
-                                                    <li><a href="woodenShutters.html">Volet à charnière en bois</a></li>
-                                                    <li><a href="pvcShutters.html">Volet pvc</a></li>
-                                                </ul>
-                                            </li>
-
-                                            <li><a href="rollerShutters.html">Volet roulant</a>
-                                                <ul class="sub-menu">
-                                                    <li><a href="zenithShutter.html">Obturateur 2.0 Zénith </a></li>
-                                                    <li><a href="zibaie component.html">Composante izibaie</a></li>
-                                                    <li><a href="vr4a component.html">Composant VR4A</a></li>
-                                                </ul>
-                                            </li>                                           
-                                        </ul>                                
-                                    </li>
-
-                                    <li class="has-child"><a href="javascript:;">Portes d'entrée</a>
-                                        <ul class="sub-menu">
-                                           
-                                            <li><a href="one-pieceAluEntranceDoors.html">Portes d'entrée ALU monobloc</a></li>
-                                            <li><a href="alu-parclosedEntranceDoors.html">Portes d'entrée cloisonnées ALU</a></li>
-                                            <li><a href="alu-glazedEntranceDoors.html">Portes d'entrée vitrées ALU</a></li>
-                                            <li><a href="steel-EntranceDoors.html">Portes d'entrée en acier</a></li>
-                                            <li><a href="pvc-parclosedEntranceDoor.html">Portes d'entrée cloisonnées en PVC</a></li>
-                                            <li><a href="harmony-product.html">Exclusivité du produit HARMONY</a></li>
-                                        </ul>                                                                 
-                                    </li>
+                        <!-- MAIN Vav -->
+                       <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
                            
-                                    <li class="has-child"><a href="javascript:;">Portes de garage</a>
-                                        <ul class="sub-menu">
-                                           
-                                            <li><a href="sideGarageDoor.html">porte de garage latérale</a></li>                                        
-                                            <li><a href="rollUpGarageDoor.html">Porte de garage enroulable</a></li>
-                                            <li><a href="slidingGarageDoor.html">Porte de garage coulissante</a></li>
-                                            <li><a href="sectionalGarageDoor.html">Porte de garage sectionnelle</a></li>                                       
-                                        </ul>                                
-                                    </li>
+                           <ul class=" nav navbar-nav menu-size">
+                               <li class="has-child"><a href="javascript:;">lES FENETRES</a>
+                                   <ul class="sub-menu">
+                                       <li><a href="EcleaRange.html">GAMME ECLIA</a>
+                                           <ul class="sub-menu">
+                                              
+                                               <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
+                                               <li><a href="AluStrikeWindow.html">GACHE FENETRE ALU</a></li>
+                                               <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
+                                               <li><a href="AluBrickPartition.html">CLOISON EN BRIQUE</a></li>
+                                           </ul>
+                                       </li>
+                                       <li><a href="TrendRange.html">GAMME DE TENDANCE</a>
+                                           <ul class="sub-menu">
+                                               <li><a href="PVCWindow.html">FENETRE PVC</a></li>
+                                               <li><a href="RangeAluStrike.html">GACHE FENETRE ALU</a></li>
+                                               <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
+                                           </ul>
+                                       </li>
+                                       <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
+                                           <ul class="sub-menu">
+                                               <li><a href="WoodenWindow.html">FENETRE EN BOIS</a></li>
+                                           </ul>
+                                       </li>
+                                   </ul>
+                               </li>
 
-                                    
-                            
-                                    <li class="has-child"><a href="javascript:;">Portails</a>
-                                        <ul class="sub-menu">
-                                            
-                                            <li><a href="portalPVC.html">Portail window</a></li>                                        
-                                            <li><a href="portalALU.html">Porte de cri</a></li>
-                                            <li><a href="portalIron.html">Portail de travail iorn</a></li>
-                                        </ul>
-                                                                    
-                                    </li>
-                                    <li class="has-child"><a href="javascript:;">Auvents & Pergolas</a>
-                                        <ul class="sub-menu">
-                                           
-                                                    <li><a href="interior blind.html">store intérieur</a></li>                                        
-                                                    <li><a href="awning.html">Auvents</a></li>
-                                                    <li><a href="pergola.html">Pergolas</a></li>
-                                        </ul>                                
-                                    </li>                                                                
-                                </ul>
-                            </div> 
-                        </div>    
-                    </div>
+                               <li class="has-child">
+                                   <a href="javascript:;">VOLETS</a>
+                                   <ul class="sub-menu">
+                                       <li><a href="swing Shutter.html">VOLET BATTANT</a>
+                                           <ul class="sub-menu">
+                                               <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
+                                               <li><a href="woodenShutters.html">VOLET A CHARNIERE EN BOIS</a></li>
+                                               <li><a href="pvcShutters.html">VOLET PVC</a></li>
+                                           </ul>
+                                       </li>
 
-                    <!-- SITE Search -->
-                    <div id="search"> 
-                        <span class="close"></span>
-                        <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                            <div class="input-group">
-                                <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
-                                <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
-                            </div> 
-                        </form>
-                    </div> 
-                </div>
+                                       <li><a href="rollerShutters.html">VOLET ROULANT</a>
+                                           <ul class="sub-menu">
+                                               <li><a href="zenithShutter.html">OBTURATEUR 2.0 ZENITH </a></li>
+                                               <li><a href="zibaie component.html">COMPOSANTE IZIBAIE</a></li>
+                                               <li><a href="vr4a component.html">COMPOSANTE VR4A</a></li>
+                                           </ul>
+                                       </li>                                           
+                                   </ul>                                
+                               </li>
 
-            
-        </header>
-        <!-- HEADER END -->
+                               <li class="has-child"><a href="javascript:;">PORTES D'ENTREE</a>
+                                   <ul class="sub-menu">
+                                      
+                                       <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE ALU MONOBLOC</a></li>
+                                       <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE CLOISONNEES ALU</a></li>
+                                       <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
+                                       <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a></li>
+                                       <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE CLOISONNEES EN PVC</a></li>
+                                       <li><a href="harmony-product.html">EXCLUSIVITE DU PRODUIT HARMONY</a></li>
+                                   </ul>                                                                 
+                               </li>
+                      
+                               <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
+                                   <ul class="sub-menu">
+                                      
+                                       <li><a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a></li>                                        
+                                       <li><a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a></li>
+                                       <li><a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a></li>
+                                       <li><a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a></li>                                       
+                                   </ul>                                
+                               </li>
+
+                               
+                       
+                               <li class="has-child"><a href="javascript:;">PORTAILS</a>
+                                   <ul class="sub-menu">
+                                       
+                                       <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>                                        
+                                       <li><a href="portalALU.html">PORTE DE CRI</a></li>
+                                       <li><a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a></li>
+                                   </ul>
+                                                               
+                               </li>
+                               <li class="has-child"><a href="javascript:;">AUVENTS & PERGOLAS</a>
+                                   <ul class="sub-menu">
+                                      
+                                               <li><a href="interior blind.html">STORE INTERIEUR</a></li>                                        
+                                               <li><a href="awning.html">AUVENTS</a></li>
+                                               <li><a href="pergola.html">PERGOLAS</a></li>
+                                   </ul>                                
+                               </li>                                                                
+                           </ul>
+                       </div> 
+                   </div>    
+               </div>
+
+               <!-- SITE Search -->
+               <div id="search"> 
+                   <span class="close"></span>
+                   <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                       <div class="input-group">
+                           <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
+                           <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
+                       </div> 
+                   </form>
+               </div> 
+           </div>
+
+       
+   </header>
+   <!-- HEADER END -->
+
 
       
         <!-- CONTENT START -->
