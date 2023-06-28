@@ -467,11 +467,21 @@
           width: 100%;
         }
         .button {
-          height: 30px;
+          height: 40px;
           width: 100px;
           background-color: #db5200;
           border-radius: 20px;
           border: none;
+          box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        .button1 {
+          border: none;
+          background: transparent;
+        }
+        .button1:active {
+          border: none;
+          background: transparent;
         }
       </style>
 
@@ -811,7 +821,6 @@
                         height="26"
                         fill="currentColor"
                         class="bi bi-geo-alt text-dark"
-                        viewBox="0 0 16 16"
                       >
                         <path
                           d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
@@ -820,11 +829,30 @@
                           d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                         />
                       </svg> </span
-                    ><button onclick="fun()">GET YOUR LOCATION</button>
-                    <br />
-                    <button class="btn btn-warning mt-3" onclick="formnext()">
-                      NEXT
+                    ><button class="button1" onclick="fun()">
+                      GET YOUR LOCATION
                     </button>
+                    <br />
+                    <div class="col-lg-12 col-md-12 text-dark">
+                      <div class="form-group">
+                        <label style="cursor: pointer">
+                          <input
+                            type="checkbox"
+                            name="check"
+                            id="myCheck"
+                            onclick="myFunction()"
+                          />
+                          <span
+                            >Mon projet est situé à une autre adresse
+                          </span></label
+                        >
+                      </div>
+                    </div>
+                    <div id="text" style="display: none">
+                      <button class="btn btn-warning mt-3" onclick="formnext()">
+                        NEXT
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1791,6 +1819,17 @@
       }
 
       // GEO-LOCATION CODE END
+      //   geon location hide and show
+
+      function myFunction() {
+        var checkBox = document.getElementById("myCheck");
+        var text = document.getElementById("text");
+        if (checkBox.checked == true) {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      }
     </script>
   </body>
 </html>
