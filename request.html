@@ -13,6 +13,7 @@
     <!-- FAVICONS ICON -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
+    <script src="//cdnjs.cloudflare.com/ajax/li bs/jquery/2.1.3/jquery.min.js"></script>
 
     <!-- PAGE TITLE HERE -->
     <title>Consza Template | Error 404</title>
@@ -113,7 +114,7 @@
 
                         <div class="logo-header">
                             <div class="logo-header-inner logo-header-one">
-                                <a href="index-3.html">
+                                <a href="index.html">
                                     <img src="images/home/sm@0.75x.png" alt="">
                                 </a>
                             </div>
@@ -326,10 +327,10 @@
 
             .flex-container>div {
                 background-color: #f1f1f1;
-                width: 250px;
-                margin: 30px;
+                width: 140px;
+                margin: 10px;
                 text-align: center;
-                height: 250px;
+                height: 150px;
                 font-size: 12px;
                 padding: 10px;
                 margin-left: 1rem;
@@ -382,8 +383,6 @@
            #pergola-page-1{
                 display: none;
             }
-
-
         </style>
 
 
@@ -391,38 +390,38 @@
         <!-- CONTENT START -->
         <div class="container-fluid p-3 text-white">
             <div class="row">
-                <div class="col-sm-12 bg-light">
-                    <div class="container-fluid p-3">
+                <div class="col-sm-6 bg-light">
+                    <div class="container p-3">
                         <div id="head-div">
                             <h3 class="text-dark">Quote Request</h3>
                             <p class="text-dark">Which Product you want..</p>
                         </div>
                         <div class="flex-container " id="choice">
 
-                            <div class="window-hover  number-block-content   " onclick=" var gw=getWindow();getValue1(gw)">
-                                <img src="images/request-img/fenetres.ba20bf4e.png" width="100px" alt="">
+                            <div class="window-hover" onclick="getWindow();">
+                                <img src="images/req-img-1/window-1.png" width="100px" alt="">
                                 <p style="font-size: medium;" id="window-page">Window </p>
                             </div>
-                            <div class="shutter-hover" onclick="getShutter()">
-                                <img src="images/request-img/2.png" width="100px" alt="">
+                            <div class="shutter-hover" onclick=" getShutter();">
+                                <img src="images/req-img-1/shutter-1.png" width="100px" alt="">
                                 <p style="font-size: medium;" id="shutter-page">Shutters </p>
                             </div>
                             <div class="door-hover" onclick="getDoor()">
-                                <img src="images/request-img/3.png" width="100px" alt="">
+                                <img src="images/req-img-1/door-1.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="door-page"> Doors</p>
                             </div>
-                            <!-- <div class="garage-hover" onclick="getGarage()">
-                                <img src="images/request-img/4.png" width="100px" alt="">
+                            <div class="garage-hover" onclick="getGarage()">
+                                <img src="images/req-img-1/garg.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="garage-page">Garage Doors</p>
-                            </div> -->
-                            <!-- <div class="portal-hover" onclick="getPortal()">
-                                <img src="images/request-img/5.png" width="100px" alt="">
+                            </div>
+                            <div class="portal-hover" onclick="getPortal()">
+                                <img src="images/req-img-1/por.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="portal-page">Portals</p>
-                            </div> -->
-                            <!-- <div class="pergola-hover" onclick="getPergola()">
-                                <img src="images/request-img/6.png" width="90px" alt="">
+                            </div>
+                            <div class="pergola-hover" onclick="getPergola()">
+                                <img src="images/req-img-1/pergola-1.jpg" width="90px" alt="">
                                 <p style="font-size: medium;" id="pergola-page">Pergola</p>
-                            </div> -->
+                            </div>
                         </div>
 
                         <!-- -----second div Window 1.1-------- -->
@@ -436,16 +435,16 @@
                                 <p class="text-dark">What windows are you looking for?</p>
                                 <div class="flex-container ">
 
-                                    <div class="window-hover" onclick="var w=countWindow();getValue1(w)">
-                                        <img src="images/win1.webp" width="100px" alt="">
+                                    <div class="window-hover" onclick="countWindow()">
+                                        <img src="images/req-img-1/win-1.1.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-2">Windows </p>
                                     </div>
-                                    <div class="shutter-hover" onclick="var d= countWindow1();getValue2(d)">
-                                        <img src="images/request-img/win2.png" width="100px" alt="">
+                                    <div class="shutter-hover" onclick="countWindow1()">
+                                        <img src="images/req-img-1/win-1.2.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-3">Doors </p>
                                     </div>
-                                    <div class="door-hover"  onclick="var r=countWindow2();getValue3(r)">
-                                        <img src="images/request-img/win3.png" width="100px" alt="">
+                                    <div class="door-hover"  onclick="countWindow2()">
+                                        <img src="images/req-img-1/win-1.3.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-4"> Roof-Window</p>
                                     </div>
                                     <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -478,32 +477,32 @@
 
                                     <div class="window-hover number text-dark" id="number1"
                                         style="padding: 3.6rem;font-size: larger;font-weight: 600;"
-                                        onclick="var one= windowCount1();getValue4(one)">
+                                        onclick="windowCount1()">
                                         1
                                     </div>
                                     <div class="shutter-hover number text-dark" id="number2"
                                         style="padding: 3.6rem;font-size: larger;font-weight: 600;"
-                                        onclick="var two= windowCount2();getValue5(two)">
+                                        onclick="windowCount2()">
                                         2
                                     </div>
                                     <div class="door-hover number text-dark" id="number3"
                                         style="padding: 3.6rem;font-size: larger;font-weight: 600;"
-                                        onclick="var three= windowCount3();getValue6(three)">
+                                        onclick="windowCount3()">
                                         3
                                     </div>
                                     <div class="garage-hover number text-dark" id="number4"
                                         style="padding: 3.6rem;font-size: larger;font-weight: 600;"
-                                        onclick="var four= windowCount4();getValue7(four)">
+                                        onclick="windowCount4()">
                                         4
                                     </div>
                                     <div class="portal-hover number text-dark" id="number5"
                                         style="padding: 3.6rem;font-size: larger;font-weight: 600;"
-                                        onclick="var five= windowCount5();getValue8(five)">
+                                        onclick="windowCount5()">
                                         5
                                     </div>
                                     <div class="pergola-hover number text-dark" id="number6"
                                         style="padding: 2.4rem;font-size: larger;font-weight: 600;"
-                                        onclick="var six= windowCount6();getValue9(six)">
+                                        onclick="windowCount6()">
                                         more than 5
                                     </div>
                                 </div>
@@ -523,17 +522,17 @@
                                 <p class="text-dark">What windows are you looking for?</p>
                                 <div class="flex-container">
 
-                                    <div class="window-hover text-dark " id="for1" onclick="var f1= windowFor1();getValue10(f1)">
-                                        <img src="images/request-img/win-type1.webp" width="100px" alt="">
+                                    <div class="window-hover text-dark " id="for1" onclick="windowFor1();">
+                                        <img src="images/req-img-1/alu-1.png" width="100px" alt="">
                                         Aluminium
                                     </div>
 
-                                    <div class="shutter-hover text-dark " id="for2" onclick="var f2= windowFor2();getValue11(f2)">
-                                        <img src="images/request-img/win-type2.webp" width="100px" alt="">
+                                    <div class="shutter-hover text-dark " id="for2" onclick="windowFor2()">
+                                        <img src="images/req-img-1/pvc-1.png" width="100px" alt="">
                                         PVC
                                     </div>
-                                    <div class="shutter-hover text-dark" id="for3" onclick="var f3= windowFor3();getValue12(f3)">
-                                        <img src="images/request-img/win-type3.png" width="100px" alt="">
+                                    <div class="shutter-hover text-dark" id="for3" onclick="windowFor3()">
+                                        <img src="images/req-img-1/pvc-alu.jpg" width="100px" alt="">
                                         PVC ALU
                                     </div>
                                 </div>
@@ -553,12 +552,12 @@
                                 <div class="flex-container">
 
                                     <div class="window-hover " id="type1" onclick="windowWork()">
-                                        <img src="images/request-img/win-reno-1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/reno-1.png" width="100px" alt="">
                                         <p style="font-size: medium;">Renovation</p>
                                     </div>
 
                                     <div class="shutter-hover " id="type2" onclick="windowWork1()">
-                                        <img src="images/request-img/win-reno-2.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/cons-1.png" width="100px" alt="">
                                         <p style="font-size: medium;">Construction</p>
                                     </div>
                                 </div>
@@ -567,31 +566,39 @@
 
 
 
-                        <!--  GeoLocation -->
+                         <!--  GeoLocation -->
 
-                        <div class="container" id="page-5">
+                         <div class="container" id="page-5">
                             <div class="container second p-1">
                                 <button class="btn btn-md text-light" style="background-color: #db5200;"
-                                onclick="windowPrev(this.parentElement.parentElement.id)">Previous Page</button>
+                                    onclick="windowPrev(this.parentElement.parentElement.id)">Previous Page</button>
                                 <br><br>
-                                <div class="form bg-primary">
+                                <div class="form ">
                                     <h3 class="form">Quote Request</h3>
-                                    <p class="text-dark">What type of project Your Looking for?</p>
-                                    <!-- <div class="flex-container"></div>  -->
-                                    <div class="window form-control" id="location" onclick="windowLocation1()">
-                                        Your Location <input type="text">
-                                    </div>
-                                  
-                                    <div class="shutter form-control" id="location1" onclick="windowLocation()">
-                                        Your Postal Code <input type="text">
-                                    </div>
-                                    <button class="btn btn-primary" onclick="getLocate()">Submit</button>
-                                </div>
+                                    <p class="text-dark">What is the location of your project?</p>
 
+                                    
+                                    <!-- <div class="flex-container"></div>  -->
+                                    <span class="location" id="lo1" style="display: none"> </span>
+                                    <span class="location1" id="lo2" style="display: none"> </span>
+                                    <label for="city" class="text-dark">your city</label><br>
+                                    <input type="text" name="city" id="city"><br>                       
+                                    <label for="post" class="text-dark">Postal code</label><br>
+                                    <input type="text" name="post" id="post"> <br>
+                                    <br>
+                                   <span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="bi bi-geo-alt text-dark" viewBox="0 0 16 16">
+                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                      </svg>
+                                   </span><button onclick="fun()" class="btn btn-info">GET YOUR LOCATION</button> <br>
+                                  <button class="btn btn-warning mt-3">Submit</button>
+                                </div>
                             </div>
                         </div>
 
                         <!--  GeoLocation End-->
+
 
                     </div>
                     <!-- Shutter 1.1 -->
@@ -606,16 +613,16 @@
                             <p class="text-dark">What windows are you looking for?</p>
                             <div class="flex-container ">
 
-                                <div class="window-hover" onclick="countShutter()">
-                                    <img src="images/request-img/shut1.webp" width="100px" alt="">
+                                <div class="window-hover" onclick="var s1= countShutter();">
+                                    <img src="images/req-img-1/shut-1.1.jpg" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-2">Wheels </p>
                                 </div>
-                                <div class="shutter-hover" onclick="countShutter1()">
-                                    <img src="images/request-img/shut2.webp" width="100px" alt="">
+                                <div class="shutter-hover" onclick="var s2= countShutter1()">
+                                    <img src="images/req-img-1/shut-1.3.png" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-3">Casements </p>
                                 </div>
-                                <div class="door-hover"  onclick="countShutter2()">
-                                    <img src="images/request-img/shut3.webp" width="100px" alt="">
+                                <div class="door-hover"  onclick="var s3= countShutter2()">
+                                    <img src="images/req-img-1/shut-1.2.png" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-4">Folding</p>
                                 </div>
                                 <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -645,15 +652,15 @@
                                 <div class="flex-container ">
     
                                     <div class="window-hover" onclick="countDoor()">
-                                        <img src="images/request-img/door-1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.1.jpg" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-2">Entrance </p>
                                     </div>
                                     <div class="shutter-hover" onclick="countDoor1()">
-                                        <img src="images/request-img/door-2.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.2.jpg" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-3">Armorded </p>
                                     </div>
                                     <div class="door-hover"  onclick="countDoor2()">
-                                        <img src="images/request-img/door3.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.3.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-4">Services</p>
                                     </div>
                                     <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -686,16 +693,16 @@
                                     <div class="flex-container ">
         
                                         <div class="window-hover" onclick="countGarage()">
-                                            <img src="images/request-img/gar-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/garage-1.1.jpg" width="100px" alt="">
                                             <p style="font-size: medium;" id="garage-page-2">Garage Door </p>
                                         </div>
                                         <div class="shutter-hover" onclick="countGarage1()">
-                                            <img src="images/request-img/gar-2.png" width="100px" alt="">
+                                            <img src="images/req-img-1/garage-1.2.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="garage-page-3">Gates </p>
                                         </div>
                                         <div class="door-hover"  onclick="countGarage2()">
-                                            <img src="images/request-img/gar-1.webp" width="100px" alt="">
-                                            <p style="font-size: medium;" id="garage-page-4">Gates</p>
+                                            <img src="images/req-img-1/garage-1.3.jpg" width="100px" alt="">
+                                            <p style="font-size: medium;" id="garage-page-4">Garage</p>
                                         </div>
                                         <!-- <div class="garage-hover"  onclick="countChoice3()">
                                             <img src="images/request-img/win4.png" width="100px" alt="">
@@ -728,11 +735,11 @@
                                     <div class="flex-container ">
         
                                         <div class="window-hover" onclick="countPortal()">
-                                            <img src="images/request-img/por-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/portal-1.3.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="portal-page-2">Portal Door </p>
                                         </div>
                                         <div class="shutter-hover" onclick="countPortal1()">
-                                            <img src="images/request-img/por-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/portal-1.5.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="portal-page-3">Portal </p>
                                         </div>
                                         <!-- <div class="door-hover"  onclick="countPortal2()">
@@ -761,20 +768,19 @@
                                 <!-- Pergola 1.1 -->
                                 <div class="container" id="pergola-page-1">
                                     <div class="container second p-1">
-                                        <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
-                                            Page</button>
+                                        <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous Page</button>
                                         <br><br>
                                         <h3 class="form">Quote Request</h3>
                                         <p class="text-dark">What windows are you looking for?</p>
                                         <div class="flex-container ">
             
                                             <div class="window-hover" onclick="countPergola()">
-                                                <img src="images/request-img/per-1.webp" width="100px" alt="">
+                                                <img src="images/req-img-1/pergola-1.1.png" width="100px" alt="">
                                                 <p style="font-size: medium;" id="pergola-page-2">Pergolas </p>
                                             </div>
                                             <div class="shutter-hover" onclick="countPergola1()">
-                                                <img src="images/request-img/per-2.png" width="100px" alt="">
-                                                <p style="font-size: medium;" id="pergola-page-3">Store banne </p>
+                                                <img src="images/req-img-1/awnings.jpg" width="100px" alt="">
+                                                <p style="font-size: medium;" id="pergola-page-3">Awnings </p>
                                             </div>
                                             <!-- <div class="door-hover"  onclick="countPortal2()">
                                                 <img src="images/request-img/gar-1.webp" width="100px" alt="">
@@ -809,22 +815,27 @@
 
 
 
-                <!-- <div class="col-sm-6 container">
+                <div class="col-sm-6 container">
                     <div class="outer-box">
-                        <img src="images/project-productImages/SERPENTAIRE_AMBIANCE-AMBORPS408_.jpg" style="opacity: 0.6; width: 100%; height: 80vh;overflow: hidden;"
+                        <img src="images/request-img/req3.png" style="opacity: 0.6; width: 100%; height: 80vh;overflow: hidden;"
                             alt="" class="">
                         <div class="middle text-dark">
                             <div class="mb-3 text-dark">Your quote request in 2min</div>
                             <div class="inner-text text-dark p-2">
-                                <p>It's simple, free and without obligation! Request a quote online and get a
+                                <p id="content">It's simple, free and without obligation! Request a quote online and get a
                                     tailor-made price, personalized according to your project. If necessary, our experts
                                     are at your disposal to answer all your requests. So, opt without delay for the
                                     know-how of your French manufacturer TRYBA which has more than 40 years of
                                     experience!</p>
+                                    <p id="value1"></p>
+                                    <p id="value2"></p>
+                                    <p id="value3"></p>
+                                    <p id="value4"></p>
+                                    <p id="value5"></p>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
             </div>
         </div>
         <!-- CONTENT END -->
@@ -856,188 +867,154 @@
     <script>
 
    let inner= document.querySelector(".inner-text").innerHTML;
-        door="",roof="";windows='';
-        one1="",two2='',three3='',four4='',five5='',six6=''; 
-        for1='';for2='',for3='';
-        val1='';
-       function getValue1(w){
-        val1=w;
-          // console.log(windows)
-        }
-        function getValue2(d){
-            door=d;
-           console.log(door)
-        }
-        function getValue3(r){
-            roof=r;
-           console.log(roof)
-        }
-        function getValue4(r){
-            one1=r;
-           console.log(roof)
-        }
-        function getValue5(r){
-            two2=r;
-           console.log(roof)
-        }
-        function getValue6(r){
-            three3=r;
-           console.log(roof)
-        }
-        function getValue7(r){
-            four4=r;
-           console.log(roof)
-        }
-        function getValue8(r){
-            five5=r;
-           console.log(roof)
-        }
-        function getValue9(r){
-            six6=r;
-           console.log(roof)
-        }
-        function getValue10(r){
-            for1=r;
-        }
-        function getValue10(r){
-            for2=r;
-        }
-        function getValue10(r){
-            for3=r;
-        }
+        
+   var first_value="",second_value="",third_value="",fourth_value="",fifth_value="";
+      
 
         function windowFor1(){
             val4 = document.getElementById('for1').innerText;
             document.getElementById("page-3").style.display = "none";
             document.getElementById("page-4").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
+            // document.querySelector(".inner-text").innerHTML +="<br>"+ val4;
+            fourth_value="Material Type:"+ val4;
+            print4();
         }
         function windowFor2(){
             val4 = document.getElementById('for2').innerText;
             document.getElementById("page-3").style.display = "none";
             document.getElementById("page-4").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-
+            // document.querySelector(".inner-text").innerHTML +="<br>"+ val4;
+            fourth_value=" Material Type:"+ val4;
+            print4();
         }
         function windowFor3(){
             val4 = document.getElementById('for3').innerText;
             document.getElementById("page-3").style.display = "none";
             document.getElementById("page-4").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-
+            //  document.querySelector(".inner-text").innerHTML +="<br>" + val4;
+            fourth_value=" Material Type:"+ val4;
+            print4();
         }
 
         function windowCount1(){
             val4 = document.getElementById('number1').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 1;
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
+            third_value=" No. of Materials :"+ val4;
+            print3();
         }
         function windowCount2(){
             val4 = document.getElementById('number2').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 2;
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
+            third_value="No. of Materials :"+ val4;
+            print3();
         }
         function windowCount3(){
             val4 = document.getElementById('number3').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 3;
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
+            third_value=" No. of Materials :"+ val4;
+            print3();
         }
         function windowCount4(){
             val4 = document.getElementById('number4').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 4;
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
+            third_value=" No. of Materials :"+ val4;
+            print3();
         }
         function windowCount5(){
             val4 = document.getElementById('number6').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 5;
+            third_value=" No. of Materials :"+ val4;
+            print3();
         }
         function windowCount6(){
             val4 = document.getElementById('number6').innerText;
             document.getElementById("page-2").style.display = "none";
             document.getElementById("page-3").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br> Material type :" + val4;
-            return 6;
+            third_value=" No. of Materials :"+ val4;
+            print3();
         }
 
         function windowWork() {
             val5 = document.getElementById('type1').innerText;
             document.getElementById("page-4").style.display = "none";
             document.getElementById("page-5").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material for : " + val5;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material for : " + val5;
+            fifth_value="Materials for :"+ val5;
+            print5();
         }
         function windowWork1() {
             val5 = document.getElementById('type2').innerText;
             document.getElementById("page-4").style.display = "none";
             document.getElementById("page-5").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Material for : " + val5;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br> Material for : " + val5;
+            fifth_value=" Materials for :"+ val5;
+            print5();
         }
 
 
 
      
 
-        function windowLocation() {
-            val6 = document.getElementById("location").innerText;
+        // function windowLocation() {
+        //     val6 = document.getElementById("location").innerText;
 
-            document.getElementById("page-4").style.display = "none";
-            document.getElementById("page-5").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br> Location :" + val6;
+        //     document.getElementById("page-4").style.display = "none";
+        //     document.getElementById("page-5").style.display = "block";
+        //      document.querySelector(".inner-text").innerHTML += "<br> Location :" + val6;
 
-        }
+        // }
 
 
 
         
             // Shutter Code Start
 
-        function getPrint([vals]){
-            vals.forEach(val => {
-                document.querySelector(".inner-text").innerHTML = val;
-            });
-        }
+      
         function getWindow() {
             val1 = document.getElementById('window-page').innerHTML;
             document.getElementById("choice").style.display = "none";
             document.getElementById("head-div").style.display = "none";
             document.getElementById("window-page-1").style.display = "block";
-            //  document.querySelector(".inner-text").innerHTML = val1;
-            // getPrint()
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-            return val1;
+         
         }
         function countWindow() {
             val2 = document.getElementById('window-page-2').innerHTML;
             document.getElementById("window-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
+            second_value=val2;
+            print2();
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-            return "Windows";
+            
         }
         function countWindow1() {
             val2 = document.getElementById('window-page-3').innerHTML;
             document.getElementById("window-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-            return "Doors";
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+             second_value=val2;
+            print2();
         }
         function countWindow2() {
             val2 = document.getElementById('window-page-4').innerHTML;
             document.getElementById("window-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-            return "Roof-Window";
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
 
          // Shutter Code end
@@ -1052,30 +1029,35 @@
             document.getElementById("choice").style.display = "none";
             document.getElementById("head-div").style.display = "none";
             document.getElementById("shutter-page-1").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML = val1;
+            //  document.querySelector(".inner-text").innerHTML = val1;
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-
+           
         }
         function countShutter() {
             val2 = document.getElementById('shutter-page-2').innerHTML;
             document.getElementById("shutter-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+             //document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+             second_value=val2;
+            print2();
         }
         function countShutter1() {
             val2 = document.getElementById('shutter-page-3').innerHTML;
             document.getElementById("shutter-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            second_value=val2;
+            print2();
         }
         function countShutter2() {
             val2 = document.getElementById('shutter-page-4').innerHTML;
             document.getElementById("shutter-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
 
          // Shutter Code end
@@ -1086,30 +1068,35 @@
             document.getElementById("choice").style.display = "none";
             document.getElementById("head-div").style.display = "none";
             document.getElementById("door-page-1").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML = val1;
+            //  document.querySelector(".inner-text").innerHTML = val1;
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-
+            
         }
         function countDoor() {
             val2 = document.getElementById('door-page-2').innerHTML;
             document.getElementById("door-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countDoor1() {
             val2 = document.getElementById('door-page-3').innerHTML;
             document.getElementById("door-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countDoor2() {
             val2 = document.getElementById('door-page-4').innerHTML;
             document.getElementById("door-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            second_value=val2;
+            print2();
         }
 
         //  Door Start
@@ -1122,30 +1109,35 @@
             document.getElementById("choice").style.display = "none";
             document.getElementById("head-div").style.display = "none";
             document.getElementById("garage-page-1").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML = val1;
+            //  document.querySelector(".inner-text").innerHTML = val1;
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-
+            
         }
         function countGarage() {
             val2 = document.getElementById('garage-page-2').innerHTML;
             document.getElementById("garage-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countGarage1() {
             val2 = document.getElementById('garage-page-3').innerHTML;
             document.getElementById("garage-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+           //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+           second_value=+val2;
+            print2();
         }
         function countGarage2() {
             val2 = document.getElementById('garage-page-4').innerHTML;
             document.getElementById("garage-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+          //   document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
 
         //  Garage End
@@ -1157,30 +1149,35 @@
             document.getElementById("choice").style.display = "none";
             document.getElementById("head-div").style.display = "none";
             document.getElementById("portal-page-1").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML = val1;
+            //  document.querySelector(".inner-text").innerHTML = val1;
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-
+           
         }
         function countPortal() {
             val2 = document.getElementById('portal-page-2').innerHTML;
             document.getElementById("portal-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countPortal1() {
             val2 = document.getElementById('portal-page-3').innerHTML;
             document.getElementById("portal-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countPortal2() {
             val2 = document.getElementById('portal-page-4').innerHTML;
             document.getElementById("portal-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
 
         //  Portal End
@@ -1195,37 +1192,57 @@
             document.getElementById("head-div").style.display = "none";
             document.getElementById("pergola-page-1").style.display = "block";
             // document.querySelector(".inner-text").innerHTML = val1;
+            first_value=val1;
+            print1();
             document.querySelector(".inner-text").classList.add("border")
-
+            
         }
         function countPergola() {
             val2 = document.getElementById('pergola-page-2').innerHTML;
             document.getElementById("pergola-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
-            // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countPergola1() {
             val2 = document.getElementById('pergola-page-3').innerHTML;
             document.getElementById("pergola-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
+            second_value=val2;
+            print2();
         }
         function countPergola2() {
             val2 = document.getElementById('pergola-page-4').innerHTML;
             document.getElementById("pergola-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-
+            second_value=val2;
+            print2();
         }
-
+      
+        function print1(){
+                document.querySelector("#content").innerHTML ="";
+                document.querySelector("#value1").innerHTML = first_value; 
+        }
+        function print2(){
+                document.querySelector("#value2").innerHTML = second_value; 
+        }
+        function print3(){
+                document.querySelector("#value3").innerHTML = third_value; 
+        }
+        function print4(){
+                document.querySelector("#value4").innerHTML = fourth_value; 
+        }
+        function print5(){
+                document.querySelector("#value5").innerHTML = fifth_value; 
+        }
+      
         //  Garage End
 
         // Pergola End
-        function getLocate(){
-            
-        }
-       
+      
         // PREVIOUS CODE START 
             function windowPrev(id){
                 switch(id){
@@ -1235,35 +1252,103 @@
                         document.getElementById("window-page-1").style.display = "none";
                         document.querySelector(".inner-text").innerHTML = inner;
                         document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
                     break;
                     case "page-2":
-                        getWindow();
-                        document.getElementById("page-2").style.display = "none";
-                        break;
-                    case "page-3": 
-                            getWindow();
-                            countWindow();
-                            document.getElementById("page-3").style.display = "none";
+                    
+                    var two= document.getElementById("value2").innerHTML;
+                      
+                            document.getElementById("window-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
                             break;
-                    case "page-4":
-                            getWindow();
-                            countWindow();
-                            windowFor2();
-                            document.getElementById("page-4").style.display = "none";
-                            break;
-                    case "page-5": 
-                            getWindow();
-                            countWindow();
-                            windowFor1();
-                            windowWork();
-                            document.getElementById("page-5").style.display = "none";
-                            break;
+                          
 
-                }
+                    case "page-3": 
+                           
+                            document.getElementById("page-2").style.display = "block";
+                            document.getElementById("page-3").style.display = "none";
+                            document.getElementById("value3").innerHTML="";
+                            break;
+                            
+                            
+                    case "page-4":
+                             document.getElementById("page-3").style.display = "block";
+                             document.getElementById("page-4").style.display = "none";
+                             document.getElementById("value4").innerHTML="";
+                             break;
+                    case "page-5": 
+                             document.getElementById("page-4").style.display = "block";
+                             document.getElementById("page-5").style.display = "none";
+                             document.getElementById("value5").innerHTML="";
+                             break;
+                            }
             }
             
             
         // PREVIOUS CODE END 
+        // GEO-LOCATION CODE START
+        function fun() {
+            document.getElementById("city").value =
+            document.getElementById("lo1").innerHTML;
+            document.getElementById("post").value =
+            document.getElementById("lo2").innerHTML;
+        }
+            var $locationText = $(".location");
+            var $locationTexts = $(".location1");
+
+            // Check for geolocation browser support and execute success method
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(
+                    geoLocationSuccess,
+                    geoLocationError,
+                    { timeout: 10000 }
+                );
+            } else {
+                alert("your browser doesn't support geolocation");
+            }
+            function geoLocationSuccess(pos) {
+                // get user lat,long
+                var myLat = pos.coords.latitude,
+                    myLng = pos.coords.longitude,
+                    loadingTimeout;
+
+                var loading = function () {
+                    $locationText.text("fetching...");
+                    $locationTexts.text("fetching...");
+                };
+
+                loadingTimeout = setTimeout(loading, 600);
+
+                var request = $.get(
+                    "https://nominatim.openstreetmap.org/reverse?format=json&lat=" +
+                    myLat +
+                    "&lon=" +
+                    myLng
+                )
+                    .done(function (data) {
+                        if (loadingTimeout) {
+                            clearTimeout(loadingTimeout);
+                            loadingTimeout = null;
+                            $locationText.text(data.address.state_district);
+                            $locationTexts.text(data.address.postcode);
+                        }
+                    })
+                    .fail(function () {
+                        // handle error
+                    });
+            }
+
+            function geoLocationError(error) {
+                var errors = {
+                    1: "Permission denied",
+                    2: "Position unavailable",
+                    3: "Request timeout",
+                };
+                alert("Error: " + errors[error.code]);
+            }
+
+        // GEO-LOCATION CODE END
     </script>
 
 
