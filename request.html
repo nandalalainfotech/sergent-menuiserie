@@ -53,272 +53,239 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 
-    <!-- JQUERY LINK   -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <script>
-       function clearForm(){
-          document.getElementById('fname').value="";
-          document.getElementById('lname').value="";
-          document.getElementById('mobile').value="";
-          document.getElementById('location').value="";
-      }
-      function showSpin(){
-          let x= document.getElementById('mobile').value;
-          if(x.length==10){
-              document.getElementById('spinner').style.display = 'block';
-              document.getElementById('spin-content').style.display = 'block';
-          }
-         
-      }
-      function showOffSpin(){
-          // let x= document.getElementById('mobile').value;
-        //  if(x.length==10)
-          document.getElementById('spinner').style.display = 'none';
-          document.getElementById('spin-content').style.display = 'none';
-      }
-      $(document).ready(function(){
-          $("#modal").click(function(){
-           $("#myModal").modal({backdrop: "static"});
-          });
-      })
-  </script>
-
 </head>
-<style>
-  #spinner{
-      display: none;
-      position: absolute;
-      left: 15rem;
-      top: 11rem;
-      bottom: 0;
-      right: 0;
-  }
-  #spin-content{
-      display: none;
-      margin-left: 11rem;
-  }
-</style>
 
 <body>
-<!-- LOADING AREA START ===== -->
-<div class="loading-area">
-  <div class="loading-box"></div>
-  <div class="loading-pic">
-      <div class="cssload-spinner">
-          <div class="cssload-ball cssload-ball-1"></div>
-          <div class="cssload-ball cssload-ball-2"></div>
-          <div class="cssload-ball cssload-ball-3"></div>
-          <div class="cssload-ball cssload-ball-4"></div>
-      </div>
-  </div>
-</div>
-<!-- LOADING AREA  END ====== -->
-  <!-- POPUP START  -->
-  <div class="modal fade" id="myModal" role="dialog">
-      <div class="modal-dialog modal-md">
-      
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-              <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-              <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
-          </div>
-          <div class="modal-body">
-              <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
-              <form action="mail.php" method="post">
-                  <label for="fname" class="pb-2">Prénom</label><br>
-                  <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
-                  <label for="lname" class="pb-2">nom de famille</label><br>
-                  <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
-                  <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-                  <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-                  <label for="location" class="pb-2">emplacement</label><br>
-                  <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-                  <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
-              </form>
-              <div>
-                  <div class="spinner-border text-success my-3 " id="spinner"></div>
-                  <div id="spin-content" class="mt-3">please wait...</div>
-              </div>
-          </div>
-          <!-- <div class="modal-footer">
-            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-          </div> -->
+    <!-- LOADING AREA START ===== -->
+    <div class="loading-area">
+        <div class="loading-box"></div>
+        <div class="loading-pic">
+            <div class="cssload-spinner">
+                <div class="cssload-ball cssload-ball-1"></div>
+                <div class="cssload-ball cssload-ball-2"></div>
+                <div class="cssload-ball cssload-ball-3"></div>
+                <div class="cssload-ball cssload-ball-4"></div>
+            </div>
         </div>
-        
-      </div>
     </div>
-        
-  <!-- POPUP END  -->
-  <div class="page-wraper">
-   
-      <!-- HEADER START -->
-      <header class="site-header header-style-3 mobile-sider-drawer-menu">
-                  
-          <div class="top-bar site-bg-primary">
-              <div class="container">
+    <!-- LOADING AREA  END ====== -->
+    <div class="page-wraper">
 
-                      <div class="d-flex justify-content-between">
-                          <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
-                              <ul class="wt-topbar-info e-p-bx text-white">
-                                  <li><span> LUNDI SAMEDI</span><span>8H-19H</span></li>
-                              </ul>
-                          </div>
-                          
-                          <div class="wt-topbar-right d-flex flex-wrap align-content-center">
-                              <ul class="wt-topbar-info-2 e-p-bx text-white">
-                                  <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
-                                  <li><i class="fa fa-envelope"></i>PRENDRE RENDEZ-VOUS</li>
-                              </ul> 
-              
-                              <ul class="social-icons">
-                                  <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
-                                  <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                                  <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                                  <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                                  <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                              </ul> 
-                                                                        
-                          </div>
-                      </div>
 
-              </div>
-          </div>  
-                  
+        <!-- HEADER START -->
+        <header class="site-header header-style-3 mobile-sider-drawer-menu">
 
-              <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-                  <div class="main-bar">  
-                                      
-                      <div class="container clearfix"> 
-                  
-                          <div class="logo-header">
-                              <div class="logo-header-inner logo-header-one">
-                                  <a href="index.html">
-                                      <img src="images/SM_258x74.svg" alt="">
+            <div class="top-bar site-bg-primary">
+                <div class="container">
 
-                                  </a>
-                              </div>
-                          </div>  
-                          
-                          <!-- NAV Toggle Button -->
-                          <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                              <span class="sr-only">Toggle navigation</span>
-                              <span class="icon-bar icon-bar-first"></span>
-                              <span class="icon-bar icon-bar-two"></span>
-                              <span class="icon-bar icon-bar-three"></span>
-                          </button> 
+                    <div class="d-flex justify-content-between">
+                        <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                            <ul class="wt-topbar-info e-p-bx text-white">
+                                <li><span> Lundi samedi</span><span>8h-19h</span></li>
+                            </ul>
+                        </div>
 
-                           <!-- MAIN Vav -->
-                          <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
-                              
-                              <ul class=" nav navbar-nav menu-size">
-                                  <li class="has-child"><a href="javascript:;">lES FENETRES</a>
-                                      <ul class="sub-menu">
-                                          <li><a href="EcleaRange.html">GAMME ECLIA</a>
-                                              <ul class="sub-menu">
-                                                 
-                                                  <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
-                                                  <li><a href="AluStrikeWindow.html">GACHE FENETRE ALU</a></li>
-                                                  <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
-                                                  <li><a href="AluBrickPartition.html">CLOISON EN BRIQUE</a></li>
-                                              </ul>
-                                          </li>
-                                          <li><a href="TrendRange.html">GAMME DE TENDANCE</a>
-                                              <ul class="sub-menu">
-                                                  <li><a href="PVCWindow.html">FENETRE PVC</a></li>
-                                                  <li><a href="RangeAluStrike.html">GACHE FENETRE ALU</a></li>
-                                                  <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
-                                              </ul>
-                                          </li>
-                                          <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
-                                              <ul class="sub-menu">
-                                                  <li><a href="WoodenWindow.html">FENETRE EN BOIS</a></li>
-                                              </ul>
-                                          </li>
-                                      </ul>
-                                  </li>
+                        <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                            <ul class="wt-topbar-info-2 e-p-bx text-white">
+                                <li data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)"
+                                        class="text-white"><i class="fa fa-phone"></i>Call Back</a></li>
+                                <li><i class="fa fa-envelope"></i>make an Appoinment</li>
+                            </ul>
 
-                                  <li class="has-child">
-                                      <a href="javascript:;">VOLETS</a>
-                                      <ul class="sub-menu">
-                                          <li><a href="swing Shutter.html">VOLET BATTANT</a>
-                                              <ul class="sub-menu">
-                                                  <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                                                  <li><a href="woodenShutters.html">VOLET A CHARNIERE EN BOIS</a></li>
-                                                  <li><a href="pvcShutters.html">VOLET PVC</a></li>
-                                              </ul>
-                                          </li>
+                            <ul class="social-icons">
+                                <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                            </ul>
 
-                                          <li><a href="rollerShutters.html">VOLET ROULANT</a>
-                                              <ul class="sub-menu">
-                                                  <li><a href="zenithShutter.html">OBTURATEUR 2.0 ZENITH </a></li>
-                                                  <li><a href="zibaie component.html">COMPOSANTE IZIBAIE</a></li>
-                                                  <li><a href="vr4a component.html">COMPOSANTE VR4A</a></li>
-                                              </ul>
-                                          </li>                                           
-                                      </ul>                                
-                                  </li>
+                        </div>
+                    </div>
 
-                                  <li class="has-child"><a href="javascript:;">PORTES D'ENTREE</a>
-                                      <ul class="sub-menu">
-                                         
-                                          <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE ALU MONOBLOC</a></li>
-                                          <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE CLOISONNEES ALU</a></li>
-                                          <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
-                                          <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a></li>
-                                          <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE CLOISONNEES EN PVC</a></li>
-                                          <li><a href="harmony-product.html">EXCLUSIVITE DU PRODUIT HARMONY</a></li>
-                                      </ul>                                                                 
-                                  </li>
-                         
-                                  <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
-                                      <ul class="sub-menu">
-                                         
-                                          <li><a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a></li>                                        
-                                          <li><a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a></li>
-                                          <li><a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a></li>
-                                          <li><a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a></li>                                       
-                                      </ul>                                
-                                  </li>
+                </div>
+            </div>
 
-                                  
-                          
-                                  <li class="has-child"><a href="javascript:;">PORTAILS</a>
-                                      <ul class="sub-menu">
-                                          
-                                          <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>                                        
-                                          <li><a href="portalALU.html">PORTE DE CRI</a></li>
-                                          <li><a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a></li>
-                                      </ul>
-                                                                  
-                                  </li>
-                                  <li class="has-child"><a href="javascript:;">AUVENTS & PERGOLAS</a>
-                                      <ul class="sub-menu">
-                                         
-                                                  <li><a href="interior blind.html">STORE INTERIEUR</a></li>                                        
-                                                  <li><a href="awning.html">AUVENTS</a></li>
-                                                  <li><a href="pergola.html">PERGOLAS</a></li>
-                                      </ul>                                
-                                  </li>                                                                
-                              </ul>
-                          </div> 
-                      </div>    
-                  </div>
+
+            <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+                <div class="main-bar">
+
+                    <div class="container clearfix">
+
+                        <div class="logo-header">
+                            <div class="logo-header-inner logo-header-one">
+                                <a href="index.html">
+                                    <img src="images/home/sm@0.75x.png" alt="">
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- NAV Toggle Button -->
+                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
+                            class="navbar-toggler collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar icon-bar-first"></span>
+                            <span class="icon-bar icon-bar-two"></span>
+                            <span class="icon-bar icon-bar-three"></span>
+                        </button>
+
+                        <!-- MAIN Vav -->
+                        <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
+
+                            <ul class=" nav navbar-nav menu-size">
+                                <li class="has-child"><a href="javascript:;">Windows</a>
+                                    <ul class="sub-menu">
+                                        <!-- <li><a href="index.html">Home 1</a></li>
+                                                    <li><a href="index-2.html">Home 2</a></li>
+                                                    <li><a href="index-3.html">Home 3</a></li>
+                                                    <li><a href="index-4.html">Home 4</a></li> -->
+                                        <li><a href="EcleaRange.html">Eclea Range 1</a>
+                                            <ul class="sub-menu">
+
+                                                <li><a href="compositeWindow.html">Composite Window</a></li>
+                                                <li><a href="AluStrikeWindow.html">ALU Strike Window</a></li>
+                                                <li><a href="AluSlidingWindow.html">ALU sliding</a></li>
+                                                <li><a href="AluBrickPartition.html">ALU brick partition</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="TrendRange.html">Trend Range</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="PVCWindow.html">PVC Window</a></li>
+                                                <li><a href="RangeAluStrike.html">ALU Strike Window</a></li>
+                                                <li><a href="AluSlidingWindow.html">ALU sliding</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="#">Wood Window Range</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="WoodenWindow.html">Wood Window</a></li>
+                                            </ul>
+                                        </li>
+                                        <!-- <li><a href="index-4.html">Home 4</a></li> -->
+                                    </ul>
+                                </li>
+
+                                <li class="has-child">
+                                    <a href="javascript:;">Shutters</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="swing Shutter.html">SWING Shutters</a>
+                                            <ul class="sub-menu">
+                                                <!-- <li><a href="about-1.html">About us 1</a></li>
+                                                            <li><a href="about-2.html">About us 2</a></li> -->
+                                                <li><a href="aluSwing.html">ALU Swing shutter</a></li>
+                                                <li><a href="woodenShutters.html">WOODEN HINGE Shutter</a></li>
+                                                <li><a href="pvcShutters.html">PVC Shutter</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <li><a href="rollerShutters.html">ROLLER Shutters</a>
+                                            <ul class="sub-menu">
+                                                <!-- <li><a href="our-team.html">Team</a></li>
+                                                            <li><a href="our-team-detail.html">Team Detail</a></li> -->
+                                                <li><a href="zenithShutter.html">Zenith 2.0 shutter</a></li>
+                                                <li><a href="zibaie component.html">Izibaie component</a></li>
+                                                <li><a href="vr4a component.html">VR4A component</a></li>
+                                            </ul>
+                                        </li>
+
+                                        <!-- <li><a href="faq.html">Faq</a></li>
+                                            <li><a href="pricing.html">Pricing</a></li>
+                                            <li><a href="error-404.html">Error-404</a></li>
+                                            <li><a href="icon-font.html">Icon Font</a></li>                                               -->
+                                    </ul>
+                                </li>
+
+                                <li class="has-child"><a href="javascript:;">Entrance Doors</a>
+                                    <ul class="sub-menu">
+                                        <!-- <li><a href="services.html">Services 1</a></li>
+                                                    <li><a href="services-2.html">Services 2</a></li>
+                                                    <li><a href="service-detail.html">Services Detail</a></li> -->
+                                        <li><a href="one-pieceAluEntranceDoors.html">One-piece ALU Entrance Doors</a>
+                                        </li>
+                                        <li><a href="alu-parclosedEntranceDoors.html">ALU Parclosed Entrance Doors</a>
+                                        </li>
+                                        <li><a href="alu-glazedEntranceDoors.html">ALU Glazed Entrance Doors</a></li>
+                                        <li><a href="steel-EntranceDoors.html">STEEL entrance doors</a></li>
+                                        <li><a href="pvc-parclosedEntranceDoor.html">PVC Parclosed Entrance Doors</a>
+                                        </li>
+                                        <li><a href="harmony-product.html">HARMONY | Product exclusivity</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-child"><a href="javascript:;">Garage Doors</a>
+                                    <ul class="sub-menu">
+                                        <!-- <li><a href="project-1.html">Projects 1</a></li>                                        
+                                                    <li><a href="project-2.html">Projects 2</a></li>
+                                                    <li><a href="project-single.html">Projects Single</a></li> -->
+                                        <li><a href="sideGarageDoor.html">Side garage door</a></li>
+                                        <li><a href="rollUpGarageDoor.html">Roll-up garage door</a></li>
+                                        <li><a href="slidingGarageDoor.html">Sliding garage door</a></li>
+                                        <li><a href="sectionalGarageDoor.html">Sectional garage door</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="has-child"><a href="javascript:;">Portals</a>
+                                    <ul class="sub-menu">
+                                        <!-- <li><a href="blog-grid.html">Blog Grid</a></li>                                        
+                                                    <li><a href="blog-list.html">Blog List</a></li>
+                                                    <li><a href="blog-masonry.html">Blog Masonry</a></li>
+                                                    <li><a href="blog-single.html">Blog Single</a></li> -->
+                                        <li><a href="portalPVC.html">PVC gate</a></li>
+                                        <li><a href="portalALU.html">ALU gate</a></li>
+                                        <li><a href="portalIron.html">Ironwork Portal</a></li>
+                                    </ul>
+                                </li>
+                                <li class="has-child"><a href="javascript:;">Awnings & Pergolas</a>
+                                    <ul class="sub-menu">
+                                        <!-- <li><a href="shop.html">Shop</a></li>                                        
+                                                    <li><a href="shop-detail.html">Shop Detail</a></li> -->
+                                        <li><a href="interior blind.html">Interior blind</a></li>
+                                        <li><a href="awning.html">Awning</a></li>
+                                        <li><a href="pergola.html">Pergola</a></li>
+                                    </ul>
+                                </li>
+                                <!-- <li><a href="contact.html">Contact</a></li>   -->
+
+                            </ul>
+
+                        </div>
+
+                        <!-- Header Right Section-->
+                        <div class="extra-nav header-2-nav">
+                            <!-- <div class="extra-cell">
+                                    <div class="header-search">
+                                        <a href="#search" class="header-search-icon"><i class="fa fa-search"></i></a>
+                                    </div>                                
+                                </div>
+                                <div class="extra-cell">
+                                    <div class="header-nav-request">
+                                        +33 659966202
+                                    </div>
+                                </div>  -->
+
+                        </div>
+
+
+
+                    </div>
 
 
                 </div>
 
                 <!-- SITE Search -->
-                  <div id="search"> 
-                      <span class="close"></span>
-                      <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                          <div class="input-group">
-                              <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
-                              <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
-                          </div> 
-                      </form>
-                  </div> 
-              </div>
+                <div id="search">
+                    <span class="close"></span>
+                    <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                        <div class="input-group">
+                            <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
+                            <span class="input-group-append"><button type="button" class="search-btn"><i
+                                        class="fa fa-paper-plane"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </header>
         <!-- HEADER END -->
 
@@ -432,27 +399,27 @@
                         <div class="flex-container " id="choice">
 
                             <div class="window-hover" onclick="getWindow();">
-                                <img src="images/request-img/fenetres.ba20bf4e.png" width="100px" alt="">
+                                <img src="images/req-img-1/window-1.png" width="100px" alt="">
                                 <p style="font-size: medium;" id="window-page">Window </p>
                             </div>
                             <div class="shutter-hover" onclick=" getShutter();">
-                                <img src="images/request-img/2.png" width="100px" alt="">
+                                <img src="images/req-img-1/shutter-1.png" width="100px" alt="">
                                 <p style="font-size: medium;" id="shutter-page">Shutters </p>
                             </div>
                             <div class="door-hover" onclick="getDoor()">
-                                <img src="images/request-img/3.png" width="100px" alt="">
+                                <img src="images/req-img-1/door-1.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="door-page"> Doors</p>
                             </div>
                             <div class="garage-hover" onclick="getGarage()">
-                                <img src="images/request-img/4.png" width="100px" alt="">
+                                <img src="images/req-img-1/garg.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="garage-page">Garage Doors</p>
                             </div>
                             <div class="portal-hover" onclick="getPortal()">
-                                <img src="images/request-img/5.png" width="100px" alt="">
+                                <img src="images/req-img-1/por.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="portal-page">Portals</p>
                             </div>
                             <div class="pergola-hover" onclick="getPergola()">
-                                <img src="images/request-img/6.png" width="90px" alt="">
+                                <img src="images/req-img-1/pergola-1.jpg" width="90px" alt="">
                                 <p style="font-size: medium;" id="pergola-page">Pergola</p>
                             </div>
                         </div>
@@ -469,15 +436,15 @@
                                 <div class="flex-container ">
 
                                     <div class="window-hover" onclick="countWindow()">
-                                        <img src="images/win1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/win-1.1.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-2">Windows </p>
                                     </div>
                                     <div class="shutter-hover" onclick="countWindow1()">
-                                        <img src="images/request-img/win2.png" width="100px" alt="">
+                                        <img src="images/req-img-1/win-1.2.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-3">Doors </p>
                                     </div>
                                     <div class="door-hover"  onclick="countWindow2()">
-                                        <img src="images/request-img/win3.png" width="100px" alt="">
+                                        <img src="images/req-img-1/win-1.3.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="window-page-4"> Roof-Window</p>
                                     </div>
                                     <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -556,16 +523,16 @@
                                 <div class="flex-container">
 
                                     <div class="window-hover text-dark " id="for1" onclick="windowFor1();">
-                                        <img src="images/request-img/win-type1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/alu-1.png" width="100px" alt="">
                                         Aluminium
                                     </div>
 
                                     <div class="shutter-hover text-dark " id="for2" onclick="windowFor2()">
-                                        <img src="images/request-img/win-type2.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/pvc-1.png" width="100px" alt="">
                                         PVC
                                     </div>
                                     <div class="shutter-hover text-dark" id="for3" onclick="windowFor3()">
-                                        <img src="images/request-img/win-type3.png" width="100px" alt="">
+                                        <img src="images/req-img-1/pvc-alu.jpg" width="100px" alt="">
                                         PVC ALU
                                     </div>
                                 </div>
@@ -585,12 +552,12 @@
                                 <div class="flex-container">
 
                                     <div class="window-hover " id="type1" onclick="windowWork()">
-                                        <img src="images/request-img/win-reno-1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/reno-1.png" width="100px" alt="">
                                         <p style="font-size: medium;">Renovation</p>
                                     </div>
 
                                     <div class="shutter-hover " id="type2" onclick="windowWork1()">
-                                        <img src="images/request-img/win-reno-2.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/cons-1.png" width="100px" alt="">
                                         <p style="font-size: medium;">Construction</p>
                                     </div>
                                 </div>
@@ -647,15 +614,15 @@
                             <div class="flex-container ">
 
                                 <div class="window-hover" onclick="var s1= countShutter();">
-                                    <img src="images/request-img/shut1.webp" width="100px" alt="">
+                                    <img src="images/req-img-1/shut-1.1.jpg" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-2">Wheels </p>
                                 </div>
                                 <div class="shutter-hover" onclick="var s2= countShutter1()">
-                                    <img src="images/request-img/shut2.webp" width="100px" alt="">
+                                    <img src="images/req-img-1/shut-1.3.png" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-3">Casements </p>
                                 </div>
                                 <div class="door-hover"  onclick="var s3= countShutter2()">
-                                    <img src="images/request-img/shut3.webp" width="100px" alt="">
+                                    <img src="images/req-img-1/shut-1.2.png" width="100px" alt="">
                                     <p style="font-size: medium;" id="shutter-page-4">Folding</p>
                                 </div>
                                 <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -685,15 +652,15 @@
                                 <div class="flex-container ">
     
                                     <div class="window-hover" onclick="countDoor()">
-                                        <img src="images/request-img/door-1.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.1.jpg" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-2">Entrance </p>
                                     </div>
                                     <div class="shutter-hover" onclick="countDoor1()">
-                                        <img src="images/request-img/door-2.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.2.jpg" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-3">Armorded </p>
                                     </div>
                                     <div class="door-hover"  onclick="countDoor2()">
-                                        <img src="images/request-img/door3.webp" width="100px" alt="">
+                                        <img src="images/req-img-1/door-1.3.png" width="100px" alt="">
                                         <p style="font-size: medium;" id="door-page-4">Services</p>
                                     </div>
                                     <!-- <div class="garage-hover"  onclick="countChoice3()">
@@ -726,16 +693,16 @@
                                     <div class="flex-container ">
         
                                         <div class="window-hover" onclick="countGarage()">
-                                            <img src="images/request-img/gar-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/garage-1.1.jpg" width="100px" alt="">
                                             <p style="font-size: medium;" id="garage-page-2">Garage Door </p>
                                         </div>
                                         <div class="shutter-hover" onclick="countGarage1()">
-                                            <img src="images/request-img/gar-2.png" width="100px" alt="">
+                                            <img src="images/req-img-1/garage-1.2.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="garage-page-3">Gates </p>
                                         </div>
                                         <div class="door-hover"  onclick="countGarage2()">
-                                            <img src="images/request-img/gar-1.webp" width="100px" alt="">
-                                            <p style="font-size: medium;" id="garage-page-4">Gates</p>
+                                            <img src="images/req-img-1/garage-1.3.jpg" width="100px" alt="">
+                                            <p style="font-size: medium;" id="garage-page-4">Garage</p>
                                         </div>
                                         <!-- <div class="garage-hover"  onclick="countChoice3()">
                                             <img src="images/request-img/win4.png" width="100px" alt="">
@@ -768,11 +735,11 @@
                                     <div class="flex-container ">
         
                                         <div class="window-hover" onclick="countPortal()">
-                                            <img src="images/request-img/por-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/portal-1.3.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="portal-page-2">Portal Door </p>
                                         </div>
                                         <div class="shutter-hover" onclick="countPortal1()">
-                                            <img src="images/request-img/por-1.webp" width="100px" alt="">
+                                            <img src="images/req-img-1/portal-1.5.png" width="100px" alt="">
                                             <p style="font-size: medium;" id="portal-page-3">Portal </p>
                                         </div>
                                         <!-- <div class="door-hover"  onclick="countPortal2()">
@@ -801,20 +768,19 @@
                                 <!-- Pergola 1.1 -->
                                 <div class="container" id="pergola-page-1">
                                     <div class="container second p-1">
-                                        <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
-                                            Page</button>
+                                        <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous Page</button>
                                         <br><br>
                                         <h3 class="form">Quote Request</h3>
                                         <p class="text-dark">What windows are you looking for?</p>
                                         <div class="flex-container ">
             
                                             <div class="window-hover" onclick="countPergola()">
-                                                <img src="images/request-img/per-1.webp" width="100px" alt="">
+                                                <img src="images/req-img-1/pergola-1.1.png" width="100px" alt="">
                                                 <p style="font-size: medium;" id="pergola-page-2">Pergolas </p>
                                             </div>
                                             <div class="shutter-hover" onclick="countPergola1()">
-                                                <img src="images/request-img/per-2.png" width="100px" alt="">
-                                                <p style="font-size: medium;" id="pergola-page-3">Store banne </p>
+                                                <img src="images/req-img-1/awnings.jpg" width="100px" alt="">
+                                                <p style="font-size: medium;" id="pergola-page-3">Awnings </p>
                                             </div>
                                             <!-- <div class="door-hover"  onclick="countPortal2()">
                                                 <img src="images/request-img/gar-1.webp" width="100px" alt="">
@@ -851,7 +817,7 @@
 
                 <div class="col-sm-6 container">
                     <div class="outer-box">
-                        <img src="images/project-productImages/SERPENTAIRE_AMBIANCE-AMBORPS408_.jpg" style="opacity: 0.6; width: 100%; height: 80vh;overflow: hidden;"
+                        <img src="images/request-img/req3.png" style="opacity: 0.6; width: 100%; height: 80vh;overflow: hidden;"
                             alt="" class="">
                         <div class="middle text-dark">
                             <div class="mb-3 text-dark">Your quote request in 2min</div>
