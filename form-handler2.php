@@ -1,78 +1,55 @@
 <?php
-/**
- * File Name: form-handler.php
- *
- * Process contact form to send mail
- *
- */
-if ( isset( $_POST['action'] ) ):
+ob_start();
+?>
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+require_once 'PHPMailer/src/Exception.php';
+require_once 'PHPMailer/src/PHPMailer.php';
+require_once 'PHPMailer/src/SMTP.php';
 
-    $name = filter_var( $_POST['username'], FILTER_SANITIZE_STRING );
-    $from_email = filter_var( $_POST['email'], FILTER_SANITIZE_EMAIL );
-    $phone = filter_var( $_POST['phone'], FILTER_SANITIZE_STRING );
-	$subject = filter_var( $_POST['subject'], FILTER_SANITIZE_STRING );
-	$message = filter_var( $_POST['message'], FILTER_SANITIZE_STRING );
-	
+$civility = htmlentities($_POST['civility']);    
+$name = htmlentities($_POST['username']);
+$firstname = htmlentities($_POST['firstname']);
+$city = htmlentities($_POST['city']);
+$phone = htmlentities($_POST['phone']);
+$check1 = htmlentities($_POST['check1']);
+$check2 = htmlentities($_POST['check2']);
+$message = htmlentities($_POST['message']);
 
-    $to_email = "thewebmaxmail@gmail.com";    // To email address
-    $to_name = "thewebmax";
+$mail = new PHPMailer();
+$mail->IsSMTP();  
+$mail->SMTPDebug = 2;
+$mail->Mailer = "smtp";
+$mail->Host = "smtp.gmail.com";
+$mail->Port = 587;
+$mail->SMTPAuth = true; 
+$mail->Username = "noreply.nandalalainfotech@gmail.com";
+$mail->Password = "yuntjikzkpxmhdoj";
+$mail->AddAddress("abinayaselvaraj26.04@gmail.com","");
 
-    $email_subject = 'You Have Received a Message From ' . $name . '.';
+$mail->SetFrom($fname);
+    $firstname = isset($_POST['firstname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['firstname']) : "";    
+    $lname = isset($_POST['lname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['lname']) : "";  
+    $mobile = isset($_POST['phone']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['phone']) : "";
+    $location = isset($_POST['message']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['message']) : "";
 
-    if ( ! empty( $name ) ) {
-        $email_subject = $name . '.';
-    }
-
-    $email_body = "You have Received a message from: " . $name . " <br/>";
-	
-	$email_body .= "Subject: " . $subject . " <br/>";
-	
-	$email_body .= "Phone: " . $phone . " <br/>";
-
-    $email_content = $message . " <br/><br/>";
-
-    $email_reply = 	"You can contact " . $name . " via email, " . $from_email ;
-
-    $prepared_message = $email_body . $email_content . $email_reply;
-
-    // You can consult https://github.com/eoghanobrien/php-simple-mail for more details
-    require 'class.simple_mail.php';
-
-    /* @var SimpleMail $mail */
-    $mail = new SimpleMail();
-    $mail->setTo( $to_email, $to_name )
-        ->setSubject( $email_subject )
-        ->setFrom( $from_email, $name )
-        ->addMailHeader( 'Reply-To', $from_email, $name )
-        ->addGenericHeader( 'X-Mailer', 'PHP/' . phpversion() )
-        ->addGenericHeader( 'Content-Type', 'text/html; charset="utf-8"' )
-        ->setMessage( $prepared_message );
+$mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
+$mail->Body .='CIVILITY :' . $civility . "\n";
+$mail->Body .=' NAME :' . $name . "\n";
+$mail->Body .='FIRST NAME :' . $firstname . "\n";
+$mail->Body .='CITY :' . $city . "\n";
+$mail->Body .='PHONE NUMBER :' . $phone . "\n";
+$mail->Body .='MESSAGE :' . $message . "\n";
 
 
-    $sent = $mail->send();
-
-    //echo $mail->debug();
-
-    if( $sent ) {
-        echo json_encode(array(
-            'success' => true,
-            'message' => "Message Sent Successfully!"
-        ));
+$mail->WordWrap = 50;
+if(!$mail->Send()) {
+    echo 'Message was not sent.';
+    echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-        echo json_encode(array(
-                'success' => false,
-                'message' => "Server Error:  mail method failed!"
-            )
-        );
+    echo 'Message has been sent.';
+    echo '<script>alert("Your message sent successfully!!")</script>';
     }
-
-else:
-
-    echo json_encode(array(
-            'success' => false,
-            'message' => "Invalid Request !"
-        )
-    );
-endif;
-
-die;
+    header("Location:thankyou.html");
+    ?>
