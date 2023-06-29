@@ -12,11 +12,10 @@
 
     <!-- FAVICONS ICON -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-icon" href="images/favicon.png" />
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/li bs/jquery/2.1.3/jquery.min.js"></script> -->
-
+    <link rel="shortcut icon" type="image/x-icon" href="images/Fav_Sm.png" />
+    
     <!-- PAGE TITLE HERE -->
-    <title>Consza Template | Error 404</title>
+    <title>Sergent Menuiserie| Rendez-vous</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -84,9 +83,6 @@
 
 </head>
 <style>
-    #main{
-        font-size: 18px;
-    }
     #spinner{
         display: none;
         position: absolute;
@@ -428,11 +424,60 @@
             </form>
         </div>
      </div> -->
+   <!-- CONTACT US START -->
+   <style>
+    @keyframes blink{
+         0% {
+        transform: scale(1);
+         }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+    }
+    #fix:hover{
+        animation-play-state: paused;
+    }
+    #fix{
+        height: 4rem;
+        z-index: 4;
+        position: fixed;
+        top: 150px;
+        right: 15px;
+        font-size: 12px;
+        animation: blink 2s infinite ease-in;
+    }
+    #fix ul li img{
+        width: 4rem;
+        border-radius: 25%;
+    }
+    #fix ul{
+        list-style-type: none;
+    }
+    #fix:hover #hider{
+        visibility: visible;
+    }
+    #hider{ 
+        visibility: hidden;
+        color: rgb(233, 134, 63);
+        }
 
+ </style>
+ <div id="fix">
+    <a href="appointment2.html">
+     <ul >
+         <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+         <li id="hider">Contact Us</li>
+     </ul>
+    </a>
+ </div>
+  <!-- CONTACT US END -->
 
         <!-- CONTENT END -->
 
-        <div class="container-fluid p-5" style="background-color: gainsboro;" id="main">
+        <div class="container-fluid p-5" style="background-color: gainsboro;">
            <form action="appointment2.php" method="post">
             <div class="row ">
                <div class="col-sm-12">
@@ -572,6 +617,7 @@
     
             </div>
         </div>
+        
         <!-- FOOTER COPYRIGHT -->
                             
         <div class="footer-bottom bg-light p-2">
@@ -592,10 +638,10 @@
                     
                 </div>
             </div>   
-        </div>  
-    
+        </div> 
     </footer>
     <!-- FOOTER END -->
+ 
     <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
 
         
