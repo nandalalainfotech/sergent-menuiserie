@@ -53,7 +53,81 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 
+    <!-- JQUERY LINK   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+         function clearForm(){
+            document.getElementById('fname').value="";
+            document.getElementById('lname').value="";
+            document.getElementById('mobile').value="";
+            document.getElementById('location').value="";
+        }
+        function showSpin(){
+            let x= document.getElementById('mobile').value;
+            if(x.length==10){
+                document.getElementById('spinner').style.display = 'block';
+                document.getElementById('spin-content').style.display = 'block';
+            }
+           
+        }
+        function showOffSpin(){
+            // let x= document.getElementById('mobile').value;
+          //  if(x.length==10)
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('spin-content').style.display = 'none';
+        }
+        $(document).ready(function(){
+            $("#modal").click(function(){
+             $("#myModal").modal({backdrop: "static"});
+            });
+        })
+    </script>
 </head>
+<style>
+  #spinner{
+      display: none;
+      position: absolute;
+      left: 15rem;
+      top: 11rem;
+      bottom: 0;
+      right: 0;
+  }
+  #spin-content{
+      display: none;
+      margin-left: 11rem;
+  }
+/* PROJECT SECTION START  */
+.section-head.center.wt-small-separator-outer h2 {
+max-width: 900px;
+margin: 0px auto;
+}
+
+@media (max-width: 1200px) {
+.section-head.center.wt-small-separator-outer h2 {
+  font-size: 50px;
+}
+}
+
+@media (max-width: 1024px) {
+.section-head.center.wt-small-separator-outer h2 {
+  font-size: 30px;
+}
+}
+
+@media (max-width: 768px) {
+.section-head.center.wt-small-separator-outer h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+}
+/* PROJECT CHOOSE SECTION END  */
+
+.fonts{
+  font-size: x-small;
+}
+</style>
+
+
 
 <body>
     <!-- LOADING AREA START ===== -->
@@ -71,7 +145,43 @@
     <!-- LOADING AREA  END ====== -->
     <div class="page-wraper">
 
-
+       <!-- POPUP START  -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog modal-md">
+      
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+              <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+          </div>
+          <div class="modal-body">
+              <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
+              <form action="mail.php" method="post">
+                  <label for="fname" class="pb-2">Prénom</label><br>
+                  <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
+                  <label for="lname" class="pb-2">nom de famille</label><br>
+                  <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
+                  <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
+                  <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+                  <label for="location" class="pb-2">emplacement</label><br>
+                  <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
+                  <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+              </form>
+              <div>
+                  <div class="spinner-border text-success my-3 " id="spinner"></div>
+                  <div id="spin-content" class="mt-3">please wait...</div>
+              </div>
+          </div>
+          <!-- <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+          </div> -->
+        </div>
+        
+      </div>
+    </div>
+        
+  <!-- POPUP END  -->
         <!-- HEADER START -->
         <header class="site-header header-style-3 mobile-sider-drawer-menu">
 
@@ -89,7 +199,7 @@
                             <ul class="wt-topbar-info-2 e-p-bx text-white">
                                 <li data-toggle="modal" data-target="#myModal"><a href="javascript:void(0)"
                                         class="text-white"><i class="fa fa-phone"></i>Call Back</a></li>
-                                <li><i class="fa fa-envelope"></i>make an Appoinment</li>
+                                <li><a href="request.html"  class="text-white"><i class="fa fa-envelope"></i>Appointment</a></li>
                             </ul>
 
                             <ul class="social-icons">
@@ -114,7 +224,7 @@
 
                         <div class="logo-header">
                             <div class="logo-header-inner logo-header-one">
-                                <a href="index.html">
+                                <a href="index-3.html">
                                     <img src="images/home/sm@0.75x.png" alt="">
                                 </a>
                             </div>
@@ -137,7 +247,7 @@
                                     <ul class="sub-menu">
                                         <!-- <li><a href="index.html">Home 1</a></li>
                                                     <li><a href="index-2.html">Home 2</a></li>
-                                                    <li><a href="index.html">Home 3</a></li>
+                                                    <li><a href="index-3.html">Home 3</a></li>
                                                     <li><a href="index-4.html">Home 4</a></li> -->
                                         <li><a href="EcleaRange.html">Eclea Range 1</a>
                                             <ul class="sub-menu">
@@ -170,8 +280,8 @@
 
                                         <li><a href="swing Shutter.html">SWING Shutters</a>
                                             <ul class="sub-menu">
-                                                <!-- <li><a href="javascript:void(0)">About us 1</a></li>
-                                                            <li><a href="javascript:void(0)">About us 2</a></li> -->
+                                                <!-- <li><a href="about-1.html">About us 1</a></li>
+                                                            <li><a href="about-2.html">About us 2</a></li> -->
                                                 <li><a href="aluSwing.html">ALU Swing shutter</a></li>
                                                 <li><a href="woodenShutters.html">WOODEN HINGE Shutter</a></li>
                                                 <li><a href="pvcShutters.html">PVC Shutter</a></li>
@@ -181,14 +291,14 @@
                                         <li><a href="rollerShutters.html">ROLLER Shutters</a>
                                             <ul class="sub-menu">
                                                 <!-- <li><a href="our-team.html">Team</a></li>
-                                                            <li><a href="#">Team Detail</a></li> -->
+                                                            <li><a href="our-team-detail.html">Team Detail</a></li> -->
                                                 <li><a href="zenithShutter.html">Zenith 2.0 shutter</a></li>
                                                 <li><a href="zibaie component.html">Izibaie component</a></li>
                                                 <li><a href="vr4a component.html">VR4A component</a></li>
                                             </ul>
                                         </li>
 
-                                        <!-- <li><a href="javascript:void(0)">Faq</a></li>
+                                        <!-- <li><a href="faq.html">Faq</a></li>
                                             <li><a href="pricing.html">Pricing</a></li>
                                             <li><a href="error-404.html">Error-404</a></li>
                                             <li><a href="icon-font.html">Icon Font</a></li>                                               -->
@@ -214,9 +324,9 @@
 
                                 <li class="has-child"><a href="javascript:;">Garage Doors</a>
                                     <ul class="sub-menu">
-                                        <!-- <li><a href="javascript:void(0)">Projects 1</a></li>                                        
+                                        <!-- <li><a href="project-1.html">Projects 1</a></li>                                        
                                                     <li><a href="project-2.html">Projects 2</a></li>
-                                                    <li><a href="javascript:void(0)">Projects Single</a></li> -->
+                                                    <li><a href="project-single.html">Projects Single</a></li> -->
                                         <li><a href="sideGarageDoor.html">Side garage door</a></li>
                                         <li><a href="rollUpGarageDoor.html">Roll-up garage door</a></li>
                                         <li><a href="slidingGarageDoor.html">Sliding garage door</a></li>
@@ -228,10 +338,10 @@
 
                                 <li class="has-child"><a href="javascript:;">Portals</a>
                                     <ul class="sub-menu">
-                                        <!-- <li><a href="javascript:void(0)">Blog Grid</a></li>                                        
+                                        <!-- <li><a href="blog-grid.html">Blog Grid</a></li>                                        
                                                     <li><a href="blog-list.html">Blog List</a></li>
                                                     <li><a href="blog-masonry.html">Blog Masonry</a></li>
-                                                    <li><a href="javascript:void(0)">Blog Single</a></li> -->
+                                                    <li><a href="blog-single.html">Blog Single</a></li> -->
                                         <li><a href="portalPVC.html">PVC gate</a></li>
                                         <li><a href="portalALU.html">ALU gate</a></li>
                                         <li><a href="portalIron.html">Ironwork Portal</a></li>
@@ -246,7 +356,7 @@
                                         <li><a href="pergola.html">Pergola</a></li>
                                     </ul>
                                 </li>
-                                <!-- <li><a href="javascript:void(0)">Contact</a></li>   -->
+                                <!-- <li><a href="contact.html">Contact</a></li>   -->
 
                             </ul>
 
@@ -380,19 +490,46 @@
             #door-page-1,
             #garage-page-1,
            #portal-page-1,
-           #pergola-page-1{
+           #pergola-page-1,
+           #show2,#show3{
                 display: none;
             }
+            @media screen and (max-width:572px) {
+                #div1{
+                   margin-left: 5rem;
+
+                }
+            }
+            #div1{cursor: pointer;}
         </style>
 
 
         <!-- Window Quote Request Start -->
         <!-- CONTENT START -->
-        <div class="container-fluid p-3 text-white">
+        <div class="container-fluid p-3  text-white">
             <div class="row">
-                <div class="col-sm-6 bg-light">
-                    <div class="container p-3">
+                <div class="container-fluid mt-5" id="show1">
+                    <div class="row">
+                        <div class="col-sm-4"></div>
+                        <div class="col-sm-2 text-dark" id="div1" onclick="reqOpen1()">
+                            <img  src="images/req-img-1/parti.png" alt="" width="200rem">
+                            <li style="list-style-type: none;margin-left: 3.2rem;" id="list1"> Particular </li> 
+                        </div>
+                        <div class="col-sm-2 text-dark" id="div1" onclick="reqOpen2()">
+                            <img src="images/req-img-1/const-person.png" alt="" width="200rem">
+                            <li style="list-style-type: none;margin-left: 3rem;" id="list2"> Professional</li> 
+                        </div>
+                        <div class="col-sm-4"></div>
+                    </div>
+                </div>
+
+
+                <div class="col-sm-6 bg-light " id="show2" >
+                    <div class="container p-3" id="initial">
                         <div id="head-div">
+                            <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
+                                Page</button>
+                            <br><br>
                             <h3 class="text-dark">Quote Request</h3>
                             <p class="text-dark">Which Product you want..</p>
                         </div>
@@ -411,7 +548,7 @@
                                 <p style="font-size: medium;" id="door-page"> Doors</p>
                             </div>
                             <div class="garage-hover" onclick="getGarage()">
-                                <img src="images/req-img-1/garg.jpg" width="100px" alt="">
+                                <img src="images/req-img-1/garage.jpg" width="100px" alt="">
                                 <p style="font-size: medium;" id="garage-page">Garage Doors</p>
                             </div>
                             <div class="portal-hover" onclick="getPortal()">
@@ -577,22 +714,25 @@
                                     <h3 class="form">Quote Request</h3>
                                     <p class="text-dark">What is the location of your project?</p>
 
-                                    
-                                    <!-- <div class="flex-container"></div>  -->
-                                    <span class="location" id="lo1" style="display: none"> </span>
-                                    <span class="location1" id="lo2" style="display: none"> </span>
-                                    <label for="city" class="text-dark">your city</label><br>
-                                    <input type="text" name="city" id="city"><br>                       
-                                    <label for="post" class="text-dark">Postal code</label><br>
-                                    <input type="text" name="post" id="post"> <br>
-                                    <br>
-                                   <span>
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="bi bi-geo-alt text-dark" viewBox="0 0 16 16">
-                                        <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
-                                        <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                                      </svg>
-                                   </span><button onclick="fun()" class="btn btn-info">GET YOUR LOCATION</button> <br>
-                                  <button class="btn btn-warning mt-3">Submit</button>
+                                    <form action="appointment2.html" method="post">
+                                          <!-- <div class="flex-container"></div>  -->
+                                          <span class="location" id="lo1" style="display: none"> </span>
+                                          <span class="location1" id="lo2" style="display: none"> </span>
+                                          <label for="city" class="text-dark">your city</label><br>
+                                          <input type="text" name="city" id="city" required><br>                       
+                                          <label for="post" class="text-dark">Postal code</label><br>
+                                          <input type="text" name="post" id="post" required> <br>
+                                          <br>
+                                        <span>
+                                          <svg xmlns="http://www.w3.org/2000/svg" width="20" height="26" fill="currentColor" class="bi bi-geo-alt text-dark" viewBox="0 0 16 16">
+                                              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+                                              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                                            </svg>
+                                            <span onclick="fun()" class="text-dark">GET YOUR LOCATION</span>
+                                        </span>
+                                        <p></p>
+                                        <a href="appointment2.html" id="eventCheck1"><button class="btn btn-warning mt-3">Submit</button></a>
+                                    </form>
                                 </div>
                             </div>
                         </div>
@@ -606,7 +746,7 @@
 
                     <div class="container" id="shutter-page-1">
                         <div class="container second p-1">
-                            <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
+                            <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
                                 Page</button>
                             <br><br>
                             <h3 class="form">Quote Request</h3>
@@ -644,7 +784,7 @@
                         <!-- Door 1.1 -->
                         <div class="container" id="door-page-1">
                             <div class="container second p-1">
-                                <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
+                                <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
                                     Page</button>
                                 <br><br>
                                 <h3 class="form">Quote Request</h3>
@@ -685,7 +825,7 @@
                             <!-- Garage 1.1 -->
                             <div class="container" id="garage-page-1">
                                 <div class="container second p-1">
-                                    <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
+                                    <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
                                         Page</button>
                                     <br><br>
                                     <h3 class="form">Quote Request</h3>
@@ -702,7 +842,7 @@
                                         </div>
                                         <div class="door-hover"  onclick="countGarage2()">
                                             <img src="images/req-img-1/garage-1.3.jpg" width="100px" alt="">
-                                            <p style="font-size: medium;" id="garage-page-4">Garage</p>
+                                            <p style="font-size: medium;" id="garage-page-4">Gates</p>
                                         </div>
                                         <!-- <div class="garage-hover"  onclick="countChoice3()">
                                             <img src="images/request-img/win4.png" width="100px" alt="">
@@ -727,7 +867,7 @@
                             <!-- Portal 1.1 -->
                             <div class="container" id="portal-page-1">
                                 <div class="container second p-1">
-                                    <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous
+                                    <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
                                         Page</button>
                                     <br><br>
                                     <h3 class="form">Quote Request</h3>
@@ -768,7 +908,8 @@
                                 <!-- Pergola 1.1 -->
                                 <div class="container" id="pergola-page-1">
                                     <div class="container second p-1">
-                                        <button class="btn btn-sm text-light" style="background-color: #db5200;">Previous Page</button>
+                                        <button class="btn btn-sm text-light" style="background-color: #db5200;" onclick="windowPrev(this.parentElement.parentElement.id)">Previous
+                                            Page</button>
                                         <br><br>
                                         <h3 class="form">Quote Request</h3>
                                         <p class="text-dark">What windows are you looking for?</p>
@@ -779,8 +920,8 @@
                                                 <p style="font-size: medium;" id="pergola-page-2">Pergolas </p>
                                             </div>
                                             <div class="shutter-hover" onclick="countPergola1()">
-                                                <img src="images/req-img-1/awnings.jpg" width="100px" alt="">
-                                                <p style="font-size: medium;" id="pergola-page-3">Awnings </p>
+                                                <img src="images/request-img/per-2.png" width="100px" alt="">
+                                                <p style="font-size: medium;" id="pergola-page-3">Store banne </p>
                                             </div>
                                             <!-- <div class="door-hover"  onclick="countPortal2()">
                                                 <img src="images/request-img/gar-1.webp" width="100px" alt="">
@@ -815,18 +956,19 @@
 
 
 
-                <div class="col-sm-6 container">
+                <div class="col-sm-6 container" id="show3">
                     <div class="outer-box">
-                        <img src="images/req-img-1/req-2.jpg" style="opacity: 0.6; width: 100%; height: 80vh;overflow: hidden;"
+                        <img src="images/req-img-1/req-1.jpg" style="opacity: 0.6; width: 100%; height: 95vh;overflow: hidden;"
                             alt="" class="">
                         <div class="middle text-dark">
-                            <div class="mb-3 text-dark">Your quote request in 2min</div>
-                            <div class="inner-text text-dark p-2">
+                            <div class="mb-3 text-white">Your quote request in 2min</div>
+                            <div class="inner-text text-white p-2">
                                 <p id="content">It's simple, free and without obligation! Request a quote online and get a
                                     tailor-made price, personalized according to your project. If necessary, our experts
                                     are at your disposal to answer all your requests. So, opt without delay for the
                                     know-how of your French manufacturer TRYBA which has more than 40 years of
                                     experience!</p>
+                                    <p id="value0"></p>
                                     <p id="value1"></p>
                                     <p id="value2"></p>
                                     <p id="value3"></p>
@@ -868,9 +1010,31 @@
 
    let inner= document.querySelector(".inner-text").innerHTML;
         
-   var first_value="",second_value="",third_value="",fourth_value="",fifth_value="";
+   var first_value="",second_value="",third_value="",fourth_value="",fifth_value="",opt1="",opt2="";
       
-
+      // let input1=document.getElementById('city').value;
+      // let input2=document.getElementById('post').value;
+      //   document.getElementById("eventCheck1").addEventListener("click",
+      //     event=>{if(input1==="" || input2==="")
+      //             event.preventDefault();
+      //           else{event}})
+      
+        function reqOpen1(){
+            opt1=document.getElementById("list1").innerHTML;
+            document.getElementById("show1").style.display="none";
+            document.getElementById("show2").style.display="block";
+            document.getElementById("show3").style.display="block";
+            // document.querySelector(".inner-text").innerHTML=opt1;
+            print6();
+        }
+        function reqOpen2(){
+            opt2=document.getElementById("list2").innerHTML;
+            document.getElementById("show1").style.display="none";
+            document.getElementById("show2").style.display="block";
+            document.getElementById("show3").style.display="block";
+            // document.querySelector(".inner-text").innerHTML=opt2;
+            print7();
+        }
         function windowFor1(){
             val4 = document.getElementById('for1').innerText;
             document.getElementById("page-3").style.display = "none";
@@ -996,9 +1160,8 @@
             document.getElementById("window-page-1").style.display = "none";
             document.getElementById("page-2").style.display = "block";
             second_value=val2;
-            print2();
             // document.querySelector(".inner-text").innerHTML += "<br>" + val2;
-            
+            print2();
         }
         function countWindow1() {
             val2 = document.getElementById('window-page-3').innerHTML;
@@ -1006,7 +1169,7 @@
             document.getElementById("page-2").style.display = "block";
             //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
              second_value=val2;
-            print2();
+              print2();
         }
         function countWindow2() {
             val2 = document.getElementById('window-page-4').innerHTML;
@@ -1223,7 +1386,6 @@
         }
       
         function print1(){
-                document.querySelector("#content").innerHTML ="";
                 document.querySelector("#value1").innerHTML = first_value; 
         }
         function print2(){
@@ -1238,6 +1400,14 @@
         function print5(){
                 document.querySelector("#value5").innerHTML = fifth_value; 
         }
+        function print6(){
+                document.querySelector("#value0").innerHTML = opt1; 
+                document.querySelector("#content").innerHTML ="";
+        }
+        function print7(){
+                document.querySelector("#value0").innerHTML = opt2;
+                document.querySelector("#content").innerHTML ="";
+        }
       
         //  Garage End
 
@@ -1250,19 +1420,61 @@
                         document.getElementById("choice").style.display = "flex";
                         document.getElementById("head-div").style.display = "block";
                         document.getElementById("window-page-1").style.display = "none";
-                        document.querySelector(".inner-text").innerHTML = inner;
-                        document.querySelector(".inner-text").classList.remove("border");
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
                         document.getElementById("value1").innerHTML="";
                     break;
                     case "page-2":
                     
-                    var two= document.getElementById("value2").innerHTML;
-                      
+                         let two = document.getElementById("value2").innerHTML;
+                       
+                    if(two.includes("Windows") || two.includes("Doors") || two.includes("Roof-Window")){  
+                        console.log("true")
                             document.getElementById("window-page-1").style.display = "block";
                             document.getElementById("page-2").style.display = "none";
                             document.getElementById("value2").innerHTML="";
-                            break;
-                          
+                            break;        
+                    } 
+                  
+                    if(two.includes("Wheels") || two.includes("Casements") || two.includes("Folding")){  
+                        console.log("true")
+                            document.getElementById("shutter-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
+                            break;        
+                    } 
+                  
+                    if(two.includes("Entrance") || two.includes("Armorded") ||two.includes("Services") ){  
+                        console.log("true")
+                            document.getElementById("door-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
+                            break;        
+                    } 
+                  
+                    if(two.includes("Garage") || two.includes("Gates") || two.includes("Gates")){  
+                        console.log("true")
+                            document.getElementById("garage-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
+                            break;        
+                    } 
+                  
+                    if(two.includes("Portal Door") || two.includes("Portal")){  
+                        console.log("true")
+                            document.getElementById("portal-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
+                            break;        
+                    } 
+                  
+                    if(two.includes("Pergolas") || two.includes("Store banne")){  
+                        console.log("true")
+                            document.getElementById("pergola-page-1").style.display = "block";
+                            document.getElementById("page-2").style.display = "none";
+                            document.getElementById("value2").innerHTML="";
+                            break;        
+                    }
 
                     case "page-3": 
                            
@@ -1277,11 +1489,65 @@
                              document.getElementById("page-4").style.display = "none";
                              document.getElementById("value4").innerHTML="";
                              break;
+
                     case "page-5": 
                              document.getElementById("page-4").style.display = "block";
                              document.getElementById("page-5").style.display = "none";
                              document.getElementById("value5").innerHTML="";
+                             document.getElementById("city").value="";
+                             document.getElementById("post").value="";
                              break;
+
+                    case "initial":
+                            document.getElementById("show3").style.display = "none";
+                            document.getElementById("show2").style.display = "none";
+                            document.getElementById("show1").style.display = "block";
+                            break;
+
+                    case "shutter-page-1": 
+                        document.getElementById("choice").style.display = "flex";
+                        document.getElementById("head-div").style.display = "block";
+                        document.getElementById("shutter-page-1").style.display = "none";
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
+                        break;
+
+                        case "door-page-1": 
+                        document.getElementById("choice").style.display = "flex";
+                        document.getElementById("head-div").style.display = "block";
+                        document.getElementById("door-page-1").style.display = "none";
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
+                        break;
+
+                        case "garage-page-1": 
+                        document.getElementById("choice").style.display = "flex";
+                        document.getElementById("head-div").style.display = "block";
+                        document.getElementById("garage-page-1").style.display = "none";
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
+                        break;
+
+                        case "portal-page-1": 
+                        document.getElementById("choice").style.display = "flex";
+                        document.getElementById("head-div").style.display = "block";
+                        document.getElementById("portal-page-1").style.display = "none";
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
+                        break;
+
+                        case "pergola-page-1": 
+                        document.getElementById("choice").style.display = "flex";
+                        document.getElementById("head-div").style.display = "block";
+                        document.getElementById("pergola-page-1").style.display = "none";
+                        // document.querySelector(".inner-text").innerHTML = inner;
+                        // document.querySelector(".inner-text").classList.remove("border");
+                        document.getElementById("value1").innerHTML="";
+                        break;
                             }
             }
             
