@@ -84,19 +84,46 @@
 
 </head>
 <style>
-#spinner{
-   display: none;
-   position: absolute;
-   left: 15rem;
-   top: 11rem;
-   bottom: 0;
-   right: 0;
+    #spinner{
+        display: none;
+        position: absolute;
+        left: 15rem;
+        top: 11rem;
+        bottom: 0;
+        right: 0;
+        color: #db5200;
+    }
+    #spin-content{
+        display: none;
+        margin-left: 11rem;
+    }
+ /* PROJECT SECTION START  */
+.section-head.center.wt-small-separator-outer h2 {
+  max-width: 900px;
+  margin: 0px auto;
 }
-#spin-content{
-   display: none;
-   margin-left: 11rem;
+
+@media (max-width: 1200px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 50px;
+  }
 }
-.fonts{
+
+@media (max-width: 1024px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+ /* PROJECT CHOOSE SECTION END  */
+
+ .fonts{
     font-size: x-small;
  }
  @keyframes blink{
@@ -136,59 +163,83 @@
     visibility: hidden;
     color: rgb(233, 134, 63);
     }
+    
+    
+     
+    .s-btn {
+    border: none;
+    background-color: #db5200;
+    padding:  9px 20px ;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+
+}
+.s-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 </style>
+
 
 <body>
 <!-- LOADING AREA START ===== -->
 <div class="loading-area">
-<div class="loading-box"></div>
-<div class="loading-pic">
-   <div class="cssload-spinner">
-       <div class="cssload-ball cssload-ball-1"></div>
-       <div class="cssload-ball cssload-ball-2"></div>
-       <div class="cssload-ball cssload-ball-3"></div>
-       <div class="cssload-ball cssload-ball-4"></div>
-   </div>
-</div>
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-spinner">
+            <div class="cssload-ball cssload-ball-1"></div>
+            <div class="cssload-ball cssload-ball-2"></div>
+            <div class="cssload-ball cssload-ball-3"></div>
+            <div class="cssload-ball cssload-ball-4"></div>
+        </div>
+    </div>
 </div>
 <!-- LOADING AREA  END ====== -->
-<!-- POPUP START  -->
-<div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog modal-md">
-   
-     <!-- Modal content-->
-     <div class="modal-content">
-       <div class="modal-header">
-           <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-           <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
-       </div>
-       <div class="modal-body">
-           <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
-           <form action="mail.php" method="post">
-               <label for="fname" class="pb-2">Prénom</label><br>
-               <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
-               <label for="lname" class="pb-2">nom de famille</label><br>
-               <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
-               <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-               <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-               <label for="location" class="pb-2">emplacement</label><br>
-               <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-               <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
-           </form>
-           <div>
-               <div class="spinner-border text-success my-3 " id="spinner"></div>
-               <div id="spin-content" class="mt-3">please wait...</div>
-           </div>
-       </div>
-       <!-- <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-       </div> -->
-     </div>
-     
-   </div>
- </div>
-     
-<!-- POPUP END  -->
+    <!-- POPUP START  -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-md">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+                <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>donnez vos coordonnées pour passer un appel</p>
+                <form action="mail.php" method="post">
+                    <label for="fname" class="pb-2">Prénom</label><br>
+                    <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
+                    <label for="lname" class="pb-2">nom de famille</label><br>
+                    <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
+                    <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
+                    <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+                    <label for="location" class="pb-2">emplacement</label><br>
+                    <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                        Soumettre</button>
+                    <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
+                </form>
+                <div>
+                    <div class="spinner-border  my-3 " id="spinner"></div>
+                    <div id="spin-content" class="mt-3">please wait...</div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+            </div> -->
+          </div>
+          
+        </div>
+      </div>
+          
+    <!-- POPUP END  -->
 <div class="page-wraper">
 
    <!-- HEADER START -->
