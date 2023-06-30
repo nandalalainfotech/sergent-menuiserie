@@ -619,6 +619,9 @@
         #div1 {
           cursor: pointer;
         }
+        #hov{
+          cursor: pointer;
+        }
       </style>
 
       <!-- Window Quote Request Start -->
@@ -1003,7 +1006,7 @@
                             d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                           />
                         </svg>
-                        <span onclick="fun();getValue()" class="text-dark"
+                        <span onclick="fun();getValue()" class="text-dark" id="hov"
                           >GET YOUR LOCATION</span
                         >
                       </span>
@@ -1334,6 +1337,7 @@
                   <p id="value4"></p>
                   <p id="value5"></p>
                   <p id="value6"></p>
+                  <p id="value7"></p>
                 </div>
               </div>
             </div>
@@ -1982,8 +1986,12 @@
           document.getElementById("post").value =
           document.getElementById("lo2").innerHTML;
           document.getElementById("value6").innerHTML = "<b>Your City is : </b>" +
-          document.getElementById("lo1").innerHTML + " <br> <b>Your postal is : </b>" + document.getElementById("lo2").innerHTML;
-      }
+          document.getElementById("lo1").innerHTML; 
+          document.getElementById("value7").innerHTML = "<b>Your postal is : </b>" +
+          document.getElementById("lo2").innerHTML;
+        }
+
+
       var $locationText = $(".location");
       var $locationTexts = $(".location1");
 
