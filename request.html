@@ -979,7 +979,7 @@
                       </span>
                       <span class="location1" id="lo2" style="display: none">
                       </span>
-                      <label for="city" class="text-dark">your city</label
+                      <label for="city" class="text-dark">Your city</label
                       ><br />
                       <input type="text" name="city" id="city" required /><br />
                       <label for="post" class="text-dark">Postal code</label
@@ -1003,7 +1003,7 @@
                             d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                           />
                         </svg>
-                        <span onclick="fun()" class="text-dark"
+                        <span onclick="fun();getValue()" class="text-dark"
                           >GET YOUR LOCATION</span
                         >
                       </span>
@@ -1306,7 +1306,7 @@
           <div class="col-sm-6 container" id="show3">
             <div class="outer-box">
               <img
-                src="images/req-img-1/req-1.jpg"
+                src="images/req-img-1/req-7.jpg"
                 style="
                   opacity: 0.6;
                   width: 100%;
@@ -1972,6 +1972,9 @@
 
       // PREVIOUS CODE END
       // GEO-LOCATION CODE START
+      function getValue(){
+        
+      }
       function fun() {
         document.getElementById("city").value =
           document.getElementById("lo1").innerHTML;
@@ -2090,7 +2093,7 @@
                           24 heures sur 24, sept jours sur sept.</p>                            
                       <ul class="widget_address"> 
                           <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                          <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
+                           <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                       </ul>  
                   </div>
               </div>
@@ -2116,7 +2119,7 @@
   </div>
   <!-- FOOTER COPYRIGHT -->
                       
-  <div class="footer-bottom bg-light p-2">
+  <div class="footer-bottom bg-light p-1">
       <div class="container">
           <div class="footer-bottom-light">
 
