@@ -53,12 +53,19 @@
      <!-- JQUERY LINK   -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-         function clearForm(){
-            document.getElementById('fname').value="";
-            document.getElementById('lname').value="";
-            document.getElementById('mobile').value="";
-            document.getElementById('location').value="";
+      function clearForm(){
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let mobile=document.getElementById("mobile").value;
+            let location=document.getElementById("location").value;
+            if(fname!=="" && lname!=='' && mobile!=='' && location!==''){
+                document.getElementById('fname').value="";
+                document.getElementById('lname').value="";
+                document.getElementById('mobile').value="";
+                document.getElementById('location').value="";
+            }  
         }
+        
         function showSpin(){
             let x= document.getElementById('mobile').value;
             if(x.length==10){
@@ -78,6 +85,24 @@
              $("#myModal").modal({backdrop: "static"});
             });
         })
+
+        function disableModal(){
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let mobile=document.getElementById("mobile").value;
+            let location=document.getElementById("location").value;
+            let flag = true;
+            const arr=[fname,lname,mobile,location];
+            arr.forEach(input => {
+                if(input=="")
+                flag = false;
+            });
+            return flag;
+        }
+        function disabled(){
+            if(disableModal())
+            {$("#myModal").modal("hide")};
+        }
     </script>
 
 </head>
@@ -220,7 +245,7 @@
                     <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
                     <label for="location" class="pb-2">emplacement</label><br>
                     <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                         Soumettre</button>
                     <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                 </form>
@@ -1511,7 +1536,7 @@
                                 24 heures sur 24, sept jours sur sept.</p>                            
                             <ul class="widget_address"> 
                                 <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                                <li><i class="flaticon-mail " ></i>contact@sergentMenuiserie.com</li>
+                                <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
                             </ul>  
                         </div>
                     </div>
@@ -1537,7 +1562,7 @@
         </div>
         <!-- FOOTER COPYRIGHT -->
                             
-        <div class="footer-bottom bg-light p-1">
+        <div class="footer-bottom bg-light p-2">
             <div class="container">
                 <div class="footer-bottom-light">
     
