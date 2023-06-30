@@ -1333,6 +1333,7 @@
                   <p id="value3"></p>
                   <p id="value4"></p>
                   <p id="value5"></p>
+                  <p id="value6"></p>
                 </div>
               </div>
             </div>
@@ -1976,10 +1977,12 @@
         
       }
       function fun() {
-        document.getElementById("city").value =
+          document.getElementById("city").value =
           document.getElementById("lo1").innerHTML;
-        document.getElementById("post").value =
+          document.getElementById("post").value =
           document.getElementById("lo2").innerHTML;
+          document.getElementById("value6").innerHTML = "<b>Your City is : </b>" +
+          document.getElementById("lo1").innerHTML + " <br> <b>Your postal is : </b>" + document.getElementById("lo2").innerHTML;
       }
       var $locationText = $(".location");
       var $locationTexts = $(".location1");
