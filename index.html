@@ -53,6 +53,12 @@
      <!-- JQUERY LINK   -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
+         function clearing(){
+                document.getElementById('fname').value="";
+                document.getElementById('lname').value="";
+                document.getElementById('mobile').value="";
+                document.getElementById('location').value="";
+      }
       function clearForm(){
             let fname=document.getElementById("fname").value;
             let lname=document.getElementById("lname").value;
@@ -232,7 +238,8 @@
           <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-                <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+                <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
+
             </div>
             <div class="modal-body">
                 <p>donnez vos coordonnées pour passer un appel</p>
@@ -1478,8 +1485,8 @@
                 </a>
              </div>
               <!-- CONTACT US END -->
-
-
+        </div>
+             
      <!-- FOOTER START -->
      <footer class="site-footer footer-dark " >
 
@@ -1586,7 +1593,8 @@
     <!-- FOOTER END -->
     <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
 
-
+        </div>
+    
 
 
 <!-- JAVASCRIPT  FILES ========================================= --> 
