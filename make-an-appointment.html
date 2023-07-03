@@ -448,72 +448,80 @@
         </style> -->
 
         <!-- CONTENT START -->
-     <div class="container py-3 " id="main" >
-        <div class="container ">
-            <form action="appointment.php" method="post">
-                <div class="row p-3">
-                    <div class="col-sm-3 p-1">
-                        Which Place you Want to Meet ?
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="place" id="home" value="Home"> 
-                        <label for="home">Home</label>
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="place" id="Work" value="Work Place"> 
-                        <label for="Work"> Working Place</label>
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="place" id="distance" value="From a Distance"> 
-                        <label for="distance">From a Distance</label>
-                    </div>
-                    <div class="col-sm-4"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div class="container py-3 " id="main" >
+                        <div class="container ">
+                               <form action="appointment.php" method="post">
+                                   <div class="row p-3">
+                                       <div class="col-sm-4 p-1">
+                                           Which Place you Want to Meet ?
+                                       </div>
+                                       <div class="col-sm-2 p-1">
+                                           <input type="radio" name="place" id="home" value="Home"> 
+                                           <label for="home">Home</label>
+                                       </div>
+                                       <div class="col-sm-3 p-1">
+                                           <input type="radio" name="place" id="Work" value="Work Place"> 
+                                           <label for="Work"> Working Place</label>
+                                       </div>
+                                       <div class="col-sm-3 p-1">
+                                           <input type="radio" name="place" id="distance" value="From a Distance"> 
+                                           <label for="distance">From a Distance</label>
+                                       </div>
+                                       <!-- <div class="col-sm-3"></div> -->
+                                   </div>
+                                   <div class="row p-3">
+                                       <div class="col-sm-3 p-1">Which date you want to Meet ?</div>
+                                       <div class="col-sm-2 p-3">
+                                           <input type="date" id="myDate" onchange="dateFun(this.id)" name="date" >
+                                       </div>
+                                       <div class="col-sm-6 p-3">
+                                           <input type="text" name="" id="getDate" size="27rem"  readonly>
+                                       </div>
+                                   </div>
+                                   <div class="row p-3">
+                                       <div class="col-sm-3 p-1">
+                                           Which Session you Want to Meet ?
+                                       </div>
+                                       <div class="col-sm-2 p-1">
+                                           <input type="radio" name="session" id="morn" value="Morning"> 
+                                           <label for="morn">Morning</label>
+                                       </div>
+                                       <div class="col-sm-2 p-1">
+                                           <input type="radio" name="session"  id="after" value="Afternoon"> 
+                                           <label for="after"> Afternoon</label>
+                                       </div>
+                                       <div class="col-sm-2 p-1">
+                                           <input type="radio" name="session" id="eve" value="Evening"> 
+                                           <label for="eve">Evening</label>
+                                       </div>
+                                       <div class="col-sm-4"></div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="col-sm-3">
+                                       Which  Type of  Project?
+                                       </div>
+                                       <div class="col-sm-8 " id="text-area1" >
+                                       <textarea name="" id="" cols="" rows="4" style="width: 100%;"></textarea>
+                                       </div>
+                                   </div>
+                                   <div class="row">
+                                       <div class="col-sm-3">
+                                       <button data-target="thankyou.html" class="btn btn-warning">Submit</button>
+                                       </div>
+                                   </div>
+                               </form>
+                       </div>
+                   </div>
                 </div>
-                <div class="row p-3">
-                    <div class="col-sm-3 p-1">Which date you want to Meet ?</div>
-                    <div class="col-sm-2 p-3">
-                        <input type="date" id="myDate" onchange="dateFun(this.id)" name="date" >
-                    </div>
-                    <div class="col-sm-6 p-3">
-                        <input type="text" name="" id="getDate" size="27rem"  readonly>
-                    </div>
-                </div>
-                <div class="row p-3">
-                    <div class="col-sm-3 p-1">
-                        Which Session you Want to Meet ?
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="session" id="morn" value="Morning"> 
-                        <label for="morn">Morning</label>
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="session"  id="after" value="Afternoon"> 
-                        <label for="after"> Afternoon</label>
-                    </div>
-                    <div class="col-sm-2 p-1">
-                        <input type="radio" name="session" id="eve" value="Evening"> 
-                        <label for="eve">Evening</label>
-                    </div>
-                    <div class="col-sm-4"></div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                       Which  Type of  Project?
-                    </div>
-                    <div class="col-sm-8 " id="text-area1" >
-                       <textarea name="" id="" cols="" rows="4" style="width: 100%;"></textarea>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-sm-3">
-                       <button data-target="thankyou.html" class="btn btn-warning">Submit</button>
-                    </div>
-                </div>
-                </div>
-                
-            </form>
+                <div class="col-sm-2"></div>
+            </div>
         </div>
-     </div>
+
+     
 <div ><pre></pre></div>
 
         <!-- CONTENT END -->
