@@ -54,32 +54,63 @@
   <!-- JQUERY LINK   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
+    function clearing(){
+              document.getElementById('fname').value="";
+              document.getElementById('lname').value="";
+              document.getElementById('mobile').value="";
+              document.getElementById('location').value="";
+    }
     function clearForm(){
-       document.getElementById('fname').value="";
-       document.getElementById('lname').value="";
-       document.getElementById('mobile').value="";
-       document.getElementById('location').value="";
-   }
-   function showSpin(){
-       let x= document.getElementById('mobile').value;
-       if(x.length==10){
-           document.getElementById('spinner').style.display = 'block';
-           document.getElementById('spin-content').style.display = 'block';
-       }
+          let fname=document.getElementById("fname").value;
+          let lname=document.getElementById("lname").value;
+          let mobile=document.getElementById("mobile").value;
+          let location=document.getElementById("location").value;
+          if(fname!=="" && lname!=='' && mobile!=='' && location!==''){
+              document.getElementById('fname').value="";
+              document.getElementById('lname').value="";
+              document.getElementById('mobile').value="";
+              document.getElementById('location').value="";
+          }  
+      }
       
-   }
-   function showOffSpin(){
-       // let x= document.getElementById('mobile').value;
-     //  if(x.length==10)
-       document.getElementById('spinner').style.display = 'none';
-       document.getElementById('spin-content').style.display = 'none';
-   }
-   $(document).ready(function(){
-       $("#modal").click(function(){
-        $("#myModal").modal({backdrop: "static"});
-       });
-   })
-</script>
+      function showSpin(){
+          let x= document.getElementById('mobile').value;
+          if(x.length==10){
+              document.getElementById('spinner').style.display = 'block';
+              document.getElementById('spin-content').style.display = 'block';
+          }
+         
+      }
+      function showOffSpin(){
+          // let x= document.getElementById('mobile').value;
+        //  if(x.length==10)
+          document.getElementById('spinner').style.display = 'none';
+          document.getElementById('spin-content').style.display = 'none';
+      }
+      $(document).ready(function(){
+          $("#modal").click(function(){
+           $("#myModal").modal({backdrop: "static"});
+          });
+      })
+
+      function disableModal(){
+          let fname=document.getElementById("fname").value;
+          let lname=document.getElementById("lname").value;
+          let mobile=document.getElementById("mobile").value;
+          let location=document.getElementById("location").value;
+          let flag = true;
+          const arr=[fname,lname,mobile,location];
+          arr.forEach(input => {
+              if(input=="")
+              flag = false;
+          });
+          return flag;
+      }
+      function disabled(){
+          if(disableModal())
+          {$("#myModal").modal("hide")};
+      }
+  </script>
 
 </head>
 <style>
@@ -208,7 +239,7 @@
           <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-                <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
+               <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
             </div>
             <div class="modal-body">
                 <p>donnez vos coordonnées pour passer un appel</p>
