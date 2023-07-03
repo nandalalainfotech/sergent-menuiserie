@@ -53,12 +53,19 @@
      <!-- JQUERY LINK   -->
      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
-         function clearForm(){
-            document.getElementById('fname').value="";
-            document.getElementById('lname').value="";
-            document.getElementById('mobile').value="";
-            document.getElementById('location').value="";
+      function clearForm(){
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let mobile=document.getElementById("mobile").value;
+            let location=document.getElementById("location").value;
+            if(fname!=="" && lname!=='' && mobile!=='' && location!==''){
+                document.getElementById('fname').value="";
+                document.getElementById('lname').value="";
+                document.getElementById('mobile').value="";
+                document.getElementById('location').value="";
+            }  
         }
+        
         function showSpin(){
             let x= document.getElementById('mobile').value;
             if(x.length==10){
@@ -78,6 +85,24 @@
              $("#myModal").modal({backdrop: "static"});
             });
         })
+
+        function disableModal(){
+            let fname=document.getElementById("fname").value;
+            let lname=document.getElementById("lname").value;
+            let mobile=document.getElementById("mobile").value;
+            let location=document.getElementById("location").value;
+            let flag = true;
+            const arr=[fname,lname,mobile,location];
+            arr.forEach(input => {
+                if(input=="")
+                flag = false;
+            });
+            return flag;
+        }
+        function disabled(){
+            if(disableModal())
+            {$("#myModal").modal("hide")};
+        }
     </script>
 
 </head>
@@ -89,6 +114,7 @@
         top: 11rem;
         bottom: 0;
         right: 0;
+        color: #db5200;
     }
     #spin-content{
         display: none;
@@ -123,7 +149,66 @@
  .fonts{
     font-size: x-small;
  }
+ @keyframes blink{
+    0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+ }
+ #fix:hover{
+    animation-play-state: paused;
+ }
+ #fix{
+    height: 4rem;
+    z-index: 4;
+    position: fixed;
+    top: 150px;
+    right: 15px;
+    font-size: 12px;
+    animation: blink 2s infinite ease-in;
+ }
+ #fix ul li img{
+    width: 4rem;
+    border-radius: 25%;
+ }
+ #fix ul{
+    list-style-type: none;
+ }
+ #fix:hover #hider{
+    visibility: visible;
+ }
+ #hider{ 
+    visibility: hidden;
+    color: rgb(233, 134, 63);
+    }
+    
+    
+     
+    .s-btn {
+    border: none;
+    background-color: #db5200;
+    padding:  9px 20px ;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+
+}
+.s-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 </style>
+
 
 <body>
 <!-- LOADING AREA START ===== -->
@@ -150,7 +235,7 @@
                 <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
             </div>
             <div class="modal-body">
-                <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
+                <p>donnez vos coordonnées pour passer un appel</p>
                 <form action="mail.php" method="post">
                     <label for="fname" class="pb-2">Prénom</label><br>
                     <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
@@ -160,10 +245,12 @@
                     <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
                     <label for="location" class="pb-2">emplacement</label><br>
                     <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-                    <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
+                        Soumettre</button>
+                    <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                 </form>
                 <div>
-                    <div class="spinner-border text-success my-3 " id="spinner"></div>
+                    <div class="spinner-border  my-3 " id="spinner"></div>
                     <div id="spin-content" class="mt-3">please wait...</div>
                 </div>
             </div>
@@ -194,7 +281,7 @@
                             <div class="wt-topbar-right d-flex flex-wrap align-content-center">
                                 <ul class="wt-topbar-info-2 e-p-bx text-white">
                                     <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
-                                    <li><i class="fa fa-envelope"></i>RENDEZ-VOUS</li>
+                                    <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>RENDEZ-VOUS</a></li>
                                 </ul> 
                 
                                 <ul class="social-icons">
@@ -822,7 +909,7 @@
                                     <div class="wt-icon-box-wraper step-blocks-dark">
                                      <div class="step-number"></div>
                                         <div class="icon-lg  m-b15">
-                                            <span class="icon-cell"><img src="images/sergent/indexicon/icon1.webp" alt=""></span>
+                                            <span class="icon-cell"><img src="images/sergent/iconindex/icon1.webp" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte m-b20">Prix tout compris</h4>
@@ -835,7 +922,7 @@
                                     <div class="wt-icon-box-wraper step-blocks-light" > 
                                          <div class="step-number"></div>
                                         <div class="icon-lg  m-b15">
-                                           <span class="icon-cell"><img src="images/sergent/indexicon/mail.png" alt=""></i></span>
+                                           <span class="icon-cell"><img src="images/sergent/iconindex/mailcall.png" alt=""></i></span>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte m-b20">Service client 7j/7</h4>
@@ -848,7 +935,7 @@
                                     <div class="wt-icon-box-wraper step-blocks-dark">
                                     <div class="step-number"></div>
                                         <div class="icon-lg  m-b15">
-                                            <span class="icon-cell"><img src="images/sergent/indexicon/location.png" alt=""></span>
+                                            <span class="icon-cell"><img src="images/sergent/iconindex/whli.webp" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte m-b20">+160 magasins</h4>
@@ -860,7 +947,7 @@
                                     <div class="wt-icon-box-wraper  step-blocks-light">
                                         <div class="step-number"></div>
                                         <div class="icon-lg  m-b15">
-                                            <span class="icon-cell"><img src="images/sergent/indexicon/award.png" alt=""></span>
+                                            <span class="icon-cell"><img src="images/sergent/iconindex/homeaward.png" alt=""></span>
                                         </div>
                                         <div class="icon-content">
                                             <h4 class="wt-tilte m-b20">Garantie 30 ans</h4>
@@ -935,7 +1022,7 @@
                                                         <a href="" class="site-button-link site-text-primary">
                                                             En savoir plus<i class="fa fa-play"></i></a>
                                                     </div>
-                                                    <div class="service-media">
+                                                    <div class="service-media" style="background-color:black;opacity:0.6;">
                                                         <img src="images/all-products/garage-door/img6.jpg" alt="" height="720px" width="720px">
                                                     </div>
                                                 </div>
@@ -947,10 +1034,10 @@
                                                     <div class="service-content">
                                                         <h4 class="service-title-large"><a href="">Obturateur </a></h4>
                                                         <p>Des volets et des fenêtres sont disponibles dans nos services</p>
-                                                        <a href="ml" class="site-button-link site-text-primary">
+                                                        <a href="" class="site-button-link site-text-primary">
                                                             En savoir plus<i class="fa fa-play"></i></a>
                                                     </div>
-                                                    <div class="service-media">
+                                                    <div class="service-media" style="background-color:black;opacity:0.6;">
                                                         <img src="images/all-products/garage-door/shut1.webp" alt="">
                                                     </div>
                                                 </div>
@@ -963,10 +1050,10 @@
                                                         <h4 class="service-title-large"><a href="">
                                                             Awining et Percola</a></h4>
                                                         <p>Nous rendons votre maison avec un design supplémentaire dans ces services</p>
-                                                        <a href="l" class="site-button-link site-text-primary">
+                                                        <a href="" class="site-button-link site-text-primary">
                                                             En savoir plus<i class="fa fa-play"></i></a>
                                                     </div>
-                                                    <div class="service-media">
+                                                    <div class="service-media" style="background-color:black;opacity:0.6;">
                                                         <img src="images/all-products/garage-door/pergula4.jpg" alt="">
                                                     </div>
                                                 </div>
@@ -982,7 +1069,7 @@
                                                         <a href="" class="site-button-link site-text-primary">
                                                             En savoir plus<i class="fa fa-play"></i></a>
                                                     </div>
-                                                    <div class="service-media">
+                                                    <div class="service-media" style="background-color:black;opacity:0.6;">
                                                         <img src="images/all-products/garage-door/swing1.webp" alt="">
                                                     </div>
                                                 </div>
@@ -997,7 +1084,7 @@
                                                         <a href="" class="site-button-link site-text-primary">
                                                             En savoir plus<i class="fa fa-play"></i></a>
                                                     </div>
-                                                    <div class="service-media">
+                                                    <div class="service-media" style="background-color:black;opacity:0.6;">
                                                         <img src="images/all-products/garage-door/window2.jpg" alt="" height="720px" width="720px">
                                                     </div>
                                                 </div>
@@ -1341,6 +1428,57 @@
 
             </div>   
            
+             <!-- CONTACT US START -->
+             <style>
+                @keyframes blink{
+                     0% {
+                    transform: scale(1);
+                     }
+                50% {
+                transform: scale(1.1);
+                }
+                100% {
+                transform: scale(1);
+                }
+                }
+                #fix:hover{
+                    animation-play-state: paused;
+                }
+                #fix{
+                    height: 4rem;
+                    z-index: 4;
+                    position: fixed;
+                    top: 150px;
+                    right: 15px;
+                    font-size: 12px;
+                    animation: blink 2s infinite ease-in;
+                }
+                #fix ul li img{
+                    width: 4rem;
+                    border-radius: 25%;
+                }
+                #fix ul{
+                    list-style-type: none;
+                }
+                #fix:hover #hider{
+                    visibility: visible;
+                }
+                #hider{ 
+                    visibility: hidden;
+                    color: rgb(233, 134, 63);
+                    }
+
+             </style>
+             <div id="fix">
+                <a href="appointment2.html">
+                 <ul >
+                     <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+                     <li id="hider">Contact Us</li>
+                 </ul>
+                </a>
+             </div>
+              <!-- CONTACT US END -->
+
 
      <!-- FOOTER START -->
      <footer class="site-footer footer-dark " >
@@ -1355,7 +1493,7 @@
                         
                         <div class="widget widget_about">
                             <div class="logo-footer clearfix bg-white">
-                                <a href="index.html"><img src="images/Footer Logo.jpg"  alt=""></a>
+                                 <a href="index.html"><img src="images/footerlogo1.svg"  alt=""></a>
                             </div>
                             <p>
                                 Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à votre expertise, vous nous avez livrés.</p>
@@ -1398,7 +1536,7 @@
                                 24 heures sur 24, sept jours sur sept.</p>                            
                             <ul class="widget_address"> 
                                 <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                                <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
+                                <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                             </ul>  
                         </div>
                     </div>
@@ -1424,7 +1562,7 @@
         </div>
         <!-- FOOTER COPYRIGHT -->
                             
-        <div class="footer-bottom bg-light p-2">
+        <div class="footer-bottom bg-light p-1">
             <div class="container">
                 <div class="footer-bottom-light">
     
