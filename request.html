@@ -1040,14 +1040,15 @@
                       ><br />
                       <input type="text" name="post" id="post" required />
                       <br />
-                      <br />
-                      <span>
+                      <p class="mt-2" id="error-msg"></p>
+  
+                      <span> <br>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
                           height="26"
                           fill="currentColor"
-                          class="bi bi-geo-alt text-dark"
+                          class="bi bi-geo-alt text-info"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -1057,7 +1058,7 @@
                             d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                           />
                         </svg>
-                        <span onclick="fun();getValue()" class="text-dark" id="hov"
+                        <span onclick="locationActive();setTimeout(fun,1000)" class="text-white btn btn-info" id="hov"
                           >GET YOUR LOCATION</span
                         >
                       </span>
@@ -2029,23 +2030,9 @@
 
       // PREVIOUS CODE END
       // GEO-LOCATION CODE START
-      function getValue(){
-        
-      }
-      function fun() {
-          document.getElementById("city").value =
-          document.getElementById("lo1").innerHTML;
-          document.getElementById("post").value =
-          document.getElementById("lo2").innerHTML;
-          document.getElementById("value6").innerHTML = "<b>Your City is : </b>" +
-          document.getElementById("lo1").innerHTML; 
-          document.getElementById("value7").innerHTML = "<b>Your postal is : </b>" +
-          document.getElementById("lo2").innerHTML;
-        }
-
-
-      var $locationText = $(".location");
-      var $locationTexts = $(".location1");
+      function locationActive(){
+        var $locationText = $(".location");
+        var $locationTexts = $(".location1");
 
       // Check for geolocation browser support and execute success method
       if (navigator.geolocation) {
@@ -2087,17 +2074,42 @@
           .fail(function () {
             // handle error
           });
-      }
+       }
 
       function geoLocationError(error) {
         var errors = {
-          1: "Permission denied",
+          1: "Permission denied. Please switch on your Location... ",
           2: "Position unavailable",
-          3: "Request timeout",
+          3: "Request timeout. Please reload your page...",
         };
-        alert("Error: " + errors[error.code]);
+        //alert("Error: " + errors[error.code]);
+        let a = document.getElementById("lo1").innerHTML;
+        let b = document.getElementById("lo2").innerHTML;
+        if(a.trim()==""|| b.trim()==""){
+          document.getElementById("error-msg").style.color = "red" ;
+          document.getElementById("error-msg").innerHTML = errors[error.code];
+        }
       }
+     
+      }
+      
+      function fun() {
+          let a = document.getElementById("lo1").innerHTML;
+          let b = document.getElementById("lo2").innerHTML;
+          document.getElementById("city").value = a; 
+          document.getElementById("post").value = b;
+         
+          if(a.trim()!="" && b.trim()!=""){
+            document.getElementById("value6").innerHTML = "<b>Your City is : </b>" +a;
+           
+            document.getElementById("value7").innerHTML = "<b>Your postal is : </b>" +b;
+    
+          }
+          if(a.trim()!="" && b.trim()!="")
+          document.getElementById("error-msg").style.display = "none" ;
+        }
 
+      
       // GEO-LOCATION CODE END
     </script>
  <!-- FOOTER START -->
