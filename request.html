@@ -1043,12 +1043,13 @@
                       <p class="mt-2" id="error-msg"></p>
   
                       <span> <br>
-                        <svg
+                        <span onclick="locationActive();setTimeout(fun,1000)" class="text-white btn btn-info" id="hov"
+                          > <svg
                           xmlns="http://www.w3.org/2000/svg"
                           width="20"
                           height="26"
                           fill="currentColor"
-                          class="bi bi-geo-alt text-info"
+                          class="bi bi-geo-alt text-white"
                           viewBox="0 0 16 16"
                         >
                           <path
@@ -1057,14 +1058,12 @@
                           <path
                             d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
                           />
-                        </svg>
-                        <span onclick="locationActive();setTimeout(fun,1000)" class="text-white btn btn-info" id="hov"
-                          >GET YOUR LOCATION</span
+                        </svg> GET YOUR LOCATION</span
                         >
                       </span>
                       <p></p>
                       <a href="appointment2.html" id="eventCheck1"
-                        ><button class="btn btn-warning mt-3">Next</button></a
+                        ><button class="btn mt-3 text-white" style="background-color:#ea5702">Next</button></a
                       >
                     </form>
                   </div>
