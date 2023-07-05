@@ -245,16 +245,16 @@
                <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
             </div>
             <div class="modal-body">
-                <p>donnez vos coordonnées pour passer un appel</p>
+         
                 <form action="mail.php" method="post">
                     <label for="fname" class="pb-2">Prénom</label><br>
-                    <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
-                    <label for="lname" class="pb-2">nom de famille</label><br>
-                    <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
+                      <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Prénom"  title="entrez a-z ouA-z."> <br>
+                    <label for="lname" class="pb-2">Nom de famille</label><br><br>
+                    <input class="w-50" type="text" name="lname" id="lname" required  placeholder="Nom"   title="entrez a-z ouA-z."> <br>
                     <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-                    <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-                    <label for="location" class="pb-2">emplacement</label><br>
-                    <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
+                    <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+                    <label for="location" class="pb-2"> Emplacement</label><br>
+                    <input class="w-50" type="text" name="location" id="location" required  placeholder="Code postal"  title="entrez l' Emplacement valide."> <br>
                     <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
                         Soumettre</button>
                     <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
@@ -283,14 +283,14 @@
                             <div class="d-flex justify-content-between">
                                 <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
                                     <ul class="wt-topbar-info e-p-bx text-white">
-                                        <li><span class="fonts"> LUNDI À VENDREDI 8.30AM-7PM</span><span>|</span><span class="fonts"> SAMEDI DIMANCHE 10AM-6PM</span></li>
+                                   <li><span class="fonts"> LUNDI AU SAMEDI 09H00 à 20H00</span><span>|</span><span class="fonts"> DIMANCHE 09H00 à 17H00</span></li>
                                     </ul>
                                 </div>
                                 
                                 <div class="wt-topbar-right d-flex flex-wrap align-content-center">
                                     <ul class="wt-topbar-info-2 e-p-bx text-white">
-                                        <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
-                                        <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>RENDEZ-VOUS</a></li>
+                                        <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
+                                        <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS GRATUIT</a></li>
                                     </ul> 
                     
                                     <ul class="social-icons">
@@ -571,7 +571,7 @@
                 color: rgb(233, 134, 63);
                 }
             #main1{
-                background-color: rgb(232, 232, 232);
+                background-color:rgb(245, 245, 245);
                 color:#040404 ;
             }
             #main1 input:focus,textarea:focus{

@@ -44,5 +44,5 @@ if(!$mail->Send()) {
     echo 'Message has been sent.';
     echo '<script>alert("Your message sent successfully!!")</script>';
     }
-    header("Location:thankYou.html");
+    header("Location:thankyou.html");
     ?>
