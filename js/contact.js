@@ -6,7 +6,7 @@ function loading(){
             $("#fix").click(function () {
                 if(count == 1){
                     $("#myModal2").modal({ backdrop: "true" });
-                    count+=1;
+                    count++;
                 }
             });
         })
