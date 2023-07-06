@@ -233,7 +233,7 @@
 </style>
 
 
-<body>
+<body onload="loading()">
     <!-- LOADING AREA START ===== -->
     <div class="loading-area">
         <div class="loading-box"></div>
@@ -1411,15 +1411,63 @@
                     color: rgb(233, 134, 63);
                 }
             </style>
-            <div id="fix">
-                <a href="appointment2.html">
+             <div id="fix" onclick="contactPageDisplay()">
+                <a href="javascript:void(0)" id="link">
                     <ul>
                         <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
                         <li id="hider">Contact Us</li>
                     </ul>
                 </a>
             </div>
+
+
             <!-- CONTACT US END -->
+
+                <!-- CONTACT MODAL START  -->
+    <div class="modal fade" id="myModal2" role="dialog">
+        <div class="modal-dialog modal-md">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Please fill the contact form for us to reach you.</h5>
+                    <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
+                </div>
+                <div class="modal-body">
+             
+                    <form action="thankyou.html" method="post">
+                        <p>Civilite <span class="text-danger">*</span></p>
+                        <input type="radio" name="civility" id="female" value="female" required>
+                        <label for="female">Madame</label>
+                        <input type="radio" name="civility" id="male" value="male" required>
+                        <label for="male">Sir</label> <br>
+                        <label for="name">Nom <span class="text-danger">*</span></label> <br>
+                        <input type="text" name="name" id="name" required style="width: 100%;" >
+                        <label for="initial">Prenom <span class="text-danger">*</span></label> <br>
+                        <input type="text" name="initial" id="initial" required  style="width: 100%;">
+                        <label for="mobile">Phone number <span class="text-danger">*</span></label> <br>
+                        <input type="text" name="mobile" id="mobile" required  style="width: 100%;">
+                        <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br>
+                        <textarea name="text" id="" cols="" rows="3" style="width: 100%;" required></textarea>
+                        <input type="checkbox" name="subscribe" id="sub" required>
+                        <label for="sub">I subscribe to the newsletter.</label> <br>
+                        <input type="submit" value="Send" class="btn rounded-5 text-white" style="background-color: #db5200;">
+                    </form>
+                    <div>
+                        <div class="spinner-border  my-3 " id="spinner"></div>
+                        <div id="spin-content" class="mt-3">please wait...</div>
+                    </div>
+                </div>
+                <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+            </div> -->
+            </div>
+
+        </div>
+    </div>
+
+    
+            <!-- CONTACT MODAL END  -->
 
 
             <!-- FOOTER START -->
@@ -1455,10 +1503,10 @@
                                         <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et
                                             nouvelles</p>
                                         <div class="nl-type">
-                                            <form role="search" method="post">
+                                            <form role="search" method="post" id="check">
                                                 <div class="nl-form">
                                                     <input name="news-letter" class="form-control"
-                                                        placeholder="Enter email address" type="text">
+                                                        placeholder="Enter email address" type="text" id="mail">
                                                     <button type="submit" class="s-btn">
                                                         S'abonner</button>
                                                 </div>
@@ -1569,6 +1617,9 @@
 
             <!-- REVOLUTION SLIDER SCRIPT FILES -->
             <script src="js/rev-script-3.js"></script>
+            <script src="js/emailCheck.js"></script>
+            <script src="js/contact.js"></script>
+
 
       <!-- <Cookies start> -->
              <!DOCTYPE html>
