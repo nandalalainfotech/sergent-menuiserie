@@ -1627,7 +1627,7 @@
 
 
       <!-- <Cookies start> -->
-             <!DOCTYPE html>
+             <!-- <!DOCTYPE html>
                 <html lang="en">
                     <head>
                     <meta charset="UTF-8">
@@ -1642,33 +1642,95 @@
                             <p class="text-dark">Ce site utilise des cookies pour vous garantir la meilleure expérience sur notre site.</p>
                             <div class="buttons">
                                 <button class="item">Je comprends</button>
-                                <!-- <a href="#" class="item ">Learn more</a> -->
+                                <a href="#" class="item ">Learn more</a>
                             </div>
                             </div>
-                        </div>
+                        </div> -->
 
-                        <script>
+                        <!-- <script>
                             const cookieBox = document.querySelector(".wrapper"),
                             acceptBtn = cookieBox.querySelector("button");
 
                             acceptBtn.onclick = ()=>{
-                            //setting cookie for 1 month, after one month it'll be expired automatically
+                            setting cookie for 1 month, after one month it'll be expired automatically
                             document.cookie = "Cookie by Sergent Menuiserie; max-age="+60*60*24*30;
-                            if(document.cookie){ //if cookie is set
-                                cookieBox.classList.add("hide"); //hide cookie box
-                            }else{ //if cookie not set then alert an error
+                            if(document.cookie){ 
+                                cookieBox.classList.add("hide"); 
+                            }else{ 
                                 alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
                             }
                             }
                             let checkCookie = document.cookie.indexOf("CookieBy=SergentMenuiserie"); //checking our cookie
-                            //if cookie is set then hide the cookie box else show it
+                       
                             checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
-                        </script>
+                        </script> -->
+  <!-- <Cookies start> -->
+    <link rel="stylesheet" href="style1.css">
+    <div id="cookieNotice" class="wrapper">   
+        <img src="images/req-img-1/cookie.png" alt="">   
+        <div class="content">
+            <h4 class="text-dark">LOGO SOCIETE</h4>
+        </div>
+        <div class="content-wrap">
+            <div class="content">
+                <p class="text-dark">Ce site Web utilise ses propres cookies et ceux de tiers pour améliorer nos services et vous montrer des publicités liées à vos préférences en analysant vos habitudes de navigation. Pour donner votre consentement à son utilisation, appuyez sur le bouton Accepter. </p>
+                <div class="buttons">
+                    <button class="item" onclick="acceptCookieConsent()">J’ACCEPTE</button>
+                    <button class="item" onclick="acceptCookieConsent()">JE REFUSE</button>    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Create cookie
+function setCookie(cname, cvalue, exdays) {
+    const d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
 
-                        </body>
-                </html>
+// Delete cookie
+function deleteCookie(cname) {
+    const d = new Date();
+    d.setTime(d.getTime() + (24*60*60*1000));
+    let expires = "expires="+ d.toUTCString();
+    document.cookie = cname + "=;" + expires + ";path=/";
+}
 
-        
+// Read cookie
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+// Set cookie consent
+function acceptCookieConsent(){
+    deleteCookie('user_cookie_consent');
+    setCookie('user_cookie_consent', 1, 30);
+    document.getElementById("cookieNotice").style.display = "none";
+}
+
+
+let cookie_consent = getCookie("user_cookie_consent");
+if(cookie_consent != ""){
+    document.getElementById("cookieNotice").style.display = "none";
+}else{
+    document.getElementById("cookieNotice").style.display = "block";
+}
+    </script>
+<!-- <Cookies end> -->        
 
 </body>
 
