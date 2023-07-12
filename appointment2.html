@@ -243,15 +243,20 @@
             </div>
             <div class="modal-body">
          
-                <form action="mail.php" method="post">
-                    <label for="fname" class="pb-2">Prénom</label><br>
-                      <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Prénom"  title="entrez a-z ouA-z."> <br>
-                    <label for="lname" class="pb-2">Nom de famille</label><br><br>
+               <form action="mail.php" method="post">
+                    <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
+                      <input class="w-50"  type="text" name="fname" id="fname" required  placeholder="Prénom"  title="entrez a-z ouA-z."> <br>
+                    <!-- <label for="lname" class="pb-2">Nom de famille</label><br><br> -->
+                    <br>
                     <input class="w-50" type="text" name="lname" id="lname" required  placeholder="Nom"   title="entrez a-z ouA-z."> <br>
-                    <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
+                    <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
+                    <br>
+
                     <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-                    <label for="location" class="pb-2"> Emplacement</label><br>
+                    <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
+                    <br>
                     <input class="w-50" type="text" name="location" id="location" required  placeholder="Code postal"  title="entrez l' Emplacement valide."> <br>
+                    <br>
                     <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
                         Soumettre</button>
                     <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
@@ -588,7 +593,7 @@ input:focus,textarea:focus{
                         <form action="appointment2.php" method="post">
                          <div class="row ">
                             <div class="col-sm-12">
-                             <p>Civilite <span class="text-danger">*</span></p> 
+                             <!-- <p>Civilite <span class="text-danger">*</span></p>  -->
                             </div>
                              <div class="col-sm-3">
                                 
@@ -605,24 +610,24 @@ input:focus,textarea:focus{
                          <div class="row">
                              <div class="col-sm-6">
              
-                                 <label for="name">Nom <span class="text-danger">*</span></label> <br>
-                                 <input type="text" name="name" id="name" required style="width: 100%;" >
-                             </div>
+                                 <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+                                 <input type="text" placeholder="Nom" name="name" id="name" required style="width: 100%;" >
+                             </div><br><br>
                              <div class="col-sm-6">
-                                 <label for="initial">Prenom <span class="text-danger">*</span></label> <br>
-                                 <input type="text" name="initial" id="initial" required  style="width: 100%;">
-                             </div>
+                                 <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+                                 <input type="text" placeholder="Prenom" name="initial" id="initial" required  style="width: 100%;">
+                             </div><br><br>
                          </div>
                          <div class="row">
                              <div class="col-sm-6">
              
-                                 <label for="city">Téléphone <span class="text-danger">*</span></label> <br>
-                                 <input type="text" name="city" id="city" required  style="width: 100%;" >
-                             </div>
+                                 <!-- <label for="city">Portable <span class="text-danger">*</span></label> <br> -->
+                                 <input type="email" placeholder="Email" name="email" id="email" required  style="width: 100%;" >
+                             </div><br>
                              <div class="col-sm-6">
-                                 <label for="mobile">Email<span class="text-danger">*</span></label> <br>
-                                 <input type="text" name="mobile" id="mobile" required  style="width: 100%;">
-                             </div>
+                                 <!-- <label for="mobile">Email<span class="text-danger">*</span></label> <br> -->
+                                 <input type="text" placeholder="Portable" name="mobile" id="mobile" required  style="width: 100%;">
+                             </div><br><br>
                          </div>
                          <div class="row">
                              <div class="col-sm-12">
