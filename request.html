@@ -2073,8 +2073,8 @@
           loadingTimeout;
 
         var loading = function () {
-          $locationText.text("fetching...");
-          $locationTexts.text("fetching...");
+          $locationText.text("aller chercher...");
+          $locationTexts.text("aller chercher...");
         };
 
         loadingTimeout = setTimeout(loading, 600);
@@ -2105,12 +2105,12 @@
           3: "Request timeout. Please reload your page...",
         };
         alert("Error: " + errors[error.code]);
-        // let a = document.getElementById("lo1").innerHTML;
-        // let b = document.getElementById("lo2").innerHTML;
-        // if(a.trim()==""|| b.trim()==""){
-        //   document.getElementById("error-msg").style.color = "red" ;
-        //   document.getElementById("error-msg").innerHTML = errors[error.code];
-        // }
+        let a = document.getElementById("lo1").innerHTML;
+        let b = document.getElementById("lo2").innerHTML;
+        if(a.trim()==""|| b.trim()==""){
+          document.getElementById("error-msg").style.color = "red" ;
+          document.getElementById("error-msg").innerHTML = errors[error.code];
+        }
       }
      
       }
