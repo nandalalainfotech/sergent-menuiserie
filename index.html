@@ -1441,19 +1441,21 @@
                 <div class="modal-body">
              
                     <form action="thankyou.html" method="post">
-                        <p>Civilite <span class="text-danger">*</span></p>
+                        <!-- <p>Civilite <span class="text-danger">*</span></p> -->
                         <input type="radio" name="civility" id="female" value="female" required>
                         <label for="female">Madame</label>
                         <input type="radio" name="civility" id="male" value="male" required>
-                        <label for="male">Sir</label> <br>
-                        <label for="name">Nom <span class="text-danger">*</span></label> <br>
-                        <input type="text" name="name" id="name" required style="width: 100%;" >
-                        <label for="initial">Prenom <span class="text-danger">*</span></label> <br>
-                        <input type="text" name="initial" id="initial" required  style="width: 100%;">
-                        <label for="mobile">Phone number <span class="text-danger">*</span></label> <br>
-                        <input type="text" name="mobile" id="mobile" required  style="width: 100%;">
-                        <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br>
-                        <textarea name="text" id="" cols="" rows="3" style="width: 100%;" required></textarea>
+                        <label for="male">Monsieur</label> <br>
+                        <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+                        <input type="text" placeholder="Nom" name="name" id="name" required style="width: 100%;" ><br><br>
+                        <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+                        <input type="text" placeholder="Prenom" name="initial" id="initial" required  style="width: 100%;"><br><br>
+                        <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
+                        <input type="text" placeholder="Portable" name="mobile" id="mobile" required  style="width: 100%;"><br><br>
+                        <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
+                        <input type="text" placeholder="Email" name="email" id="email" required  style="width: 100%;"><br><br>
+                        <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
+                        <textarea name="text" id="" placeholder="Description de votre projet" cols="" rows="3" style="width: 100%;" required></textarea>
                         <input type="checkbox" name="subscribe" id="sub" required>
                         <label for="sub">I subscribe to the newsletter.</label> <br>
                         <input type="submit" value="Send" class="btn rounded-5 text-white" style="background-color: #db5200;">
