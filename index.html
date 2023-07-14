@@ -176,7 +176,7 @@
         height: 4rem;
         z-index: 4;
         position: fixed;
-        top: 150px;
+        bottom: 5rem;
         right: 15px;
         font-size: 12px;
         animation: blink 2s infinite ease-in;
@@ -1368,68 +1368,33 @@
 
             </div>
 
+            <!DOCTYPE html>
+            <html lang="en">
+            <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <title>Document</title>
+                <link rel="stylesheet" href="contact-us.css">
+            </head>
+            <body>
+                
             <!-- CONTACT US START -->
-            <style>
-                @keyframes blink {
-                    0% {
-                        transform: scale(1);
-                    }
-
-                    50% {
-                        transform: scale(1.1);
-                    }
-
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-
-                #fix:hover {
-                    animation-play-state: paused;
-                }
-
-                #fix {
-                    height: 4rem;
-                    z-index: 4;
-                    position: fixed; 
-                    top: 27rem;    
-                    right: 5px;              
-                    font-size: 12px;
-                    /* display: none; */
-                    animation: blink 2s infinite ease-in;
-                }
-
-                #fix ul li img {
-                    width: 4rem;
-                    border-radius: 25%;
-                }
-
-                #fix ul {
-                    list-style-type: none;
-                }
-
-                #fix:hover #hider {
-                    visibility: visible;
-                }
-
-                #hider {
-                    visibility: hidden;
-                    color: rgb(233, 134, 63);
-                }
-            </style>
-             <div id="fix" onclick="contactPageDisplay()">
-                <a href="javascript:void(0)" id="link">
-                    <ul>
-                        <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
-                        <li id="hider">Contactez</li>
-                        <li id="hider" class="text-center"> nous</li>
-                    </ul>
-                </a>
-            </div>
+         
+          <div id="fix" onclick="contactPageDisplay()">
+             <a href="javascript:void(0)" id="link">
+                 <ul>
+                     <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+                     <li id="hider">Contactez</li>
+                     <li id="hider" class="text-center"> nous</li>
+                 </ul>
+             </a>
+         </div>
 
 
-            <!-- CONTACT US END -->
+         <!-- CONTACT US END -->
 
+            </body>
+            </html>
                 <!-- CONTACT MODAL START  -->
     <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog modal-md">
