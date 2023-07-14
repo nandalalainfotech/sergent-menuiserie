@@ -1,24 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
 
 #cookieNotice{
-  left: 4px;
-  right: 500px;
+  /* left: 4px;
+  right: 500px; */
 }
 
 .wrapper {
   position: fixed;
   bottom: 0px;
-  /* right: 200rem; */
-  display: none;
+  left: 0px;
+  
   max-width: 365px;
   background: #d9d7d7;
   padding: 25px 25px 30px 25px;
   border-radius: 15px;
   box-shadow: 1px 7px 14px -5px rgba(0, 0, 0, 0.15);
   text-align: center;
-  opacity: 0.8;
-  /* position: fixed;
-  top: 200rem; */
+  opacity: .9;
   z-index: 5;
 }
 .wrapper.hide {

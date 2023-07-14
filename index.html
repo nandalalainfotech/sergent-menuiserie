@@ -1391,10 +1391,11 @@
                 #fix {
                     height: 4rem;
                     z-index: 4;
-                    position: fixed;
-                    top: 150px;
-                    right: 15px;
+                    position: fixed; 
+                    top: 27rem;    
+                    right: 5px;              
                     font-size: 12px;
+                    /* display: none; */
                     animation: blink 2s infinite ease-in;
                 }
 
@@ -1420,7 +1421,8 @@
                 <a href="javascript:void(0)" id="link">
                     <ul>
                         <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
-                        <li id="hider">Contactez-nous</li>
+                        <li id="hider">Contactez</li>
+                        <li id="hider" class="text-center"> nous</li>
                     </ul>
                 </a>
             </div>
@@ -1629,15 +1631,15 @@
 
 
       <!-- <Cookies start> -->
-             <!-- <!DOCTYPE html>
+             <!DOCTYPE html>
                 <html lang="en">
                     <head>
                     <meta charset="UTF-8">
                     <title>Cookie Constent Box | Sergent Menuiserie</title>
-                    <link rel="stylesheet" href="style1.css">
+                    <!-- <link rel="stylesheet" href="style1.css"> -->
                     </head>
                         <body>
-                        <div class="wrapper">
+                        <!-- <div class="wrapper">
                             <img src="images/req-img-1/cookie.png" alt="">
                             <div class="content">
                             <header class="text-dark">Consentement aux cookies</header>
@@ -1648,8 +1650,8 @@
                             </div>
                             </div>
                         </div> -->
-
-                        <!-- <script>
+<!-- 
+                        <script>
                             const cookieBox = document.querySelector(".wrapper"),
                             acceptBtn = cookieBox.querySelector("button");
 
@@ -1667,11 +1669,11 @@
                             checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
                         </script> -->
   <!-- <Cookies start> -->
-    <link rel="stylesheet" href="style1.css">
+    <link rel="stylesheet" href="cookiesStyle.css">
     <div id="cookieNotice" class="wrapper">   
         <img src="images/SM_258x74 (1).svg" alt="">   
-        <div class="content">
-            <!-- <h4 class="text-dark">LOGO SOCIETE</h4> -->
+        <div class="content"> 
+             <!-- <h4 class="text-dark">LOGO SOCIETE</h4> -->
         </div>
         <div class="content-wrap">
             <div class="content">
@@ -1684,21 +1686,21 @@
         </div>
     </div>
     <script>
-        // Create cookie
-function setCookie(cname, cvalue, exdays) {
+        <!-- // Create cookie -->
+ function setCookie(cname, cvalue, exdays) {
     const d = new Date();
     d.setTime(d.getTime() + (exdays*24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-}
+} 
 
-// Delete cookie
-function deleteCookie(cname) {
+// Delete cookie -->
+ function deleteCookie(cname) {
     const d = new Date();
     d.setTime(d.getTime() + (24*60*60*1000));
     let expires = "expires="+ d.toUTCString();
     document.cookie = cname + "=;" + expires + ";path=/";
-}
+} 
 
 // Read cookie
 function getCookie(cname) {
@@ -1717,12 +1719,12 @@ function getCookie(cname) {
     return "";
 }
 
-// Set cookie consent
+ // Set cookie consent
 function acceptCookieConsent(){
     deleteCookie('user_cookie_consent');
     setCookie('user_cookie_consent', 1, 30);
     document.getElementById("cookieNotice").style.display = "none";
-}
+} 
 
 
 let cookie_consent = getCookie("user_cookie_consent");
@@ -1731,7 +1733,7 @@ if(cookie_consent != ""){
 }else{
     document.getElementById("cookieNotice").style.display = "block";
 }
-    </script>
+    </script> 
 <!-- <Cookies end> -->        
 
 </body>
