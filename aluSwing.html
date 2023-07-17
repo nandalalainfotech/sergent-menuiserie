@@ -112,6 +112,90 @@
               {$("#myModal").modal("hide")};
           }
       </script>
+      <!-- Product thumbnail carousel-->
+<script>
+    $(document).ready(function() {
+    
+      var sync1 = $("#sync1");
+      var sync2 = $("#sync2");
+      var slidesPerPage = 4; //globaly define number of elements per page
+      var syncedSecondary = true;
+    
+          sync1.owlCarousel({
+            items : 1,
+            slideSpeed : 2000,
+            nav: true,
+            autoplay: false,
+            dots: false,
+            loop: true,
+            responsiveRefreshRate : 200,
+            navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+          }).on('changed.owl.carousel', syncPosition);
+    
+          sync2
+            .on('initialized.owl.carousel', function () {
+              sync2.find(".owl-item").eq(0).addClass("current");
+            })
+            .owlCarousel({
+            items : slidesPerPage,
+            dots: false,
+            nav: false,
+            margin:30,
+            smartSpeed: 200,
+            slideSpeed : 500,
+            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+            responsiveRefreshRate : 100
+          }).on('changed.owl.carousel', syncPosition2);
+    
+      function syncPosition(el) {
+        //if you set loop to false, you have to restore this next line
+        //var current = el.item.index;
+        
+        //if you disable loop you have to comment this block
+        var count = el.item.count-1;
+        var current = Math.round(el.item.index - (el.item.count/2) - .5);
+        
+        if(current < 0) {
+          current = count;
+        }
+        if(current > count) {
+          current = 0;
+        }
+        
+        //end block
+    
+        sync2
+          .find(".owl-item")
+          .removeClass("current")
+          .eq(current)
+          .addClass("current");
+        var onscreen = sync2.find('.owl-item.active').length - 1;
+        var start = sync2.find('.owl-item.active').first().index();
+        var end = sync2.find('.owl-item.active').last().index();
+        
+        if (current > end) {
+          sync2.data('owl.carousel').to(current, 100, true);
+        }
+        if (current < start) {
+          sync2.data('owl.carousel').to(current - onscreen, 100, true);
+        }
+      }
+      
+      function syncPosition2(el) {
+        if(syncedSecondary) {
+          var number = el.item.index;
+          sync1.data('owl.carousel').to(number, 100, true);
+        }
+      }
+      
+      sync2.on("click", ".owl-item", function(e){
+        e.preventDefault();
+        var number = $(this).index();
+        sync1.data('owl.carousel').to(number, 300, true);
+      });
+    });
+</script>
+
 
 </head>
 <style>
@@ -447,271 +531,597 @@
            
        </header>
        <!-- HEADER END -->
-   
+     <!-- CONTENT START -->
+     <div class="page-content">
+
+          
+
+        <!-- SECTION CONTENT START -->
+        <div class="section-full p-t50 p-b90 site-bg-white">
+        
+            <!-- PRODUCT DETAILS -->
+            <div class="container woo-entry">
+            
+                <div class="row m-b30">
+                    <div class="col-lg-7 col-md-5  m-b30">
+                        <div class="wt-box wt-product-gallery on-show-slider"> 
+                        
+                            <div id="sync1" class="owl-carousel owl-theme owl-btn-vertical-center m-b5">
+                                <!--Large Pic 1-->
+                                <div class="item">
+                                    <div class="mfp-gallery">
+                                        <div class="wt-box">
+                                            <div class="wt-thum-bx wt-img-overlay1 ">
+                                                <img src="images/ALU/Alu.jpg" alt="" style="width:1060px;height: 371px;">
+                                                <div class="product-view">
+                                                    <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
+                                                    data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-1.jpg">
+                                                    <i class="fa fa-search-plus"></i>     
+                                                    </a>  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Large Pic 2-->
+                                <div class="item">
+                                    <div class="mfp-gallery">
+                                        <div class="wt-box">
+                                            <div class="wt-thum-bx wt-img-overlay1 ">
+                                                <img src="images/ALU/m1.jpg" alt="" style="width:1060px;height: 371px;">>
+                                                <div class="product-view">
+                                                    <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
+                                                    data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-8.jpg">
+                                                    <i class="fa fa-search-plus"></i>     
+                                                    </a>  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Large Pic 3-->
+                                <div class="item">
+                                    <div class="mfp-gallery">
+                                        <div class="wt-box">
+                                            <div class="wt-thum-bx wt-img-overlay1 ">
+                                                <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER1 (2) (2) - Copy.jpg" style="width:1060px;height: 371px;"> alt="">
+                                                <div class="product-view">
+                                                    <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
+                                                    data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-9.jpg">
+                                                    <i class="fa fa-search-plus"></i>     
+                                                    </a>  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Large Pic 4-->
+                                <div class="item">
+                                    <div class="mfp-gallery">
+                                        <div class="wt-box">
+                                            <div class="wt-thum-bx wt-img-overlay1 ">
+                                                <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER2 1.jpg" alt=""style="width:1060px;height: 371px;">
+                                                <div class="product-view">
+                                                    <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
+                                                    data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-13.jpg">
+                                                    <i class="fa fa-search-plus"></i>     
+                                                    </a>  -->
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!--Large Pic 5-->
+                                <!-- <div class="item">
+                                    <div class="mfp-gallery">
+                                        <div class="wt-box">
+                                            <div class="wt-thum-bx wt-img-overlay1 ">
+                                                <img src="images/sampleImages/img-1.png" alt="">
+                                                <div class="product-view"> -->
+                                                    <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
+                                                    data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-14.jpg">
+                                                    <i class="fa fa-search-plus"></i>     
+                                                    </a>  -->
+                                                <!-- </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                            </div>
+                            
+                            <div id="sync2" class="owl-carousel owl-theme">
+                                <div class="item">
+                                    <div class="wt-media">
+                                        <img src="images/ALU/Alu.jpg" alt="" style="width:1060px;height: 100px;">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="wt-media">
+                                        <img src="images/ALU/m1.jpg" alt="" style="width:1060px;height: 100px;">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="wt-media">
+                                        <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER1 (2) (2) - Copy.jpg"alt="" style="width:1060px;height: 100px;">
+                                    </div>
+                                </div>
+                                <div class="item">
+                                    <div class="wt-media">
+                                        <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER2 1.jpg" alt="" style="width:1060px;height: 100px;">
+                                    </div>
+                                </div>
+                                <!-- <div class="item">
+                                    <div class="wt-media">
+                                        <img src="images/sampleImages/img-1.png" alt="">
+                                    </div>
+                                </div> -->
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-lg-5 col-md-7">
+                        <div class="product-detail-info">
+                            
+                            <div class="single-product-title ">
+                                <h2 class="post-title">VOLET BATTANT ALU</h2>
+                            </div>
+                            <!-- <div class="product-single-price">
+                                <span class="p-single-old-price">$45</span>
+                                <span class="p-single-new-price">$39.99</span>
+                            </div> -->
+                            <!-- <div class="product-single-rating">
+                                <span class="rating-bx site-text-primary">
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star"></i>
+                                    <i class="fa fa-star-o"></i>
+                                </span>
+                                <span class="font-weight-600 text-black">(4 customer reviews)</span>
+                            </div> -->
+
+                            <div class="wt-product-text">
+
+                            <p class="p-t15">Vous cherchez un tout nouveau volet au design épuré pour apporter une touche d'élégance à votre intérieur ?
+
+                                Les produits en aluminium "Terres de Fenêtre" sauront vous séduire. Design et légers, ils atteignent également d'excellentes performances pour protéger votre habitation du froid, du bruit ou des brèches.
+                            </p>                                
+
+                            </div>
+
+                            <!-- <div class="product_meta"> 
+                                <div class="sku_wrapper">SKU: 
+                                    <span class="sku">05</span>
+                                </div> 
+                                <div class="posted_in">Categories: 
+                                    <a href="#" rel="tag">Constrction Tools</a>
+                                </div>
+                            </div> -->
+                            <!-- <div class="product-single-availability">
+                                Availability: <span>500 In Stock</span>
+                            </div>  -->
+
+                            <!-- <form method="post" class="cart clearfix m-t30"> -->
+                                <!-- <div class="quantity btn-quantity m-b20">
+                                    <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
+                                </div> -->
+                                <button class="site-button btn-hover-animation m-b30 w-75"><i class="flaticon-right"></i>FIND A POINT OF SALE</button>
+                                <br>
+                                <a href="request.html">
+                                <button class="site-button btn-hover-animation m-b30 w-75"><i class="flaticon-right"></i>ASK FOR A QUOTE</button>
+                                </a>
+                            <!-- </form> -->
+
+                        </div>
+                    </div>
+                </div>
+                  
+
+                <!-- Detail SECTION START -->
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2"></div>
+                        <div class="col-sm-8">
+                            <div class="product-detail-full"> 
+
+                                <div class="wt-accordion " id="accordion">
+                                    <!--one-->
+                                    <div class="panel wt-panel">
+        
+                                        <div class="container p-b20 p-t20">
+                                            <div class="row">
+                                                <div class="col-sm-4"></div>
+                                                <div class="col-sm-4" style="border-left: 2px solid #db5200;"><h2 ><span >DETAILS</span></h2></div>
+                                                <div class="col-sm-4"></div>
+                                            </div>
+                                        </div>
+                                        <div class="acod-head" id="headingOne">
+                                            <h5 class="acod-title">
+                                            <a style="color:#db5200" data-toggle="collapse" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                                LES AVANTAGES
+                                                <span class="indicator"><i class="fa"></i></span>
+                                            </a>
+                                            </h5>
+                                        </div>
+                                    
+                                        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="acod-content p-tb15">
+                                                <ul style="color: #db5200;">
+                                                    <li><span class="text-dark">Esthétiques, vaste choix de modèles</span></li>
+                                                    <li><span  class="text-dark">Résistants aux variations climatiques et atmosphériques</span></li>
+                                                    <li><span  class="text-dark">Nombreuses options de ferrage disponibles pour un ajustement parfait du volet dans la baie</span></li>
+                                                    <li><span  class="text-dark">Modèles pleins : barres seules, écharpe ou pentures et contre pentures</span></li>
+                                                    <li><span  class="text-dark">Modèles persiennés</span></li>
+                                                    <li><span  class="text-dark">Modèles cintrés</span></li>
+                                                    <li><span  class="text-dark">Nombreux coloris</span></li>
+                                                    <li><span  class="text-dark">Motorisables</span></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+        
+                                    </div>
+                                <!-- two  -->
+
+                                <div class="panel wt-panel">
+        
+<style>
+.color-div div{
+    margin: .5rem;
+}
+</style>                        
+                                    <!-- <div class="acod-head" id="headingOne"> -->
+                                        <!-- <h5 class="acod-title">
+                                        <a style="color: #db5200;" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                            COLORS
+                                            <span class="indicator"><i class="fa"></i></span>
+                                        </a>
+                                        </h5> -->
+                                    <!-- </div> -->
+                                
+                                    <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                        <div class="acod-content p-tb15"> -->
+                                           
+                                            <!-- <div class="container"> -->
+                                                <!-- <div class="row color-div" style="font-size: .8rem;">
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #f0d6af;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">1015</span>
+                                                            <span>LIGHT IVORY</span>
+                                                           </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #620e23;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                            <div>
+                                                                <span  style="display: block;">3004</span>
+                                                                <span>PURPLE RED</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #475057;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                            <div>
+                                                                <span  style="display: block;">7016</span>
+                                                                <span>CHARCOAL GRAY</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #848d95;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">7022</span>
+                                                            <span>UMBER GRAY</span>
+                                                           </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #4d270f;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">8014</span>
+                                                            <span>SEPIA BROWN</span>
+                                                           </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #453932;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">8019</span>
+                                                            <span>BROWN GRAY</span>
+                                                           </div>
+                                                        </div>    
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #171b19;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                          <div>
+                                                            <span  style="display: block;">9005</span>
+                                                            <span>INTENSE BLACK</span>
+                                                          </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #2f2b20;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                            <div>
+                                                                <span  style="display: block;">N2100</span>
+                                                                <span>SAND BLASTED</span>
+                                                            </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #454241;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">2900</span>
+                                                            <span>SAND GRAY</span>
+                                                           </div>
+                                                        </div>
+                                                        <div class="d-flex">
+                                                            <div style="background-color: #cbc9c8;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                           <div>
+                                                            <span  style="display: block;">7047</span>
+                                                            <span>TELEGRIS</span>
+                                                           </div>
+                                                        </div>                                                                                    
+                                                   
+                                                </div> -->
+                                            <!-- </div> -->
+                                              
+                                             <!-- <div class="container"> -->
+                                                <!-- <div class="row" style="font-size: .8rem;"> -->
+                                                   
+                                                    <!-- <div class="d-flex">
+                                                        <div style="background-color: #4d270f;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                        <span  style="display: block;">8014</span>
+                                                        <span>NATURE</span>
+                                                    </div> -->
+                                                    <!-- <div class="d-flex">
+                                                        <div style="background-color: #453932;border-radius: 50%;width: 50px; height: 38px;"> </div>
+                                                        <span  style="display: block;">8019</span>
+                                                        <span>BROWN GRAY </span>
+                                                    </div> -->
+                                                <!-- </div> -->
+                                             <!-- </div> -->
+                                              
+                                              
+                                        <!-- </div>
+                                    </div>
+        
+                                </div> -->
+                                    <!-- three  -->
+                                    <!-- <div class="panel wt-panel">
+        
+                    
+                                        <div class="acod-head" id="headingOne">
+                                            <h5 class="acod-title">
+                                            <a style="color: #db5200;" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseOne">
+                                                BRANDS & LABELS
+                                                <span class="indicator"><i class="fa"></i></span>
+                                            </a>
+                                            </h5>
+                                        </div>
+                                    
+                                        <div id="collapseThree" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="acod-content p-tb15">
+                                                <div class="row color-div">
+                                                    <div class="d-flex">
+                                                        <img src="images/cekal-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <img src="images/telechargement-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <img src="images/france-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <img src="images/nf-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <img src="images/qe-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                    <div class="d-flex">
+                                                        <img src="images/aev-removebg-preview.png" alt="" width="100px">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+            
+                                    </div> -->
+                                    <!-- four  -->
+                                    <!-- <div class="panel wt-panel">
+        
+                    
+                                        <div class="acod-head" id="headingOne">
+                                            <h5 class="acod-title">
+                                            <a style="color: #db5200;" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseOne">
+                                                ACCESSORIES
+                                                <span class="indicator"><i class="fa"></i></span>
+                                            </a>
+                                            </h5>
+                                        </div>
+                                    
+                                        <div id="collapseFour" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="acod-content p-tb15">
+                                               <div class="row col-div" style="font-size: .8rem;">
+                                                    <div class="d-flex p-2"> 
+                                                        <div class="text-center">
+                                                            <img src="images/accessories/SYMBIOSE.jpg" alt="" width="23px">
+                                                             <span style="display: block;">SYMBIOSE HANDLE AS STANDARD</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-2">
+                                                        <div class="text-center">
+                                                            <img src="images/accessories/SYMBIOSE-AERO.jpg" alt="" width="50px">
+                                                             <span style="display: block;">AERO SYMBIOSE HANDLE</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-2">
+                                                        <div class="text-center">
+                                                            <img src="images/accessories/POIGNEE-SEDUCTION.jpg" alt="" width="30px">
+                                                             <span style="display: block;">SEDUCTION HANDLE</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="d-flex p-2">
+                                                        <div class="text-center">
+                                                            <img src="images/accessories/CUVETTE.jpg" alt="" width="18px">
+                                                             <span style="display: block;">RECESSED BOWL</span>
+                                                        </div>
+                                                    </div>  
+                                               </div>
+                                            </div>
+                                        </div>
+            
+                                    </div> -->
+                                    <!-- five  -->
+                                    <!-- <div class="panel wt-panel">
+        
+                    
+                                        <div class="acod-head" id="headingOne">
+                                            <h5 class="acod-title">
+                                            <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                                Description
+                                                <span class="indicator"><i class="fa"></i></span>
+                                            </a>
+                                            </h5>
+                                        </div>
+                                    
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="acod-content p-tb15">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.
+                                            </div>
+                                        </div>
+            
+                                    </div> -->
+                                    <!-- six  -->
+                                    <!-- <div class="panel wt-panel">
+        
+                    
+                                        <div class="acod-head" id="headingOne">
+                                            <h5 class="acod-title">
+                                            <a data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseOne">
+                                                Description
+                                                <span class="indicator"><i class="fa"></i></span>
+                                            </a>
+                                            </h5>
+                                        </div>
+                                    
+                                        <div id="collapseTwo" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                                            <div class="acod-content p-tb15">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sagittis orci ac odio dictum tincidunt. Donec ut metus leo. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Sed luctus, dui eu sagittis sodales, nulla nibh sagittis augue, vel porttitor diam enim non metus. Vestibulum aliquam augue neque. Phasellus tincidunt odio eget ullamcorper efficitur. Cras placerat ut turpis pellentesque vulputate. Nam sed consequat tortor. Curabitur finibus sapien dolor. Ut eleifend tellus nec erat pulvinar dignissim. Nam non arcu purus. Vivamus et massa massa.
+                                            </div>
+                                        </div>
+            
+                                    </div> -->
+                                
+                                </div> 
+        
+                            </div> 
+                        </div>
+                        <div class="col-sm-2"></div>
+                    </div>
+                </div>
+                
+               
+                <!-- Detail SECTION END -->                    
+                
+            </div>
+            <!-- PRODUCT DETAILS -->    
+                
+        </div>
+        <!-- CONTENT CONTENT END -->
+    <br>
+    <br>
+        <!-- SECTION CONTENT START -->
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-3"></div>
+                <div class="col-sm-3">
+                    <h3>CHOISISSEZ</h3>
+                        <h3><span style="color: #db5200;">VOTRE SOLUTION</span></h3>
+                </div>
+                <div class="col-sm-4">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id et hic, optio nam iusto, inventore delectus sequi quae ratione neque dolore enim velit. Recusandae.
+                </div>
+                <div class="col-sm-2"></div>
+
+            </div>
+            <div class="row">
+                <div class="col-sm-2"></div>
+                <div class="col-sm-8">
+                    <div id="demo" class="carousel slide" data-ride="carousel">
+                        <ul class="carousel-indicators">
+                            <li data-target="#demo" data-slide-to="0" class="active"></li>
+                            <li data-target="#demo" data-slide-to="1"></li>
+                            <li data-target="#demo" data-slide-to="2"></li>
+                          </ul>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                              <img src="images/ALU/Alu.jpg" alt="Los Angeles" style="width:822px;height: 452px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER1 (2) (2) - Copy.jpg" alt="Los Angeles" style="width:822px;height: 452px;">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="images/ALU/m1.jpg" alt="Los Angeles"  style="width:822px;height: 452px;">
+                            </div>
+                        </div>
+                            
+                        <!-- Left and right controls -->
+                        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+                            <span class="carousel-control-prev-icon"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#demo" data-slide="next">
+                            <span class="carousel-control-next-icon"></span>
+                        </a>
+
+                    </div>
+                </div>
+                <div class="col-sm-2"></div>
+            </div>
+            <hr>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-sm-2">
+                        </div>
+                        <div class="col-sm-4">
+                            <h3>THESE PRODUCTS COULD
+                                <span style="color: #db5200;">INTEREST YOU</span></h3>
+                        </div>
+                        <div class="col-sm-6"></div>
+                    </div>
+                    <br>
+                    <div class="row">
+                        <div class="col-sm-2">
+                            
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/ALU/VOLET-BATTANT-ALU-SLIDER1 (2) (2) - Copy.jpg" alt="" style="height: 305px;width: 381px;" >
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/ALU/m1.jpg" alt="" style="height: 305px;width: 381px;">
+                        </div>
+                        <div class="col-sm-2">
+                            
+                        </div>
+                    </div>
+                    <br>     
+                    <div class="row">
+                        <div class="col-sm-4">
+
+                        </div>
+                        <div class="col-sm-4">
+                            <img src="images/alu/VOLET-BATTANT-ALU-SLIDER2 1.jpg" alt="" style="height: 305px;width: 381px;">
+                        </div>
+                        <div class="col-sm-4">
+
+                        </div>
+                    </div>
+                </div>
+         
+        </div>
+         <!-- SECTION CONTENT END -->  
+      
+        
+ 
+    </div>
+    <!-- CONTENT END -->
+
+
 
        
 
 
-        <!-- CONTENT START -->
-        <div class="page-content">
-
-            <!-- INNER PAGE BANNER -->
-            <!-- <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(images/banner/1.jpg);">
-            <div class="overlay-main site-bg-black opacity-07"></div>
-            <div class="container">
-                <div class="wt-bnr-inr-entry">
-                    <div class="banner-title-outer">
-                        <div class="banner-title-name">
-                            <h2 class="wt-title">Project Detail</h2>
-                        </div>
-                    </div> -->
-            <!-- BREADCRUMB ROW -->
-
-            <!-- <div>
-                            <ul class="wt-breadcrumb breadcrumb-style-2">
-                                <li><a href="index.html">Home</a></li>
-                                <li>Project Detail</li>
-                            </ul>
-                        </div> -->
-
-            <!-- BREADCRUMB ROW END -->
-            <!-- </div>
-            </div>
-        </div> -->
-            <!-- INNER PAGE BANNER END -->
-
-            <!-- info SECTION START -->
-            <div class="section-full  p-b90 bg-gray">
-                <div class="container">
-                    <div class="section-content">
-                        <div class="project-single">
-                            <div class="project-single-media">
-                                <div class="row project-single-img-column m-b30">
-                                    <div class="col-md-6 col-lg-6"><img
-                                            src="images/product-2/VOLET-BATTANT-ALU-SLIDER2 1.jpg" alt=""></div>
-                                    <div class="col-md-6 col-lg-6">
-                                        <div class="project-single-row-section">
-                                            <h2 class="wt-tilte m-b20">Volet battant ALU</h2>
-                                            <p>Lorem ipsum is simply free text used by copytyping refreshing. Neque
-                                                porro est qui
-                                                dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae
-                                                vitae dicta sunt explicabo.
-                                                aellt port lacus quis enim var sed efficitur turpis gilla sed sit amet
-                                                finibus eros.
-                                                lorem ipsum is local dummy text of the printing and typesetting
-                                                industry.
-                                                lorem ipsum has been the ndustry and dummy text ever since the 1500s.
-                                            </p>
-                                            <p>Eveniet in vulputate velit esse molestie consequat, vel illum dolore eu
-                                                feugiat nulla facilisis at seds eros sed et accumsan et iusto odio
-                                                dignissim. Temporibus autem quibusdam et aut officiis.</p>
-
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- <div class="row">
-                            <div class="col-md-6 col-lg-6">
-                                <div class="project-single-sibar-info m-b30">
-                                    <h3 class="wt-tilte">Project Information</h3>
-                                    <p>It is a long established fact that a reader will be distracted by the readable content...</p>
-                                    <ul class="info-list-1">
-                                        <li><h5 class="title">Date :</h5><span>05 March 2021</span></li>
-                                        <li><h5 class="title">Category :</h5><span>Contruction, Building</span></li>
-                                        <li><h5 class="title">Clients :</h5><span>Christopher Bloom</span></li>
-                                        <li><h5 class="title">Location :</h5><span>Bulls Stadium, New York</span></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-lg-6">
-                                <div class="project-single-row-section">
-                                    <h2 class="wt-tilte m-b20">New York Housing Project</h2>
-                                    <p>Lorem ipsum is simply free text used by copytyping refreshing. Neque porro est qui
-                                    dolorem ipsum quia quaed inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-                                    aellt port lacus quis enim var sed efficitur turpis gilla sed sit amet finibus eros. 
-                                    lorem ipsum is local dummy text of the printing and typesetting industry.
-                                    lorem ipsum has been the ndustry and dummy text ever since the 1500s.
-                                    </p>
-                                    <p>Eveniet in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at seds eros sed et accumsan et iusto odio dignissim. Temporibus autem quibusdam et aut officiis.</p>
-                                
-                                </div>
-                            </div>
-                        </div> -->
-
-
-
-                        </div>
-
-
-                    </div>
-
-                </div>
-            </div>
-            <!-- info  SECTION END -->
-
-
-            <!-- LATEST PRJECTS SLIDER START -->
-            <div class="section-full p-t120 p-b90 project-style-new site-bg-gray-light">
-
-                <div class="container">
-
-                    <!-- TITLE START-->
-                    <div class="section-head center wt-small-separator-outer">
-                        <div class="wt-small-separator site-text-primary">
-                            <div>Explore Recent Work</div>
-                        </div>
-                        <h2>Related Projects</h2>
-                    </div>
-                    <!-- TITLE END-->
-
-                </div>
-
-                <!-- IMAGE CAROUSEL START -->
-                <div class="container">
-                    <div class="section-content">
-                        <div class="owl-carousel project-carousel  owl-btn-vertical-center m-b30">
-                            <!-- COLUMNS 1 -->
-                            <div class="item cat-1">
-                                <div class="project-new-2">
-                                    <div class="wt-img-effect">
-                                        <img src="images/product-2/product-slider-img1 (1) (1).jpg" alt="">
-                                        <div class="project-view">
-                                            <a class="elem pic-long project-view-btn" href="images/project/1.jpg"
-                                                title="Nh-16 Highway Bridge" data-lcl-txt="" data-lcl-author=""
-                                                data-lcl-thumb="images/project/1.jpg">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="project-new-content">
-                                        <span class="project-new-category">Bridge, interior</span>
-                                        <h4 class="wt-title"><a href="javascript:void(0)">Nh-16 Highway Bridge</a></h4>
-                                        <p>You can dream, create, design and build the most wonderful place in the
-                                            world.</p>
-                                        <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i
-                                                class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 2 -->
-                            <div class="item cat-2">
-                                <div class="project-new-2">
-                                    <div class="wt-img-effect">
-                                        <img src="images/product-2/VOLET-BATTANT-ALU-SLIDER2 1 (1).jpg" alt="">
-                                        <div class="project-view">
-                                            <a class="elem pic-long project-view-btn" href="images/project/2.jpg"
-                                                title="Ruma Dam Project" data-lcl-txt="" data-lcl-author=""
-                                                data-lcl-thumb="images/project/2.jpg">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="project-new-content">
-                                        <span class="project-new-category">Construction, Engineering</span>
-                                        <h4 class="wt-title"><a href="javascript:void(0)">Ruma Dam Project</a></h4>
-                                        <p>You can dream, create, design and build the most wonderful place in the
-                                            world.</p>
-                                        <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i
-                                                class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 3 -->
-                            <div class="item cat-3">
-                                <div class="project-new-2">
-                                    <div class="wt-img-effect">
-                                        <img src="images/product-2/VOLET-BATTANT-PVC-SLIDER2_0 (3).jpg" alt="">
-                                        <div class="project-view">
-                                            <a class="elem pic-long project-view-btn" href="images/project/3.jpg"
-                                                title="New York Housing Project" data-lcl-txt="" data-lcl-author=""
-                                                data-lcl-thumb="images/project/3.jpg">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="project-new-content">
-                                        <span class="project-new-category">Apartment</span>
-                                        <h4 class="wt-title"><a href="javascript:void(0)">New York Housing Project</a></h4>
-                                        <p>You can dream, create, design and build the most wonderful place in the
-                                            world.</p>
-                                        <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i
-                                                class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 4 -->
-                            <div class="item cat-4">
-                                <div class="project-new-2">
-                                    <div class="wt-img-effect">
-                                        <img src="images/product-2/VOLET-BATTANT-ALU-SLIDER1 (2) (2).jpg" alt="">
-                                        <div class="project-view">
-                                            <a class="elem pic-long project-view-btn" href="images/project/4.jpg"
-                                                title="House Extensions" data-lcl-txt="" data-lcl-author=""
-                                                data-lcl-thumb="images/project/4.jpg">
-                                                <i class="fa fa-search-plus"></i>
-                                            </a>
-                                        </div>
-                                    </div>
-                                    <div class="project-new-content">
-                                        <span class="project-new-category">Building Constrction</span>
-                                        <h4 class="wt-title"><a href="javascript:void(0)">House Extensions</a></h4>
-                                        <p>You can dream, create, design and build the most wonderful place in the
-                                            world.</p>
-                                        <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i
-                                                class="fa fa-play"></i></a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- COLUMNS 5 -->
-                            <!-- <div class="item cat-5">
-                            <div class="project-new-2">
-                                <div class="wt-img-effect">
-                                    <img src="images/project/5.jpg" alt="">
-                                    <div class="project-view">
-                                        <a class="elem pic-long project-view-btn" href="images/project/5.jpg" title="Renovation" 
-                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/project/5.jpg">
-                                        <i class="fa fa-search-plus"></i>     
-                                        </a> 
-                                    </div> 
-                                </div>
-                                <div class="project-new-content">
-                                    <span class="project-new-category">Renovation , Architecture</span>	
-                                    <h4 class="wt-title"><a href="javascript:void(0)">Renovation</a></h4>
-                                    <p>You can dream, create, design and build the most wonderful place in the world.</p>
-                                    <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                </div>
-                            </div>                            
-                        </div>                         -->
-                            <!-- COLUMNS 6 -->
-                            <!-- <div class="item cat-1">
-                            <div class="project-new-2">
-                                <div class="wt-img-effect">
-                                    <img src="images/project/6.jpg" alt="">
-                                    <div class="project-view">
-                                        <a class="elem pic-long project-view-btn" href="images/project/6.jpg" title="Tehla Mines Project" 
-                                        data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/project/6.jpg">
-                                        <i class="fa fa-search-plus"></i>     
-                                        </a> 
-                                    </div> 
-                                </div>
-                                <div class="project-new-content">
-                                    <span class="project-new-category">Mines</span>	
-                                    <h4 class="wt-title"><a href="javascript:void(0)">Tehla Mines Project</a></h4>
-                                    <p>You can dream, create, design and build the most wonderful place in the world.</p>
-                                    <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                </div>
-                            </div>                            
-                        </div>                         -->
-
-                        </div>
-                    </div>
-                </div>
-
-
-            </div>
-            <!-- LATEST PRJECTS SLIDER END -->
-
-        </div>
+        
            <!-- CONTACT US START -->
            <style>
             @keyframes blink{
