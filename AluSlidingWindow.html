@@ -55,103 +55,227 @@
  <!-- JQUERY LINK   -->
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
  <script>
+    function clearing(){
+              document.getElementById('fname').value="";
+              document.getElementById('lname').value="";
+              document.getElementById('mobile').value="";
+              document.getElementById('location').value="";
+    }
     function clearForm(){
-       document.getElementById('fname').value="";
-       document.getElementById('lname').value="";
-       document.getElementById('mobile').value="";
-       document.getElementById('location').value="";
-   }
-   function showSpin(){
-       let x= document.getElementById('mobile').value;
-       if(x.length==10){
-           document.getElementById('spinner').style.display = 'block';
-           document.getElementById('spin-content').style.display = 'block';
-       }
+          let fname=document.getElementById("fname").value;
+          let lname=document.getElementById("lname").value;
+          let mobile=document.getElementById("mobile").value;
+          let location=document.getElementById("location").value;
+          if(fname!=="" && lname!=='' && mobile!=='' && location!==''){
+              document.getElementById('fname').value="";
+              document.getElementById('lname').value="";
+              document.getElementById('mobile').value="";
+              document.getElementById('location').value="";
+          }  
+      }
       
-   }
-   function showOffSpin(){
-       // let x= document.getElementById('mobile').value;
-     //  if(x.length==10)
-       document.getElementById('spinner').style.display = 'none';
-       document.getElementById('spin-content').style.display = 'none';
-   }
-   $(document).ready(function(){
-       $("#modal").click(function(){
-        $("#myModal").modal({backdrop: "static"});
-       });
-   })
-</script>
+      function showSpin(){
+          let x= document.getElementById('mobile').value;
+          if(x.length==10){
+              document.getElementById('spinner').style.display = 'block';
+              document.getElementById('spin-content').style.display = 'block';
+          }
+         
+      }
+      function showOffSpin(){
+          // let x= document.getElementById('mobile').value;
+        //  if(x.length==10)
+          document.getElementById('spinner').style.display = 'none';
+          document.getElementById('spin-content').style.display = 'none';
+      }
+      $(document).ready(function(){
+          $("#modal").click(function(){
+           $("#myModal").modal({backdrop: "static"});
+          });
+      })
+
+      function disableModal(){
+          let fname=document.getElementById("fname").value;
+          let lname=document.getElementById("lname").value;
+          let mobile=document.getElementById("mobile").value;
+          let location=document.getElementById("location").value;
+          let flag = true;
+          const arr=[fname,lname,mobile,location];
+          arr.forEach(input => {
+              if(input=="")
+              flag = false;
+          });
+          return flag;
+      }
+      function disabled(){
+          if(disableModal())
+          {$("#myModal").modal("hide")};
+      }
+  </script>
 
 </head>
 <style>
-#spinner{
-   display: none;
-   position: absolute;
-   left: 15rem;
-   top: 11rem;
-   bottom: 0;
-   right: 0;
+    #spinner{
+        display: none;
+        position: absolute;
+        left: 15rem;
+        top: 11rem;
+        bottom: 0;
+        right: 0;
+        color: #db5200;
+    }
+    #spin-content{
+        display: none;
+        margin-left: 11rem;
+    }
+ /* PROJECT SECTION START  */
+.section-head.center.wt-small-separator-outer h2 {
+  max-width: 900px;
+  margin: 0px auto;
 }
-#spin-content{
-   display: none;
-   margin-left: 11rem;
+
+@media (max-width: 1200px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 50px;
+  }
 }
-.fonts{
+
+@media (max-width: 1024px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+ /* PROJECT CHOOSE SECTION END  */
+
+ .fonts{
     font-size: x-small;
  }
+ @keyframes blink{
+    0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+ }
+ #fix:hover{
+    animation-play-state: paused;
+ }
+ #fix{
+    height: 4rem;
+    z-index: 4;
+    position: fixed;
+    top: 150px;
+    right: 15px;
+    font-size: 12px;
+    animation: blink 2s infinite ease-in;
+ }
+ #fix ul li img{
+    width: 4rem;
+    border-radius: 25%;
+ }
+ #fix ul{
+    list-style-type: none;
+ }
+ #fix:hover #hider{
+    visibility: visible;
+ }
+ #hider{ 
+    visibility: hidden;
+    color: rgb(233, 134, 63);
+    }
+    
+    
+     
+    .s-btn {
+    border: none;
+    background-color: #db5200;
+    padding:  9px 20px ;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+
+}
+.s-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 </style>
+
 
 <body>
 <!-- LOADING AREA START ===== -->
 <div class="loading-area">
-<div class="loading-box"></div>
-<div class="loading-pic">
-   <div class="cssload-spinner">
-       <div class="cssload-ball cssload-ball-1"></div>
-       <div class="cssload-ball cssload-ball-2"></div>
-       <div class="cssload-ball cssload-ball-3"></div>
-       <div class="cssload-ball cssload-ball-4"></div>
-   </div>
-</div>
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-spinner">
+            <div class="cssload-ball cssload-ball-1"></div>
+            <div class="cssload-ball cssload-ball-2"></div>
+            <div class="cssload-ball cssload-ball-3"></div>
+            <div class="cssload-ball cssload-ball-4"></div>
+        </div>
+    </div>
 </div>
 <!-- LOADING AREA  END ====== -->
-<!-- POPUP START  -->
-<div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog modal-md">
-   
-     <!-- Modal content-->
-     <div class="modal-content">
-       <div class="modal-header">
-           <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-           <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
-       </div>
-       <div class="modal-body">
-           <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
-           <form action="mail.php" method="post">
-               <label for="fname" class="pb-2">Prénom</label><br>
-               <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
-               <label for="lname" class="pb-2">nom de famille</label><br>
-               <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
-               <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-               <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-               <label for="location" class="pb-2">emplacement</label><br>
-               <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-               <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
-           </form>
-           <div>
-               <div class="spinner-border text-success my-3 " id="spinner"></div>
-               <div id="spin-content" class="mt-3">please wait...</div>
-           </div>
-       </div>
-       <!-- <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-       </div> -->
-     </div>
-     
-   </div>
- </div>
-     
-<!-- POPUP END  -->
+    <!-- POPUP START  -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-md">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+               <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
+            </div>
+            <div class="modal-body">
+         
+               <form action="mail.php" method="post">
+                    <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
+                      <input class="w-50"  type="text" name="fname" id="fname" required  placeholder="Prénom"  title="entrez a-z ouA-z."> <br>
+                    <!-- <label for="lname" class="pb-2">Nom de famille</label><br><br> -->
+                    <br>
+                    <input class="w-50" type="text" name="lname" id="lname" required  placeholder="Nom"   title="entrez a-z ouA-z."> <br>
+                    <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
+                    <br>
+
+                    <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+                    <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
+                    <br>
+                    <input class="w-50" type="text" name="location" id="location" required  placeholder="Code postal"  title="entrez l' Emplacement valide."> <br>
+                    <br>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                        Soumettre</button>
+                    <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
+                </form>
+                <div>
+                    <div class="spinner-border  my-3 " id="spinner"></div>
+                    <div id="spin-content" class="mt-3">please wait...</div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+            </div> -->
+          </div>
+          
+        </div>
+      </div>
+          
+    <!-- POPUP END  -->
 <div class="page-wraper">
 
    <!-- HEADER START -->
@@ -163,14 +287,15 @@
                    <div class="d-flex justify-content-between">
                        <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
                            <ul class="wt-topbar-info e-p-bx text-white">
-                             <li><span class="fonts"> LUNDI À VENDREDI 8.30AM-7PM</span><span>|</span><span class="fonts"> SAMEDI DIMANCHE 10AM-6PM</span></li>
+                        <li><span class="fonts"> LUNDI AU SAMEDI 09H00 à 20H00</span><span>|</span><span class="fonts"> DIMANCHE 09H00 à 17H00</span></li>
                            </ul>
                        </div>
                        
                        <div class="wt-topbar-right d-flex flex-wrap align-content-center">
                            <ul class="wt-topbar-info-2 e-p-bx text-white">
-                               <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
-                               <li><i class="fa fa-envelope"></i>RENDEZ-VOUS</li>
+                               <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
+                                                                  <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS GRATUIT</a></li>
+
                            </ul> 
            
                            <ul class="social-icons">
@@ -700,6 +825,57 @@
      
         </div>
         <!-- CONTENT END -->
+   <!-- CONTACT US START -->
+   <style>
+    @keyframes blink{
+         0% {
+        transform: scale(1);
+         }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+    }
+    #fix:hover{
+        animation-play-state: paused;
+    }
+    #fix{
+        height: 4rem;
+        z-index: 4;
+        position: fixed;
+        top: 150px;
+        right: 15px;
+        font-size: 12px;
+        animation: blink 2s infinite ease-in;
+    }
+    #fix ul li img{
+        width: 4rem;
+        border-radius: 25%;
+    }
+    #fix ul{
+        list-style-type: none;
+    }
+    #fix:hover #hider{
+        visibility: visible;
+    }
+    #hider{ 
+        visibility: hidden;
+        color: rgb(233, 134, 63);
+        }
+
+ </style>
+ <div id="fix">
+    <a href="appointment2.html">
+     <ul >
+         <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+         <li id="hider">Contactez-nous</li>
+     </ul>
+    </a>
+ </div>
+  <!-- CONTACT US END -->
+
  <!-- FOOTER START -->
  <footer class="site-footer footer-dark " >
 
@@ -713,7 +889,7 @@
                     
                     <div class="widget widget_about">
                         <div class="logo-footer clearfix bg-white">
-                            <a href="index.html"><img src="images/Footer Logo.jpg"  alt=""></a>
+                             <a href="index.html"><img src="images/footerlogo1.svg"  alt=""></a>
                         </div>
                         <p>
                             Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à votre expertise, vous nous avez livrés.</p>
@@ -756,7 +932,7 @@
                             24 heures sur 24, sept jours sur sept.</p>                            
                         <ul class="widget_address"> 
                             <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                            <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
+                             <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                         </ul>  
                     </div>
                 </div>
@@ -782,7 +958,7 @@
     </div>
     <!-- FOOTER COPYRIGHT -->
                         
-    <div class="footer-bottom bg-light p-2">
+    <div class="footer-bottom bg-light p-1">
         <div class="container">
             <div class="footer-bottom-light">
 

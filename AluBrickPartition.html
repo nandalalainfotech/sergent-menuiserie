@@ -2,41 +2,41 @@
 <html lang="en">
 
 <head>
-	<!-- META -->
+    <!-- META -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="keywords" content="" />
     <meta name="author" content="" />
-    <meta name="robots" content="" />    
+    <meta name="robots" content="" />
     <meta name="description" content="" />
-    
+
     <!-- FAVICONS ICON -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="images/Fav_Sm.png" />
-    
+
     <!-- PAGE TITLE HERE -->
     <title>Sergent Menuiserie|Gamme Écléa|Cloison en brique </title>
-    
+
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    
+
     <!-- BOOTSTRAP STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- FONTAWESOME STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
     <!-- OWL CAROUSEL STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.min.css">
-  
+
     <!-- MAGNIFIC POPUP STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/magnific-popup.min.css">
-   
+
     <!-- MAIN STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <!-- FLATICON STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/flaticon.min.css">
     <!-- Lc light box popup -->
-    <link rel="stylesheet" href="css/lc_lightbox.css" />   
+    <link rel="stylesheet" href="css/lc_lightbox.css" />
     <!-- Price Range Slider -->
     <link rel="stylesheet" href="css/bootstrap-slider.min.css" />
 
@@ -45,306 +45,440 @@
     <link rel="stylesheet" class="skin" type="text/css" href="css/skin-1.css">
 
 
-       
+
 
     <!-- REVOLUTION SLIDER CSS -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/settings.css">
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
-  <!-- JQUERY LINK   -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-  <script>
-    function clearForm(){
-       document.getElementById('fname').value="";
-       document.getElementById('lname').value="";
-       document.getElementById('mobile').value="";
-       document.getElementById('location').value="";
-   }
-   function showSpin(){
-       let x= document.getElementById('mobile').value;
-       if(x.length==10){
-           document.getElementById('spinner').style.display = 'block';
-           document.getElementById('spin-content').style.display = 'block';
-       }
-      
-   }
-   function showOffSpin(){
-       // let x= document.getElementById('mobile').value;
-     //  if(x.length==10)
-       document.getElementById('spinner').style.display = 'none';
-       document.getElementById('spin-content').style.display = 'none';
-   }
-   $(document).ready(function(){
-       $("#modal").click(function(){
-        $("#myModal").modal({backdrop: "static"});
-       });
-   })
-</script>
+    <!-- JQUERY LINK   -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script>
+        function clearing(){
+                  document.getElementById('fname').value="";
+                  document.getElementById('lname').value="";
+                  document.getElementById('mobile').value="";
+                  document.getElementById('location').value="";
+        }
+        function clearForm(){
+              let fname=document.getElementById("fname").value;
+              let lname=document.getElementById("lname").value;
+              let mobile=document.getElementById("mobile").value;
+              let location=document.getElementById("location").value;
+              if(fname!=="" && lname!=='' && mobile!=='' && location!==''){
+                  document.getElementById('fname').value="";
+                  document.getElementById('lname').value="";
+                  document.getElementById('mobile').value="";
+                  document.getElementById('location').value="";
+              }  
+          }
+          
+          function showSpin(){
+              let x= document.getElementById('mobile').value;
+              if(x.length==10){
+                  document.getElementById('spinner').style.display = 'block';
+                  document.getElementById('spin-content').style.display = 'block';
+              }
+             
+          }
+          function showOffSpin(){
+              // let x= document.getElementById('mobile').value;
+            //  if(x.length==10)
+              document.getElementById('spinner').style.display = 'none';
+              document.getElementById('spin-content').style.display = 'none';
+          }
+          $(document).ready(function(){
+              $("#modal").click(function(){
+               $("#myModal").modal({backdrop: "static"});
+              });
+          })
+    
+          function disableModal(){
+              let fname=document.getElementById("fname").value;
+              let lname=document.getElementById("lname").value;
+              let mobile=document.getElementById("mobile").value;
+              let location=document.getElementById("location").value;
+              let flag = true;
+              const arr=[fname,lname,mobile,location];
+              arr.forEach(input => {
+                  if(input=="")
+                  flag = false;
+              });
+              return flag;
+          }
+          function disabled(){
+              if(disableModal())
+              {$("#myModal").modal("hide")};
+          }
+      </script>
 
 </head>
 <style>
-#spinner{
-   display: none;
-   position: absolute;
-   left: 15rem;
-   top: 11rem;
-   bottom: 0;
-   right: 0;
+    #spinner{
+        display: none;
+        position: absolute;
+        left: 15rem;
+        top: 11rem;
+        bottom: 0;
+        right: 0;
+        color: #db5200;
+    }
+    #spin-content{
+        display: none;
+        margin-left: 11rem;
+    }
+ /* PROJECT SECTION START  */
+.section-head.center.wt-small-separator-outer h2 {
+  max-width: 900px;
+  margin: 0px auto;
 }
-#spin-content{
-   display: none;
-   margin-left: 11rem;
+
+@media (max-width: 1200px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 50px;
+  }
 }
-.fonts{
+
+@media (max-width: 1024px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .section-head.center.wt-small-separator-outer h2 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+}
+ /* PROJECT CHOOSE SECTION END  */
+
+ .fonts{
     font-size: x-small;
  }
+ @keyframes blink{
+    0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+ }
+ #fix:hover{
+    animation-play-state: paused;
+ }
+ #fix{
+    height: 4rem;
+    z-index: 4;
+    position: fixed;
+    top: 150px;
+    right: 15px;
+    font-size: 12px;
+    animation: blink 2s infinite ease-in;
+ }
+ #fix ul li img{
+    width: 4rem;
+    border-radius: 25%;
+ }
+ #fix ul{
+    list-style-type: none;
+ }
+ #fix:hover #hider{
+    visibility: visible;
+ }
+ #hider{ 
+    visibility: hidden;
+    color: rgb(233, 134, 63);
+    }
+    
+    
+     
+    .s-btn {
+    border: none;
+    background-color: #db5200;
+    padding:  9px 20px ;
+    font-weight: 700;
+    text-align: center;
+    white-space: nowrap;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    
+
+}
+.s-btn:hover {
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
 </style>
+
 
 <body>
 <!-- LOADING AREA START ===== -->
 <div class="loading-area">
-<div class="loading-box"></div>
-<div class="loading-pic">
-   <div class="cssload-spinner">
-       <div class="cssload-ball cssload-ball-1"></div>
-       <div class="cssload-ball cssload-ball-2"></div>
-       <div class="cssload-ball cssload-ball-3"></div>
-       <div class="cssload-ball cssload-ball-4"></div>
-   </div>
-</div>
+    <div class="loading-box"></div>
+    <div class="loading-pic">
+        <div class="cssload-spinner">
+            <div class="cssload-ball cssload-ball-1"></div>
+            <div class="cssload-ball cssload-ball-2"></div>
+            <div class="cssload-ball cssload-ball-3"></div>
+            <div class="cssload-ball cssload-ball-4"></div>
+        </div>
+    </div>
 </div>
 <!-- LOADING AREA  END ====== -->
-<!-- POPUP START  -->
-<div class="modal fade" id="myModal" role="dialog">
-   <div class="modal-dialog modal-md">
-   
-     <!-- Modal content-->
-     <div class="modal-content">
-       <div class="modal-header">
-           <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-           <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
-       </div>
-       <div class="modal-body">
-           <p>Entrez votre numéro de téléphone puis validez votre choix. Un conseiller vous rappelle.</p>
-           <form action="mail.php" method="post">
-               <label for="fname" class="pb-2">Prénom</label><br>
-               <input class="w-50" type="text" name="fname" id="fname" required  placeholder="Dupants"  title="entrez a-z ouA-z."> <br>
-               <label for="lname" class="pb-2">nom de famille</label><br>
-               <input class="w-50" type="text" name="lname" id="lname" required  placeholder="paul"   title="entrez a-z ouA-z."> <br>
-               <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br>
-               <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="+1234567890" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
-               <label for="location" class="pb-2">emplacement</label><br>
-               <input class="w-50" type="text" name="location" id="location" required  placeholder="53,fread,fryue,franch"  title="entrez l'emplacement valide."> <br>
-               <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
-           </form>
-           <div>
-               <div class="spinner-border text-success my-3 " id="spinner"></div>
-               <div id="spin-content" class="mt-3">please wait...</div>
-           </div>
-       </div>
-       <!-- <div class="modal-footer">
-         <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-       </div> -->
-     </div>
-     
-   </div>
- </div>
-     
-<!-- POPUP END  -->
-<div class="page-wraper">
+    <!-- POPUP START  -->
+    <div class="modal fade" id="myModal" role="dialog">
+        <div class="modal-dialog modal-md">
+        
+          <!-- Modal content-->
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
+               <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
+            </div>
+            <div class="modal-body">
+         
+               <form action="mail.php" method="post">
+                    <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
+                      <input class="w-50"  type="text" name="fname" id="fname" required  placeholder="Prénom"  title="entrez a-z ouA-z."> <br>
+                    <!-- <label for="lname" class="pb-2">Nom de famille</label><br><br> -->
+                    <br>
+                    <input class="w-50" type="text" name="lname" id="lname" required  placeholder="Nom"   title="entrez a-z ouA-z."> <br>
+                    <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
+                    <br>
 
-   <!-- HEADER START -->
-   <header class="site-header header-style-3 mobile-sider-drawer-menu">
-               
-       <div class="top-bar site-bg-primary">
-           <div class="container">
+                    <input class="w-50" type="text" name="mobile" id="mobile" required   maxlength="10" placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide."> <br>
+                    <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
+                    <br>
+                    <input class="w-50" type="text" name="location" id="location" required  placeholder="Code postal"  title="entrez l' Emplacement valide."> <br>
+                    <br>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                        Soumettre</button>
+                    <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
+                </form>
+                <div>
+                    <div class="spinner-border  my-3 " id="spinner"></div>
+                    <div id="spin-content" class="mt-3">please wait...</div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+            </div> -->
+          </div>
+          
+        </div>
+      </div>
+          
+    <!-- POPUP END  -->
+    <div class="page-wraper">
 
-                   <div class="d-flex justify-content-between">
-                       <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
-                           <ul class="wt-topbar-info e-p-bx text-white">
-                             <li><span class="fonts"> LUNDI À VENDREDI 8.30AM-7PM</span><span>|</span><span class="fonts"> SAMEDI DIMANCHE 10AM-6PM</span></li>
-                           </ul>
-                       </div>
-                       
-                       <div class="wt-topbar-right d-flex flex-wrap align-content-center">
-                           <ul class="wt-topbar-info-2 e-p-bx text-white">
-                               <li id="modal"><a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELER</a></li>
-                               <li><i class="fa fa-envelope"></i>RENDEZ-VOUS</li>
-                           </ul> 
-           
-                           <ul class="social-icons">
-                               <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
-                               <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
-                               <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                               <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                               <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                           </ul> 
-                                                                     
-                       </div>
-                   </div>
+        <!-- HEADER START -->
+        <header class="site-header header-style-3 mobile-sider-drawer-menu">
 
-           </div>
-       </div>  
-               
+            <div class="top-bar site-bg-primary">
+                <div class="container">
 
-           <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-               <div class="main-bar">  
-                                   
-                   <div class="container clearfix"> 
-               
-                       <div class="logo-header">
-                           <div class="logo-header-inner logo-header-one">
-                               <a href="index.html">
-                                   <img src="images/SM_258x74.svg" alt="">
+                    <div class="d-flex justify-content-between">
+                        <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                            <ul class="wt-topbar-info e-p-bx text-white">
+                                <li><span class="fonts"> LUNDI À VENDREDI 8.30AM-7PM</span><span>|</span><span
+                                        class="fonts"> SAMEDI DIMANCHE 10AM-6PM</span></li>
+                            </ul>
+                        </div>
 
-                               </a>
-                           </div>
-                       </div>  
-                       
-                       <!-- NAV Toggle Button -->
-                       <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button" class="navbar-toggler collapsed">
-                           <span class="sr-only">Toggle navigation</span>
-                           <span class="icon-bar icon-bar-first"></span>
-                           <span class="icon-bar icon-bar-two"></span>
-                           <span class="icon-bar icon-bar-three"></span>
-                       </button> 
+                        <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                            <ul class="wt-topbar-info-2 e-p-bx text-white">
+                                <li id="modal"><a href="javascript:void(0)" class="text-white"><i
+                                            class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
+                                <li><a href="request.html" class="text-white"><i
+                                            class="fa fa-envelope"></i>DEVIS GRATUIT</a></li>
+
+                            </ul>
+
+                            <ul class="social-icons">
+                                <li><a href="javascript:void(0);" class="fa fa-google"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-rss"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                            </ul>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+                <div class="main-bar">
+
+                    <div class="container clearfix">
+
+                        <div class="logo-header">
+                            <div class="logo-header-inner logo-header-one">
+                                <a href="index.html">
+                                    <img src="images/SM_258x74.svg" alt="">
+
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- NAV Toggle Button -->
+                        <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
+                            class="navbar-toggler collapsed">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar icon-bar-first"></span>
+                            <span class="icon-bar icon-bar-two"></span>
+                            <span class="icon-bar icon-bar-three"></span>
+                        </button>
 
                         <!-- MAIN Vav -->
-                       <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
-                           
-                           <ul class=" nav navbar-nav menu-size">
-                               <li class="has-child"><a href="javascript:;"> FENETRES</a>
-                                   <ul class="sub-menu">
-                                       <li><a href="EcleaRange.html">GAMME ECLIA</a>
-                                           <ul class="sub-menu">
-                                              
-                                               <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
-                                               <li><a href="AluStrikeWindow.html">GACHE FENETRE ALU</a></li>
-                                               <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
-                                               <li><a href="AluBrickPartition.html">CLOISON EN BRIQUE</a></li>
-                                           </ul>
-                                       </li>
-                                       <li><a href="TrendRange.html">GAMME DE TENDANCE</a>
-                                           <ul class="sub-menu">
-                                               <li><a href="PVCWindow.html">FENETRE PVC</a></li>
-                                               <li><a href="RangeAluStrike.html">GACHE FENETRE ALU</a></li>
-                                               <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
-                                           </ul>
-                                       </li>
-                                       <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
-                                           <ul class="sub-menu">
-                                               <li><a href="WoodenWindow.html">FENETRE EN BOIS</a></li>
-                                           </ul>
-                                       </li>
-                                   </ul>
-                               </li>
+                        <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
 
-                               <li class="has-child">
-                                   <a href="javascript:;">VOLETS</a>
-                                   <ul class="sub-menu">
-                                       <li><a href="swing Shutter.html">VOLET BATTANT</a>
-                                           <ul class="sub-menu">
-                                               <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                                               <li><a href="woodenShutters.html">VOLET A CHARNIERE EN BOIS</a></li>
-                                               <li><a href="pvcShutters.html">VOLET PVC</a></li>
-                                           </ul>
-                                       </li>
+                            <ul class=" nav navbar-nav menu-size">
+                                <li class="has-child"><a href="javascript:;"> FENETRES</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="EcleaRange.html">GAMME ECLIA</a>
+                                            <ul class="sub-menu">
 
-                                       <li><a href="rollerShutters.html">VOLET ROULANT</a>
-                                           <ul class="sub-menu">
-                                               <li><a href="zenithShutter.html">OBTURATEUR 2.0 ZENITH </a></li>
-                                               <li><a href="zibaie component.html">COMPOSANTE IZIBAIE</a></li>
-                                               <li><a href="vr4a component.html">COMPOSANTE VR4A</a></li>
-                                           </ul>
-                                       </li>                                           
-                                   </ul>                                
-                               </li>
+                                                <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
+                                                <li><a href="AluStrikeWindow.html">GACHE FENETRE ALU</a></li>
+                                                <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
+                                                <li><a href="AluBrickPartition.html">CLOISON EN BRIQUE</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="TrendRange.html">GAMME DE TENDANCE</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="PVCWindow.html">FENETRE PVC</a></li>
+                                                <li><a href="RangeAluStrike.html">GACHE FENETRE ALU</a></li>
+                                                <li><a href="AluSlidingWindow.html">ALU COULISSANT</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="WoodenWindow.html">FENETRE EN BOIS</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
 
-                               <li class="has-child"><a href="javascript:;">PORTES D'ENTREE</a>
-                                   <ul class="sub-menu">
-                                      
-                                       <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE ALU MONOBLOC</a></li>
-                                       <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE CLOISONNEES ALU</a></li>
-                                       <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
-                                       <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a></li>
-                                       <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE CLOISONNEES EN PVC</a></li>
-                                       <li><a href="harmony-product.html">EXCLUSIVITE DU PRODUIT HARMONY</a></li>
-                                   </ul>                                                                 
-                               </li>
-                      
-                               <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
-                                   <ul class="sub-menu">
-                                      
-                                       <li><a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a></li>                                        
-                                       <li><a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a></li>
-                                       <li><a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a></li>
-                                       <li><a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a></li>                                       
-                                   </ul>                                
-                               </li>
+                                <li class="has-child">
+                                    <a href="javascript:;">VOLETS</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="swing Shutter.html">VOLET BATTANT</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
+                                                <li><a href="woodenShutters.html">VOLET A CHARNIERE EN BOIS</a></li>
+                                                <li><a href="pvcShutters.html">VOLET PVC</a></li>
+                                            </ul>
+                                        </li>
 
-                               
-                       
-                               <li class="has-child"><a href="javascript:;">PORTAILS</a>
-                                   <ul class="sub-menu">
-                                       
-                                       <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>                                        
-                                       <li><a href="portalALU.html">PORTE DE CRI</a></li>
-                                       <li><a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a></li>
-                                   </ul>
-                                                               
-                               </li>
-                               <li class="has-child"><a href="javascript:;">AUVENTS & PERGOLAS</a>
-                                   <ul class="sub-menu">
-                                      
-                                               <li><a href="interior blind.html">STORE INTERIEUR</a></li>                                        
-                                               <li><a href="awning.html">AUVENTS</a></li>
-                                               <li><a href="pergola.html">PERGOLAS</a></li>
-                                   </ul>                                
-                               </li>                                                                
-                           </ul>
-                       </div> 
-                   </div>    
-               </div>
+                                        <li><a href="rollerShutters.html">VOLET ROULANT</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="zenithShutter.html">OBTURATEUR 2.0 ZENITH </a></li>
+                                                <li><a href="zibaie component.html">COMPOSANTE IZIBAIE</a></li>
+                                                <li><a href="vr4a component.html">COMPOSANTE VR4A</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </li>
 
-               <!-- SITE Search -->
-               <div id="search"> 
-                   <span class="close"></span>
-                   <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                       <div class="input-group">
-                           <input class="form-control" value="" name="q" type="search" placeholder="Type to search"/>
-                           <span class="input-group-append"><button type="button" class="search-btn"><i class="fa fa-paper-plane"></i></button></span>
-                       </div> 
-                   </form>
-               </div> 
-           </div>
+                                <li class="has-child"><a href="javascript:;">PORTES D'ENTREE</a>
+                                    <ul class="sub-menu">
 
-       
-   </header>
-   <!-- HEADER END -->
+                                        <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE ALU MONOBLOC</a>
+                                        </li>
+                                        <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE CLOISONNEES
+                                                ALU</a></li>
+                                        <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
+                                        <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a></li>
+                                        <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE CLOISONNEES EN
+                                                PVC</a></li>
+                                        <li><a href="harmony-product.html">EXCLUSIVITE DU PRODUIT HARMONY</a></li>
+                                    </ul>
+                                </li>
+
+                                <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a></li>
+                                        <li><a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a></li>
+                                        <li><a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a></li>
+                                        <li><a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a></li>
+                                    </ul>
+                                </li>
+
+
+
+                                <li class="has-child"><a href="javascript:;">PORTAILS</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>
+                                        <li><a href="portalALU.html">PORTE DE CRI</a></li>
+                                        <li><a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a></li>
+                                    </ul>
+
+                                </li>
+                                <li class="has-child"><a href="javascript:;">AUVENTS & PERGOLAS</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="interior blind.html">STORE INTERIEUR</a></li>
+                                        <li><a href="awning.html">AUVENTS</a></li>
+                                        <li><a href="pergola.html">PERGOLAS</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SITE Search -->
+                <div id="search">
+                    <span class="close"></span>
+                    <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                        <div class="input-group">
+                            <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
+                            <span class="input-group-append"><button type="button" class="search-btn"><i
+                                        class="fa fa-paper-plane"></i></button></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+
+        </header>
+        <!-- HEADER END -->
 
         <!-- CONTENT START -->
         <div class="page-content">
 
             <!-- INNER PAGE BANNER -->
-            <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(images/sergent/alubrick/back.jpg);">
-            	<div class="overlay-main site-bg-black opacity-07"></div>
+            <div class="wt-bnr-inr overlay-wraper bg-center"
+                style="background-image:url(images/sergent/alubrick/back.jpg);">
+                <div class="overlay-main site-bg-black opacity-07"></div>
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
-                    	<div class="banner-title-outer">
-                        	<div class="banner-title-name">
-                        		<h2 class="wt-title">Cloison en brique</h2>
+                        <div class="banner-title-outer">
+                            <div class="banner-title-name">
+                                <h2 class="wt-title">Cloison en brique</h2>
                             </div>
                         </div>
-                        <!-- BREADCRUMB ROW -->                            
-                        
-                            <!-- <div>
+                        <!-- BREADCRUMB ROW -->
+
+                        <!-- <div>
                                 <ul class="wt-breadcrumb breadcrumb-style-2">
                                     <li><a href="index.html">Home</a></li>
                                     <li>Blog Grid</li>
                                 </ul>
                             </div> -->
-                        
-                        <!-- BREADCRUMB ROW END -->                        
+
+                        <!-- BREADCRUMB ROW END -->
                     </div>
                 </div>
             </div>
@@ -369,8 +503,9 @@
                                 <!--Block one-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img1.jpg" alt=""></a>
-                                    </div>                                    
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img1.jpg"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -378,23 +513,27 @@
                                             </ul>
                                         </div>                                  -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Bringing A Better Design Process To Your Organization</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Bringing A Better Design
+                                                    Process To Your Organization</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                        
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                        </div>                                        
-                                    </div>                                
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <!--Block two-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img2.png" alt=""></a>
-                                    </div>                                     
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img2.png"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -402,23 +541,27 @@
                                             </ul>
                                         </div>                                   -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor sit amet consectetur adipisicing.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor sit
+                                                    amet consectetur adipisicing.</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                        
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                        </div>                                        
-                                    </div>                                
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <!--Block three-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img3.jpg" alt=""></a>
-                                    </div>                                     
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img3.jpg"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -426,23 +569,27 @@
                                             </ul>
                                         </div>                                   -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor sit amet consectetur adipisicing.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor sit
+                                                    amet consectetur adipisicing.</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                    
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
                                         </div>
-                                    </div>                                
-                                </div> 
+                                    </div>
+                                </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <!--Block Four-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img4.jpg" alt=""></a>
-                                    </div>                                    
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img4.jpg"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -450,23 +597,27 @@
                                             </ul>
                                         </div>                                  -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor, sit amet consectetur adipisicing.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum dolor, sit
+                                                    amet consectetur adipisicing.</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                        
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                        </div>                                        
-                                    </div>                                
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <!--Block Five-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img5.jpg" alt=""></a>
-                                    </div>                                     
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img5.jpg"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -474,23 +625,27 @@
                                             </ul>
                                         </div>                                   -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem, ipsum dolor sit amet consectetur adipisicing.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem, ipsum dolor sit
+                                                    amet consectetur adipisicing.</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                        
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
-                                        </div>                                        
-                                    </div>                                
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            
+
                             <div class="col-lg-4 col-md-6 col-sm-12 m-b30">
                                 <!--Block Six-->
                                 <div class="blog-post blog-post-4-outer">
                                     <div class="wt-post-media wt-img-effect zoom-slow">
-                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img6.webp" alt=""></a>
-                                    </div>                                     
+                                        <a href="javascript:void(0)"><img src="images/sergent/alubrick/img6.webp"
+                                                alt=""></a>
+                                    </div>
                                     <div class="wt-post-info">
                                         <!-- <div class="wt-post-meta ">
                                             <ul>
@@ -498,208 +653,276 @@
                                             </ul>
                                         </div>                                   -->
                                         <div class="wt-post-title ">
-                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum, dolor sit amet consectetur adipisicing.</a></h4>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit amet</p>
+                                            <h4 class="post-title"><a href="javascript:void(0)">Lorem ipsum, dolor sit
+                                                    amet consectetur adipisicing.</a></h4>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipis cing elit. Aliquam sit
+                                                amet</p>
                                         </div>
-                                    
+
                                         <div class="wt-post-readmore ">
-                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read More<i class="fa fa-play"></i></a>
+                                            <a href="javascript:void(0)" class="site-button-link site-text-primary">Read
+                                                More<i class="fa fa-play"></i></a>
                                         </div>
-                                    </div>                                
-                                </div> 
+                                    </div>
+                                </div>
                             </div>
-                                                        
+
                         </div>
 
-                        <div class="text-center m-b30"> 
-                            <a href="javascript:void(0)" class="site-button btn-hover-animation"><i class="flaticon-right"></i>More About</a> 
+                        <div class="text-center m-b30">
+                            <a href="javascript:void(0)" class="site-button btn-hover-animation"><i
+                                    class="flaticon-right"></i>More About</a>
                         </div>
 
                     </div>
                 </div>
-            </div>   
+            </div>
             <!-- OUR BLOG END -->
             <!-- forms -->
             <div class="container px-5">
                 <div class="clear" id="comment-list">
                     <div class="comments-area" id="comments">
                         <div>
-                             <!-- LEAVE A REPLY START -->
-                             <div class="comment-respond m-t30" id="respond">
-                        
+                            <!-- LEAVE A REPLY START -->
+                            <div class="comment-respond m-t30" id="respond">
+
                                 <h2 class="comment-reply-title" id="reply-title">Add a Review
                                     <small>
-                                        <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
+                                        <a style="display:none;" href="#" id="cancel-comment-reply-link"
+                                            rel="nofollow">Cancel reply</a>
                                     </small>
                                 </h2>
-        
+
                                 <form class="comment-form" id="commentform" method="post">
                                     <p class="comment-form-comment">
                                         <label>Comment</label>
-                                        <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
+                                        <textarea class="form-control" rows="8" name="comment" placeholder="Comment"
+                                            id="comment"></textarea>
                                     </p>
                                     <p class="comment-form-author">
                                         <label>Name <span class="required">*</span></label>
-                                        <input class="form-control" type="text" value="" name="user-comment" placeholder="Author" id="author">
+                                        <input class="form-control" type="text" value="" name="user-comment"
+                                            placeholder="Author" id="author">
                                     </p>
-                                    
+
                                     <p class="comment-form-email">
                                         <label>Email <span class="required">*</span></label>
-                                        <input class="form-control" type="text" value="" name="email" placeholder="Email">
+                                        <input class="form-control" type="text" value="" name="email"
+                                            placeholder="Email">
                                     </p>
-                                    
+
                                     <p class="comment-form-url">
                                         <label>Website</label>
-                                        <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
+                                        <input class="form-control" type="text" value="" name="url"
+                                            placeholder="Website" id="url">
                                     </p>
-                                    
-                                    
-                                    
+
+
+
                                     <p class="form-submit">
-                                        <button class="site-button btn-hover-animation"  type="button"><i class="flaticon-right"></i>Submit</button>
+                                        <button class="site-button btn-hover-animation" type="button"><i
+                                                class="flaticon-right"></i>Submit</button>
                                     </p>
-                                    
+
                                 </form>
-        
+
                             </div>
                             <!-- LEAVE A REPLY END -->
                         </div>
                     </div>
-                </div>        
-        
+                </div>
+
             </div>
             <!-- end forms -->
-     
+
         </div>
         <!-- CONTENT END -->
+   <!-- CONTACT US START -->
+        <style>
+            @keyframes blink{
+                0% {
+                transform: scale(1);
+                }
+            50% {
+            transform: scale(1.1);
+            }
+            100% {
+            transform: scale(1);
+            }
+            }
+            #fix:hover{
+                animation-play-state: paused;
+            }
+            #fix{
+                height: 4rem;
+                z-index: 4;
+                position: fixed;
+                top: 150px;
+                right: 15px;
+                font-size: 12px;
+                animation: blink 2s infinite ease-in;
+            }
+            #fix ul li img{
+                width: 4rem;
+                border-radius: 25%;
+            }
+            #fix ul{
+                list-style-type: none;
+            }
+            #fix:hover #hider{
+                visibility: visible;
+            }
+            #hider{ 
+                visibility: hidden;
+                color: rgb(233, 134, 63);
+                }
 
-     <!-- FOOTER START -->
-     <footer class="site-footer footer-dark " >
+        </style>
+ <div id="fix">
+    <a href="appointment2.html">
+     <ul >
+         <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+         <li id="hider">Contactez-nous</li>
+     </ul>
+    </a>
+ </div>
+  <!-- CONTACT US END -->
 
-        <!-- FOOTER BLOCKES START -->  
-        <div class="footer-top">
-                                                                         
-            <div class="container mt-5">
-                <div class="row">
-    
-                    <div class="col-lg-3 col-md-6">
-                        
-                        <div class="widget widget_about">
-                            <div class="logo-footer clearfix bg-white">
-                                <a href="index.html"><img src="images/Footer Logo.jpg"  alt=""></a>
+        <!-- FOOTER START -->
+        <footer class="site-footer footer-dark ">
+
+            <!-- FOOTER BLOCKES START -->
+            <div class="footer-top">
+
+                <div class="container mt-5">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="widget widget_about">
+                                <div class="logo-footer clearfix bg-white">
+                                    <a href="index.html"><img src="images/Footer Logo.jpg" alt=""></a>
+                                </div>
+                                <p>
+                                    Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et
+                                    à votre expertise, vous nous avez livrés.</p>
+                                <div class="call-us">
+                                    <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+                                </div>
+
                             </div>
-                            <p>
-                                Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à votre expertise, vous nous avez livrés.</p>
-                            <div class="call-us">
-                                <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget n-letter">
+                                <h3 class="widget-title"> Bulletin</h3>
+                                <div class="n-letter-content">
+                                    <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et
+                                        nouvelles</p>
+                                    <div class="nl-type">
+                                        <form role="search" method="post">
+                                            <div class="nl-form">
+                                                <input name="news-letter" class="form-control"
+                                                    placeholder="Enter email address" type="text">
+                                                <button type="submit" class="s-btn">
+                                                    S'abonner</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
+                                </ul>
                             </div>
-    
-                        </div>                            
-                        
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6">  
-                        <div class="widget n-letter">
-                           <h3 class="widget-title"> Bulletin</h3>
-                           <div class="n-letter-content">
-                                <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
-                                <div class="nl-type">
-                                    <form role="search" method="post">
-                                        <div class="nl-form">
-                                            <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
-                                            <button type="submit" class="s-btn">
-                                                S'abonner</button>
-                                        </div>
-                                    </form>
-                                </div>                                    
-                           </div> 
-                           <ul class="social-icons">
-                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                            <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
-                        </ul>
                         </div>
-                    </div>                                                
-                
-                    <div class="col-lg-3 col-md-6">
-                        <div class="widget">
-                            <h3 class="widget-title">Contactez-nous</h3>
-                            <p>Notre support disponible pour vous aider
-                                24 heures sur 24, sept jours sur sept.</p>                            
-                            <ul class="widget_address"> 
-                                <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                                <li><i class="flaticon-mail"></i>contact@sergent Menuiserie.com</li>
-                            </ul>  
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget">
+                                <h3 class="widget-title">Contactez-nous</h3>
+                                <p>Notre support disponible pour vous aider
+                                    24 heures sur 24, sept jours sur sept.</p>
+                                <ul class="widget_address">
+                                    <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326,
+                                        Paris - 75008</li>
+                                     <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
+                                </ul>
+                            </div>
                         </div>
-                    </div>
-    
-                    <div class="col-lg-3 col-md-6">
-                        <div class="widget widget_services">
-                            <h3 class="widget-title">Liens d'entreprise</h3>
-                            <ul>
-                                <li><a href="javascript:void(0)"> À propos</a></li>
-                                <li><a href="javascript:void(0)">Projets</a></li>
-                                <li><a href="javascript:void(0)">Blog</a></li>
-                                <li><a href="javascript:void(0)">FAQ</a></li>
-                                <li><a href="javascript:void(0)">Contactez-nous</a></li>
-                            </ul>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget widget_services">
+                                <h3 class="widget-title">Liens d'entreprise</h3>
+                                <ul>
+                                    <li><a href="javascript:void(0)"> À propos</a></li>
+                                    <li><a href="javascript:void(0)">Projets</a></li>
+                                    <li><a href="javascript:void(0)">Blog</a></li>
+                                    <li><a href="javascript:void(0)">FAQ</a></li>
+                                    <li><a href="javascript:void(0)">Contactez-nous</a></li>
+                                </ul>
+                            </div>
                         </div>
+
+
+
                     </div>
-    
-    
-    
+
                 </div>
-    
             </div>
-        </div>
-        <!-- FOOTER COPYRIGHT -->
-                            
-        <div class="footer-bottom bg-light p-2">
-            <div class="container">
-                <div class="footer-bottom-light">
-    
-                    <div class="footer-copy-right">
-                        <div class="row">
+            <!-- FOOTER COPYRIGHT -->
+
+            <div class="footer-bottom bg-light p-1">
+                <div class="container">
+                    <div class="footer-bottom-light">
+
+                        <div class="footer-copy-right">
+                            <div class="row">
                                 <div class="col-sm-9">
-                                    <span class="copyrights-text text-dark align-content-center">© 2023 Sergent Menuiserie Entreprise.</span>
+                                    <span class="copyrights-text text-dark align-content-center">© 2023 Sergent
+                                        Menuiserie Entreprise.</span>
                                 </div>
-                              
+
                                 <div class="col-sm-3">
-                                    <span class="float-end text-dark "style="margin-left:40px">Conçu par</span>  <span class="site-text-primary float-end"><img src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px" width="100px"></span>
+                                    <span class="float-end text-dark " style="margin-left:40px">Conçu par</span> <span
+                                        class="site-text-primary float-end"><img
+                                            src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px"
+                                            width="100px"></span>
                                 </div>
-                            </div>  
+                            </div>
+                        </div>
+
                     </div>
-                    
                 </div>
-            </div>   
-        </div>  
-    
-    </footer>
-    <!-- FOOTER END -->
+            </div>
+
+        </footer>
+        <!-- FOOTER END -->
         <!-- BUTTON TOP START -->
-		<button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+        <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
 
- 	</div>
+    </div>
 
 
-<!-- JAVASCRIPT  FILES ========================================= --> 
-<script  src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
-<script  src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-<script  src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+    <!-- JAVASCRIPT  FILES ========================================= -->
+    <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+    <script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
+    <script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
-<script  src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-<script  src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-<script  src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-<script  src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
-<script  src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-<script  src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-<script  src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
-<script  src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
-<script  src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-<script src="js/lc_lightbox.lite.js" ></script><!-- IMAGE POPUP -->
-<script  src="js/bootstrap-slider.min.js"></script><!-- Form js -->
-<script  src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+    <script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+    <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+    <script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
+    <script src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+    <script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+    <script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+    <script src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+    <script src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+    <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
+    <script src="js/bootstrap-slider.min.js"></script><!-- Form js -->
+    <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
 
 
