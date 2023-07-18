@@ -97,47 +97,7 @@
   }
    /* PROJECT CHOOSE SECTION END  */
   
-   .fonts{
-      font-size: x-small;
-   }
-   @keyframes blink{
-      0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-   }
-   #fix:hover{
-      animation-play-state: paused;
-   }
-   #fix{
-      height: 4rem;
-      z-index: 4;
-      position: fixed;
-      top: 150px;
-      right: 15px;
-      font-size: 12px;
-      animation: blink 2s infinite ease-in;
-   }
-   #fix ul li img{
-      width: 4rem;
-      border-radius: 25%;
-   }
-   #fix ul{
-      list-style-type: none;
-   }
-   #fix:hover #hider{
-      visibility: visible;
-   }
-   #hider{ 
-      visibility: hidden;
-      color: rgb(233, 134, 63);
-      }
-      
+  
       
        
       .s-btn {
@@ -1032,8 +992,7 @@
                       Quelle est la localisation de votre projet ?
                     </p>
 
-                    <form action="appointment2.html" method="post">
-                      <!-- <div class="flex-container"></div>  -->
+                    <!-- <form action="appointment2.html" method="post">
                       <span class="location" id="lo1" style="display: none">
                       </span>
                       <span class="location1" id="lo2" style="display: none">
@@ -1071,7 +1030,37 @@
                       <a href="appointment2.html" id="eventCheck1"
                         ><button class="btn mt-3 text-white" style="background-color:#ea5702">Suivante</button></a
                       >
-                    </form>
+                    </form> -->
+                    <div>
+                      <span class="text-dark">Ta Ville</span>
+                      <span class="location text-dark p-1" style="display: block;border: 1.5px solid;height: 35px;"></span>
+                      <span class="text-dark mt-2">Votre poste</span>
+                      <span class="location1 text-dark mt-2 p-1" style="display: block;border: 1.5px solid;height: 35px;"></span>
+                      <p class="mt-2" id="error-msg"></p>
+                      <span style="display: block;"> <br>
+
+                        <span onclick="locationActive();setTimeout(locationPrint,2000)" class="text-white btn btn-info" id="hov"
+                          > <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="20"
+                          height="26"
+                          fill="currentColor"
+                          class="bi bi-geo-alt text-white"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"
+                          />
+                          <path
+                            d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                          />
+                        </svg> OBTENEZ VOTRE EMPLACEMENT</span
+                        >
+                      </span>
+                      <a href="appointment2.html" id="eventCheck1" 
+                        ><button class="btn mt-3 text-white" style="background-color:#ea5702">Suivante</button></a
+                      >
+                    </div>
                   </div>
                 </div>
               </div>
@@ -1421,7 +1410,7 @@
           height: 4rem;
           z-index: 4;
           position: fixed;
-          top: 150px;
+          bottom: 5rem;
           right: 15px;
           font-size: 12px;
           animation: blink 2s infinite ease-in;
@@ -1445,7 +1434,8 @@
         <a href="appointment2.html">
           <ul>
             <li><img src="images//req-img-1/contact-us2.png" alt="" /></li>
-            <li id="hider">Contactez-nous</li>
+            <li id="hider">Contactez</li>
+            <li id="hider" class="text-center">nous</li>
           </ul>
         </a>
       </div>
@@ -1484,6 +1474,7 @@
     <!-- Form js -->
     <script src="js/jquery.bgscroll.js"></script>
     <!-- BACKGROUND SCROLL -->
+
 
     <script>
       let inner = document.querySelector(".inner-text").innerHTML;
@@ -1895,6 +1886,13 @@
 
       // Pergola End
 
+
+      function locationPrint(){
+        document.getElementById('value6').innerHTML = 
+              document.querySelector('.location').innerHTML;
+        document.getElementById('value7').innerHTML = 
+              document.querySelector('.location1').innerHTML;
+      }
       // PREVIOUS CODE START
       function windowPrev(id) {
         switch (id) {
@@ -1992,9 +1990,11 @@
             document.getElementById("page-4").style.display = "block";
             document.getElementById("page-5").style.display = "none";
             document.getElementById("value5").innerHTML = "";
-            document.getElementById("city").value = "";
-            document.getElementById("post").value = "";
+            document.querySelector(".location").innerHTML = "";
+            document.querySelector(".location1").innerHTML = "";
             document.getElementById("value6").innerHTML = "";
+            document.getElementById("value7").innerHTML = "";
+            document.getElementById("error-msg").innerHTML = "";
             break;
 
           case "initial":
@@ -2101,12 +2101,12 @@
       function geoLocationError(error) {
         var errors = {
           1: "Permission denied. Please switch on your Location... ",
-          2: "Position unavailable",
+          2: "Sorry, Your Position unavailable",
           3: "Request timeout. Please reload your page...",
         };
         // alert("Error: " + errors[error.code]);
-        let a = document.getElementById("lo1").innerHTML;
-        let b = document.getElementById("lo2").innerHTML;
+        let a = document.querySelector(".location").innerHTML;
+        let b = document.querySelector(".location1").innerHTML;
         if(a.trim()==""|| b.trim()==""){
           document.getElementById("error-msg").style.color = "red" ;
           document.getElementById("error-msg").innerHTML = errors[error.code];
@@ -2115,21 +2115,20 @@
      
       }
       
-      function fun() {
-          let a = document.getElementById("lo1").innerHTML;
-          let b = document.getElementById("lo2").innerHTML;
-          document.getElementById("city").value = a; 
-          document.getElementById("post").value = b;
-         
-          if(a.trim()!="" && b.trim()!=""){
-            document.getElementById("value6").innerHTML = "<b>Votre ville est : </b>" +a;
-           
-            document.getElementById("value7").innerHTML = "<b>Votre postal est : </b>" +b;
-    
-          }
-          if(a.trim()!="" && b.trim()!="")
-          document.getElementById("error-msg").style.display = "none" ;
-        }
+      // function fun() {
+        
+        let btn = document.querySelector("#eventCheck1");
+          btn.addEventListener('click', e =>{
+            let a = document.querySelector(".location").innerHTML;
+            let b = document.querySelector(".location1").innerHTML;
+            if(a.trim()=='' || b.trim()==''){
+             e.preventDefault();
+            document.getElementById("error-msg").style.color = "red" ;
+            document.getElementById("error-msg").innerHTML = "Veuillez appuyer sur le bouton obtenir votre position";
+            }
+            
+          }); 
+        // }
 
       
       // GEO-LOCATION CODE END
@@ -2165,9 +2164,9 @@
                      <div class="n-letter-content">
                           <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
                           <div class="nl-type">
-                              <form role="search" method="post">
+                              <form role="search" method="post" id="check" action="emailCheck.php"> 
                                   <div class="nl-form">
-                                      <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
+                                      <input name="news-letter" id="mail" class="form-control" placeholder="Enter email address" type="text">
                                       <button type="submit" class="s-btn">
                                           S'abonner</button>
                                   </div>
@@ -2243,6 +2242,7 @@
 
 </div>
 
+<script src="js/emailCheck.js"></script>
 
 </body>
 </html>

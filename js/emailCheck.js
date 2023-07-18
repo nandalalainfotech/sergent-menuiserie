@@ -6,6 +6,7 @@ form.addEventListener('submit',function(event){
     if(!validationInputs()){
         event.preventDefault();
     }
+   
 });
 
 function validationInputs(){
