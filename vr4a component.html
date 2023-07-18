@@ -1156,9 +1156,9 @@
                        <div class="n-letter-content">
                             <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
                             <div class="nl-type">
-                                <form role="search" method="post">
+                                <form role="search" method="post" id="check" action="emailCheck.php">
                                     <div class="nl-form">
-                                        <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
+                                        <input name="news-letter" id="mail" class="form-control" placeholder="Enter email address" type="text">
                                         <button type="submit" class="s-btn">
                                             S'abonner</button>
                                     </div>
@@ -1254,6 +1254,8 @@
 <script  src="js/bootstrap-slider.min.js"></script><!-- Form js -->
 <script  src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
+
+<script src="js/emailCheck.js"></script>
 
 <!-- Product thumbnail carousel-->
 <script>
