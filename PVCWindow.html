@@ -154,47 +154,6 @@
 }
  /* PROJECT CHOOSE SECTION END  */
 
- .fonts{
-    font-size: x-small;
- }
- @keyframes blink{
-    0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
- }
- #fix:hover{
-    animation-play-state: paused;
- }
- #fix{
-    height: 4rem;
-    z-index: 4;
-    position: fixed;
-    top: 150px;
-    right: 15px;
-    font-size: 12px;
-    animation: blink 2s infinite ease-in;
- }
- #fix ul li img{
-    width: 4rem;
-    border-radius: 25%;
- }
- #fix ul{
-    list-style-type: none;
- }
- #fix:hover #hider{
-    visibility: visible;
- }
- #hider{ 
-    visibility: hidden;
-    color: rgb(233, 134, 63);
-    }
-    
     
      
     .s-btn {
@@ -647,10 +606,10 @@
                                     <!-- <div class="quantity btn-quantity m-b20">
                                         <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
                                     </div> -->
-                                    <button class="site-button btn-hover-animation m-b30 w-75"><i class="flaticon-right"></i>FIND A POINT OF SALE</button>
+                                    <button class="site-button  m-b30 w-75"><i class="flaticon-right"></i>FIND A POINT OF SALE</button>
                                     <br>
                                     <a href="request.html">
-                                    <button class="site-button btn-hover-animation m-b30 w-75"><i class="flaticon-right"></i>ASK FOR A QUOTE</button>
+                                    <button class="site-button  m-b30 w-75"><i class="flaticon-right"></i>ASK FOR A QUOTE</button>
                                     </a>
                                 <!-- </form> -->
 
@@ -1273,7 +1232,7 @@
                 height: 4rem;
                 z-index: 4;
                 position: fixed;
-                top: 150px;
+               bottom: 5rem;
                 right: 15px;
                 font-size: 12px;
                 animation: blink 2s infinite ease-in;
@@ -1296,9 +1255,10 @@
          </style>
          <div id="fix">
             <a href="appointment2.html">
-             <ul >
+           <ul >
                  <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
-                 <li id="hider">Contactez-nous</li>
+                 <li id="hider">Contactez</li>
+                 <li id="hider" class="text-center">nous</li>
              </ul>
             </a>
          </div>
@@ -1385,7 +1345,7 @@
                        <div class="n-letter-content">
                             <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
                             <div class="nl-type">
-                                <form role="search" method="post">
+                                <form role="search" method="post" id="check" action="emailCheck.php"> 
                                     <div class="nl-form">
                                         <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
                                         <button type="submit" class="s-btn">
@@ -1482,6 +1442,7 @@
 <script  src="js/bootstrap-slider.min.js"></script><!-- Form js -->
 <script  src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
+<script src="js/emailCheck.js"></script>
 
 <!-- Product thumbnail carousel-->
 <script>
