@@ -6,8 +6,7 @@ form.addEventListener('submit',function(event){
     if(!validationInputs()){
         event.preventDefault();
     }
-    else
-    alert("Merci, votre identifiant email a bien été reçu")
+   
 });
 
 function validationInputs(){
