@@ -153,7 +153,6 @@
     }
     /* PROJECT CHOOSE SECTION END  */
 
-    
     .s-btn {
       border: none;
       background-color: #db5200;
@@ -801,12 +800,12 @@
                   <!-- <div class="quantity btn-quantity m-b20">
                                         <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
                                     </div> -->
-                  <button class="site-button  m-b30 w-75">
+                  <button class="site-button m-b30 w-75">
                     <i class="flaticon-right"></i>TROUVER UN POINT DE VENTE
                   </button>
                   <br />
                   <a href="request.html">
-                    <button class="site-button  m-b30 w-75">
+                    <button class="site-button m-b30 w-75">
                       <i class="flaticon-right"></i>DEMANDER UN DEVIS
                     </button>
                   </a>
@@ -891,7 +890,8 @@
                               </li>
                               <li>
                                 <span class="text-dark"
-                                  >Laquage réalisé avant assemblage pour une finition optimale</span
+                                  >Laquage réalisé avant assemblage pour une
+                                  finition optimale</span
                                 >
                               </li>
                               <li>
@@ -1306,11 +1306,20 @@
           <!-- PRODUCT DETAILS -->
         </div>
         <!-- CONTENT CONTENT END -->
-
+        <style>
+          .head1 {
+            margin-left: 225px;
+          }
+          @media screen and (max-width: 600px) {
+            .head1 {
+              margin-left: -5px;
+            }
+          }
+        </style>
         <!-- SECTION CONTENT START -->
         <div class="container">
           <div class="row">
-            <div class="col-sm-4" style="margin-left: 200px">
+            <div class="col-sm-4 head1">
               <h3>
                 CES PRODUITS POURRAIENT<br />
                 <span style="color: #db5200">VOUS INTÉRESSER</span>
@@ -1419,57 +1428,56 @@
         <!-- SECTION CONTENT END -->
       </div>
 
-
-        <!-- CONTACT US START -->
-        <style>
-          @keyframes blink {
-            0% {
-              transform: scale(1);
-            }
-            50% {
-              transform: scale(1.1);
-            }
-            100% {
-              transform: scale(1);
-            }
+      <!-- CONTACT US START -->
+      <style>
+        @keyframes blink {
+          0% {
+            transform: scale(1);
           }
-          #fix:hover {
-            animation-play-state: paused;
+          50% {
+            transform: scale(1.1);
           }
-          #fix {
-            height: 4rem;
-            z-index: 4;
-            position: fixed;
-            bottom: 5rem;
-            right: 15px;
-            font-size: 12px;
-            animation: blink 2s infinite ease-in;
+          100% {
+            transform: scale(1);
           }
-          #fix ul li img {
-            width: 4rem;
-            border-radius: 25%;
-          }
-          #fix ul {
-            list-style-type: none;
-          }
-          #fix:hover #hider {
-            visibility: visible;
-          }
-          #hider {
-            visibility: hidden;
-            color: rgb(233, 134, 63);
-          }
-        </style>
-        <div id="fix">
-          <a href="appointment2.html">
-            <ul>
-              <li><img src="images//req-img-1/contact-us2.png" alt="" /></li>
-              <li id="hider">Contactez</li>
-              <li id="hider" class="text-center">nous</li>
-            </ul>
-          </a>
-        </div>
-        <!-- CONTACT US END -->
+        }
+        #fix:hover {
+          animation-play-state: paused;
+        }
+        #fix {
+          height: 4rem;
+          z-index: 4;
+          position: fixed;
+          bottom: 5rem;
+          right: 15px;
+          font-size: 12px;
+          animation: blink 2s infinite ease-in;
+        }
+        #fix ul li img {
+          width: 4rem;
+          border-radius: 25%;
+        }
+        #fix ul {
+          list-style-type: none;
+        }
+        #fix:hover #hider {
+          visibility: visible;
+        }
+        #hider {
+          visibility: hidden;
+          color: rgb(233, 134, 63);
+        }
+      </style>
+      <div id="fix">
+        <a href="appointment2.html">
+          <ul>
+            <li><img src="images//req-img-1/contact-us2.png" alt="" /></li>
+            <li id="hider">Contactez</li>
+            <li id="hider" class="text-center">nous</li>
+          </ul>
+        </a>
+      </div>
+      <!-- CONTACT US END -->
       <div class="container px-5">
         <div class="clear" id="comment-list">
           <div class="comments-area" id="comments">
@@ -1588,10 +1596,15 @@
                     mises à jour et nouvelles
                   </p>
                   <div class="nl-type">
-                    <form role="search" method="post" id="check" action="emailCheck.php">
+                    <form
+                      role="search"
+                      method="post"
+                      id="check"
+                      action="emailCheck.php"
+                    >
                       <div class="nl-form">
                         <input
-                        id="mail"
+                          id="mail"
                           name="news-letter"
                           class="form-control"
                           placeholder="Enter email address"

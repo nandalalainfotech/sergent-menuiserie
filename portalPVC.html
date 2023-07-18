@@ -153,7 +153,6 @@
     }
     /* PROJECT CHOOSE SECTION END  */
 
-   
     .s-btn {
       border: none;
       background-color: #db5200;
@@ -833,14 +832,12 @@
                     <!-- <div class="quantity btn-quantity m-b20">
                                         <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
                                     </div> -->
-                    <button class="site-button  m-b30 w-75">
+                    <button class="site-button m-b30 w-75">
                       <i class="flaticon-right"></i>TROUVER UN POINT DE VENTE
                     </button>
                     <br />
                     <a href="request.html">
-                      <button
-                        class="site-button  m-b30 w-75"
-                      >
+                      <button class="site-button m-b30 w-75">
                         <i class="flaticon-right"></i>DEMANDER UN DEVIS
                       </button>
                     </a>
@@ -1346,11 +1343,20 @@
             <!-- PRODUCT DETAILS -->
           </div>
           <!-- CONTENT CONTENT END -->
-
+          <style>
+            .head1 {
+              margin-left: 225px;
+            }
+            @media screen and (max-width: 600px) {
+              .head1 {
+                margin-left: -5px;
+              }
+            }
+          </style>
           <!-- SECTION CONTENT START -->
           <div class="container">
             <div class="row">
-              <div class="col-sm-4" style="margin-left: 200px">
+              <div class="col-sm-4 head1">
                 <h3>
                   CES PRODUITS POURRAIENT<br />
                   <span style="color: #db5200">VOUS INTÉRESSER</span>
@@ -1492,7 +1498,7 @@
             height: 4rem;
             z-index: 4;
             position: fixed;
-           bottom: 5rem;
+            bottom: 5rem;
             right: 15px;
             font-size: 12px;
             animation: blink 2s infinite ease-in;
@@ -1642,10 +1648,15 @@
                     mises à jour et nouvelles
                   </p>
                   <div class="nl-type">
-                    <form role="search" method="post" action="emailCheck.php" id="check">
+                    <form
+                      role="search"
+                      method="post"
+                      action="emailCheck.php"
+                      id="check"
+                    >
                       <div class="nl-form">
                         <input
-                        id="mail"
+                          id="mail"
                           name="news-letter"
                           class="form-control"
                           placeholder="Enter email address"
