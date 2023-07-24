@@ -2011,7 +2011,11 @@
             document.querySelector(".location1").innerHTML = "";
             document.getElementById("value6").innerHTML = "";
             document.getElementById("value7").innerHTML = "";
-            document.getElementById("error-msg").innerHTML = "";
+            // document.getElementById("error-msg").innerHTML = "";
+            document.getElementById("city-name").style.color = "black" ;
+            document.getElementById("postal-name").style.color = "black" ;
+            document.querySelector('.location').style.borderColor = 'black';
+            document.querySelector('.location1').style.borderColor = 'black';
             break;
 
           case "initial":
@@ -2121,13 +2125,13 @@
           2: "Désolé, votre position n'est pas disponible",
           3: "Expiration de la demande. Merci de recharger votre page...",
         };
-        // alert("Error: " + errors[error.code]);
-        let a = document.querySelector(".location").innerHTML;
-        let b = document.querySelector(".location1").innerHTML;
-        if(a.trim()==""|| b.trim()==""){
-          document.getElementById("error-msg").style.color = "red" ;
-          document.getElementById("error-msg").innerHTML = errors[error.code];
-        }
+        alert("Error: " + errors[error.code]);
+        // let a = document.querySelector(".location").innerHTML;
+        // let b = document.querySelector(".location1").innerHTML;
+        // if(a.trim()==""|| b.trim()==""){
+        //   document.getElementById("error-msg").style.color = "red" ;
+        //   document.getElementById("error-msg").innerHTML = errors[error.code];
+        // }
       }
      
       }
@@ -2144,8 +2148,9 @@
             document.getElementById("postal-name").style.color = "red" ;
             document.querySelector('.location').style.borderColor = 'red';
             document.querySelector('.location1').style.borderColor = 'red';
-            document.getElementById("error-msg").style.color = "red" ;
-            document.getElementById("error-msg").innerHTML = "Veuillez appuyer sur le bouton obtenir votre position";
+            // document.getElementById("error-msg").style.color = "red" ;
+            alert("Veuillez appuyer sur le bouton obtenir votre position                         ")
+            // document.getElementById("error-msg").innerHTML = "Veuillez appuyer sur le bouton obtenir votre position";
             }
             
           }); 
