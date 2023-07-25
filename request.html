@@ -1899,16 +1899,19 @@
 
 
       function locationPrint(){
-        let a =  document.querySelector('.location').innerHTML;;
+        let a =  document.querySelector('.location').innerHTML;
         let city1 = a.split(" ");
         city1.pop();
         let city2 = 'Ta ville: ';
         for(let i of city1){
           city2 += i;
         }
-        document.getElementById('value6').innerHTML = city2;
-        document.getElementById('value7').innerHTML = 'Votre code postal: ' +
+        if(city2.length > 10){
+          document.getElementById('value6').innerHTML = city2;
+          document.getElementById('value7').innerHTML = 'Votre code postal: ' +
               document.querySelector('.location1').innerHTML;
+        }
+       
       }
       // PREVIOUS CODE START
       function windowPrev(id) {
