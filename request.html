@@ -479,7 +479,7 @@
           width: 140px;
           margin: 10px;
           text-align: center;
-          height: 170px;
+          height: 145px;
           font-size: 12px;
           padding: 10px;
           margin-left: 1rem;
@@ -577,7 +577,7 @@
             </div>
           </div>
 
-          <div class="col-sm-6 bg-light" id="show2">
+          <div class="col-sm-6 bg-light" id="show2" >
             <div class="container p-3" id="initial">
               <div id="head-div">
                 <button
@@ -595,7 +595,7 @@
                 <div class="window-hover" onclick="getWindow();">
                   <img
                     src="images/req-img-1/window-1.png"
-                    width="100px"
+                    width="65px"
                     alt=""
                   />
                   <p style="font-size: medium" id="window-page">Fenêtre</p>
@@ -603,30 +603,42 @@
                 <div class="shutter-hover" onclick=" getShutter();">
                   <img
                     src="images/req-img-1/shutter-1.png"
-                    width="100px"
+                    width="65px"
                     alt=""
                   />
                   <p style="font-size: medium" id="shutter-page">Volets</p>
                 </div>
                 <div class="door-hover" onclick="getDoor()">
-                  <img src="images/req-img-1/door-1.jpg" width="100px" alt="" />
-                  <p style="font-size: medium" id="door-page">Des portes</p>
+                  <img src="images/req-img-1/door-1.jpg"   width="65px" alt="" />
+                  <p style="font-size: medium" id="door-page">Portes d’entrée</p>
                 </div>
                 <div class="garage-hover" onclick="getGarage()">
-                  <img src="images/req-img-1/garage.jpg" width="100px" alt="" />
+                  <img src="images/req-img-1/garage.jpg"   width="65px" alt="" />
                   <p style="font-size: medium" id="garage-page">Portes de garage</p>
                 </div>
+                <div class="window-hover" onclick="getVeranda();">
+                  <img
+                    src="images/req-img-1/window-1.png"
+                    width="65px"
+                    alt=""
+                  />
+                  <p style="font-size: medium" id="veranda">Vérandas</p>
+                </div>
                 <div class="portal-hover" onclick="getPortal()">
-                  <img src="images/req-img-1/por.jpg" width="100px" alt="" />
+                  <img src="images/req-img-1/por.jpg"   width="65px" alt="" />
                   <p style="font-size: medium" id="portal-page">Portails</p>
                 </div>
                 <div class="pergola-hover" onclick="getPergola()">
                   <img
                     src="images/req-img-1/pergola-1.jpg"
-                    width="90px"
+                    width="65px"
                     alt=""
                   />
-                  <p style="font-size: medium" id="pergola-page">Pergola</p>
+                  <p style="font-size: medium" id="pergola-page">Pergola & Store banne</p>
+                </div>
+                <div class="garage-hover" onclick="getAutres()">
+                  <img src="images/req-img-1/garage.jpg"   width="65px" alt="" />
+                  <p style="font-size: medium" id="autres">Autres</p>
                 </div>
               </div>
 
@@ -947,9 +959,9 @@
                       >
                     </form> -->
                     <div>
-                      <span id="city-name">Ta Ville</span>
+                      <span id="city-name">Commune</span>
                       <span class="location text-dark p-1" style="display: block;height: 35px;"></span>
-                      <span class="mt-2" id="postal-name">Votre poste</span>
+                      <span class="mt-2" id="postal-name">Code Postal</span>
                       <span class="location1 text-dark mt-2 p-1" style="display: block;height: 35px;"></span>
                       <p class="mt-2" id="error-msg"></p>
                       <span style="display: block;"> <br>
@@ -1050,7 +1062,7 @@
                   Page précédente
                 </button>
                 <br /><br />
-                <h3 class="form">demande de citation</h3>
+                <!-- <h3 class="form">demande de citation</h3> -->
                 <p class="text-dark">Quel type de portes recherchez-vous ?</p>
                 <div class="flex-container">
                   <div class="window-hover" onclick="countDoor()">
@@ -1164,7 +1176,7 @@
                   Page précédente
                 </button>
                 <br /><br />
-                <h3 class="form">demande de citation</h3>
+                <!-- <h3 class="form">demande de citation</h3> -->
                 <p class="text-dark">Quel type de portes de portail recherchez-vous ?</p>
                 <div class="flex-container">
                   <div class="window-hover" onclick="countPortal()">
@@ -1218,9 +1230,19 @@
                   Page précédente
                 </button>
                 <br /><br />
-                <h3 class="form">demande de citation</h3>
+                <!-- <h3 class="form">demande de citation</h3> -->
                 <p class="text-dark">Quel type de pergola recherchez-vous ?</p>
                 <div class="flex-container">
+                  <div class="shutter-hover" onclick="countPergola1()">
+                    <img
+                      src="images/req-img-1/pergola-1.jpg"
+                      width="100px"
+                      alt=""
+                    />
+                    <p style="font-size: medium" id="pergola-page-3">
+                      Vérandas
+                    </p>
+                  </div>
                   <div class="window-hover" onclick="countPergola()">
                     <img
                       src="images/req-img-1/pergola-1.1.png"
@@ -1274,7 +1296,7 @@
                 style="
                   opacity: 0.6;
                   width: 100%;
-                  height: 95vh;
+                  height: 108vh;
                   overflow: hidden;
                 "
                 alt=""
@@ -1527,6 +1549,15 @@
 
       // Shutter Code Start
 
+      function getVeranda() {
+        val1 = document.getElementById("veranda").innerHTML;
+        document.getElementById("choice").style.display = "none";
+        document.getElementById("head-div").style.display = "none";
+        document.getElementById("window-page-1").style.display = "block";
+        first_value = val1;
+        print1();
+        document.querySelector(".inner-text").classList.add("border");
+      }
       function getWindow() {
         val1 = document.getElementById("window-page").innerHTML;
         document.getElementById("choice").style.display = "none";
@@ -1559,6 +1590,16 @@
         //  document.querySelector(".inner-text").innerHTML += "<br>" + val2;
         second_value = val2;
         print2();
+      }
+      function getAutres() {
+        val1 = document.getElementById("autres").innerHTML;
+        document.getElementById("choice").style.display = "none";
+        document.getElementById("head-div").style.display = "none";
+        document.getElementById("garage-page-1").style.display = "block";
+        //  document.querySelector(".inner-text").innerHTML = val1;
+        first_value = val1;
+        print1();
+        document.querySelector(".inner-text").classList.add("border");
       }
 
       // Shutter Code end
@@ -1731,6 +1772,7 @@
         second_value = val2;
         print2();
       }
+      
 
       //  Portal End
 
@@ -1806,13 +1848,13 @@
         let a =  document.querySelector('.location').innerHTML;
         let city1 = a.split(" ");
         city1.pop();
-        let city2 = 'Ta ville: ';
+        let city2 = 'Commune: ';
         for(let i of city1){
           city2 += i;
         }
         if(city2.length > 10){
           document.getElementById('value6').innerHTML = city2;
-          document.getElementById('value7').innerHTML = 'Votre code postal: ' +
+          document.getElementById('value7').innerHTML = 'Code Postal: ' +
               document.querySelector('.location1').innerHTML;
         }
        
@@ -1890,7 +1932,7 @@
               break;
             }
 
-            if (two.includes("Pergolas") || two.includes("Store banne")) {
+            if (two.includes("Pergolas") || two.includes("Store banne") || two.includes("Vérandas")) {
               console.log("true");
               document.getElementById("pergola-page-1").style.display = "block";
               document.getElementById("page-2").style.display = "none";
