@@ -218,7 +218,7 @@
                     <br>
                     <input class="w-50" type="text" name="location" id="location" required  placeholder="Code postal"  title="entrez l' Emplacement valide."> <br>
                     <br>
-                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                    <button type="submit" class="s-btn mt-3" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled,4000)'>
                         Soumettre</button>
                     <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                 </form>
@@ -610,16 +610,13 @@ input:focus,textarea:focus{
                                  <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br>
                                  <textarea name="text" id="" cols="" rows="3" style="width: 100%;" required></textarea>
                              </div>
-                             <div class="col-sm-12">
-                                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam soluta eveniet eaque vitae maiores assumenda et neque, corporis beatae officiis.</p>
-             
-                             </div>
+                             
                          </div>
                          <div class="row">
                              <div class="col-sm-12">
                                  <input type="checkbox" name="subscribe" id="sub" required>
-                                 <label for="sub">I subscribe to the newsletter.</label> <br>
-                                 <input type="submit" value="Send" class="btn rounded-5 text-white" style="background-color: #db5200;">
+                                 <label for="sub">Je m'inscris à la newsletter.</label> <br>
+                                 <input type="submit" value="Envoyer" class="btn rounded-5 text-white" style="background-color: #db5200;">
                              </div>
                          </div>
                         </form>
