@@ -226,7 +226,7 @@
                             title="entrez l' Emplacement valide."> <br>
                         <br>
                         <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre</button>
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                     </form>
@@ -1151,233 +1151,231 @@
             <div class="col-sm-4"></div>
         </div>
     </div>
-    <footer class="site-footer footer-dark">
 
-        <!-- FOOTER START -->
-        <footer class="site-footer footer-dark ">
 
-            <!-- FOOTER START -->
-            <footer class="site-footer footer-dark ">
+    <!-- FOOTER START -->
+    <footer class="site-footer footer-dark ">
 
-                <!-- FOOTER BLOCKES START -->
-                <div class="footer-top">
+        <!-- FOOTER BLOCKES START -->
+        <div class="footer-top">
 
-                    <div class="container mt-5">
-                        <div class="row">
+            <div class="container ">
+                <div class="row">
 
-                            <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
 
-                                <div class="widget widget_about">
-                                    <div class="logo-footer clearfix bg-white">
-                                        <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
-
-                                    </div>
-                                    <p>
-                                        Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre
-                                        créativité et à votre expertise, vous nous avez livrés.</p>
-                                    <div class="call-us">
-                                        <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
-                                    </div>
-
-                                </div>
-
+                        <div class="widget widget_about">
+                            <div class="logo-footer clearfix bg-white">
+                                <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
+                            </div>
+                            <p>Simple, gratuite et sans engagement.</p>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>Tarif sur-mesure selon votre projet</li>
+                                <li>Des conseils d'experts</li>
+                            </ul>
+                            <div class="call-us">
+                                <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
                             </div>
 
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget n-letter">
-                                    <h3 class="widget-title"> Bulletin</h3>
-                                    <div class="n-letter-content">
-                                        <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et
-                                            nouvelles</p>
-                                        <div class="nl-type">
-                                            <form role="search" method="post" action="emailCheck.php" id="check">
-                                                <div class="nl-form">
-                                                    <input name="news-letter" class="form-control" id="mail"
-                                                        placeholder="Enter email address" type="text">
-                                                    <button type="submit" class="s-btn">
-                                                        S'abonner</button>
-                                                </div>
-                                            </form>
+                        </div>
+
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget n-letter">
+                            <h3 class="widget-title"> Bulletin</h3>
+                            <div class="n-letter-content">
+                                <p>Abonnez-vous</p>
+                                <div class="nl-type">
+                                    <form role="search" method="post" id="check" action="emailCheck.php">
+                                        <div class="nl-form">
+                                            <input name="news-letter" class="form-control"
+                                                placeholder="Enter email address" type="text" id="mail">
+                                            <button type="submit" class="s-btn">
+                                                S'abonner</button>
                                         </div>
-                                    </div>
-                                    <ul class="social-icons">
-                                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
-                                    </ul>
+                                    </form>
                                 </div>
                             </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget">
-                                    <h3 class="widget-title">Contactez-nous</h3>
-                                    <p>Notre support disponible pour vous aider
-                                        24 heures sur 24, sept jours sur sept.</p>
-                                    <ul class="widget_address">
-                                        <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326,
-                                            Paris - 75008</li>
-                                        <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget widget_services">
-                                    <h3 class="widget-title">Liens d'entreprise</h3>
-                                    <ul>
-                                        <li><a href="javascript:void(0)"> À propos</a></li>
-                                        <li><a href="javascript:void(0)">Projets</a></li>
-                                        <li><a href="javascript:void(0)">Blog</a></li>
-                                        <li><a href="javascript:void(0)">FAQ</a></li>
-                                        <li><a href="javascript:void(0)">Contactez-nous</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-                <!-- FOOTER COPYRIGHT -->
-
-                <div class="footer-bottom bg-light p-1">
-                    <div class="container">
-                        <div class="footer-bottom-light">
-
-                            <div class="footer-copy-right">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <span class="copyrights-text text-dark align-content-center">© 2023 Sergent
-                                            Menuiserie Entreprise.</span>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
-                                        <span class="site-text-primary float-end"><img
-                                                src="images/all-products/garage-door/Asset 19@2x.png" alt=""
-                                                height="80px" width="100px"></span>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <ul class="social-icons">
+                                <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                                <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
+                            </ul>
                         </div>
                     </div>
-                </div>
 
-            </footer>
-            <!-- FOOTER END -->
-            <!-- BUTTON TOP START -->
-            <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget">
+                            <h3 class="widget-title">Contactez-nous</h3>
+                            <p>Notre technicien disponible</p>
+                            <ul class="widget_address">
+                                <li><i class="flaticon-location"></i>pour vous 7 sur 7 jours <br> 4 rue SCHOTTEN <br>
+                                    91560
+                                    CROSNE</li>
+                                <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6">
+                        <div class="widget widget_services">
+                            <h3 class="widget-title">Liens d'entreprise</h3>
+                            <ul>
+                                <li><a href="#">A propos</a></li>
+                                <li><a href="#">Déroulement du Projet</a></li>
+                                <li><a href="#">Conditions générales de vente</a></li>
+                                <li><a href="#">Garantie</a></li>
+                                <li><a href="#">Parrainage</a></li>
+                                <li><a href="#">Recrutement</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+
+                </div>
 
             </div>
+        </div>
+        <!-- FOOTER COPYRIGHT -->
+
+        <div class="footer-bottom bg-light p-1">
+            <div class="container">
+                <div class="footer-bottom-light">
+
+                    <div class="footer-copy-right">
+                        <div class="row">
+                            <div class="col-sm-9">
+                                <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous droits
+                                    réservés Sergent Menuiserie</span>
+                            </div>
+
+                            <div class="col-sm-3">
+                                <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
+                                <span class="site-text-primary float-end"><img
+                                        src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px"
+                                        width="100px"></span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </footer>
+    <!-- FOOTER END -->
+    <!-- BUTTON TOP START -->
+    <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
+
+    </div>
 
 
-            <!-- JAVASCRIPT  FILES ========================================= -->
-            <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
-            <script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-            <script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+    <!-- JAVASCRIPT  FILES ========================================= -->
+    <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+    <script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
+    <script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
 
-            <script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-            <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-            <script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-            <script src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
-            <script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-            <script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-            <script src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
-            <script src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
-            <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-            <script src="js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
-            <script src="js/bootstrap-slider.min.js"></script><!-- Form js -->
-            <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+    <script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+    <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+    <script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
+    <script src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+    <script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+    <script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+    <script src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+    <script src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+    <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+    <script src="js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
+    <script src="js/bootstrap-slider.min.js"></script><!-- Form js -->
+    <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
-            <script src="js/emailCheck.js"></script>
-            <script src="js/emailCheck.js"></script>
+    <script src="js/emailCheck.js"></script>
+    <script src="js/emailCheck.js"></script>
 
-            <script>
-                $(document).ready(function () {
+    <script>
+        $(document).ready(function () {
 
-                    var sync1 = $("#sync1");
-                    var sync2 = $("#sync2");
-                    var slidesPerPage = 4; //globaly define number of elements per page
-                    var syncedSecondary = true;
+            var sync1 = $("#sync1");
+            var sync2 = $("#sync2");
+            var slidesPerPage = 4; //globaly define number of elements per page
+            var syncedSecondary = true;
 
-                    sync1.owlCarousel({
-                        items: 1,
-                        slideSpeed: 2000,
-                        nav: true,
-                        autoplay: false,
-                        dots: false,
-                        loop: true,
-                        responsiveRefreshRate: 200,
-                        navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
-                    }).on('changed.owl.carousel', syncPosition);
+            sync1.owlCarousel({
+                items: 1,
+                slideSpeed: 2000,
+                nav: true,
+                autoplay: false,
+                dots: false,
+                loop: true,
+                responsiveRefreshRate: 200,
+                navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+            }).on('changed.owl.carousel', syncPosition);
 
-                    sync2
-                        .on('initialized.owl.carousel', function () {
-                            sync2.find(".owl-item").eq(0).addClass("current");
-                        })
-                        .owlCarousel({
-                            items: slidesPerPage,
-                            dots: false,
-                            nav: false,
-                            margin: 30,
-                            smartSpeed: 200,
-                            slideSpeed: 500,
-                            slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                            responsiveRefreshRate: 100
-                        }).on('changed.owl.carousel', syncPosition2);
+            sync2
+                .on('initialized.owl.carousel', function () {
+                    sync2.find(".owl-item").eq(0).addClass("current");
+                })
+                .owlCarousel({
+                    items: slidesPerPage,
+                    dots: false,
+                    nav: false,
+                    margin: 30,
+                    smartSpeed: 200,
+                    slideSpeed: 500,
+                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                    responsiveRefreshRate: 100
+                }).on('changed.owl.carousel', syncPosition2);
 
-                    function syncPosition(el) {
-                        //if you set loop to false, you have to restore this next line
-                        //var current = el.item.index;
+            function syncPosition(el) {
+                //if you set loop to false, you have to restore this next line
+                //var current = el.item.index;
 
-                        //if you disable loop you have to comment this block
-                        var count = el.item.count - 1;
-                        var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+                //if you disable loop you have to comment this block
+                var count = el.item.count - 1;
+                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
 
-                        if (current < 0) {
-                            current = count;
-                        }
-                        if (current > count) {
-                            current = 0;
-                        }
+                if (current < 0) {
+                    current = count;
+                }
+                if (current > count) {
+                    current = 0;
+                }
 
-                        //end block
+                //end block
 
-                        sync2
-                            .find(".owl-item")
-                            .removeClass("current")
-                            .eq(current)
-                            .addClass("current");
-                        var onscreen = sync2.find('.owl-item.active').length - 1;
-                        var start = sync2.find('.owl-item.active').first().index();
-                        var end = sync2.find('.owl-item.active').last().index();
+                sync2
+                    .find(".owl-item")
+                    .removeClass("current")
+                    .eq(current)
+                    .addClass("current");
+                var onscreen = sync2.find('.owl-item.active').length - 1;
+                var start = sync2.find('.owl-item.active').first().index();
+                var end = sync2.find('.owl-item.active').last().index();
 
-                        if (current > end) {
-                            sync2.data('owl.carousel').to(current, 100, true);
-                        }
-                        if (current < start) {
-                            sync2.data('owl.carousel').to(current - onscreen, 100, true);
-                        }
-                    }
+                if (current > end) {
+                    sync2.data('owl.carousel').to(current, 100, true);
+                }
+                if (current < start) {
+                    sync2.data('owl.carousel').to(current - onscreen, 100, true);
+                }
+            }
 
-                    function syncPosition2(el) {
-                        if (syncedSecondary) {
-                            var number = el.item.index;
-                            sync1.data('owl.carousel').to(number, 100, true);
-                        }
-                    }
+            function syncPosition2(el) {
+                if (syncedSecondary) {
+                    var number = el.item.index;
+                    sync1.data('owl.carousel').to(number, 100, true);
+                }
+            }
 
-                    sync2.on("click", ".owl-item", function (e) {
-                        e.preventDefault();
-                        var number = $(this).index();
-                        sync1.data('owl.carousel').to(number, 300, true);
-                    });
-                });
-            </script>
+            sync2.on("click", ".owl-item", function (e) {
+                e.preventDefault();
+                var number = $(this).index();
+                sync1.data('owl.carousel').to(number, 300, true);
+            });
+        });
+    </script>
 
 </body>
 

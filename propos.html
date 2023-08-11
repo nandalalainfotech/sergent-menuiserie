@@ -258,15 +258,15 @@
                         <br>
 
                         <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-                            placeholder="Portable" pattern=".[0-9]{9}"
-                            title="Saisissez un numéro de mobile valide."> <br>
+                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+                        <br>
                         <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
                         <br>
                         <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
                             title="entrez l' Emplacement valide."> <br>
                         <br>
                         <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre</button>
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                     </form>
@@ -363,7 +363,7 @@
                                         </li>
                                         <li><a href="TrendRange.html">GAMME TENDANCE</a>
                                             <ul class="sub-menu">
-                                                <li><a href="PVCWindow.html">FENETRE PVS</a></li>
+                                                <li><a href="PVCWindow.html">FENETRE PVC</a></li>
                                                 <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
                                                 <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
                                             </ul>
@@ -395,17 +395,23 @@
                                                 <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
                                             </ul>
                                         </li>
+                                        <li><a href="voketspersiennes.html">VOKETS PERSIENNES</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
+
+                                            </ul>
+                                        </li>
                                     </ul>
                                 </li>
 
-                                <li class="has-child"><a href="javascript:;">PORTES D'ENTREE</a>
+                                <li class="has-child"><a href="javascript:;">PORTES DENTREE</a>
                                     <ul class="sub-menu">
                                         <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
                                         </li>
                                         <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
                                                 ALU</a></li>
                                         <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
-                                        <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a></li>
+                                        <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
                                         <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
                                         </li>
                                         <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
@@ -416,10 +422,10 @@
                                 <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
                                     <ul class="sub-menu">
 
-                                        <li><a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a></li>
-                                        <li><a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a></li>
-                                        <li><a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a></li>
-                                        <li><a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a></li>
+                                        <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
+                                        <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
+                                        <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISsSANTE</a></li>
+                                        <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
                                     </ul>
                                 </li>
 
@@ -428,25 +434,25 @@
                                 <li class="has-child"><a href="javascript:;">PORTAILS</a>
                                     <ul class="sub-menu">
 
-                                        <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>
-                                        <li><a href="portalALU.html">PORTE DE CRI</a></li>
-                                        <li><a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a></li>
+                                        <li><a href="portalPVC.html">PORTAIL PVC</a></li>
+                                        <li><a href="portalALU.html">PORTAIL ALU</a></li>
+                                        <li><a href="portalIron.html">PORTAIL FREONNERIE</a></li>
                                     </ul>
 
                                 </li>
-                                <li class="has-child"><a href="javascript:;">AUVENTS & PERGOLAS</a>
+                                <li class="has-child"><a href="javascript:;">STORE & PERGOLAS</a>
                                     <ul class="sub-menu">
 
                                         <li><a href="interior blind.html">STORE INTERIEUR</a></li>
-                                        <li><a href="awning.html">AUVENTS</a></li>
-                                        <li><a href="pergola.html">PERGOLAS</a></li>
+                                        <li><a href="awning.html">STORE BANNE</a></li>
+                                        <li><a href="pergola.html">PERGOLA</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                    <a href="request.html">VERANDA</a>
+                                    <a href="javascript:;">VERANDAS</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Veranda</a></li>
-                                        <li><a href="#">Veranda</a></li>
+                                        <li><a href="gamme-excellence.html">GAMME EXCELLENCE</a></li>
+                                        <li><a href="gamme-cosy.html">GAMME COSY</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-child">
@@ -473,29 +479,32 @@
 
         </header>
         <!-- HEADER END -->
-<style>
-    #shadow{
-        background-color: rgb(245, 245, 245);
-    }
-</style>
+        <style>
+            #shadow {
+                background-color: rgb(245, 245, 245);
+            }
+        </style>
 
         <!-- CONTENT START -->
         <div class="page-content">
 
             <!-- CONTENT HEADER SECTION START -->
-            <div class="container p-t40" >
+            <div class="container p-t40">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 p-t40" id="shadow">
                         <div style="text-align: center;">
                             <div>
-                                <h3 style="color: #db5200;">Siège social : <span style="font-weight: 900;color: #000;">Sergent Menuiserie</span> </h3>
+                                <h3 style="color: #db5200;">Siège social : <span
+                                        style="font-weight: 900;color: #000;">Sergent Menuiserie</span> </h3>
                             </div>
                             <div style="margin-left: 1rem;">
-                                <h3 style="color: #db5200;">Siret : <span style="font-weight: 700;color: #000;">978 175 537 R.C.S. Evry</span> </h3>
+                                <h3 style="color: #db5200;">Siret : <span style="font-weight: 700;color: #000;">978 175
+                                        537 R.C.S. Evry</span> </h3>
                             </div>
                             <div style="margin-left: 1.5rem;">
-                                <h3 style="color: #db5200;">Capital : <span style="font-weight: 700;color: #000;">10101.00€</span> </h3>
+                                <h3 style="color: #db5200;">Capital : <span
+                                        style="font-weight: 700;color: #000;">10101.00€</span> </h3>
                             </div>
                             <div style="margin-left: 2rem;">
                                 <h5>4 rue Schotten</h5>
@@ -526,7 +535,7 @@
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="container" >
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
@@ -539,7 +548,7 @@
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="container" >
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
@@ -552,7 +561,7 @@
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="container" >
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
@@ -567,7 +576,7 @@
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="container" >
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
@@ -580,7 +589,7 @@
                     <div class="col-sm-1"></div>
                 </div>
             </div>
-            <div class="container" >
+            <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
@@ -592,12 +601,13 @@
                     </div>
                     <div class="col-sm-1"></div>
                 </div>
-                
+
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-1"></div>
-                    <div class="col-sm-10  px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">Notre entreprise est située en Essonne (91), et nous fournissons nos services partout en France.</div>
+                    <div class="col-sm-10  px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">Notre
+                        entreprise est située en Essonne (91), et nous fournissons nos services partout en France.</div>
                     <div class="col-sm-1"></div>
                 </div>
             </div>
@@ -605,8 +615,10 @@
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
-                        Nous utilisons une large variété de bois de haute qualité, allant des essences locales aux bois exotiques,
-                        pour nos créations. Notre équipe maîtrise diverses techniques de menuiserie traditionnelles et modernes, ce
+                        Nous utilisons une large variété de bois de haute qualité, allant des essences locales aux bois
+                        exotiques,
+                        pour nos créations. Notre équipe maîtrise diverses techniques de menuiserie traditionnelles et
+                        modernes, ce
                         qui nous permet de créer des pièces uniques et élégantes.
                     </div>
                     <div class="col-sm-1"></div>
@@ -616,9 +628,12 @@
                 <div class="row">
                     <div class="col-sm-1"></div>
                     <div class="col-sm-10 px-5 py-3" id="shadow" style="text-indent: 5rem;text-align: justify;">
-                        Pour l&#39;avenir, nous aspirons à continuer de développer notre réputation en tant qu&#39;entreprise de menuiserie de
-                        confiance, en offrant des produits et des services de qualité supérieure. Nous envisageons également
-                        d&#39;explorer de nouvelles possibilités de conception et d&#39;innovation pour répondre aux besoins changeants de
+                        Pour l&#39;avenir, nous aspirons à continuer de développer notre réputation en tant
+                        qu&#39;entreprise de menuiserie de
+                        confiance, en offrant des produits et des services de qualité supérieure. Nous envisageons
+                        également
+                        d&#39;explorer de nouvelles possibilités de conception et d&#39;innovation pour répondre aux
+                        besoins changeants de
                         nos clients.
                     </div>
                     <div class="col-sm-1"></div>
@@ -717,7 +732,7 @@
         <!-- FOOTER BLOCKES START -->
         <div class="footer-top">
 
-            <div class="container mt-5">
+            <div class="container ">
                 <div class="row">
 
                     <div class="col-lg-3 col-md-6">
@@ -726,11 +741,13 @@
                             <div class="logo-footer clearfix bg-white">
                                 <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
                             </div>
-                            <p>
-                                Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à
-                                votre expertise, vous nous avez livrés.</p>
+                            <p>Simple, gratuite et sans engagement.</p>
+                            <ul style="margin-left: 1.5rem;">
+                                <li>Tarif sur-mesure selon votre projet</li>
+                                <li>Des conseils d'experts</li>
+                            </ul>
                             <div class="call-us">
-                                <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+                                <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
                             </div>
 
                         </div>
@@ -741,13 +758,12 @@
                         <div class="widget n-letter">
                             <h3 class="widget-title"> Bulletin</h3>
                             <div class="n-letter-content">
-                                <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles
-                                </p>
+                                <p>Abonnez-vous</p>
                                 <div class="nl-type">
                                     <form role="search" method="post" id="check" action="emailCheck.php">
                                         <div class="nl-form">
                                             <input name="news-letter" class="form-control"
-                                                placeholder="Enter email address" type="text">
+                                                placeholder="Enter email address" type="text" id="mail">
                                             <button type="submit" class="s-btn">
                                                 S'abonner</button>
                                         </div>
@@ -766,11 +782,11 @@
                     <div class="col-lg-3 col-md-6">
                         <div class="widget">
                             <h3 class="widget-title">Contactez-nous</h3>
-                            <p>Notre support disponible pour vous aider
-                                24 heures sur 24, sept jours sur sept.</p>
+                            <p>Notre technicien disponible</p>
                             <ul class="widget_address">
-                                <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris -
-                                    75008</li>
+                                <li><i class="flaticon-location"></i>pour vous 7 sur 7 jours <br> 4 rue SCHOTTEN <br>
+                                    91560
+                                    CROSNE</li>
                                 <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                             </ul>
                         </div>
@@ -780,11 +796,12 @@
                         <div class="widget widget_services">
                             <h3 class="widget-title">Liens d'entreprise</h3>
                             <ul>
-                                <li><a href="javascript:void(0)"> À propos</a></li>
-                                <li><a href="javascript:void(0)">Projets</a></li>
-                                <li><a href="javascript:void(0)">Blog</a></li>
-                                <li><a href="javascript:void(0)">FAQ</a></li>
-                                <li><a href="javascript:void(0)">Contactez-nous</a></li>
+                                <li><a href="#">A propos</a></li>
+                                <li><a href="#">Déroulement du Projet</a></li>
+                                <li><a href="#">Conditions générales de vente</a></li>
+                                <li><a href="#">Garantie</a></li>
+                                <li><a href="#">Parrainage</a></li>
+                                <li><a href="#">Recrutement</a></li>
                             </ul>
                         </div>
                     </div>
@@ -804,13 +821,13 @@
                     <div class="footer-copy-right">
                         <div class="row">
                             <div class="col-sm-9">
-                                <span class="copyrights-text text-dark align-content-center">© 2023 Sergent Menuiserie
-                                    Entreprise.</span>
+                                <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous droits
+                                    réservés Sergent Menuiserie</span>
                             </div>
 
                             <div class="col-sm-3">
-                                <span class="float-end text-dark " style="margin-left:40px">Conçu par</span> <span
-                                    class="site-text-primary float-end"><img
+                                <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
+                                <span class="site-text-primary float-end"><img
                                         src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px"
                                         width="100px"></span>
                             </div>
