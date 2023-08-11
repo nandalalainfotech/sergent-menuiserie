@@ -12791,3 +12791,22 @@ select {
     border: none;
     width: 124% !important;
   } */
+
+
+    /* @media (max-width: 640px) {
+      .blog-post-1-outer [class*="col-6"] {
+        max-width: 100%;
+        flex: auto;
+      }@media (max-width: 640px) {
+        .blog-post-1-outer [class*="col-6"] {
+          max-width: 100%;
+          flex: auto;
+        }@media (max-width: 640px) {
+          .blog-post-1-outer [class*="col-6"] {
+            max-width: 100%;
+            flex: auto;
+          }@media (max-width: 640px) {
+            .blog-post-1-outer [class*="col-6"] {
+              max-width: 100%;
+              flex: auto;
+            } */
