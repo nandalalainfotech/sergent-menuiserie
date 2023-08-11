@@ -12212,7 +12212,7 @@ STEP NUMBER
   left: 0px;
   width: 100%;
   height: 100%;
-  /* transition: 0.5s all ease; */
+  transition: 0.5s all ease;
   /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+22,000000+22,000000+100&0+22,0.65+100 */
   /* FF3.6-15 */
   /* Chrome10-25,Safari5.1-6 */
@@ -12226,8 +12226,8 @@ STEP NUMBER
   /* IE6-9 */
 }
 
-.service-box-style1:after {
-  opacity: 0;
+.service-box-style1:hover:after {
+  opacity: 1;
   top: 0%;
 }
 
@@ -12243,24 +12243,24 @@ STEP NUMBER
 .service-box-style1 .service-content p {
   color: #fff;
   margin-bottom: 20px;
-  opacity: 1;
-  /* transform: translate3d(0%, -50%, 0);
-  transition: transform .4s, opacity .2s; */
+  opacity: 0;
+  transform: translate3d(0%, -50%, 0);
+  transition: transform .4s, opacity .2s;
 }
 
 .service-box-style1 .site-button-link {
   display: block;
-  opacity: 1;
-  /* transform: translate3d(0, -100%, 0);
-  transition: transform .4s, opacity .2s; */
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform .4s, opacity .2s;
 }
 
 .service-box-style1 .service-title-large {
   margin-bottom: 15px;
   position: relative;
-  opacity: 1;
-  /* transform: translate3d(0, -100%, 0);
-  transition: transform .4s, opacity .2s; */
+  opacity: 0;
+  transform: translate3d(0, -100%, 0);
+  transition: transform .4s, opacity .2s;
 }
 
 .service-box-style1 .service-title-large a {
@@ -12272,21 +12272,21 @@ STEP NUMBER
   color: #db5200;
 }
 
-.service-box-style1 .service-title-large {
+.service-box-style1:hover .service-title-large {
   opacity: 1;
   transform: translate3d(0, 0, 0);
   transition: transform 0.4s cubic-bezier(0.57, 0.04, 0.06, 0.84) 0.1s,
     opacity 0.2s 0.1s;
 }
 
-.service-box-style1 p {
+.service-box-style1:hover p {
   opacity: 1;
   transform: translate3d(0, 0%, 0);
   transition: transform 0.6s cubic-bezier(0.57, 0.04, 0.06, 0.84) 0.1s,
     opacity 0.2s 0.1s;
 }
 
-.service-box-style1 .site-button-link {
+.service-box-style1:hover .site-button-link {
   opacity: 1;
   transform: translate3d(0, 10%, 0);
   transition: transform 0.6s cubic-bezier(0.57, 0.04, 0.06, 0.84) 0.1s,
@@ -12298,13 +12298,12 @@ STEP NUMBER
 }
 
 .service-box-style1:after .service-media img {
-  width: 100%;
-  opacity: 0.5;
+  width: 100%;  
 }
 
-/* .service-box-style1:after .service-media img {
-  opacity: 0.5;
-} */
+.service-box-style1:hover .service-media img {
+  opacity: 0.7;
+}
 
 /*project_slider_3*/
 .project-slider-3-box {
