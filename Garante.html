@@ -265,7 +265,7 @@
                         <br />
                         <br />
                         <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre
                         </button>
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
@@ -351,152 +351,116 @@
                         </button>
 
                         <!-- MAIN Vav -->
-                        <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center">
-                            <ul class="nav navbar-nav menu-size">
-                                <li class="has-child">
-                                    <a href="javascript:;"> FENETRES</a>
+                        <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
+
+                            <ul class=" nav navbar-nav menu-size">
+                                <li class="has-child"><a href="javascript:;"> FENETRES</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="EcleaRange.html">GAMME CLASSIQUE</a>
+                                        <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
                                             <ul class="sub-menu">
-                                                <li>
-                                                    <a href="compositeWindow.html">FENETRE COMPOSITE</a>
-                                                </li>
-                                                <li>
-                                                    <a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a>
-                                                </li>
-                                                <li>
-                                                    <a href="AluSlidingWindow.html">COULISSANT ALU</a>
-                                                </li>
-                                                <li>
-                                                    <a href="AluBrickPartition.html">GALANDAGE ALU</a>
-                                                </li>
+
+                                                <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
+                                                <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
+                                                <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
+                                                <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="TrendRange.html">GAMME TENDANCE</a>
+                                        <li><a href="TrendRange.html">GAMME TENDANCE</a>
                                             <ul class="sub-menu">
-                                                <li><a href="PVCWindow.html">FENETRE PVS</a></li>
-                                                <li>
-                                                    <a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a>
-                                                </li>
-                                                <li>
-                                                    <a href="AluSlidingWindow.html">COULISSANT ALU</a>
-                                                </li>
+                                                <li><a href="PVCWindow.html">FENETRE PVC</a></li>
+                                                <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
+                                                <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
                                             </ul>
                                         </li>
-                                        <li>
-                                            <a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
+                                        <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
                                             <ul class="sub-menu">
                                                 <li><a href="WoodenWindow.html">FENETRE BOIS</a></li>
                                             </ul>
                                         </li>
                                     </ul>
+
                                 </li>
 
                                 <li class="has-child">
                                     <a href="javascript:;">VOLETS</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="swing Shutter.html">VOLETS BATTANTS</a>
+                                        <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
                                             <ul class="sub-menu">
                                                 <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                                                <li>
-                                                    <a href="woodenShutters.html">VOLET BATTANT BOIS</a>
-                                                </li>
-                                                <li>
-                                                    <a href="pvcShutters.html">VOLET BATTANT PVC</a>
-                                                </li>
+                                                <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
+                                                <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
                                             </ul>
                                         </li>
 
-                                        <li>
-                                            <a href="rollerShutters.html">VOLETS ROULANTS</a>
+                                        <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
                                             <ul class="sub-menu">
-                                                <li>
-                                                    <a href="zenithShutter.html">VOLET ROULANT PVC</a>
-                                                </li>
-                                                <li>
-                                                    <a href="zibaie component.html">VOLET ROULANT ALU</a>
-                                                </li>
-                                                <li>
-                                                    <a href="vr4a component.html">VOLET ROULANT TRADI</a>
-                                                </li>
+                                                <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
+                                                <li><a href="zibaie component.html">VOLET ROULANT ALU</a></li>
+                                                <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="voketspersiennes.html">VOKETS PERSIENNES</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
+
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
 
-                                <li class="has-child">
-                                    <a href="javascript:;">PORTES D'ENTREE</a>
+                                <li class="has-child"><a href="javascript:;">PORTES DENTREE</a>
                                     <ul class="sub-menu">
-                                        <li>
-                                            <a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU
-                                            </a>
+                                        <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
                                         </li>
-                                        <li>
-                                            <a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES ALU</a>
+                                        <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
+                                                ALU</a></li>
+                                        <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
+                                        <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
+                                        <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
                                         </li>
-                                        <li>
-                                            <a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a>
-                                        </li>
-                                        <li>
-                                            <a href="steel-EntranceDoors.html">PORTES D'ENTREE EN ACIER</a>
-                                        </li>
-                                        <li>
-                                            <a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
-                                        </li>
-                                        <li>
-                                            <a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a>
-                                        </li>
+                                        <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
+                                    </ul>
+
+                                </li>
+
+                                <li class="has-child"><a href="javascript:;">PORTES DE GARAGE</a>
+                                    <ul class="sub-menu">
+
+                                        <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
+                                        <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
+                                        <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISsSANTE</a></li>
+                                        <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
                                     </ul>
                                 </li>
 
-                                <li class="has-child">
-                                    <a href="javascript:;">PORTES DE GARAGE</a>
-                                    <ul class="sub-menu">
-                                        <li>
-                                            <a href="sideGarageDoor.html">PORTES DE GARAGE LATERALE</a>
-                                        </li>
-                                        <li>
-                                            <a href="rollUpGarageDoor.html">PORTES DE GARAGE ENROULABLE</a>
-                                        </li>
-                                        <li>
-                                            <a href="slidingGarageDoor.html">PORTES DE GARAGE COULISSANTE</a>
-                                        </li>
-                                        <li>
-                                            <a href="sectionalGarageDoor.html">PORTES DE GARAGE SECTIONNELLE</a>
-                                        </li>
-                                    </ul>
-                                </li>
 
-                                <li class="has-child">
-                                    <a href="javascript:;">PORTAILS</a>
+
+                                <li class="has-child"><a href="javascript:;">PORTAILS</a>
                                     <ul class="sub-menu">
-                                        <li><a href="portalPVC.html">PORTAIL WINDOW</a></li>
-                                        <li><a href="portalALU.html">PORTE DE CRI</a></li>
-                                        <li>
-                                            <a href="portalIron.html">PORTAIL DE TRAVAIL IORN</a>
-                                        </li>
+
+                                        <li><a href="portalPVC.html">PORTAIL PVC</a></li>
+                                        <li><a href="portalALU.html">PORTAIL ALU</a></li>
+                                        <li><a href="portalIron.html">PORTAIL FREONNERIE</a></li>
                                     </ul>
+
                                 </li>
-                                <li class="has-child">
-                                    <a href="javascript:;">AUVENTS & PERGOLAS</a>
+                                <li class="has-child"><a href="javascript:;">STORE & PERGOLAS</a>
                                     <ul class="sub-menu">
+
                                         <li><a href="interior blind.html">STORE INTERIEUR</a></li>
-                                        <li><a href="awning.html">AUVENTS</a></li>
-                                        <li><a href="pergola.html">PERGOLAS</a></li>
+                                        <li><a href="awning.html">STORE BANNE</a></li>
+                                        <li><a href="pergola.html">PERGOLA</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                    <a href="sampls.html">VERANDA</a>
+                                    <a href="javascript:;">VERANDAS</a>
                                     <ul class="sub-menu">
-                                        <li><a href="sampls.html">Veranda</a></li>
-                                        <li><a href="sampls.html">Veranda</a></li>
+                                        <li><a href="gamme-excellence.html">GAMME EXCELLENCE</a></li>
+                                        <li><a href="gamme-cosy.html">GAMME COSY</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                    <a href="request.html" style="color: #db5200">DEVIS GRATUIT</a>
+                                    <a href="request.html" style="color: #db5200;">DEVIS GRATUIT</a>
                                 </li>
                             </ul>
                         </div>
@@ -616,13 +580,15 @@
                     </p>
                     <p>
                         Conformément à l’article L 221-10, L 312-50 et L 312-51 du Code de la Consommation, V ne peut
-                        recevoir aucun versement d’acompte de la part du Client avant l'expiration d'un délai de sept jours
+                        recevoir aucun versement d’acompte de la part du Client avant l'expiration d'un délai de sept
+                        jours
                         à compter de la signature du contrat. Le solde dû par le Client est perçu à la réception des
-                        travaux.  
+                        travaux.
                     </p>
                     <p>
                         Conformément à l’article L 221-10, L 312-50 et L 312-51 du Code de la Consommation, V ne peut
-                        recevoir aucun versement d’acompte de la part du Client avant l'expiration d'un délai de sept jours
+                        recevoir aucun versement d’acompte de la part du Client avant l'expiration d'un délai de sept
+                        jours
                         à compter de la signature du contrat. Le solde dû par le Client est perçu à la réception des
                         travaux.
                     </p>
@@ -635,292 +601,415 @@
                         compensation.
                     </p>
                     <p>
-                        <h4>
-                            3 – RÉSERVE DE PROPRIÉTÉ
-                        </h4>
+                    <h4>
+                        3 – RÉSERVE DE PROPRIÉTÉ
+                    </h4>
                     </p>
                     <p>
                         Les produits objet du présent contrat sont vendus avec une clause subordonnant expressément le
-                        transfert de leur propriété au paiement intégral du prix en principal et accessoires. Dans le cas où
+                        transfert de leur propriété au paiement intégral du prix en principal et accessoires. Dans le
+                        cas où
                         le paiement n’interviendrait pas dans les délais prévus par les parties, SERGENT MENUISERIE se
-                        réserve le droit de reprendre la chose livrée. Il est précisé que, dès la livraison des produits, le
+                        réserve le droit de reprendre la chose livrée. Il est précisé que, dès la livraison des
+                        produits, le
                         Client supportera les risques de pertes, de vol ou de détérioration.
                     </p>
                     <p>
-                        <h4>
-                            4 – GARANTIES
-                        </h4>
+                    <h4>
+                        4 – GARANTIES
+                    </h4>
                     </p>
                     <p>
-                        Les produits et les prestations sont garantis, sur présentation d’un original de la facture, dans le
+                        Les produits et les prestations sont garantis, sur présentation d’un original de la facture,
+                        dans le
                         cadre, d’une part, des dispositions légales et, d’autre part, de la garantie commerciale SERGENT
                         MENUISERIE.
                     </p>
-                    <p><h4>
-                        4.1 Garantie légale
-                    </h4></p>
                     <p>
-                        SERGENT MENUISERIE est tenu des défauts de conformité du bien au contrat et dommages de nature décennale, dans les conditions et délais fixés par la loi  et notamment par les articles L.217-4 et suivants du Code de la Consommation et des défauts cachés de la chose vendue dans les conditions prévues aux articles 1641 et suivants du Code Civil. 
+                    <h4>
+                        4.1 Garantie légale
+                    </h4>
+                    </p>
+                    <p>
+                        SERGENT MENUISERIE est tenu des défauts de conformité du bien au contrat et dommages de nature
+                        décennale, dans les conditions et délais fixés par la loi et notamment par les articles L.217-4
+                        et suivants du Code de la Consommation et des défauts cachés de la chose vendue dans les
+                        conditions prévues aux articles 1641 et suivants du Code Civil.
                     </p>
                     <p>
                         <b>
-                            Lorsqu’il agit sur le fondement de la garantie légale de conformité, le Client : 
+                            Lorsqu’il agit sur le fondement de la garantie légale de conformité, le Client :
                         </b>
-                        <p>
-                            bénéficie d’un délai de deux ans à compter de la délivrance du bien pour agir;
-                        </p>
-                        
-                        <p>
-                            peut choisir entre la réparation ou le remplacement du bien, sous réserve des conditions de coût prévues par l’article L. 217-9 du Code de la Consommation ;
-                        </p>
-                        <p>
-                            est dispensé de rapporter la preuve de l’existence du défaut de conformité du bien durant les   vingt-quatre mois suivant la délivrance du bien.  
-                        </p>
-                        <p>
-                            La garantie légale de conformité s’applique indépendamment de la garantie commerciale.
-                        </p>
-                        <p>
-                            Dans l’hypothèse où l’action fondée sur la garantie des défauts cachés de la chose vendue est intentée par le Client dans les conditions prévues aux articles 1641 et suivants du Code Civil, celui-ci  pourra demander soit la résolution de la vente, soit une réduction du prix de vente conformément à l'article 1644 du Code Civil.
-                        </p>
+                    <p>
+                        bénéficie d’un délai de deux ans à compter de la délivrance du bien pour agir;
+                    </p>
+
+                    <p>
+                        peut choisir entre la réparation ou le remplacement du bien, sous réserve des conditions de coût
+                        prévues par l’article L. 217-9 du Code de la Consommation ;
+                    </p>
+                    <p>
+                        est dispensé de rapporter la preuve de l’existence du défaut de conformité du bien durant les
+                        vingt-quatre mois suivant la délivrance du bien.
+                    </p>
+                    <p>
+                        La garantie légale de conformité s’applique indépendamment de la garantie commerciale.
+                    </p>
+                    <p>
+                        Dans l’hypothèse où l’action fondée sur la garantie des défauts cachés de la chose vendue est
+                        intentée par le Client dans les conditions prévues aux articles 1641 et suivants du Code Civil,
+                        celui-ci pourra demander soit la résolution de la vente, soit une réduction du prix de vente
+                        conformément à l'article 1644 du Code Civil.
+                    </p>
                     </p>
                     <p>
                         <b>
                             Extraits du Code de la consommation :
                         </b>
-                        <p>
-                            Art. L.217-4. Le vendeur livre un bien conforme au contrat et répond des défauts de conformité existant lors de la délivrance.
-                        </p>
-                        <p>
-                            Il répond également des défauts de conformité résultant de l’emballage, des instructions de montage ou de l’installation lorsque celle-ci a été mise à sa charge par le contrat ou a été réalisée sous sa responsabilité.
-                        </p>
-                        <p>
-                            <b>
-                                Art. L.217.5. –  Le bien est conforme au contrat :
-                            </b>
-                            <p>
-                                1-  S’il est  propre à l’usage habituellement attendu d’un bien semblable, le cas échéant : s’il correspond à la description donnée par le vendeur et possède  les qualités que celui-ci a présentées à l’acheteur sous forme d’échantillon ou de modèle ; s’il présente les qualités qu’un acheteur peut légitimement attendre eu égard aux déclarations publiques faites par le vendeur, par le producteur ou par son représentant, notamment dans la publicité ou l’étiquetage ;
-                            </p>
-                            <p>
-                                2-  Ou s’il présente les caractéristiques définies d’un commun accord par les parties ou est propre à tout usage spécial recherché par l’acheteur, porté à la connaissance du vendeur et que ce dernier a accepté. 
-                            </p>
-                            <p>
-                                Art. L.217-12. – L’action résultant du défaut de conformité se prescrit par deux ans à compter de la délivrance du bien.
-                            </p>
-                            <p>
-                                Art. L.217-16.  Lorsque l'acheteur demande au vendeur, pendant le cours de la garantie commerciale qui lui a été consentie lors de l'acquisition ou de la réparation d'un bien meuble, une remise en état couverte par la garantie, toute période d'immobilisation d'au moins sept jours vient s'ajouter à la durée de la garantie qui restait à courir. Cette période court à compter de la demande d'intervention de l'acheteur ou de la mise à disposition pour réparation du bien en cause, si cette mise à disposition est postérieure à la demande d'intervention. 
-                            </p>
-                            <p>
-                                <b>
-                                    Extraits du Code civil :
-                                </b>
-                                <p>
-                                    Art. 1641. – Le vendeur est tenu de la garantie à raison des défauts cachés de la chose vendue qui la rendent impropre à l’usage auquel on la destine, ou qui diminuent tellement cet usage, que l’acheteur ne l’aurait pas acquise, ou n’en aurait donné qu’un moindre prix, s’il les avait connus.
-                                </p>
-                                <p>
-                                    Art. 1648. – L’action résultant des vices rédhibitoires doit être intentée par l’acquéreur dans un délai de deux ans à compter de la découverte du vice.
-                                </p>
-                            </p>
-                        </p>
+                    <p>
+                        Art. L.217-4. Le vendeur livre un bien conforme au contrat et répond des défauts de conformité
+                        existant lors de la délivrance.
                     </p>
                     <p>
-                        <h4>
-                            4.2 Garantie commerciale SERGENT MENUISERIE
-                        </h4>
-                        <p>
-                            SERGENT MENUISERIE accorde une garantie commerciale dans les conditions figurant sur le document intitulé   « Garanties » mis à la disposition du Client et disponible sur le site kpark.fr ainsi que sur le catalogue SERGENT MENUISERIE. La garantie prend effet à la date de l’encaissement du solde des travaux.
-                        </p>
-                        <p>
-                            4.3 Pour permettre de remédier au vice constaté, le Client doit accorder à SERGENT MENUISERIE le temps et les facilités requis, SERGENT MENUISERIE étant dégagée de toute responsabilité si le Client refuse de les lui accorder.
-                        </p>
-                        <p>
-                            Pièces détachées : Pour les produits concernés, la durée de disponibilité des pièces détachées est identique à la durée de la garantie commerciale proposée par SERGENT MENUISERIE  pour chaque catégorie de produits dans le document « Garanties ».
-                        </p>
+                        Il répond également des défauts de conformité résultant de l’emballage, des instructions de
+                        montage ou de l’installation lorsque celle-ci a été mise à sa charge par le contrat ou a été
+                        réalisée sous sa responsabilité.
                     </p>
                     <p>
-                        <h4>
-                            5- TRAVAUX A LA CHARGE DU CLIENT
-                        </h4>
-                        <p>
-                            Dans le cas de l’installation de portail de clôture avec motorisation et/ou de porte de garage, il est rappelé que le Client a la charge, préalablement à la dite installation, de fournir et poser une gaine apparente PVC ou un fourreau encastré avec aiguille (au choix du Client) conformément aux normes de sécurité, afin de permettre le câblage par SERGENT MENUISERIE de la motorisation de portail.
-                        </p>
-                        <p>
-                            <b>
-                                De plus, il est précisé que les travaux objet du contrat ne comprennent pas, sauf accord écrit entre les 2 parties :
-                            </b>
-                            <p>
-                               Les travaux de plâtrerie et/ou de maçonnerie  consécutifs à la dépose de l’ancien dormant ;
-                            </p>
-                            <p>
-                                Les raccords de peinture ;
-                            </p>
-                            <p>
-                                L’installation de systèmes de ventilation mécanique autre que les grilles de ventilation (qui peuvent être incorporées aux produits livrés).
-                            </p>
-                            <p>
-                                La mise en œuvre de certains produits (portails, portes de garage, volets, etc) nécessite une découpe des anciens accessoires afin que ces derniers soient remplacés par des accessoires qui seront ajustés sur place (gonds, arrêts de volets, etc). Les éventuelles traces laissées par les découpes sur les tableaux, appuis, façades et piliers sont inhérentes à la mise en œuvre des produits et les éventuelles retouches restent à la discrétion/charge du Client.
-                            </p>
-                        </p>
+                        <b>
+                            Art. L.217.5. – Le bien est conforme au contrat :
+                        </b>
+                    <p>
+                        1- S’il est propre à l’usage habituellement attendu d’un bien semblable, le cas échéant : s’il
+                        correspond à la description donnée par le vendeur et possède les qualités que celui-ci a
+                        présentées à l’acheteur sous forme d’échantillon ou de modèle ; s’il présente les qualités qu’un
+                        acheteur peut légitimement attendre eu égard aux déclarations publiques faites par le vendeur,
+                        par le producteur ou par son représentant, notamment dans la publicité ou l’étiquetage ;
                     </p>
                     <p>
-                        <h4>
-                            6 – RESPONSABILITE
-                        </h4>
-                        <p>
-                            La responsabilité de SERGENT MENUISERIE est celle définie par la Loi.
-                        </p>
-                        <p>
-                            Toutefois, SERGENT MENUISERIE ne saurait être tenue pour responsable de tout préjudice n’ayant pas un caractère direct avec les produits livrés ou les travaux effectués (notamment manque à gagner, perte d’une chance, etc.).
-                        </p>
-                        <p>
-                            Le Client s’engage à signaler à SERGENT MENUISERIE, le cas échéant, toutes modalités particulières d’environnement des locaux ou d’accès aux locaux susceptibles d’avoir un impact sur l’installation
-                        </p>
-                        <p>
-                            Dans le cas où les travaux nécessitent une autorisation (telle que permis de construire, autorisation de la copropriété…), le Client est seul responsable de son obtention. La non obtention de l’autorisation ne peut constituer pour le Client un motif valable d’annulation de la commande postérieurement au délai de rétractation de 14 jours visé à l’article 14 des présentes Conditions Générales de Vente et saurait engager la responsabilité de SERGENT MENUISERIE   pendant l’exécution de la prestation d’installation ni ultérieurement.
-                        </p>
+                        2- Ou s’il présente les caractéristiques définies d’un commun accord par les parties ou est
+                        propre à tout usage spécial recherché par l’acheteur, porté à la connaissance du vendeur et que
+                        ce dernier a accepté.
+                    </p>
+                    <p>
+                        Art. L.217-12. – L’action résultant du défaut de conformité se prescrit par deux ans à compter
+                        de la délivrance du bien.
+                    </p>
+                    <p>
+                        Art. L.217-16. Lorsque l'acheteur demande au vendeur, pendant le cours de la garantie
+                        commerciale qui lui a été consentie lors de l'acquisition ou de la réparation d'un bien meuble,
+                        une remise en état couverte par la garantie, toute période d'immobilisation d'au moins sept
+                        jours vient s'ajouter à la durée de la garantie qui restait à courir. Cette période court à
+                        compter de la demande d'intervention de l'acheteur ou de la mise à disposition pour réparation
+                        du bien en cause, si cette mise à disposition est postérieure à la demande d'intervention.
+                    </p>
+                    <p>
+                        <b>
+                            Extraits du Code civil :
+                        </b>
+                    <p>
+                        Art. 1641. – Le vendeur est tenu de la garantie à raison des défauts cachés de la chose vendue
+                        qui la rendent impropre à l’usage auquel on la destine, ou qui diminuent tellement cet usage,
+                        que l’acheteur ne l’aurait pas acquise, ou n’en aurait donné qu’un moindre prix, s’il les avait
+                        connus.
+                    </p>
+                    <p>
+                        Art. 1648. – L’action résultant des vices rédhibitoires doit être intentée par l’acquéreur dans
+                        un délai de deux ans à compter de la découverte du vice.
+                    </p>
+                    </p>
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        4.2 Garantie commerciale SERGENT MENUISERIE
+                    </h4>
+                    <p>
+                        SERGENT MENUISERIE accorde une garantie commerciale dans les conditions figurant sur le document
+                        intitulé « Garanties » mis à la disposition du Client et disponible sur le site kpark.fr ainsi
+                        que sur le catalogue SERGENT MENUISERIE. La garantie prend effet à la date de l’encaissement du
+                        solde des travaux.
+                    </p>
+                    <p>
+                        4.3 Pour permettre de remédier au vice constaté, le Client doit accorder à SERGENT MENUISERIE le
+                        temps et les facilités requis, SERGENT MENUISERIE étant dégagée de toute responsabilité si le
+                        Client refuse de les lui accorder.
+                    </p>
+                    <p>
+                        Pièces détachées : Pour les produits concernés, la durée de disponibilité des pièces détachées
+                        est identique à la durée de la garantie commerciale proposée par SERGENT MENUISERIE pour chaque
+                        catégorie de produits dans le document « Garanties ».
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        5- TRAVAUX A LA CHARGE DU CLIENT
+                    </h4>
+                    <p>
+                        Dans le cas de l’installation de portail de clôture avec motorisation et/ou de porte de garage,
+                        il est rappelé que le Client a la charge, préalablement à la dite installation, de fournir et
+                        poser une gaine apparente PVC ou un fourreau encastré avec aiguille (au choix du Client)
+                        conformément aux normes de sécurité, afin de permettre le câblage par SERGENT MENUISERIE de la
+                        motorisation de portail.
+                    </p>
+                    <p>
+                        <b>
+                            De plus, il est précisé que les travaux objet du contrat ne comprennent pas, sauf accord
+                            écrit entre les 2 parties :
+                        </b>
+                    <p>
+                        Les travaux de plâtrerie et/ou de maçonnerie consécutifs à la dépose de l’ancien dormant ;
+                    </p>
+                    <p>
+                        Les raccords de peinture ;
+                    </p>
+                    <p>
+                        L’installation de systèmes de ventilation mécanique autre que les grilles de ventilation (qui
+                        peuvent être incorporées aux produits livrés).
+                    </p>
+                    <p>
+                        La mise en œuvre de certains produits (portails, portes de garage, volets, etc) nécessite une
+                        découpe des anciens accessoires afin que ces derniers soient remplacés par des accessoires qui
+                        seront ajustés sur place (gonds, arrêts de volets, etc). Les éventuelles traces laissées par les
+                        découpes sur les tableaux, appuis, façades et piliers sont inhérentes à la mise en œuvre des
+                        produits et les éventuelles retouches restent à la discrétion/charge du Client.
+                    </p>
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        6 – RESPONSABILITE
+                    </h4>
+                    <p>
+                        La responsabilité de SERGENT MENUISERIE est celle définie par la Loi.
+                    </p>
+                    <p>
+                        Toutefois, SERGENT MENUISERIE ne saurait être tenue pour responsable de tout préjudice n’ayant
+                        pas un caractère direct avec les produits livrés ou les travaux effectués (notamment manque à
+                        gagner, perte d’une chance, etc.).
+                    </p>
+                    <p>
+                        Le Client s’engage à signaler à SERGENT MENUISERIE, le cas échéant, toutes modalités
+                        particulières d’environnement des locaux ou d’accès aux locaux susceptibles d’avoir un impact
+                        sur l’installation
+                    </p>
+                    <p>
+                        Dans le cas où les travaux nécessitent une autorisation (telle que permis de construire,
+                        autorisation de la copropriété…), le Client est seul responsable de son obtention. La non
+                        obtention de l’autorisation ne peut constituer pour le Client un motif valable d’annulation de
+                        la commande postérieurement au délai de rétractation de 14 jours visé à l’article 14 des
+                        présentes Conditions Générales de Vente et saurait engager la responsabilité de SERGENT
+                        MENUISERIE pendant l’exécution de la prestation d’installation ni ultérieurement.
+                    </p>
 
                     </p>
                     <p>
-                        <h4>
-                            7 –  MODIFICATION
-                        </h4>
-                        <p>
-                            Toute modification des termes de la commande  pourra intervenir au maximum dans les  trois (3) semaines de la prise de cotes par le métreur et fera l’objet d’un accord écrit du Client.
-                        </p>
-                        <p>
-                            Par ailleurs, dans les cas où les caractéristiques des produits à remplacer seraient incompatibles avec les possibilités de fabrication ou si leur mise en œuvre risque de provoquer des travaux non prévus dans les prestations définies au présent contrat, SERGENT MENUISERIE se réserve la faculté de résilier le contrat dans les trois semaines de la prise de cotes. Toute somme versée par le Client lui sera alors remboursée et ce dernier ne saurait prétendre au paiement d’une quelconque indemnité. 
-                        </p>
+                    <h4>
+                        7 – MODIFICATION
+                    </h4>
+                    <p>
+                        Toute modification des termes de la commande pourra intervenir au maximum dans les trois (3)
+                        semaines de la prise de cotes par le métreur et fera l’objet d’un accord écrit du Client.
                     </p>
                     <p>
-                        <h4>
-                            8 – LIVRAISON
-                        </h4>
-                        <p>
-                            Le délai de livraison court à partir de la date telle qu’indiquée sur le contrat et la livraison est réputée effectuée sur le chantier
-                        </p>
-                        <p>
-                            En cas de dépassement par SERGENT MENUISERIE du délai de livraison annoncé, le Client pourra résoudre le contrat dans les conditions de l’article L.216-2 du Code de la consommation.
-                        </p>
-                        <p>
-                            Toute modification du contrat initial, postérieure à la prise des cotes et acceptée par les deux parties, donnera automatiquement lieu à un report de la date de livraison initialement prévue.
-                        </p>
-                        <p>
-                            <b>
-                                Le Client dégage SERGENT MENUISERIE de tout engagement relatif aux délais de livraison et ne saurait prétendre au paiement d’une quelconque indemnité :
-                            </b>
-                            <p>
-                                1. dans le cas où les renseignements à fournir par le Client ne seraient pas donnés en temps voulu ;
-                            </p>
-                            <p>
-                                2. dans le cas où l’accès à l’installation n’a pas été possible à la date prévue du fait du Client ;
-                            </p>
-                            <p>
-                                3. dans le cas où les conditions de paiement n’auraient pas été respectées par le Client ;
-                            </p>
-                            <p>
-                                4. en cas de force majeure ou d’intempéries.
-                            </p>
-                            <p>
-                                Certaines tâches peuvent être sous-traitées. 
-                            </p>
-                        </p>
+                        Par ailleurs, dans les cas où les caractéristiques des produits à remplacer seraient
+                        incompatibles avec les possibilités de fabrication ou si leur mise en œuvre risque de provoquer
+                        des travaux non prévus dans les prestations définies au présent contrat, SERGENT MENUISERIE se
+                        réserve la faculté de résilier le contrat dans les trois semaines de la prise de cotes. Toute
+                        somme versée par le Client lui sera alors remboursée et ce dernier ne saurait prétendre au
+                        paiement d’une quelconque indemnité.
+                    </p>
                     </p>
                     <p>
-                        <h4>
-                            9 – CONFORMITE
-                        </h4>
-                        <p>
-                            K par K ne peut garantir l’exacte conformité de ses produits et/ou travaux, réalisés sur mesure et pour des cas ne se répétant pas, aux échantillons proposés ou installations présentées dans ses magasins. Les produits décrits sur le contrat seront cotés par un technicien-métreur qui s’assurera de leur adaptation à la fabrication en usine. Une éventuelle différence de cotes entre celles figurant sur le contrat et celles prises par le métreur pour la fabrication, ne peut constituer en aucun cas pour le Client un motif d’annulation.
-                        </p>
-                        <p>
-                            En ce qui concerne les produits posés en rénovation, le maintien du dormant existant entraînera de par l’installation, une perte de clair de vitrage égale à l’épaisseur du dormant existant plus le jeu nécessaire. Par ailleurs, SERGENT MENUISERIE ne peut s’engager sur les qualités, tant isolantes que phoniques, des murs ou supports sur lesquels les produits sont posés.
-                        </p>
+                    <h4>
+                        8 – LIVRAISON
+                    </h4>
+                    <p>
+                        Le délai de livraison court à partir de la date telle qu’indiquée sur le contrat et la livraison
+                        est réputée effectuée sur le chantier
                     </p>
                     <p>
-                        <h4>
-                            10 – RECLAMATIONS
-                        </h4>
-                        <p>
-                            Les réclamations devront être faites avant toute transformation du produit concerné. En tout état de cause, la responsabilité de SERGENT MENUISERIE se trouvera limitée selon les articles 4, 6 et 9.
-                        </p>
+                        En cas de dépassement par SERGENT MENUISERIE du délai de livraison annoncé, le Client pourra
+                        résoudre le contrat dans les conditions de l’article L.216-2 du Code de la consommation.
                     </p>
                     <p>
-                        <h4>
-                            11 –  RESILIATION
-                        </h4>
-                        <p>
-                            En cas de non-respect de l’une quelconque de ses obligations par le Client, SERGENT MENUISERIE pourra se prévaloir de la résolution du contrat de plein droit et sans sommation, ni formalité. Dans ce cas et dans le cas où le Client annulerait unilatéralement le contrat après expiration du délai de rétractation de  14 jours prévu à l’article L.221-18 du Code de la consommation, SERGENT MENUISERIE sera fondée à obtenir une indemnité au titre du préjudice subi, sans sommation, ni formalité, indemnité devant être retenue en tout ou en partie sur les sommes déjà versées par le Client à titre d’acompte. Cette indemnité sera équivalente à 5% de la valeur TTC du contrat en cas d’annulation intervenant entre la signature du contrat et le rendez-vous  de métrage (prise de cotes).  Cette indemnité sera portée à 50%  de la valeur TTC du contrat à partir du jour suivant celui du rendez-vous de métrage.     
-                        </p>
-                        <p>
-                            SERGENT MENUISERIE se réserve par ailleurs le droit de résilier le contrat dans l’hypothèse où la prise de cotes par le métreur au domicile du Client n’aura pas pu être réalisée, du fait du Client, dans les 2 mois de la signature du contrat.
-                        </p>
+                        Toute modification du contrat initial, postérieure à la prise des cotes et acceptée par les deux
+                        parties, donnera automatiquement lieu à un report de la date de livraison initialement prévue.
                     </p>
                     <p>
-                        <h4>
-                            12 -  LOI APPLICABLE
-                        </h4>
-                        <p>
-                            Les présentes conditions générales de vente sont soumises au droit français. 
-                        </p>
+                        <b>
+                            Le Client dégage SERGENT MENUISERIE de tout engagement relatif aux délais de livraison et ne
+                            saurait prétendre au paiement d’une quelconque indemnité :
+                        </b>
+                    <p>
+                        1. dans le cas où les renseignements à fournir par le Client ne seraient pas donnés en temps
+                        voulu ;
                     </p>
                     <p>
-                        <h4>
-                            13 – LITIGES - MEDIATION
-                        </h4>
-                        <p>
-                            En cas de litige, le Client devra s’adresser en priorité au service clients de SERGENT MENUISERIE au 08 01 01 05 07 (numéro vert, gratuit depuis un poste fixe en France), du lundi au vendredi sauf jour férié ou chômé, de 8h30 à 19h00 & samedi et dimanche de 10h00 à 18h00, par mail à l’adresse suivante : contact@kpark.fr ou par courrier recommandé avec AR à l’adresse suivante : SERGENT MENUISERIE, Service Client, 148-156 rue Gallieni, 92100 Boulogne-Billancourt.
-                        </p>
-                        <p>
-                            En l’absence de solution dans les 21 jours qui suivent la demande adressée au service clients, le Client pourra saisir la Commission Paritaire de Médiation de la Vente Directe, 100 avenue du Président Kennedy 75016 Paris – Tél : 01.42.15.30.00 e-mail : info@fvd.fr qui recherchera gratuitement un règlement à l’amiable. 
-                        </p>
-                        <p>
-                            Conformément à l’article L. 211-3 du Code de la Consommation, il est en effet rappelé que le Client peut recourir gratuitement à une procédure de médiation pour les réclamations déjà déposées par écrit auprès du service Clients SERGENT MENUISERIE depuis moins d’un an et n’ayant pas abouti à un accord. 
-                        </p>
-                        <p>
-                            A défaut de règlement amiable, tout litige concernant les présentes sera tranché par les tribunaux compétents tels que définis par les règles du Code de procédure civile.
-                        </p>
+                        2. dans le cas où l’accès à l’installation n’a pas été possible à la date prévue du fait du
+                        Client ;
                     </p>
                     <p>
-                        <h4>
-                            14 – RETRACTATION
-                        </h4>
-                        <p>
-                            Le Client bénéficie d’un droit de rétractation du contrat, pouvant s’exercer dans un délai de   QUATORZE  JOURS A COMPTER DE LA SIGNATURE DU CONTRAT.
-                        </p>
-                        <p>
-                            Pour exercer ce droit, le Client, sans avoir à donner un motif, doit notifier à SERGENT MENUISERIE  son nom et son adresse ainsi que sa décision de rétractation au moyen d’une déclaration dénuée d’ambiguïté par lettre recommandée avec avis de réception à l’adresse indiquée en haut de la première page du contrat.  Le Client peut utiliser le formulaire de rétractation ci-dessus  mais ce n’est pas obligatoire.
-                        </p>
-                        <p>
-                            Pour que le délai de rétractation soit respecté, il suffit que le Client transmette sa notification avant l’expiration du délai de rétractation.  
-                        </p>
-                        <p>
-                            En cas de rétractation de la part du Client, SERGENT MENUISERIE remboursera tous les paiements reçus du Client, sans retard excessif et, en tout état de cause, au plus tard quatorze jours à compter du jour où SERGENT MENUISERIE est informé de la décision de rétractation du Client. SERGENT MENUISERIE procèdera au remboursement en utilisant le même moyen de paiement que celui que le Client aura utilisé pour la transaction initiale.  Avec l’accord exprès du Client, un autre moyen peut être utilisé. Ce remboursement n’occasionnera pas de frais pour le Client.
-                        </p>
+                        3. dans le cas où les conditions de paiement n’auraient pas été respectées par le Client ;
                     </p>
                     <p>
-                        <h4>
-                            15 - Protection des données personnelles – PROSPECTION TELEPHONIQUE
-                        </h4>
-                        <p>
-                            Les données personnelles communiquées à SERGENT MENUISERIE par le Client au titre de sa commande ont pour objectif d’assurer la bonne fin des commandes, la gestion des relations commerciales, d’améliorer la qualité des services et/ou de mieux répondre aux attentes du Client, et de lui permettre de bénéficier des offres de SERGENT MENUISERIE. Dans ce cadre, le Client consent à l’utilisation de ces données par SERGENT MENUISERIE et/ ou par des tiers  agissant pour le compte de SERGENT MENUISERIE. Conformément à la loi dite « Informatique et Libertés » du 6 janvier 1978, le Client dispose d’un droit d’accès, de rectification, de suppression et d’opposition sur les données personnelles qui le concernent.
-                        </p>
-                        <p>
-                            Le Client exerce ses droits en écrivant à : 
-                        </p>
-                        <p>
-                            « SERGENT MENUISERIE»,  4 rue de Schotten 91560 CROSNE contact@sergent menuiserie.com  
-                        </p>
-                        <p>
-                            En application de l’article L. 223-1   du Code de la consommation, nous vous rappelons que si   d’une manière générale vous ne souhaitez pas faire l'objet de prospection commerciale par voie téléphonique, vous pouvez gratuitement vous inscrire sur la liste d'opposition au démarchage téléphonique, Bloctel
-                        </p>
+                        4. en cas de force majeure ou d’intempéries.
                     </p>
-                   
+                    <p>
+                        Certaines tâches peuvent être sous-traitées.
+                    </p>
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        9 – CONFORMITE
+                    </h4>
+                    <p>
+                        K par K ne peut garantir l’exacte conformité de ses produits et/ou travaux, réalisés sur mesure
+                        et pour des cas ne se répétant pas, aux échantillons proposés ou installations présentées dans
+                        ses magasins. Les produits décrits sur le contrat seront cotés par un technicien-métreur qui
+                        s’assurera de leur adaptation à la fabrication en usine. Une éventuelle différence de cotes
+                        entre celles figurant sur le contrat et celles prises par le métreur pour la fabrication, ne
+                        peut constituer en aucun cas pour le Client un motif d’annulation.
+                    </p>
+                    <p>
+                        En ce qui concerne les produits posés en rénovation, le maintien du dormant existant entraînera
+                        de par l’installation, une perte de clair de vitrage égale à l’épaisseur du dormant existant
+                        plus le jeu nécessaire. Par ailleurs, SERGENT MENUISERIE ne peut s’engager sur les qualités,
+                        tant isolantes que phoniques, des murs ou supports sur lesquels les produits sont posés.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        10 – RECLAMATIONS
+                    </h4>
+                    <p>
+                        Les réclamations devront être faites avant toute transformation du produit concerné. En tout
+                        état de cause, la responsabilité de SERGENT MENUISERIE se trouvera limitée selon les articles 4,
+                        6 et 9.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        11 – RESILIATION
+                    </h4>
+                    <p>
+                        En cas de non-respect de l’une quelconque de ses obligations par le Client, SERGENT MENUISERIE
+                        pourra se prévaloir de la résolution du contrat de plein droit et sans sommation, ni formalité.
+                        Dans ce cas et dans le cas où le Client annulerait unilatéralement le contrat après expiration
+                        du délai de rétractation de 14 jours prévu à l’article L.221-18 du Code de la consommation,
+                        SERGENT MENUISERIE sera fondée à obtenir une indemnité au titre du préjudice subi, sans
+                        sommation, ni formalité, indemnité devant être retenue en tout ou en partie sur les sommes déjà
+                        versées par le Client à titre d’acompte. Cette indemnité sera équivalente à 5% de la valeur TTC
+                        du contrat en cas d’annulation intervenant entre la signature du contrat et le rendez-vous de
+                        métrage (prise de cotes). Cette indemnité sera portée à 50% de la valeur TTC du contrat à partir
+                        du jour suivant celui du rendez-vous de métrage.
+                    </p>
+                    <p>
+                        SERGENT MENUISERIE se réserve par ailleurs le droit de résilier le contrat dans l’hypothèse où
+                        la prise de cotes par le métreur au domicile du Client n’aura pas pu être réalisée, du fait du
+                        Client, dans les 2 mois de la signature du contrat.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        12 - LOI APPLICABLE
+                    </h4>
+                    <p>
+                        Les présentes conditions générales de vente sont soumises au droit français.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        13 – LITIGES - MEDIATION
+                    </h4>
+                    <p>
+                        En cas de litige, le Client devra s’adresser en priorité au service clients de SERGENT
+                        MENUISERIE au 08 01 01 05 07 (numéro vert, gratuit depuis un poste fixe en France), du lundi au
+                        vendredi sauf jour férié ou chômé, de 8h30 à 19h00 & samedi et dimanche de 10h00 à 18h00, par
+                        mail à l’adresse suivante : contact@kpark.fr ou par courrier recommandé avec AR à l’adresse
+                        suivante : SERGENT MENUISERIE, Service Client, 148-156 rue Gallieni, 92100 Boulogne-Billancourt.
+                    </p>
+                    <p>
+                        En l’absence de solution dans les 21 jours qui suivent la demande adressée au service clients,
+                        le Client pourra saisir la Commission Paritaire de Médiation de la Vente Directe, 100 avenue du
+                        Président Kennedy 75016 Paris – Tél : 01.42.15.30.00 e-mail : info@fvd.fr qui recherchera
+                        gratuitement un règlement à l’amiable.
+                    </p>
+                    <p>
+                        Conformément à l’article L. 211-3 du Code de la Consommation, il est en effet rappelé que le
+                        Client peut recourir gratuitement à une procédure de médiation pour les réclamations déjà
+                        déposées par écrit auprès du service Clients SERGENT MENUISERIE depuis moins d’un an et n’ayant
+                        pas abouti à un accord.
+                    </p>
+                    <p>
+                        A défaut de règlement amiable, tout litige concernant les présentes sera tranché par les
+                        tribunaux compétents tels que définis par les règles du Code de procédure civile.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        14 – RETRACTATION
+                    </h4>
+                    <p>
+                        Le Client bénéficie d’un droit de rétractation du contrat, pouvant s’exercer dans un délai de
+                        QUATORZE JOURS A COMPTER DE LA SIGNATURE DU CONTRAT.
+                    </p>
+                    <p>
+                        Pour exercer ce droit, le Client, sans avoir à donner un motif, doit notifier à SERGENT
+                        MENUISERIE son nom et son adresse ainsi que sa décision de rétractation au moyen d’une
+                        déclaration dénuée d’ambiguïté par lettre recommandée avec avis de réception à l’adresse
+                        indiquée en haut de la première page du contrat. Le Client peut utiliser le formulaire de
+                        rétractation ci-dessus mais ce n’est pas obligatoire.
+                    </p>
+                    <p>
+                        Pour que le délai de rétractation soit respecté, il suffit que le Client transmette sa
+                        notification avant l’expiration du délai de rétractation.
+                    </p>
+                    <p>
+                        En cas de rétractation de la part du Client, SERGENT MENUISERIE remboursera tous les paiements
+                        reçus du Client, sans retard excessif et, en tout état de cause, au plus tard quatorze jours à
+                        compter du jour où SERGENT MENUISERIE est informé de la décision de rétractation du Client.
+                        SERGENT MENUISERIE procèdera au remboursement en utilisant le même moyen de paiement que celui
+                        que le Client aura utilisé pour la transaction initiale. Avec l’accord exprès du Client, un
+                        autre moyen peut être utilisé. Ce remboursement n’occasionnera pas de frais pour le Client.
+                    </p>
+                    </p>
+                    <p>
+                    <h4>
+                        15 - Protection des données personnelles – PROSPECTION TELEPHONIQUE
+                    </h4>
+                    <p>
+                        Les données personnelles communiquées à SERGENT MENUISERIE par le Client au titre de sa commande
+                        ont pour objectif d’assurer la bonne fin des commandes, la gestion des relations commerciales,
+                        d’améliorer la qualité des services et/ou de mieux répondre aux attentes du Client, et de lui
+                        permettre de bénéficier des offres de SERGENT MENUISERIE. Dans ce cadre, le Client consent à
+                        l’utilisation de ces données par SERGENT MENUISERIE et/ ou par des tiers agissant pour le compte
+                        de SERGENT MENUISERIE. Conformément à la loi dite « Informatique et Libertés » du 6 janvier
+                        1978, le Client dispose d’un droit d’accès, de rectification, de suppression et d’opposition sur
+                        les données personnelles qui le concernent.
+                    </p>
+                    <p>
+                        Le Client exerce ses droits en écrivant à :
+                    </p>
+                    <p>
+                        « SERGENT MENUISERIE», 4 rue de Schotten 91560 CROSNE contact@sergent menuiserie.com
+                    </p>
+                    <p>
+                        En application de l’article L. 223-1 du Code de la consommation, nous vous rappelons que si
+                        d’une manière générale vous ne souhaitez pas faire l'objet de prospection commerciale par voie
+                        téléphonique, vous pouvez gratuitement vous inscrire sur la liste d'opposition au démarchage
+                        téléphonique, Bloctel
+                    </p>
+                    </p>
+
 
                 </div>
                 <div class="col-1">
 
                 </div>
             </div>
-           
+
         </div>
 
 
@@ -928,58 +1017,54 @@
 
 
         <!-- FOOTER START -->
-        <footer class="site-footer footer-dark">
+        <footer class="site-footer footer-dark ">
+
             <!-- FOOTER BLOCKES START -->
             <div class="footer-top">
-                <div class="container mt-5">
+
+                <div class="container ">
                     <div class="row">
+
                         <div class="col-lg-3 col-md-6">
+
                             <div class="widget widget_about">
                                 <div class="logo-footer clearfix bg-white">
-                                    <a href="index.html"><img src="images/footerlogo1.svg" alt="" /></a>
+                                    <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
                                 </div>
-                                <p>
-                                    Aujourd'hui, nous pouvons vous dire que grâce à votre
-                                    passion, à votre créativité et à votre expertise, vous nous
-                                    avez livrés.
-                                </p>
+                                <p>Simple, gratuite et sans engagement.</p>
+                                <ul style="margin-left: 1.5rem;">
+                                    <li>Tarif sur-mesure selon votre projet</li>
+                                    <li>Des conseils d'experts</li>
+                                </ul>
                                 <div class="call-us">
-                                    <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+                                    <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
                                 </div>
+
                             </div>
+
                         </div>
 
                         <div class="col-lg-3 col-md-6">
                             <div class="widget n-letter">
-                                <h3 class="widget-title">Bulletin</h3>
+                                <h3 class="widget-title"> Bulletin</h3>
                                 <div class="n-letter-content">
-                                    <p>
-                                        Abonnez-vous à notre newsletter pour recevoir nos
-                                        dernières mises à jour et nouvelles
-                                    </p>
+                                    <p>Abonnez-vous</p>
                                     <div class="nl-type">
                                         <form role="search" method="post" id="check" action="emailCheck.php">
                                             <div class="nl-form">
-                                                <input name="news-letter" class="form-control" id="mail"
-                                                    placeholder="Enter email address" type="text" />
-                                                <button type="submit" class="s-btn">S'abonner</button>
+                                                <input name="news-letter" class="form-control"
+                                                    placeholder="Enter email address" type="text" id="mail">
+                                                <button type="submit" class="s-btn">
+                                                    S'abonner</button>
                                             </div>
                                         </form>
                                     </div>
                                 </div>
                                 <ul class="social-icons">
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-facebook"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-twitter"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-linkedin"></a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-pinterest"></a>
-                                    </li>
+                                    <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
                                 </ul>
                             </div>
                         </div>
@@ -987,18 +1072,13 @@
                         <div class="col-lg-3 col-md-6">
                             <div class="widget">
                                 <h3 class="widget-title">Contactez-nous</h3>
-                                <p>
-                                    Notre support disponible pour vous aider 24 heures sur 24,
-                                    sept jours sur sept.
-                                </p>
+                                <p>Notre technicien disponible</p>
                                 <ul class="widget_address">
-                                    <li>
-                                        <i class="flaticon-location"></i>78, Avenue des
-                                        Chanps-Elysees, Bureau 326, Paris - 75008
+                                    <li><i class="flaticon-location"></i>pour vous 7 sur 7 jours <br> 4 rue SCHOTTEN
+                                        <br> 91560
+                                        CROSNE
                                     </li>
-                                    <li>
-                                        <i class="flaticon-mail"></i>contact@sergentmenuiserie.com
-                                    </li>
+                                    <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                                 </ul>
                             </div>
                         </div>
@@ -1007,15 +1087,20 @@
                             <div class="widget widget_services">
                                 <h3 class="widget-title">Liens d'entreprise</h3>
                                 <ul>
-                                    <li><a href="javascript:void(0)"> À propos</a></li>
-                                    <li><a href="javascript:void(0)">Projets</a></li>
-                                    <li><a href="javascript:void(0)">Blog</a></li>
-                                    <li><a href="javascript:void(0)">FAQ</a></li>
-                                    <li><a href="javascript:void(0)">Contactez-nous</a></li>
+                                    <li><a href="#">A propos</a></li>
+                                    <li><a href="#">Déroulement du Projet</a></li>
+                                    <li><a href="#">Conditions générales de vente</a></li>
+                                    <li><a href="#">Garantie</a></li>
+                                    <li><a href="#">Parrainage</a></li>
+                                    <li><a href="#">Recrutement</a></li>
                                 </ul>
                             </div>
                         </div>
+
+
+
                     </div>
+
                 </div>
             </div>
             <!-- FOOTER COPYRIGHT -->
@@ -1023,24 +1108,27 @@
             <div class="footer-bottom bg-light p-1">
                 <div class="container">
                     <div class="footer-bottom-light">
+
                         <div class="footer-copy-right">
                             <div class="row">
                                 <div class="col-sm-9">
-                                    <span class="copyrights-text text-dark align-content-center">© 2023 Sergent
-                                        Menuiserie Entreprise.</span>
+                                    <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous
+                                        droits réservés Sergent Menuiserie</span>
                                 </div>
 
                                 <div class="col-sm-3">
-                                    <span class="float-end text-dark" style="margin-left: 40px">Conçu par</span>
+                                    <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
                                     <span class="site-text-primary float-end"><img
                                             src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px"
-                                            width="100px" /></span>
+                                            width="100px"></span>
                                 </div>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
+
         </footer>
         <!-- FOOTER END -->
         <!-- BUTTON TOP START -->

@@ -265,7 +265,7 @@
                             title="entrez l' Emplacement valide."> <br>
                         <br>
                         <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'>
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre</button>
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                     </form>
@@ -451,8 +451,8 @@
                                 <li class="has-child">
                                     <a href="javascript:;">VERANDAS</a>
                                     <ul class="sub-menu">
-                                    <li><a href="gamme-excellence.html">GAMME EXCELLENCE</a></li>
-                                    <li><a href="gamme-cosy.html">GAMME COSY</a></li>
+                                        <li><a href="gamme-excellence.html">GAMME EXCELLENCE</a></li>
+                                        <li><a href="gamme-cosy.html">GAMME COSY</a></li>
                                     </ul>
                                 </li>
                                 <li class="has-child">
@@ -1402,7 +1402,7 @@
                 <!-- FOOTER BLOCKES START -->
                 <div class="footer-top">
 
-                    <div class="container mt-5">
+                    <div class="container ">
                         <div class="row">
 
                             <div class="col-lg-3 col-md-6">
@@ -1411,11 +1411,14 @@
                                     <div class="logo-footer clearfix bg-white">
                                         <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
                                     </div>
-                                    <p>
-                                        Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre
-                                        créativité et à votre expertise, vous nous avez livrés.</p>
+                                    <p>Simple, gratuite et sans engagement.</p>
+                                    <ul style="margin-left: 1.5rem;">
+                                        <li>Tarif sur-mesure selon votre projet</li>
+                                        <li>Des conseils d'experts</li>
+                                    </ul>
                                     <div class="call-us">
-                                        <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
+                                        <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94
+                                            80</a>
                                     </div>
 
                                 </div>
@@ -1426,13 +1429,12 @@
                                 <div class="widget n-letter">
                                     <h3 class="widget-title"> Bulletin</h3>
                                     <div class="n-letter-content">
-                                        <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et
-                                            nouvelles</p>
+                                        <p>Abonnez-vous</p>
                                         <div class="nl-type">
                                             <form role="search" method="post" id="check" action="emailCheck.php">
                                                 <div class="nl-form">
-                                                    <input name="news-letter" id="mail" class="form-control"
-                                                        placeholder="Enter email address" type="text">
+                                                    <input name="news-letter" class="form-control"
+                                                        placeholder="Enter email address" type="text" id="mail">
                                                     <button type="submit" class="s-btn">
                                                         S'abonner</button>
                                                 </div>
@@ -1451,11 +1453,12 @@
                             <div class="col-lg-3 col-md-6">
                                 <div class="widget">
                                     <h3 class="widget-title">Contactez-nous</h3>
-                                    <p>Notre support disponible pour vous aider
-                                        24 heures sur 24, sept jours sur sept.</p>
+                                    <p>Notre technicien disponible</p>
                                     <ul class="widget_address">
-                                        <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326,
-                                            Paris - 75008</li>
+                                        <li><i class="flaticon-location"></i>pour vous 7 sur 7 jours <br> 4 rue SCHOTTEN
+                                            <br>
+                                            91560
+                                            CROSNE</li>
                                         <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                                     </ul>
                                 </div>
@@ -1465,11 +1468,12 @@
                                 <div class="widget widget_services">
                                     <h3 class="widget-title">Liens d'entreprise</h3>
                                     <ul>
-                                        <li><a href="javascript:void(0)"> À propos</a></li>
-                                        <li><a href="javascript:void(0)">Projets</a></li>
-                                        <li><a href="javascript:void(0)">Blog</a></li>
-                                        <li><a href="javascript:void(0)">FAQ</a></li>
-                                        <li><a href="javascript:void(0)">Contactez-nous</a></li>
+                                        <li><a href="#">A propos</a></li>
+                                        <li><a href="#">Déroulement du Projet</a></li>
+                                        <li><a href="#">Conditions générales de vente</a></li>
+                                        <li><a href="#">Garantie</a></li>
+                                        <li><a href="#">Parrainage</a></li>
+                                        <li><a href="#">Recrutement</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -1489,8 +1493,9 @@
                             <div class="footer-copy-right">
                                 <div class="row">
                                     <div class="col-sm-9">
-                                        <span class="copyrights-text text-dark align-content-center">© 2023 Sergent
-                                            Menuiserie Entreprise.</span>
+                                        <span class="copyrights-text text-dark align-content-center">Copyright ©2023
+                                            Tous droits
+                                            réservés Sergent Menuiserie</span>
                                     </div>
 
                                     <div class="col-sm-3">
@@ -1576,172 +1581,8 @@
             </a>
         </div>
         <!-- CONTACT US END -->
-
     </div>
     <!-- CONTENT END -->
-    <!-- <div class="container px-5">
-            <div class="clear" id="comment-list">
-                <div class="comments-area" id="comments">
-                    <div>
-                        <!-- COMMENT LIST END -->
-
-    <!-- LEAVE A REPLY START -->
-    <!-- <div class="comment-respond" id="respond">
-                    
-                                                    <h2 class="comment-reply-title" id="reply-title">Add a Review
-                                                        <small>
-                                                            <a style="display:none;" href="#" id="cancel-comment-reply-link" rel="nofollow">Cancel reply</a>
-                                                        </small>
-                                                    </h2>
-                    
-                                                    <form class="comment-form" id="commentform" method="post">
-                                                        <p class="comment-form-comment">
-                                                            <label>Comment</label>
-                                                            <textarea class="form-control" rows="8" name="comment" placeholder="Comment" id="comment"></textarea>
-                                                        </p>
-                                                        <p class="comment-form-author">
-                                                            <label>Name <span class="required">*</span></label>
-                                                            <input class="form-control" type="text" value="" name="user-comment" placeholder="Author" id="author">
-                                                        </p>
-                                                        
-                                                        <p class="comment-form-email">
-                                                            <label>Email <span class="required">*</span></label>
-                                                            <input class="form-control" type="text" value="" name="email" placeholder="Email">
-                                                        </p>
-                                                        
-                                                        <p class="comment-form-url">
-                                                            <label>Website</label>
-                                                            <input class="form-control" type="text" value="" name="url" placeholder="Website" id="url">
-                                                        </p>
-                                                        
-                                                        
-                                                        
-                                                        <p class="form-submit">
-                                                            <button class="site-button btn-hover-animation"  type="button"><i class="flaticon-right"></i>Submit</button>
-                                                        </p>
-                                                        
-                                                    </form>
-                    
-                                                </div> -->
-    <!-- LEAVE A REPLY END -->
-    <!-- </div>
-                                        </div>
-                                    </div>
-                                </div>                             
-                            </div> 
-                            
-                    </div> -->
-
-    <!-- </div>  -->
-
-
-
-
-
-    <!-- FOOTER START -->
-    <!-- <footer class="site-footer footer-dark " > -->
-
-    <!-- FOOTER BLOCKES START -->
-    <!-- <div class="footer-top">
-                                                                     
-        <div class="container mt-5">
-            <div class="row">
-
-                <div class="col-lg-3 col-md-6">
-                    
-                    <div class="widget widget_about">
-                        <div class="logo-footer clearfix bg-white">
-                             <a href="index.html"><img src="images/footerlogo1.svg"  alt=""></a>
-                        </div>
-                        <p>
-                            Aujourd'hui, nous pouvons vous dire que grâce à votre passion, à votre créativité et à votre expertise, vous nous avez livrés.</p>
-                        <div class="call-us">
-                            <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">+33 659966202</a>
-                        </div>
-
-                    </div>                            
-                    
-                </div>
-
-                <div class="col-lg-3 col-md-6">  
-                    <div class="widget n-letter">
-                       <h3 class="widget-title"> Bulletin</h3>
-                       <div class="n-letter-content">
-                            <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
-                            <div class="nl-type">
-                                <form role="search" method="post" id="check" action="emailCheck.php"> 
-                                    <div class="nl-form">
-                                        <input name="news-letter" class="form-control" placeholder="Enter email address" type="text">
-                                        <button type="submit" class="s-btn">
-                                            S'abonner</button>
-                                    </div>
-                                </form>
-                            </div>                                    
-                       </div> 
-                       <ul class="social-icons">
-                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                        <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
-                    </ul>
-                    </div>
-                </div>                                                
-            
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget">
-                        <h3 class="widget-title">Contactez-nous</h3>
-                        <p>Notre support disponible pour vous aider
-                            24 heures sur 24, sept jours sur sept.</p>                            
-                        <ul class="widget_address"> 
-                            <li><i class="flaticon-location"></i>78, Avenue des Chanps-Elysees, Bureau 326, Paris - 75008</li>
-                             <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
-                        </ul>  
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="widget widget_services">
-                        <h3 class="widget-title">Liens d'entreprise</h3>
-                        <ul>
-                            <li><a href="javascript:void(0)"> À propos</a></li>
-                            <li><a href="javascript:void(0)">Projets</a></li>
-                            <li><a href="javascript:void(0)">Blog</a></li>
-                            <li><a href="javascript:void(0)">FAQ</a></li>
-                            <li><a href="javascript:void(0)">Contactez-nous</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-
-
-            </div>
-
-        </div>
-    </div> -->
-    <!-- FOOTER COPYRIGHT -->
-
-    <!-- <div class="footer-bottom bg-light p-1">
-        <div class="container">
-            <div class="footer-bottom-light">
-
-                <div class="footer-copy-right">
-                    <div class="row">
-                            <div class="col-sm-9">
-                                <span class="copyrights-text text-dark align-content-center">© 2023 Sergent Menuiserie Entreprise.</span>
-                            </div>
-                          
-                            <div class="col-sm-3">
-                                <span class="float-end text-dark "style="margin-left:40px">Conçu par</span>  <span class="site-text-primary float-end"><img src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px" width="100px"></span>
-                            </div>
-                        </div>  
-                </div>
-                
-            </div>
-        </div>   
-    </div>   -->
-
-    </footer>
-    <!-- FOOTER END -->
     <!-- BUTTON TOP START -->
     <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
 
