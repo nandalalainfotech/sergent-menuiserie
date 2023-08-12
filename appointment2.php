@@ -27,6 +27,9 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
+$mail->addCC('karthikeyan16599@gmail.com','');
+$mail->addBCC('abinayaselvaraj26.04@gmail.com','');
+
 
 $mail->SetFrom($gender);
 $mail->SetFrom($name);
@@ -46,6 +49,8 @@ $mail->SetFrom($text);
    
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from User Details in SERGENT MENUISERIE';
+$mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
+$mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 $mail->Body .='<h3>Civility : ' .strtoupper($gender)  . "</h3>";
 $mail->Body .='<h3>Nom : ' . strtoupper($name) .  "</h3>";
 $mail->Body .='<h3>Prenom : ' . strtoupper($fullname) .  "</h3>";
