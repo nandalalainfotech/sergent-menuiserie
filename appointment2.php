@@ -35,6 +35,7 @@ $mail->SetFrom($city);
 $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text);
+
     // $gender = isset($_POST['place']) ? preg_replace("/[^\.\-\' a-zA-Z]/", "", $_POST['place']) : "";    
     // $name = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z]/", "", $_POST['date']) : "";  
     // $fullname = isset($_POST['session']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['session']) : "";
@@ -42,16 +43,17 @@ $mail->SetFrom($text);
     // $mobile = isset($_POST['place']) ? preg_replace("/[^\.\-\' 0-9]/", "", $_POST['place']) : "";    
     // $text = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['date']) : "";  
 
-
+   
+$mail->isHTML(true);  
 $mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
-$mail->Body .='Civility :' . $gender . "\n";
-$mail->Body .='Nom :' . $name . "\n";
-$mail->Body .='Prenom :' . $fullname . "\n";
-$mail->Body .='Phone no.:' . $mobile . "\n";
-$mail->Body .='Email.:' . $email . "\n";
-$mail->Body .='Ville :' . $city . "\n";
-$mail->Body .='Description :' . $text . "\n";
-// $mail->Body .='LOCATION :' . $location . "\n";
+$mail->Body .='<h3>Civility :' . $gender . "</h3>";
+$mail->Body .='<h3>Nom :' . $name .  "</h3>";
+$mail->Body .='<h3>Prenom :' . $fullname .  "</h3>";
+$mail->Body .='<h3>Phone no:' . $mobile .  "</h3>";
+$mail->Body .='<h3>Email:' . $email .  "</h3>";
+// $mail->Body .='Ville :' . $city . "\n";
+$mail->Body .='<h3>Description :' . $text .  "</h3>";
+
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {
