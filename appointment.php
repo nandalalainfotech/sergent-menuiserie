@@ -23,6 +23,9 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
+$mail->addCC('karthikeyan16599@gmail.com','');
+$mail->addBCC('abinayaselvaraj26.04@gmail.com','');
+
 
 $mail->SetFrom($meetingAt);
 $mail->SetFrom($date);
@@ -33,6 +36,8 @@ $mail->SetFrom($session);
     // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from Meeting Place in SERGENT MENUISERIE';
+$mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
+$mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 $mail->Body .='<h3>Meeting at : ' .strtoupper($meetingAt)  . "</h3>";
 $mail->Body .='<h3>Appointment Date : ' . $date . "</h3>";
 $mail->Body .='<h3>Your Session : ' .strtoupper($session) . "</h3>";

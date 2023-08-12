@@ -24,7 +24,8 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-
+$mail->addCC('karthikeyan16599@gmail.com','');
+$mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 $mail->SetFrom($fname);
     $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
@@ -33,6 +34,8 @@ $mail->SetFrom($fname);
     $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);
 $mail->Subject ='MAIL received from RAPPELEZ-MOI in SERGENT MENUISERIE';
+$mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
+$mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 $mail->Body .='<h3>FIRST NAME : ' . strtoupper($fname) . "</h3>";
 $mail->Body .='<h3>LAST NAME : ' .  strtoupper($lname) . "</h3>";
 $mail->Body .='<h3>CONTACT NO : ' . $mobile . "</h3>";
