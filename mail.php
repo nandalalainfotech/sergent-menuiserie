@@ -1,3 +1,4 @@
+
 <?php
 ob_start();
 ?>
@@ -24,17 +25,18 @@ $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
 
+
 $mail->SetFrom($fname);
     $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
     $lname = isset($_POST['lname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['lname']) : "";  
     $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
     $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
-
-$mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
-$mail->Body .='FIRST NAME :' . $fname . "\n";
-$mail->Body .='LAST NAME :' . $lname . "\n";
-$mail->Body .='CONTACT NO :' . $mobile . "\n";
-$mail->Body .='LOCATION :' . $location . "\n";
+$mail->isHTML(true);
+$mail->Subject ='mAIL received from RAPPELEZ-MOI in SERGENT MENUISERIE';
+$mail->Body .='<h3>FIRST NAME :' . $fname . "</h3>";
+$mail->Body .='<h3>LAST NAME :' . $lname . "</h3>";
+$mail->Body .='<h3>CONTACT NO :' . $mobile . "</h3>";
+$mail->Body .='<h3>LOCATION :' . $location . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {
