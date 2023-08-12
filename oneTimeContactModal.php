@@ -16,6 +16,7 @@ $email = htmlentities($_POST['email']);
 $text_box = htmlentities($_POST['text']);
 
 
+
 $mail = new PHPMailer();
 $mail->IsSMTP();  
 $mail->SMTPDebug = 2;
@@ -33,7 +34,6 @@ $mail->SetFrom($lastName);
 $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text_box);
-   
 
 
 $mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
