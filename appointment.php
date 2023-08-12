@@ -31,11 +31,12 @@ $mail->SetFrom($session);
     // $date = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['date']) : "";  
     // $session = isset($_POST['session']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['session']) : "";
     // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
-
+$mail->isHTML(true);  
 $mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
-$mail->Body .='Meeting at :' . $meetingAt . "\n";
-$mail->Body .='Appointment Date :' . $date . "\n";
-$mail->Body .='Your Session :' . $session . "\n";
+$mail->Body .='<h3>Meeting at : ' . $meetingAt . "</h3>";
+$mail->Body .='<h3>Appointment Date : ' . $date . "</h3>";
+$mail->Body .='<h3>Your Session : ' . $session . "</h3>";
+// $mail->Body .='<h3>Email:' . $email .  "</h3>";
 // $mail->Body .='LOCATION :' . $location . "\n";
 
 $mail->WordWrap = 50;
