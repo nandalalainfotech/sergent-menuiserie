@@ -27,7 +27,7 @@ $mail->SetFrom($email);
    
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from User E-mail in SERGENT MENUISERIE';
-$mail->Body .='<h2>User e-mail is :' . $email . "</h2>";
+$mail->Body .='<h2>User e-mail is : ' .strtolower($email ) . "</h2>";
 
 
 $mail->WordWrap = 50;

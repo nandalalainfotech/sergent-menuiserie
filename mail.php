@@ -32,11 +32,11 @@ $mail->SetFrom($fname);
     $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
     $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);
-$mail->Subject ='mAIL received from RAPPELEZ-MOI in SERGENT MENUISERIE';
-$mail->Body .='<h3>FIRST NAME :' . $fname . "</h3>";
-$mail->Body .='<h3>LAST NAME :' . $lname . "</h3>";
-$mail->Body .='<h3>CONTACT NO :' . $mobile . "</h3>";
-$mail->Body .='<h3>LOCATION :' . $location . "</h3>";
+$mail->Subject ='MAIL received from RAPPELEZ-MOI in SERGENT MENUISERIE';
+$mail->Body .='<h3>FIRST NAME : ' . strtoupper($fname) . "</h3>";
+$mail->Body .='<h3>LAST NAME : ' .  strtoupper($lname) . "</h3>";
+$mail->Body .='<h3>CONTACT NO : ' . $mobile . "</h3>";
+$mail->Body .='<h3>LOCATION : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {

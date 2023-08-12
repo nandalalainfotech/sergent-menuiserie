@@ -33,9 +33,9 @@ $mail->SetFrom($session);
     // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from Meeting Place in SERGENT MENUISERIE';
-$mail->Body .='<h3>Meeting at : ' . $meetingAt . "</h3>";
+$mail->Body .='<h3>Meeting at : ' .strtoupper($meetingAt)  . "</h3>";
 $mail->Body .='<h3>Appointment Date : ' . $date . "</h3>";
-$mail->Body .='<h3>Your Session : ' . $session . "</h3>";
+$mail->Body .='<h3>Your Session : ' .strtoupper($session) . "</h3>";
 // $mail->Body .='<h3>Email:' . $email .  "</h3>";
 // $mail->Body .='LOCATION :' . $location . "\n";
 
