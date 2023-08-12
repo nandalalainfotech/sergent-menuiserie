@@ -54,14 +54,13 @@
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
     <!-- JQUERY LINK   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-   
     <script>
         function clearForm() {
             let fname = document.getElementById("fname").value;
             let lname = document.getElementById("lname").value;
             let mobile = document.getElementById("mobile").value;
             let location = document.getElementById("location").value;
-            if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
+            if (fname !== "" && lname !== '' && mobile !== '' && location !== '') {
                 document.getElementById('fname').value = "";
                 document.getElementById('lname').value = "";
                 document.getElementById('mobile').value = "";
@@ -69,53 +68,42 @@
             }
         }
 
-        function mobValidator(value) {
-            let validRegex = /^[0-9]{10}$/;
-            return String(value).match(validRegex);
-        }
         function showSpin() {
-            let a = document.getElementById('fname').value;
-            let b = document.getElementById('lname').value;
-            let c = document.getElementById('location').value;
             let x = document.getElementById('mobile').value;
-            if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
+            if (x.length == 10) {
                 document.getElementById('spinner').style.display = 'block';
                 document.getElementById('spin-content').style.display = 'block';
             }
 
         }
         function showOffSpin() {
+            // let x= document.getElementById('mobile').value;
+            //  if(x.length==10)
             document.getElementById('spinner').style.display = 'none';
             document.getElementById('spin-content').style.display = 'none';
-            let a = document.getElementById('fname').value;
-            let b = document.getElementById('lname').value;
-            let c = document.getElementById('location').value;
-            let x = document.getElementById('mobile').value;
-            if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
-                $("#myModal").modal("hide");
-            }
         }
-
         $(document).ready(function () {
             $("#modal").click(function () {
                 $("#myModal").modal({ backdrop: "static" });
             });
         })
 
-        // function disableModal() {
-        //     let fname = document.getElementById("fname").value;
-        //     let lname = document.getElementById("lname").value;
-        //     let mobile = document.getElementById("mobile").value;
-        //     let location = document.getElementById("location").value;
-        //     let flag = true;
-        //     const arr = [fname, lname, mobile, location];
-        //     arr.forEach(input => {
-        //         if (input == "")
-        //             flag = false;
-        //     });
-        //     return flag;
-        // }
-
+        function disableModal() {
+            let fname = document.getElementById("fname").value;
+            let lname = document.getElementById("lname").value;
+            let mobile = document.getElementById("mobile").value;
+            let location = document.getElementById("location").value;
+            let flag = true;
+            const arr = [fname, lname, mobile, location];
+            arr.forEach(input => {
+                if (input == "")
+                    flag = false;
+            });
+            return flag;
+        }
+        function disabled() {
+            if (disableModal()) { $("#myModal").modal("hide") };
+        }
     </script>
 
 </head>
@@ -124,7 +112,7 @@
         display: none;
         position: absolute;
         left: 15rem;
-        top: 15rem;
+        top: 11rem;
         bottom: 0;
         right: 0;
         color: #db5200;
@@ -287,8 +275,8 @@
                         <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
                         <input class="w-50" type="text" name="location" id="location" required
                             placeholder="Code postal" title="entrez l' Emplacement valide."> <br>
-                            <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+                        <button type="submit" class="s-btn mt-3"
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre</button>
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                     </form>
@@ -457,7 +445,7 @@
 
                                         <li><a href="portalPVC.html">PORTAIL PVC</a></li>
                                         <li><a href="portalALU.html">PORTAIL ALU</a></li>
-                                        <li><a href="portalIron.html">PORTAIL FERRONNERIE</a></li>
+                                        <li><a href="portalIron.html">PORTAIL FREONNERIE</a></li>
                                     </ul>
 
                                 </li>
@@ -1355,8 +1343,8 @@
                             <div class="col-lg-6 col-md-12">
 
                                 <div class="get-in-touch3">
-                                    <div class="get-in-touch3-media"><img src="images/all-products/interior3.jpg"
-                                            alt=""></div>
+                                    <div class="get-in-touch3-media"><img src="images/home/call.jpg"
+                                            alt="" style="height: 350px; ;width: 545px;"></div>
                                     <div class="get-in-touch3-info"><span> Assistance ouverte 24h/24 et 7j/7 pour
                                             obtenir de l'aide</span><strong>01 83 63 94 80
                                         </strong></div>
@@ -1494,9 +1482,9 @@
 
                             <div class="col-lg-3 col-md-6">
                                 <div class="widget n-letter">
-                                    <h3 class="widget-title"> Abonnez-vous</h3>
+                                    <h3 class="widget-title"> Bulletin</h3>
                                     <div class="n-letter-content">
-                                       <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
+                                        <p>Abonnez-vous</p>
                                         <div class="nl-type">
                                             <form role="search" method="post" id="check" action="emailCheck.php">
                                                 <div class="nl-form">
@@ -1521,9 +1509,9 @@
                                 <div class="widget">
                                     <h3 class="widget-title">Contactez-nous</h3>
                                     <p>Notre technicien disponible</p>
-                                    <p>pour vous 7 sur 7 jours</p>
+
                                     <ul class="widget_address">
-                                        <li><i class="flaticon-location"></i> 4 rue SCHOTTEN <br> 91560 CROSNE</li>
+                                        <li><i class="flaticon-location"></i>pour vous 7 sur 7 jours <br> 4 rue SCHOTTEN <br> 91560 CROSNE</li>
                                         <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                                     </ul>
                                 </div>
