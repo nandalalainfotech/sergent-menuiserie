@@ -46,13 +46,13 @@ $mail->SetFrom($text);
    
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from User Details in SERGENT MENUISERIE';
-$mail->Body .='<h3>Civility :' . $gender . "</h3>";
-$mail->Body .='<h3>Nom :' . $name .  "</h3>";
-$mail->Body .='<h3>Prenom :' . $fullname .  "</h3>";
-$mail->Body .='<h3>Phone no:' . $mobile .  "</h3>";
-$mail->Body .='<h3>Email:' . $email .  "</h3>";
+$mail->Body .='<h3>Civility : ' .strtoupper($gender)  . "</h3>";
+$mail->Body .='<h3>Nom : ' . strtoupper($name) .  "</h3>";
+$mail->Body .='<h3>Prenom : ' . strtoupper($fullname) .  "</h3>";
+$mail->Body .='<h3>Phone no : ' . $mobile .  "</h3>";
+$mail->Body .='<h3>Email : ' . strtolower($email) .  "</h3>";
 // $mail->Body .='Ville :' . $city . "\n";
-$mail->Body .='<h3>Description :' . $text .  "</h3>";
+$mail->Body .='<h3>Description : ' . strtoupper($text) .  "</h3>";
 
 
 $mail->WordWrap = 50;

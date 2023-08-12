@@ -50,73 +50,78 @@
   <!-- JQUERY LINK   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
-    function clearing() {
-      document.getElementById("fname").value = "";
-      document.getElementById("lname").value = "";
-      document.getElementById("mobile").value = "";
-      document.getElementById("location").value = "";
-    }
     function clearForm() {
-      let fname = document.getElementById("fname").value;
-      let lname = document.getElementById("lname").value;
-      let mobile = document.getElementById("mobile").value;
-      let location = document.getElementById("location").value;
-      if (fname !== "" && lname !== "" && mobile !== "" && location !== "") {
-        document.getElementById("fname").value = "";
-        document.getElementById("lname").value = "";
-        document.getElementById("mobile").value = "";
-        document.getElementById("location").value = "";
-      }
+        let fname = document.getElementById("fname").value;
+        let lname = document.getElementById("lname").value;
+        let mobile = document.getElementById("mobile").value;
+        let location = document.getElementById("location").value;
+        if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
+            document.getElementById('fname').value = "";
+            document.getElementById('lname').value = "";
+            document.getElementById('mobile').value = "";
+            document.getElementById('location').value = "";
+        }
     }
 
+    function mobValidator(value) {
+        let validRegex = /^[0-9]{10}$/;
+        return String(value).match(validRegex);
+    }
     function showSpin() {
-      let x = document.getElementById("mobile").value;
-      if (x.length == 10) {
-        document.getElementById("spinner").style.display = "block";
-        document.getElementById("spin-content").style.display = "block";
-      }
+        let a = document.getElementById('fname').value;
+        let b = document.getElementById('lname').value;
+        let c = document.getElementById('location').value;
+        let x = document.getElementById('mobile').value;
+        if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
+            document.getElementById('spinner').style.display = 'block';
+            document.getElementById('spin-content').style.display = 'block';
+        }
+
     }
     function showOffSpin() {
-      // let x= document.getElementById('mobile').value;
-      //  if(x.length==10)
-      document.getElementById("spinner").style.display = "none";
-      document.getElementById("spin-content").style.display = "none";
+        document.getElementById('spinner').style.display = 'none';
+        document.getElementById('spin-content').style.display = 'none';
+        let a = document.getElementById('fname').value;
+        let b = document.getElementById('lname').value;
+        let c = document.getElementById('location').value;
+        let x = document.getElementById('mobile').value;
+        if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
+            $("#myModal").modal("hide");
+        }
     }
-    $(document).ready(function () {
-      $("#modal").click(function () {
-        $("#myModal").modal({ backdrop: "static" });
-      });
-    });
 
-    function disableModal() {
-      let fname = document.getElementById("fname").value;
-      let lname = document.getElementById("lname").value;
-      let mobile = document.getElementById("mobile").value;
-      let location = document.getElementById("location").value;
-      let flag = true;
-      const arr = [fname, lname, mobile, location];
-      arr.forEach((input) => {
-        if (input == "") flag = false;
-      });
-      return flag;
-    }
-    function disabled() {
-      if (disableModal()) {
-        $("#myModal").modal("hide");
-      }
-    }
-  </script>
+    $(document).ready(function () {
+        $("#modal").click(function () {
+            $("#myModal").modal({ backdrop: "static" });
+        });
+    })
+
+    // function disableModal() {
+    //     let fname = document.getElementById("fname").value;
+    //     let lname = document.getElementById("lname").value;
+    //     let mobile = document.getElementById("mobile").value;
+    //     let location = document.getElementById("location").value;
+    //     let flag = true;
+    //     const arr = [fname, lname, mobile, location];
+    //     arr.forEach(input => {
+    //         if (input == "")
+    //             flag = false;
+    //     });
+    //     return flag;
+    // }
+
+</script>	
 </head>
 <style>
-  #spinner {
-    display: none;
-    position: absolute;
-    left: 15rem;
-    top: 11rem;
-    bottom: 0;
-    right: 0;
-    color: #db5200;
-  }
+ #spinner {
+        display: none;
+        position: absolute;
+        left: 15rem;
+        top: 15rem;
+        bottom: 0;
+        right: 0;
+        color: #db5200;
+    }
 
   #spin-content {
     display: none;
@@ -210,9 +215,8 @@
             <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
             <br />
 
-            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-              placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}"
-              title="Saisissez un numéro de mobile valide." />
+             <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
+                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
             <br />
             <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
             <br />
@@ -221,9 +225,8 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-              onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
-              Soumettre
-            </button>
+            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+            Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
           <div>
