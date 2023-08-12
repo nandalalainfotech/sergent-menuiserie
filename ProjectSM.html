@@ -613,12 +613,12 @@
                     <p>
                     <h4>1. Conception projet</h4>
                     <p style="text-indent: 4rem;">
-                            Votre conseiller technicien SERGENT se déplace à votre domicile pour diagnostiquer l'état de vos
+                        Votre conseiller technicien SERGENT se déplace à votre domicile pour diagnostiquer l'état de vos
                         menuiseries, et faire le point sur vos besoins en matière de sécurité, d'isolation phonique et
                         thermique...
                     </p>
                     <p style="text-indent: 4rem;">
-                            Après l'étude précise de vos attentes, il conçoit avec vous une solution adaptée sur mesure. Un
+                        Après l'étude précise de vos attentes, il conçoit avec vous une solution adaptée sur mesure. Un
                         devis gratuit et complet vous est fourni, accompagné de simulations de vos futures menuiseries,
                         sans engagement de votre part.
                     </p>
@@ -626,10 +626,10 @@
                     <p>
                     <h4>2. La prise de mesure par le métreur</h4>
                     <p style="text-indent: 4rem;">
-                            Dès que votre projet est validé, un métreur spécialiste viendra à votre domicile prendre les
+                        Dès que votre projet est validé, un métreur spécialiste viendra à votre domicile prendre les
                         côtes exactes de vos menuiseries et de votre bâti.
                     <p style="text-indent: 4rem;">
-                            Il vous préconisera la pose la plus adaptée à vos exigences et à la configuration du lieu. Vous
+                        Il vous préconisera la pose la plus adaptée à vos exigences et à la configuration du lieu. Vous
                         recevrez ensuite la confirmation de commande définitive. La fabrication dans nos usines peut
                         commencer.
                     </p>
@@ -641,11 +641,11 @@
                         3.La pose excellence
                     </h4>
                     <p style="text-indent: 4rem;">
-                            Nos installateurs sont formés et certifiés qui vous garantit une prestation conforme à la norme
+                        Nos installateurs sont formés et certifiés qui vous garantit une prestation conforme à la norme
                         NF et une qualité de service. Nos équipes s'engagent ainsi à faire la pose dans la période
                         indiquée, à protéger vos meubles et vos sols, et à nettoyer le chantier avant leur départ.
                     <p style="text-indent: 4rem;">
-                            Ils assurent la mise en service de vos menuiseries, l'explication de leur fonctionnement et vous
+                        Ils assurent la mise en service de vos menuiseries, l'explication de leur fonctionnement et vous
                         conseillent sur leur entretien pour des produits qui durent longtemps.
                     </p>
 
@@ -656,11 +656,11 @@
                         4. Contrôle qualité après l’installation
                     </h4>
                     <p style="text-indent: 4rem;">
-                            Dès l'installation de vos nouvelles menuiseries terminée, votre conseiller-technicien SERGENT
+                        Dès l'installation de vos nouvelles menuiseries terminée, votre conseiller-technicien SERGENT
                         s'assure, avec vous, que le résultat vous satisfait. Même 6 mois après la pose, sur simple appel
                         de votre part, nous réalisons une révision complète de vos menuiseries.
                     <p style="text-indent: 4rem;">
-                            Votre satisfaction est notre plus grande fierté. Notre service clients est à votre écoute pour
+                        Votre satisfaction est notre plus grande fierté. Notre service clients est à votre écoute pour
                         vos remarques ou questions à tout moment, avant, pendant et après le chantier.
                     </p>
                     </p>
@@ -677,6 +677,58 @@
 
 
         <!-- Table End-->
+
+        <!-- CONTACT MODAL START  -->
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog modal-md">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
+                        <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="oneTimeContactModal.php" method="post" id="form_modal">
+                            <!-- <p>Civilite <span class="text-danger">*</span></p> -->
+                            <input type="radio" name="civility" id="female" value="female" class="female" required>
+                            <label for="female">Madame</label>
+                            <input type="radio" name="civility" id="male" value="male" required class="male">
+                            <label for="male">Monsieur</label> <br>
+                            <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Nom" name="name" id="name1" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Prenom" name="initial" id="initial" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Portable" name="mobile" id="mobile1" required
+                                style="width: 100%;" maxlength="10" minlength="10"><br><br>
+                            <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
+                            <input type="email" placeholder="Email" name="email" id="email1" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
+                            <textarea name="text" id="text_box" placeholder="Description de votre projet" cols=""
+                                rows="3" style="width: 100%;" required class="text_box"></textarea>
+                            <input type="checkbox" name="subscribe" id="sub" required>
+                            <label for="sub">I subscribe to the newsletter.</label> <br>
+                            <input type="submit" value="Envoyer" class="btn rounded-5 text-white"
+                                style="background-color: #db5200;">
+                        </form>
+                        <!-- <div>
+                                            <div class="spinner-border  my-3 " id="spinner"></div>
+                                            <div id="spin-content" class="mt-3">please wait...</div>
+                                        </div> -->
+                    </div>
+                    <!-- <div class="modal-footer">
+                                  <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+                                </div> -->
+                </div>
+
+            </div>
+        </div>
+        <!-- CONTACT MODAL END  -->
         <!-- FOOTER START -->
         <footer class="site-footer footer-dark ">
 
@@ -753,7 +805,8 @@
                                     <li><a href="Garante.html">Conditions générales de vente</a></li>
                                     <li><a href="Gar-Table.html">Garantie</a></li>
                                     <li><a href="parrainage.html">Parrainage</a></li>
-                                    <li><a href="#">Recrutement</a></li>
+                                    <li data-toggle="modal" data-target="#myModal2"><a
+                                            href="javascript:void(0);">Recrutement</a></li>
                                 </ul>
                             </div>
                         </div>
