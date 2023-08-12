@@ -35,14 +35,14 @@ $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text_box);
 
-
-$mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
-$mail->Body .='Civility :' . $gender . "\n";
-$mail->Body .='Nom :' . $firstName . "\n";
-$mail->Body .='Prenom :' . $lastName . "\n";
-$mail->Body .='Phone no.:' . $mobile . "\n";
-$mail->Body .='Email.:' . $email . "\n";
-$mail->Body .='Description :' . $text_box . "\n";
+$mail->isHTML(true);
+$mail->Subject = '<h2>Mail received from One Time Contact Model in SERGENT MENUISERIE</h2>';
+$mail->Body .='<h3>Civility :' . $gender . "</h3>";
+$mail->Body .='<h3>Nom :' . $firstName . "</h3>";
+$mail->Body .='<h3>Prenom :' . $lastName . "</h3>";
+$mail->Body .='<h3>Phone no.:' . $mobile . "</h3>";
+$mail->Body .='<h3>Email.:' . $email . "</h3>";
+$mail->Body .='<h3>Description :' . $text_box . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {

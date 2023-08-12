@@ -26,7 +26,7 @@ $mail->SetFrom($email);
     // $email = isset($_POST['news-letter']) ? preg_match("/^([a-z0-9\+_\-]+)(\. [a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[ a-z]{2,6}$/ix", "", $_POST['news-letter']) : "";    
    
 $mail->isHTML(true);  
-$mail->Subject = 'User E-mail received from SERGENT MENUISERIE';
+$mail->Subject = 'Mail received from User E-mail in SERGENT MENUISERIE';
 $mail->Body .='<h2>User e-mail is :' . $email . "</h2>";
 
 

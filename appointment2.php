@@ -45,7 +45,7 @@ $mail->SetFrom($text);
 
    
 $mail->isHTML(true);  
-$mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
+$mail->Subject = 'Mail received from User Details in SERGENT MENUISERIE';
 $mail->Body .='<h3>Civility :' . $gender . "</h3>";
 $mail->Body .='<h3>Nom :' . $name .  "</h3>";
 $mail->Body .='<h3>Prenom :' . $fullname .  "</h3>";

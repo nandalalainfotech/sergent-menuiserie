@@ -32,7 +32,7 @@ $mail->SetFrom($session);
     // $session = isset($_POST['session']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['session']) : "";
     // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);  
-$mail->Subject = 'Call Back enquiry received from SERGENT MENUISERIE';
+$mail->Subject = 'Mail received from Meeting Place in SERGENT MENUISERIE';
 $mail->Body .='<h3>Meeting at : ' . $meetingAt . "</h3>";
 $mail->Body .='<h3>Appointment Date : ' . $date . "</h3>";
 $mail->Body .='<h3>Your Session : ' . $session . "</h3>";
