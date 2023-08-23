@@ -51,49 +51,49 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
     function clearForm() {
-        let fname = document.getElementById("fname").value;
-        let lname = document.getElementById("lname").value;
-        let mobile = document.getElementById("mobile").value;
-        let location = document.getElementById("location").value;
-        if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
-            document.getElementById('fname').value = "";
-            document.getElementById('lname').value = "";
-            document.getElementById('mobile').value = "";
-            document.getElementById('location').value = "";
-        }
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let mobile = document.getElementById("mobile").value;
+      let location = document.getElementById("location").value;
+      if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
+        document.getElementById('fname').value = "";
+        document.getElementById('lname').value = "";
+        document.getElementById('mobile').value = "";
+        document.getElementById('location').value = "";
+      }
     }
 
     function mobValidator(value) {
-        let validRegex = /^[0-9]{10}$/;
-        return String(value).match(validRegex);
+      let validRegex = /^[0-9]{10}$/;
+      return String(value).match(validRegex);
     }
     function showSpin() {
-        let a = document.getElementById('fname').value;
-        let b = document.getElementById('lname').value;
-        let c = document.getElementById('location').value;
-        let x = document.getElementById('mobile').value;
-        if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
-            document.getElementById('spinner').style.display = 'block';
-            document.getElementById('spin-content').style.display = 'block';
-        }
+      let a = document.getElementById('fname').value;
+      let b = document.getElementById('lname').value;
+      let c = document.getElementById('location').value;
+      let x = document.getElementById('mobile').value;
+      if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
+        document.getElementById('spinner').style.display = 'block';
+        document.getElementById('spin-content').style.display = 'block';
+      }
 
     }
     function showOffSpin() {
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('spin-content').style.display = 'none';
-        let a = document.getElementById('fname').value;
-        let b = document.getElementById('lname').value;
-        let c = document.getElementById('location').value;
-        let x = document.getElementById('mobile').value;
-        if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
-            $("#myModal").modal("hide");
-        }
+      document.getElementById('spinner').style.display = 'none';
+      document.getElementById('spin-content').style.display = 'none';
+      let a = document.getElementById('fname').value;
+      let b = document.getElementById('lname').value;
+      let c = document.getElementById('location').value;
+      let x = document.getElementById('mobile').value;
+      if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
+        $("#myModal").modal("hide");
+      }
     }
 
     $(document).ready(function () {
-        $("#modal").click(function () {
-            $("#myModal").modal({ backdrop: "static" });
-        });
+      $("#modal").click(function () {
+        $("#myModal").modal({ backdrop: "static" });
+      });
     })
 
     // function disableModal() {
@@ -110,18 +110,18 @@
     //     return flag;
     // }
 
-</script>	
+  </script>
 </head>
 <style>
- #spinner {
-        display: none;
-        position: absolute;
-        left: 15rem;
-        top: 15rem;
-        bottom: 0;
-        right: 0;
-        color: #db5200;
-    }
+  #spinner {
+    display: none;
+    position: absolute;
+    left: 15rem;
+    top: 15rem;
+    bottom: 0;
+    right: 0;
+    color: #db5200;
+  }
 
   #spin-content {
     display: none;
@@ -220,8 +220,8 @@
             <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
             <br />
 
-             <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10" placeholder="Portable"
+              pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
             <br />
             <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
             <br />
@@ -230,8 +230,8 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
-            Soumettre</button>
+              onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+              Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
           <div>
@@ -317,13 +317,13 @@
 
             <!-- MAIN Vav -->
             <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
-            
+
               <ul class=" nav navbar-nav menu-size">
                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
                   <ul class="sub-menu">
                     <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
                       <ul class="sub-menu">
-            
+
                         <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
                         <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
                         <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
@@ -343,9 +343,9 @@
                       </ul>
                     </li>
                   </ul>
-            
+
                 </li>
-            
+
                 <li class="has-child">
                   <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
                   <ul class="sub-menu">
@@ -356,7 +356,7 @@
                         <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
                       </ul>
                     </li>
-            
+
                     <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
                       <ul class="sub-menu">
                         <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
@@ -367,12 +367,12 @@
                     <li><a href="voketspersiennes.html">VOLETS PERSIENNES</a>
                       <ul class="sub-menu">
                         <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
-            
+
                       </ul>
                     </li>
                   </ul>
                 </li>
-            
+
                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
                     D'ENTREE</a>
                   <ul class="sub-menu">
@@ -386,20 +386,20 @@
                     </li>
                     <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
                   </ul>
-            
+
                 </li>
-            
+
                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
                     GARAGE</a>
                   <ul class="sub-menu">
-            
+
                     <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
                     <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
                     <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li>
                     <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
                   </ul>
                 </li>
-            
+
                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
                     CLOTURES</a>
                   <ul class="sub-menu">
@@ -409,12 +409,12 @@
                     <li><a href="gardeCrops.html">GARDE CORPS</a></li>
                     <li><a href="motarisation.html">MOTORISATION</a></li>
                   </ul>
-            
+
                 </li>
                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
                     PERGOLAS</a>
                   <ul class="sub-menu">
-            
+
                     <li><a href="interior blind.html">STORE INTERIEUR</a></li>
                     <li><a href="awning.html">STORE BANNE</a></li>
                     <li><a href="pergola.html">PERGOLA</a></li>
@@ -427,7 +427,7 @@
                   </ul>
                 </li>
                 <li class="has-child">
-                                                  <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                  <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
                 </li>
               </ul>
             </div>
@@ -620,10 +620,10 @@
                                     </span>
                                     <span class="font-weight-600 text-black">(4 customer reviews)</span>
                                 </div> -->
-
+                                <br> <br> 
                 <div class="wt-product-text">
-                  <p class="p-t15" style="color: #db5200">LE CHOIX MALIN</p>
-                                                  <p class="p-t15" style="text-align: justify;">
+                  <b class="p-t15" style="color: #db5200">LE CHOIX MALIN</b>
+                  <p class="p-t15" style="text-align: justify;">
                     Avec ses lignes généreuses et ses DÉTAILSs astucieux, la
                     fenêtre PVC Tendance offre l’essentiel pour être bien chez
                     soi tout en prenant soin de son budget.
@@ -1567,12 +1567,12 @@
               <div class="widget n-letter">
                 <h3 class="widget-title"> Abonnez-vous</h3>
                 <div class="n-letter-content">
-                 <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
+                  <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
                   <div class="nl-type">
                     <form role="search" method="post" id="check" action="emailCheck.php">
                       <div class="nl-form">
-                        <input name="news-letter" class="form-control text-white" placeholder="Enter email address" type="text"
-                          id="mail">
+                        <input name="news-letter" class="form-control text-white" placeholder="Enter email address"
+                          type="text" id="mail">
                         <button type="submit" class="s-btn">
                           S'abonner</button>
                       </div>
