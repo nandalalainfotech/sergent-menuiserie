@@ -39,7 +39,7 @@ $mail->SetFrom($email);
 $mail->SetFrom($text_box);
 
 $mail->isHTML(true);
-$mail->Subject = '<h2>Mail received from One Time Contact Model in SERGENT MENUISERIE</h2>';
+$mail->Subject = 'Mail received from One Time Contact Model in SERGENT MENUISERIE';
 $mail->Body .='<h3>Civility : ' .strtoupper($gender)  . "</h3>";
 $mail->Body .='<h3>Nom : ' .strtoupper($firstName)  . "</h3>";
 $mail->Body .='<h3>Prenom : ' .strtoupper($lastName ) . "</h3>";
