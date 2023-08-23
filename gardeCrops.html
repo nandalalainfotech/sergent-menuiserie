@@ -15,7 +15,7 @@
     <link rel="shortcut icon" type="image/x-icon" href="images/Fav_Sm.png" />
 
     <!-- PAGE TITLE HERE -->
-    <title>Sergent Menuiserie| les fenêtres|Volets| Portes d'entrée|Portes de garage|Portails|Auvents & Pergolas</title>
+    <title>Sergent Menuiserie </title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -52,7 +52,7 @@
     <!-- REVOLUTION NAVIGATION STYLE -->
     <link rel="stylesheet" type="text/css" href="plugins/revolution/revolution/css/navigation.css">
 
-    <!-- <link rel="stylesheet" href="carosel.css"> -->
+    <!-- JQUERY LINK   -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         function clearForm() {
@@ -116,7 +116,159 @@
         // }
 
     </script>
+    <!-- Product thumbnail carousel-->
+    <script>
+        $(document).ready(function () {
+
+            var sync1 = $("#sync1");
+            var sync2 = $("#sync2");
+            var slidesPerPage = 4; //globaly define number of elements per page
+            var syncedSecondary = true;
+
+            sync1.owlCarousel({
+                items: 1,
+                slideSpeed: 2000,
+                nav: true,
+                autoplay: false,
+                dots: false,
+                loop: true,
+                responsiveRefreshRate: 200,
+                navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
+            }).on('changed.owl.carousel', syncPosition);
+
+            sync2
+                .on('initialized.owl.carousel', function () {
+                    sync2.find(".owl-item").eq(0).addClass("current");
+                })
+                .owlCarousel({
+                    items: slidesPerPage,
+                    dots: false,
+                    nav: false,
+                    margin: 30,
+                    smartSpeed: 200,
+                    slideSpeed: 500,
+                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
+                    responsiveRefreshRate: 100
+                }).on('changed.owl.carousel', syncPosition2);
+
+            function syncPosition(el) {
+                //if you set loop to false, you have to restore this next line
+                //var current = el.item.index;
+
+                //if you disable loop you have to comment this block
+                var count = el.item.count - 1;
+                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
+
+                if (current < 0) {
+                    current = count;
+                }
+                if (current > count) {
+                    current = 0;
+                }
+
+                //end block
+
+                sync2
+                    .find(".owl-item")
+                    .removeClass("current")
+                    .eq(current)
+                    .addClass("current");
+                var onscreen = sync2.find('.owl-item.active').length - 1;
+                var start = sync2.find('.owl-item.active').first().index();
+                var end = sync2.find('.owl-item.active').last().index();
+
+                if (current > end) {
+                    sync2.data('owl.carousel').to(current, 100, true);
+                }
+                if (current < start) {
+                    sync2.data('owl.carousel').to(current - onscreen, 100, true);
+                }
+            }
+
+            function syncPosition2(el) {
+                if (syncedSecondary) {
+                    var number = el.item.index;
+                    sync1.data('owl.carousel').to(number, 100, true);
+                }
+            }
+
+            sync2.on("click", ".owl-item", function (e) {
+                e.preventDefault();
+                var number = $(this).index();
+                sync1.data('owl.carousel').to(number, 300, true);
+            });
+        });
+    </script>
+
+
 </head>
+<style>
+    #spinner {
+        display: none;
+        position: absolute;
+        left: 15rem;
+        top: 15rem;
+        bottom: 0;
+        right: 0;
+        color: #db5200;
+    }
+
+    #spin-content {
+        display: none;
+        margin-left: 11rem;
+    }
+
+    /* PROJECT SECTION START  */
+    .section-head.center.wt-small-separator-outer h2 {
+        max-width: 900px;
+        margin: 0px auto;
+    }
+
+    @media (max-width: 1200px) {
+        .section-head.center.wt-small-separator-outer h2 {
+            font-size: 50px;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        .section-head.center.wt-small-separator-outer h2 {
+            font-size: 30px;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .section-head.center.wt-small-separator-outer h2 {
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+    }
+
+    /* PROJECT CHOOSE SECTION END  */
+
+
+
+
+
+    .s-btn {
+        border: none;
+        background-color: #db5200;
+        padding: 9px 20px;
+        font-weight: 700;
+        text-align: center;
+        white-space: nowrap;
+        color: #fff;
+        font-size: 10px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+
+
+    }
+
+    .s-btn:hover {
+        box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
 
 <body>
     <!-- LOADING AREA START ===== -->
@@ -131,7 +283,7 @@
             </div>
         </div>
     </div>
-
+    <!-- LOADING AREA  END ====== -->
     <!-- POPUP START  -->
     <div class="modal fade" id="myModal" role="dialog">
         <div class="modal-dialog modal-md">
@@ -139,7 +291,7 @@
             <!-- Modal content-->
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE <BR> VOUS RAPPELLERA </h5>
+                    <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
                     <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
                 </div>
                 <div class="modal-body">
@@ -147,17 +299,22 @@
                     <form action="mail.php" method="post">
                         <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
                         <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
-                            title="entrez a-z ouA-z."> <br><br>
-                        <!-- <label for="lname" class="pb-2">Nom de famille</label><br> -->
+                            title="entrez a-z ouA-z."> <br>
+                        <!-- <label for="lname" class="pb-2">Nom de famille</label><br><br> -->
+                        <br>
                         <input class="w-50" type="text" name="lname" id="lname" required placeholder="Nom"
-                            title="entrez a-z ouA-z."> <br><br>
+                            title="entrez a-z ouA-z."> <br>
                         <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
+                        <br>
+
                         <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
-                        <br><br>
+                            placeholder="Portable (10 numbers max)" pattern=".[0-9]{9}"
+                            title="Saisissez un numéro de mobile valide."> <br>
                         <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
+                        <br>
                         <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
                             title="entrez l' Emplacement valide."> <br>
+                        <br>
                         <button type="submit" class="s-btn mt-3"
                             onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
                             Soumettre</button>
@@ -169,17 +326,14 @@
                     </div>
                 </div>
                 <!-- <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-        </div> -->
+              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+            </div> -->
             </div>
 
         </div>
     </div>
 
     <!-- POPUP END  -->
-
-
-    <!-- LOADING AREA  END ====== -->
     <div class="page-wraper">
 
         <!-- HEADER START -->
@@ -202,6 +356,7 @@
                                             class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
                                 <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS
                                         GRATUIT</a></li>
+
                             </ul>
 
                             <ul class="social-icons">
@@ -354,7 +509,7 @@
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                                                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
                                 </li>
                             </ul>
                         </div>
@@ -377,10 +532,8 @@
 
         </header>
         <!-- HEADER END -->
-
-
-        <!-- CONTENT START -->
-        <div class="page-content">
+         <!-- CONTENT START -->
+         <div class="page-content">
             <div class="wt-bnr-inr overlay-wraper bg-center"
                 style="background-image: url(images/sampleImages/img-1.png)">
                 <div class="overlay-main site-bg-black opacity-07"></div>
@@ -388,12 +541,14 @@
                     <div class="wt-bnr-inr-entry">
                         <div class="banner-title-outer">
                             <div class="banner-title-name">
-                                <h2 class="wt-title">VOLET PERSIENNES</h2>
+                                <h2 class="wt-title">GARDE CORPS EXTÉRIEURS EN ALUMINIUM</h2>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
+
             <!-- SECTION CONTENT START -->
             <div class="section-full p-t50 p-b90 site-bg-white">
 
@@ -531,7 +686,7 @@
                             <div class="product-detail-info">
 
                                 <div class="single-product-title ">
-                                    <h2 class="post-title">VOLET PERSIENNES</h2>
+                                    <h2 class="post-title">GARDE CORPS EXTÉRIEURS EN ALUMINIUM</h2>
                                 </div>
                                 <!-- <div class="product-single-price">
                                 	<span class="p-single-old-price">$45</span>
@@ -549,19 +704,15 @@
                                 </div> -->
 
                                 <div class="wt-product-text">
-                                    <p class="p-t15" style="text-align: justify;">Sur-mesure, modernes ou
-                                        traditionnelles, nos persiennes savent trouver leur place
-                                        dans tous les types d’habitat. <br> <br>
-                                        <b style="font-weight: bold;">Persienne bois, PVC, aluminium</b>  ou encore en <b style="font-weight: bold;"> acier… </b>Cette
-                                        fermeture trouve
-                                        particulièrement sa place pour la rénovation. Disponibles dans de nombreuses
-                                        configurations, elles peuvent toutes être équipées (hormis les persiennes
-                                        tourangelles
-                                        Iris) d’un système d’ouverture à projection. Les différents matériaux permettent
-                                        de
-                                        s’adapter à tous les projets !.
+                                    <p class="p-t15" style="text-align: justify;padding-right: 1rem;">Soyez sereins, nos
+                                        garde-corps sur-mesure sécurisent votre extérieur-terrasse,
+                                        balcon, fenêtre- pour prévenir toute chute accidentelle. Outre leur fonction
+                                        sécuritaire, nos balustrades habillent vos espaces : vitré transparent pour un
+                                        style
+                                        épuré, câble inox pour un look industriel, à motifs pour les plus artistes
+                                        d&#39;entres
+                                        vous...
                                     </p>
-
                                 </div>
 
                                 <!-- <div class="product_meta"> 
@@ -580,11 +731,11 @@
                                 <!-- <div class="quantity btn-quantity m-b20">
                                         <input id="demo_vertical2" type="text" value="1" name="demo_vertical2"/>
                                     </div> -->
-                                <button class="site-button  m-b30 w-75"><i class="flaticon-right"></i>TROUVER UN POINT
-                                    DE VENTE</button>
+                                <button class="site-button m-b30 w-75"><i class="flaticon-right"></i>TROUVER UN POINT DE
+                                    VENTE</button>
                                 <br>
                                 <a href="request.html">
-                                    <button class="site-button  m-b30 w-75"><i class="flaticon-right"></i>DEMANDEZ UN
+                                    <button class="site-button m-b30 w-75"><i class="flaticon-right"></i>DEMANDEZ UN
                                         DEVIS</button>
                                 </a>
                                 <!-- </form> -->
@@ -605,7 +756,7 @@
                                             <div class="row">
                                                 <div class="col-sm-4"></div>
                                                 <div class="col-sm-4" style="border-left: 2px solid #db5200;">
-                                                    <h2><span>DÉTAILS </span></h2>
+                                                    <h2><span>DÉTAILS</span></h2>
                                                 </div>
                                                 <div class="col-sm-4"></div>
                                             </div>
@@ -965,7 +1116,8 @@
                         <h3><span style="color: #db5200;">VOTRE SOLUTION</span></h3>
                     </div>
                     <div class="col-sm-4">
-
+                        <!-- Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore id et hic, optio nam iusto,
+                        inventore delectus sequi quae ratione neque dolore enim velit. Recusandae. -->
                     </div>
                     <div class="col-sm-2"></div>
 
@@ -1049,7 +1201,7 @@
 
             </div>
             <!-- SECTION CONTENT END -->
-            <BR></BR>
+            <br>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-5"></div>
@@ -1064,8 +1216,13 @@
                 </div>
             </div>
         </div>
+        <!-- CONTENT END -->
+       
+
     </div>
-    <!-- CONTENT END -->
+
+    </div>
+
     <!-- CONTACT MODAL START  -->
     <div class="modal fade" id="myModal2" role="dialog">
         <div class="modal-dialog modal-md">
@@ -1105,19 +1262,18 @@
                             style="background-color: #db5200;">
                     </form>
                     <!-- <div>
-                                    <div class="spinner-border  my-3 " id="spinner"></div>
-                                    <div id="spin-content" class="mt-3">please wait...</div>
-                                </div> -->
+                                        <div class="spinner-border  my-3 " id="spinner"></div>
+                                        <div id="spin-content" class="mt-3">please wait...</div>
+                                    </div> -->
                 </div>
                 <!-- <div class="modal-footer">
-                          <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-                        </div> -->
+                              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
+                            </div> -->
             </div>
 
         </div>
     </div>
     <!-- CONTACT MODAL END  -->
-
     <!-- FOOTER START -->
     <footer class="site-footer footer-dark ">
 
@@ -1176,13 +1332,11 @@
                         <div class="widget">
                             <h3 class="widget-title">Contactez-nous</h3>
                             <p>Notre technicien disponible</p>
-                            <p> pour vous 7 sur 7 jours </p>
+                            <p>pour vous 7 sur 7 jours</p>
                             <ul class="widget_address">
-                                <li><i class="flaticon-location"></i> 4 rue SCHOTTEN
-                                    <br>
+                                <li><i class="flaticon-location"></i> 4 rue SCHOTTEN <br>
                                     91560
-                                    CROSNE
-                                </li>
+                                    CROSNE</li>
                                 <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
                             </ul>
                         </div>
@@ -1218,8 +1372,7 @@
                     <div class="footer-copy-right">
                         <div class="row">
                             <div class="col-sm-9">
-                                <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous
-                                    droits
+                                <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous droits
                                     réservés Sergent Menuiserie</span>
                             </div>
 
@@ -1238,13 +1391,10 @@
 
     </footer>
     <!-- FOOTER END -->
-
     <!-- BUTTON TOP START -->
     <button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button>
 
     </div>
-
-
 
     <!-- JAVASCRIPT  FILES ========================================= -->
     <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
@@ -1265,92 +1415,6 @@
     <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
     <script src="js/emailCheck.js"></script>
-
-
-    <!-- Product thumbnail carousel-->
-    <script>
-        $(document).ready(function () {
-
-            var sync1 = $("#sync1");
-            var sync2 = $("#sync2");
-            var slidesPerPage = 4; //globaly define number of elements per page
-            var syncedSecondary = true;
-
-            sync1.owlCarousel({
-                items: 1,
-                slideSpeed: 2000,
-                nav: true,
-                autoplay: false,
-                dots: false,
-                loop: true,
-                responsiveRefreshRate: 200,
-                navText: ['<i class="fa fa-chevron-left"></i>', '<i class="fa fa-chevron-right"></i>'],
-            }).on('changed.owl.carousel', syncPosition);
-
-            sync2
-                .on('initialized.owl.carousel', function () {
-                    sync2.find(".owl-item").eq(0).addClass("current");
-                })
-                .owlCarousel({
-                    items: slidesPerPage,
-                    dots: false,
-                    nav: false,
-                    margin: 30,
-                    smartSpeed: 200,
-                    slideSpeed: 500,
-                    slideBy: slidesPerPage, //alternatively you can slide by 1, this way the active slide will stick to the first item in the second carousel
-                    responsiveRefreshRate: 100
-                }).on('changed.owl.carousel', syncPosition2);
-
-            function syncPosition(el) {
-                //if you set loop to false, you have to restore this next line
-                //var current = el.item.index;
-
-                //if you disable loop you have to comment this block
-                var count = el.item.count - 1;
-                var current = Math.round(el.item.index - (el.item.count / 2) - .5);
-
-                if (current < 0) {
-                    current = count;
-                }
-                if (current > count) {
-                    current = 0;
-                }
-
-                //end block
-
-                sync2
-                    .find(".owl-item")
-                    .removeClass("current")
-                    .eq(current)
-                    .addClass("current");
-                var onscreen = sync2.find('.owl-item.active').length - 1;
-                var start = sync2.find('.owl-item.active').first().index();
-                var end = sync2.find('.owl-item.active').last().index();
-
-                if (current > end) {
-                    sync2.data('owl.carousel').to(current, 100, true);
-                }
-                if (current < start) {
-                    sync2.data('owl.carousel').to(current - onscreen, 100, true);
-                }
-            }
-
-            function syncPosition2(el) {
-                if (syncedSecondary) {
-                    var number = el.item.index;
-                    sync1.data('owl.carousel').to(number, 100, true);
-                }
-            }
-
-            sync2.on("click", ".owl-item", function (e) {
-                e.preventDefault();
-                var number = $(this).index();
-                sync1.data('owl.carousel').to(number, 300, true);
-            });
-        });
-    </script>
-
 
 
 
