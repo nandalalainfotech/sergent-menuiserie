@@ -50,49 +50,49 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
     function clearForm() {
-        let fname = document.getElementById("fname").value;
-        let lname = document.getElementById("lname").value;
-        let mobile = document.getElementById("mobile").value;
-        let location = document.getElementById("location").value;
-        if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
-            document.getElementById('fname').value = "";
-            document.getElementById('lname').value = "";
-            document.getElementById('mobile').value = "";
-            document.getElementById('location').value = "";
-        }
+      let fname = document.getElementById("fname").value;
+      let lname = document.getElementById("lname").value;
+      let mobile = document.getElementById("mobile").value;
+      let location = document.getElementById("location").value;
+      if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
+        document.getElementById('fname').value = "";
+        document.getElementById('lname').value = "";
+        document.getElementById('mobile').value = "";
+        document.getElementById('location').value = "";
+      }
     }
 
     function mobValidator(value) {
-        let validRegex = /^[0-9]{10}$/;
-        return String(value).match(validRegex);
+      let validRegex = /^[0-9]{10}$/;
+      return String(value).match(validRegex);
     }
     function showSpin() {
-        let a = document.getElementById('fname').value;
-        let b = document.getElementById('lname').value;
-        let c = document.getElementById('location').value;
-        let x = document.getElementById('mobile').value;
-        if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
-            document.getElementById('spinner').style.display = 'block';
-            document.getElementById('spin-content').style.display = 'block';
-        }
+      let a = document.getElementById('fname').value;
+      let b = document.getElementById('lname').value;
+      let c = document.getElementById('location').value;
+      let x = document.getElementById('mobile').value;
+      if (x.length == 10 && mobValidator(x) && (a !== '' && b !== '' && c !== '')) {
+        document.getElementById('spinner').style.display = 'block';
+        document.getElementById('spin-content').style.display = 'block';
+      }
 
     }
     function showOffSpin() {
-        document.getElementById('spinner').style.display = 'none';
-        document.getElementById('spin-content').style.display = 'none';
-        let a = document.getElementById('fname').value;
-        let b = document.getElementById('lname').value;
-        let c = document.getElementById('location').value;
-        let x = document.getElementById('mobile').value;
-        if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
-            $("#myModal").modal("hide");
-        }
+      document.getElementById('spinner').style.display = 'none';
+      document.getElementById('spin-content').style.display = 'none';
+      let a = document.getElementById('fname').value;
+      let b = document.getElementById('lname').value;
+      let c = document.getElementById('location').value;
+      let x = document.getElementById('mobile').value;
+      if (a !== "" && b !== '' && c !== '' && x !== '' && x.length == 10 && mobValidator(x)) {
+        $("#myModal").modal("hide");
+      }
     }
 
     $(document).ready(function () {
-        $("#modal").click(function () {
-            $("#myModal").modal({ backdrop: "static" });
-        });
+      $("#modal").click(function () {
+        $("#myModal").modal({ backdrop: "static" });
+      });
     })
 
     // function disableModal() {
@@ -109,18 +109,18 @@
     //     return flag;
     // }
 
-</script>	
+  </script>
 </head>
 <style>
- #spinner {
-        display: none;
-        position: absolute;
-        left: 15rem;
-        top: 15rem;
-        bottom: 0;
-        right: 0;
-        color: #db5200;
-    }
+  #spinner {
+    display: none;
+    position: absolute;
+    left: 15rem;
+    top: 15rem;
+    bottom: 0;
+    right: 0;
+    color: #db5200;
+  }
 
   #spin-content {
     display: none;
@@ -219,8 +219,8 @@
             <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
             <br />
 
-             <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10" placeholder="Portable"
+              pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
             <br />
             <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
             <br />
@@ -229,8 +229,8 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
-                            Soumettre</button>
+              onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+              Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
           <div>
@@ -629,26 +629,28 @@
                                 </div> -->
 
                 <div class="wt-product-text">
-                  <span><b>+ LUMINOSITÉ + SÉCURITÉ + ISOLATION + DESIGN <br />
-                      + LONGÉVITÉ + SOLIDITÉ + 100% RECYCLABLE</b></span><br />
-                  <span style="color: #db5200; font-size: 1.1rem"><b>LE +</b></span>
-                  <br />
-                  <span class="text-dark">
-                    ECLAZ vous propose toute une gamme de vitrages
-                    complémentaires adaptés aux différents besoins : Vitrage
-                    feuilleté pour plus de sécurité, ou avec isolation
-                    acoustique renforcée ou décoratif pour préserver
-                    l’intimité…
-                  </span>
-                  <br />
-                  <span style="color: #db5200; font-size: 1.1rem">
-                    <b>SÉCURITÉ Q1</b>
-                  </span>
-                  <br />
-                  <span class="text-dark">
-                    Jusqu’à 13 points de fermeture sur l’ouvrant principal,
-                    avec gâche anti-arrachement
-                  </span>
+                  <p style="text-align: justify;">
+                    <span><b>+ LUMINOSITÉ + SÉCURITÉ + ISOLATION + DESIGN <br />
+                        + LONGÉVITÉ + SOLIDITÉ + 100% RECYCLABLE</b></span><br />
+                    <span style="color: #db5200; font-size: 1.1rem"><b>LE +</b></span>
+                    <br />
+                    <span class="text-dark">
+                      ECLAZ vous propose toute une gamme de vitrages
+                      complémentaires adaptés aux différents besoins : Vitrage
+                      feuilleté pour plus de sécurité, ou avec isolation
+                      acoustique renforcée ou décoratif pour préserver
+                      l’intimité…
+                    </span>
+                    <br />
+                    <span style="color: #db5200; font-size: 1.1rem">
+                      <b>SÉCURITÉ Q1</b>
+                    </span>
+                    <br />
+                    <span class="text-dark">
+                      Jusqu’à 13 points de fermeture sur l’ouvrant principal,
+                      avec gâche anti-arrachement
+                    </span>
+                  </p>
                 </div>
 
                 <!-- <div class="product_meta"> 
@@ -1616,53 +1618,53 @@
     </div>
     <!-- CONTACT US END -->
 
-        <!-- CONTACT MODAL START  -->
-        <div class="modal fade" id="myModal2" role="dialog">
-          <div class="modal-dialog modal-md">
-        
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
-                <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
-              </div>
-              <div class="modal-body">
-        
-                <form action="oneTimeContactModal.php" method="post" id="form_modal">
-                  <!-- <p>Civilite <span class="text-danger">*</span></p> -->
-                  <input type="radio" name="civility" id="female" value="female" class="female" required>
-                  <label for="female">Madame</label>
-                  <input type="radio" name="civility" id="male" value="male" required class="male">
-                  <label for="male">Monsieur</label> <br>
-                  <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
-                  <input type="text" placeholder="Nom" name="name" id="name1" required style="width: 100%;"><br><br>
-                  <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
-                  <input type="text" placeholder="Prenom" name="initial" id="initial" required style="width: 100%;"><br><br>
-                  <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
-                  <input type="text" placeholder="Portable" name="mobile" id="mobile1" required style="width: 100%;"
-                    maxlength="10" minlength="10"><br><br>
-                  <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
-                  <input type="email" placeholder="Email" name="email" id="email1" required style="width: 100%;"><br><br>
-                  <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
-                  <textarea name="text" id="text_box" placeholder="Description de votre projet" cols="" rows="3"
-                    style="width: 100%;" required class="text_box"></textarea>
-                  <input type="checkbox" name="subscribe" id="sub" required>
-                  <label for="sub">I subscribe to the newsletter.</label> <br>
-                  <input type="submit" value="Envoyer" class="btn rounded-5 text-white" style="background-color: #db5200;">
-                </form>
-                <!-- <div>
+    <!-- CONTACT MODAL START  -->
+    <div class="modal fade" id="myModal2" role="dialog">
+      <div class="modal-dialog modal-md">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
+            <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
+          </div>
+          <div class="modal-body">
+
+            <form action="oneTimeContactModal.php" method="post" id="form_modal">
+              <!-- <p>Civilite <span class="text-danger">*</span></p> -->
+              <input type="radio" name="civility" id="female" value="female" class="female" required>
+              <label for="female">Madame</label>
+              <input type="radio" name="civility" id="male" value="male" required class="male">
+              <label for="male">Monsieur</label> <br>
+              <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+              <input type="text" placeholder="Nom" name="name" id="name1" required style="width: 100%;"><br><br>
+              <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+              <input type="text" placeholder="Prenom" name="initial" id="initial" required style="width: 100%;"><br><br>
+              <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
+              <input type="text" placeholder="Portable" name="mobile" id="mobile1" required style="width: 100%;"
+                maxlength="10" minlength="10"><br><br>
+              <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
+              <input type="email" placeholder="Email" name="email" id="email1" required style="width: 100%;"><br><br>
+              <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
+              <textarea name="text" id="text_box" placeholder="Description de votre projet" cols="" rows="3"
+                style="width: 100%;" required class="text_box"></textarea>
+              <input type="checkbox" name="subscribe" id="sub" required>
+              <label for="sub">I subscribe to the newsletter.</label> <br>
+              <input type="submit" value="Envoyer" class="btn rounded-5 text-white" style="background-color: #db5200;">
+            </form>
+            <!-- <div>
                                         <div class="spinner-border  my-3 " id="spinner"></div>
                                         <div id="spin-content" class="mt-3">please wait...</div>
                                     </div> -->
-              </div>
-              <!-- <div class="modal-footer">
+          </div>
+          <!-- <div class="modal-footer">
                               <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
                             </div> -->
-            </div>
-        
-          </div>
         </div>
-        <!-- CONTACT MODAL END  -->
+
+      </div>
+    </div>
+    <!-- CONTACT MODAL END  -->
     <!-- FOOTER START -->
     <footer class="site-footer footer-dark ">
 
@@ -1695,12 +1697,12 @@
               <div class="widget n-letter">
                 <h3 class="widget-title"> Abonnez-vous</h3>
                 <div class="n-letter-content">
-                 <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
+                  <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
                   <div class="nl-type">
                     <form role="search" method="post" id="check" action="emailCheck.php">
                       <div class="nl-form">
-                        <input name="news-letter" class="form-control text-white" placeholder="Enter email address" type="text"
-                          id="mail">
+                        <input name="news-letter" class="form-control text-white" placeholder="Enter email address"
+                          type="text" id="mail">
                         <button type="submit" class="s-btn">
                           S'abonner</button>
                       </div>
@@ -1738,8 +1740,8 @@
                   <li><a href="Garante.html">Conditions générales de vente</a></li>
                   <li><a href="Gar-Table.html">Garantie</a></li>
                   <li><a href="parrainage.html">Parrainage</a></li>
-                 <li  data-toggle="modal" data-target="#myModal2"><a href="javascript:void(0);" >Recrutement</a></li>
-              </ul>
+                  <li data-toggle="modal" data-target="#myModal2"><a href="javascript:void(0);">Recrutement</a></li>
+                </ul>
               </div>
             </div>
 
