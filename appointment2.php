@@ -39,13 +39,6 @@ $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text);
 
-    // $gender = isset($_POST['place']) ? preg_replace("/[^\.\-\' a-zA-Z]/", "", $_POST['place']) : "";    
-    // $name = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z]/", "", $_POST['date']) : "";  
-    // $fullname = isset($_POST['session']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['session']) : "";
-    // $city = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
-    // $mobile = isset($_POST['place']) ? preg_replace("/[^\.\-\' 0-9]/", "", $_POST['place']) : "";    
-    // $text = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['date']) : "";  
-
    
 $mail->isHTML(true);  
 $mail->Subject = 'Mail received from User Details in SERGENT MENUISERIE';

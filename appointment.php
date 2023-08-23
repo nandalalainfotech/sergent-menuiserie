@@ -40,7 +40,7 @@ $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 $mail->Body .='<h3>Meeting at : ' .strtoupper($meetingAt)  . "</h3>";
 $mail->Body .='<h3>Appointment Date : ' . $date . "</h3>";
-$mail->Body .='<h3>Your Session : ' .strtoupper($session) . "</h3>";
+$mail->Body .='<h3>Session : ' .strtoupper($session) . "</h3>";
 // $mail->Body .='<h3>Email:' . $email .  "</h3>";
 // $mail->Body .='LOCATION :' . $location . "\n";
 
