@@ -23,6 +23,7 @@
 
 
     <!-- BOOTSTRAP STYLE SHEET -->
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"> -->
     <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
     <!-- FONTAWESOME STYLE SHEET -->
     <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css" />
@@ -220,22 +221,23 @@
     .s-btn:hover {
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     }
+
     /* ABOUT COMPANY  */
     .step-blocks-dark1 {
-                    color: #fff;
-                    background-color: #db5200;
-                    height: 310px;
-                }
+        color: #fff;
+        background-color: #db5200;
+        height: 310px;
+    }
 
-                .step-blocks-light1 {
-                    color: #000;
-                    background-color: #f9f9f9;
-                    height: 310px;
-                }
+    .step-blocks-light1 {
+        color: #000;
+        background-color: #f9f9f9;
+        height: 310px;
+    }
 </style>
 
 
-<body onload="loading()">
+<body onload="loading();indexDivView();">
     <!-- LOADING AREA START ===== -->
     <div class="loading-area">
         <div class="loading-box"></div>
@@ -260,7 +262,7 @@
                     <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
                 </div>
                 <div class="modal-body">
-             
+
                     <form action="mail.php" method="post">
                         <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
                         <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
@@ -273,8 +275,8 @@
                             placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
                         <br><br>
                         <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
-                        <input class="w-50" type="text" name="location" id="location" required
-                            placeholder="Code postal" title="entrez l' Emplacement valide."> <br>
+                        <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
+                            title="entrez l' Emplacement valide."> <br>
                         <button type="submit" class="s-btn mt-3"
                             onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(disabled(),4000)'>
                             Soumettre</button>
@@ -339,7 +341,7 @@
                     <div class="container clearfix">
 
                         <div class="logo-header" style="height: 75px;width: 110px;">
-                             <div class="logo-header" style="height: 75px;width: 110px;">
+                            <div class="logo-header" style="height: 75px;width: 110px;">
                                 <a href="index.html">
                                     <img src="images/SM_258x74.svg" style="height: 70px; width: 110px;">
 
@@ -358,13 +360,13 @@
 
                         <!-- MAIN Vav -->
                         <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
-                        
+
                             <ul class=" nav navbar-nav menu-size">
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
                                     <ul class="sub-menu">
                                         <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
                                             <ul class="sub-menu">
-                        
+
                                                 <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
                                                 <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
                                                 <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
@@ -384,9 +386,9 @@
                                             </ul>
                                         </li>
                                     </ul>
-                        
+
                                 </li>
-                        
+
                                 <li class="has-child">
                                     <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
                                     <ul class="sub-menu">
@@ -397,7 +399,7 @@
                                                 <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
                                             </ul>
                                         </li>
-                        
+
                                         <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
                                             <ul class="sub-menu">
                                                 <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
@@ -408,12 +410,12 @@
                                         <li><a href="voketspersiennes.html">VOLETS PERSIENNES</a>
                                             <ul class="sub-menu">
                                                 <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
-                        
+
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
                                         D'ENTREE</a>
                                     <ul class="sub-menu">
@@ -427,20 +429,20 @@
                                         </li>
                                         <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
                                     </ul>
-                        
+
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
                                         GARAGE</a>
                                     <ul class="sub-menu">
-                        
+
                                         <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
                                         <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
                                         <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li>
                                         <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
                                     </ul>
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
                                         CLOTURES</a>
                                     <ul class="sub-menu">
@@ -450,12 +452,12 @@
                                         <li><a href="gardeCrops.html">GARDE CORPS</a></li>
                                         <li><a href="motarisation.html">MOTORISATION</a></li>
                                     </ul>
-                        
+
                                 </li>
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
                                         PERGOLAS</a>
                                     <ul class="sub-menu">
-                        
+
                                         <li><a href="interior blind.html">STORE INTERIEUR</a></li>
                                         <li><a href="awning.html">STORE BANNE</a></li>
                                         <li><a href="pergola.html">PERGOLA</a></li>
@@ -468,7 +470,7 @@
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
                                 </li>
                             </ul>
                         </div>
@@ -497,8 +499,8 @@
 
             <!-- SLIDER START -->
             <div id="welcome_wrapper" class="rev_slider_wrapper fullscreen-container" data-alias="typewriter-effect"
-                data-source="gallery" style="max-height: 650px;">
-                <div id="welcome_two" class="rev_slider fullscreenbanner"  data-version="5.4.1">
+                data-source="gallery" style="max-height: 800px;">
+                <div id="welcome_two" class="rev_slider fullscreenbanner" data-version="5.4.1">
                     <ul>
 
                         <!-- SLIDE 1 -->
@@ -559,10 +561,11 @@
                                 data-paddingright="[0,0,0,0]" data-paddingbottom="[0,0,0,0]"
                                 data-paddingleft="[0,0,0,0]" style="z-index: 13; 
                             white-space: normal; 
-                            font-weight: 900;
+                            font-weight: 800;
                             color:#000;
-                            border-width:0px; font-family: 'Mulish', sans-serif;">C’est Le Moment Me Rénover Vos
-                                Menuiseries !Jusqu’au 30 Août-25%Sur L’ensemble De Votre Projet</div>
+                            border-width:0px; font-family: 'Mulish', sans-serif;">OFFRE RENTREE C’est le moment de
+                                rénover vos menuiseries Jusqu’au 30 Septembre -25% sur l’ensemble de votre
+                            </div>
 
                             <!-- LAYER NR. 5 [ for see all service botton ] -->
                             <!-- <div class="tp-caption tp-resizeme" id="slide-901-layer-5"
@@ -694,7 +697,9 @@
                             white-space: normal; 
                             font-weight: 900;
                             color:#000;
-                            border-width:0px; font-family: 'Mulish', sans-serif;"> 100% Assurance qualité</div>
+                            border-width:0px; font-family: 'Mulish', sans-serif;">Sergent poseur est là Simplifiez-vous
+                                la pose de vos projets en profitant de 20 ans d’expérience dans l’installation de
+                                menuiseries.</div>
 
 
 
@@ -798,7 +803,53 @@
                 </div>
             </div>
             <!-- SLIDER END -->
-
+            <div class="container-fluid">
+                <div class="container noneDisplay" id="noneDisplay"  style="margin-left: 150px !important; ">
+                    <!-- <div class="row"> -->
+                    <div class="row mb-3">
+                        <div class="col-sm-4">
+    
+                        </div>
+                        <div class="col-sm-5  p-2 photo" 
+                            style="width: auto; height: 300px; text-align: center;color: #ffffff;background-image: url(images/all-products/call5.jpg);background-repeat: no-repeat;">
+                           <div class="row">
+                            <div class="col-sm-10">
+    
+                            </div>
+                            <div class="col-sm-2">
+                                <div onclick="indexDivNone()">
+                                    <button class= " btn close-button"  aria-label="Dismiss alert" type="button" data-close>
+                                        <span aria-hidden="true"  >&times;</span>
+                                      </button>
+                                </div>
+                            </div>
+                           </div>
+                            <div class="mt-2">
+                                <div class="mt-5">
+                                    <p> Besoin d'aide pour <a href="request.html" class="" style="color: #db5200;"><b>votre
+                                                devis ?</b></a> </p>
+                                    <p>Utilisez notre formularie simplifie.</p>
+                                </div>
+    
+                                <div>
+                                    <a href="make-an-appointment.html" class="text-white"> Un conseiller vous rappelle
+                                        gratuitement.</a>
+    
+                                </div>
+                                <div class="mt-3">
+                                    <a href="request.html" class=" text-white btn-lg"
+                                        style="background-color: #db5200; opacity: .8;"> Demande devis gratuit</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-2">
+                          
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+            
 
             <!-- PROJECT SECTION START -->
             <div class="site-bg-grey">
@@ -819,7 +870,7 @@
 
             </div>
             <!-- PROJECT CHOOSE SECTION END -->
-      
+
 
             <!-- ABOUT COMPANY -->
             <div class="section-full  p-b20 step-blocks">
@@ -903,10 +954,10 @@
 
                                     <!-- TITLE START-->
                                     <div class="section-head left wt-small-separator-outer">
-                                        <div class="wt-small-separator site-text-primary">
-                                            <div>
-                                                Nos services</div>
-                                        </div>
+                                        <!-- <div class="wt-small-separator site-text-primary">
+                                             <div>
+                                                Nos services</div> -->
+                                        <!-- </div> -->
                                         <h2 class="wt-title">Nous fournissons des services de bonne qualité à tout
                                             moment et n'importe où
                                         </h2>
@@ -916,22 +967,23 @@
 
                                         <a href="appointment2.html" class="site-button btn-hover-animation"><i
                                                 class="flaticon-right"></i>
-                                                prendre rendez-vous</a>
+                                            prendre rendez-vous</a>
 
                                     </div>
                                     <!-- TITLE END-->
 
                                     <style>
-                                        #hov-content{
+                                        #hov-content {
                                             display: none;
                                         }
-                                        #display-content:hover #hov-content{
+
+                                        #display-content:hover #hov-content {
                                             display: block;
                                         }
-                                        #display-content:hover #opac-img{
+
+                                        #display-content:hover #opac-img {
                                             opacity: .6;
                                         }
-
                                     </style>
 
                                 </div>
@@ -939,19 +991,21 @@
                                 <div class="col-lg-8 col-md-12">
                                     <div class="services-gallery-style1 m-b26">
                                         <div class="owl-carousel services-gallery-one owl-btn-bottom-left ">
-                                             <!-- COLUMNS 1 -->
-                                            <div class="item "  id="display-content" >
+                                            <!-- COLUMNS 1 -->
+                                            <div class="item " id="display-content">
                                                 <div class="service-box-style1">
                                                     <div class="service-content" id="hov-content">
                                                         <h4 class="service-title-large"><a href="sideGarageDoor.html">
                                                                 Portes de garage</a></h4>
                                                         <p>Les portes de garage sont disponibles dans la meilleure
                                                             qualité</p>
-                                                        <a href="appointment2.html" class="site-button-link site-text-primary">
+                                                        <a href="appointment2.html"
+                                                            class="site-button-link site-text-primary">
                                                             prendre rendez-vous<i class="fa fa-play"></i></a>
                                                     </div>
                                                     <div class="service-media" id="opac-img">
-                                                        <img src="images/all-products/garage-door/img6.jpg" alt="" style="height: 439px; width: 429px;">
+                                                        <img src="images/all-products/garage-door/img6.jpg" alt=""
+                                                            style="height: 439px; width: 429px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -960,14 +1014,17 @@
                                             <div class="item " id="display-content">
                                                 <div class="service-box-style1">
                                                     <div class="service-content" id="hov-content">
-                                                        <h4 class="service-title-large"><a href="swing Shutter.html">Obturateur </a></h4>
+                                                        <h4 class="service-title-large"><a
+                                                                href="swing Shutter.html">Obturateur </a></h4>
                                                         <p>Des volets et des fenêtres sont disponibles dans nos services
                                                         </p>
-                                                        <a href="appointment2.html" class="site-button-link site-text-primary">
+                                                        <a href="appointment2.html"
+                                                            class="site-button-link site-text-primary">
                                                             prendre rendez-vous<i class="fa fa-play"></i></a>
                                                     </div>
                                                     <div class="service-media" id="opac-img">
-                                                        <img src="images/all-products/garage-door/shut1.webp" alt="" style="height: 439px; width: 429px;">
+                                                        <img src="images/all-products/garage-door/shut1.webp" alt=""
+                                                            style="height: 439px; width: 429px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -980,11 +1037,13 @@
                                                                 Awining et Percola</a></h4>
                                                         <p>Nous rendons votre maison avec un design supplémentaire dans
                                                             ces services</p>
-                                                        <a href="appointment2.html" class="site-button-link site-text-primary">
+                                                        <a href="appointment2.html"
+                                                            class="site-button-link site-text-primary">
                                                             prendre rendez-vous<i class="fa fa-play"></i></a>
                                                     </div>
                                                     <div class="service-media" id="opac-img">
-                                                        <img src="images/all-products/garage-door/pergula4.jpg" alt="" style="height: 439px; width: 429px;">
+                                                        <img src="images/all-products/garage-door/pergula4.jpg" alt=""
+                                                            style="height: 439px; width: 429px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -996,11 +1055,13 @@
                                                         <h4 class="service-title-large"><a href="portalPVC.html">
                                                                 Portes du portail </a></h4>
                                                         <p>Des portails en aluminium et coulissants sont disponibles</p>
-                                                        <a href="appointment2.html" class="site-button-link site-text-primary">
+                                                        <a href="appointment2.html"
+                                                            class="site-button-link site-text-primary">
                                                             prendre rendez-vous<i class="fa fa-play"></i></a>
                                                     </div>
                                                     <div class="service-media" id="opac-img">
-                                                        <img src="images/all-products/garage-door/swing1.webp" alt="" style="height: 439px; width: 429px;">
+                                                        <img src="images/all-products/garage-door/swing1.webp" alt=""
+                                                            style="height: 439px; width: 429px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1009,14 +1070,17 @@
                                             <div class="item " id="display-content">
                                                 <div class="service-box-style1">
                                                     <div class="service-content" id="hov-content">
-                                                        <h4 class="service-title-large"><a href="AluSlidingWindow.html"> Fenêtre </a></h4>
+                                                        <h4 class="service-title-large"><a href="AluSlidingWindow.html">
+                                                                Fenêtre </a></h4>
                                                         <p> Toutes les variétés de fenêtres sont disponibles ici comme
                                                             le PVC</p>
-                                                        <a href="appointment2.html" class="site-button-link site-text-primary">
+                                                        <a href="appointment2.html"
+                                                            class="site-button-link site-text-primary">
                                                             prendre rendez-vous<i class="fa fa-play"></i></a>
                                                     </div>
                                                     <div class="service-media" id="opac-img">
-                                                        <img src="images/all-products/garage-door/window2.jpg" alt="" style="height: 439px; width: 429px;">
+                                                        <img src="images/all-products/garage-door/window2.jpg" alt=""
+                                                            style="height: 439px; width: 429px;">
                                                     </div>
                                                 </div>
                                             </div>
@@ -1040,7 +1104,7 @@
                     <!-- TITLE START-->
                     <div class="section-head center wt-small-separator-outer">
                         <!-- <div class="wt-small-separator site-text-primary"> -->
-                            <!-- <div>Produits de qualité</div> -->
+                        <!-- <div>Produits de qualité</div> -->
                         <!-- </div> -->
                         <h2 class="wt-title">
                             Certains de nos produits qui vous surprendront</h2>
@@ -1055,14 +1119,15 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>01</span>
-                                            Fenêtre
+                                            Fenêtres
                                         </div>
-                                        <h4 class="project-title-large"><a href="#"> Fenêtre d'obturation</a></h4>
+                                        <h4 class="project-title-large"><a href="#">L’isolation thermique et
+                                                phonique</a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="AluSlidingWindow.html">
-                                        <img src="images/all-products/img.jpg" alt="" width=""
-                                            style="width: 100%;object-fit: fill;"></a>
+                                            <img src="images/all-products/img.jpg" alt="" width=""
+                                                style="width: 100%;object-fit: fill;"></a>
                                     </div>
                                 </div>
                             </div>
@@ -1073,15 +1138,15 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>02</span>
-                                            Garage
+                                            Portes de garage
                                         </div>
                                         <h4 class="project-title-large"><a href="#">
-                                                Portes de garage </a></h4>
+                                                Sécurité et l’isolation thermique </a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="sectionalGarageDoor.html">
-                                        <img src="images/all-products/garage2.jpg" alt="">
-                                    </a>
+                                            <img src="images/all-products/garage2.jpg" alt="">
+                                        </a>
                                     </div>
                                 </div>
                             </div>
@@ -1092,14 +1157,14 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>03</span>
-                                            Pergola
+                                            Pergolas
                                         </div>
                                         <h4 class="project-title-large"><a href="#">
-                                                Conception de pergolas</a></h4>
+                                                Pièce en plus</a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="pergola.html">
-                                        <img src="images/all-products/pergola4.jpg" alt=""></a>
+                                            <img src="images/all-products/pergola4.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1110,14 +1175,14 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>04</span>
-                                            Portes d'entrée
+                                            Portes d’entrée
                                         </div>
                                         <h4 class="project-title-large"><a href="#">
-                                                Portes d'entrée avec la meilleure qualité</a></h4>
+                                                Sécurité optimale</a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="alu-glazedEntranceDoors.html">
-                                        <img src="images/all-products/entrance1.jpg" alt=""></a>
+                                            <img src="images/all-products/entrance1.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1128,15 +1193,14 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>05</span>
-
-                                            Portail
+                                            Portails et Portillons
                                         </div>
                                         <h4 class="project-title-large"><a href="#">
-                                                Les portes de portail sont disponibles</a></h4>
+                                                Entrée moderne</a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="portalALU.html">
-                                        <img src="images/all-products/door2.webp" alt=""></a>
+                                            <img src="images/all-products/door2.webp" alt=""></a>
                                     </div>
                                 </div>
                             </div>
@@ -1147,17 +1211,56 @@
                                     <div class="project-content">
                                         <div class="project-title site-text-primary">
                                             <span>06</span>
-                                            Auvents
+                                            Store banne
                                         </div>
                                         <h4 class="project-title-large"><a href="#">
-                                                Tous les types d'auvents sont là</a></h4>
+                                                Abri soleil et pluie</a></h4>
                                     </div>
                                     <div class="project-media">
                                         <a href="awning.html">
-                                        <img src="images/all-products/awings3.jpg" alt=""></a>
+                                            <img src="images/all-products/awings3.jpg" alt=""></a>
                                     </div>
                                 </div>
                             </div>
+
+                            <!-- COLUMNS 7-->
+                            <div class="item ">
+                                <div class="project-slider-3-box">
+                                    <div class="project-content">
+                                        <div class="project-title site-text-primary">
+                                            <span>07</span>
+                                            Verandas
+                                        </div>
+                                        <h4 class="project-title-large"><a href="#">
+                                                Pièce en plus</a></h4>
+                                    </div>
+                                    <div class="project-media">
+                                        <a href="Verandas.html">
+                                            <img src="images/all-products/Verandas1.jpg" alt=""
+                                                style="height: 391px !important;width: 391px !important;"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- COLUMNS 8 -->
+                            <div class="item ">
+                                <div class="project-slider-3-box">
+                                    <div class="project-content">
+                                        <div class="project-title site-text-primary">
+                                            <span>08</span>
+                                            Volets
+                                        </div>
+                                        <h4 class="project-title-large"><a href="#">
+                                                Sécurité et l’isolation thermique</a></h4>
+                                    </div>
+                                    <div class="project-media">
+                                        <a href="voketspersiennes.html">
+                                            <img src="images/all-products/Volets1.jpg" alt=""
+                                                style="height: 391px !important;width: 391px !important;"></a>
+                                    </div>
+                                </div>
+                            </div>
+
 
                         </div>
                     </div>
@@ -1243,7 +1346,8 @@
                                 <div class="item">
                                     <div class="ow-client-logo">
                                         <div class="client-logo client-logo-media">
-                                            <a href="#"><img src="images/telechargement-removebg-preview.png" alt=""></a>
+                                            <a href="#"><img src="images/telechargement-removebg-preview.png"
+                                                    alt=""></a>
                                         </div>
                                     </div>
                                 </div>
@@ -1303,15 +1407,20 @@
                                             <div>
                                                 À propos de nous</div>
                                         </div> -->
-                                        <h2 class="wt-title">Nous vous aidons à développer votre propre entreprise</h2>
-                                        <p> Cela signifiait également que nous devions fournir un environnement
-                                            d'apprentissage
-                                            dirigé par des entraîneurs expérimentés et performants. Cependant, notre
-                                            plus
-                                            objectif important était de créer une atmosphère accueillante.</p>
+                                        <h2 class="wt-title">Votre projet clé en main</h2>
+                                        <p> Nous nous déplaçons chez vous et évaluons les opportunités comme les
+                                            contraintes des travaux à réaliser. Nous prenons vos mesures, et nous vous
+                                            conseillons également sur les produits, finitions et matériaux au plus près
+                                            de vos attentes.</p>
+                                        <p>
+                                            En changeant ses menuiseries pour des ouvertures performantes thermiquement,
+                                            vous améliorez votre confort, vous réalisez des économies d'énergie et vous
+                                            participez à la préservation de l'environnement.
+                                        </p>
                                     </div>
 
-                                    <a href="appointment2.html" class="site-button btn-hover-animation"><i class="flaticon-right"></i>
+                                    <a href="appointment2.html" class="site-button btn-hover-animation"><i
+                                            class="flaticon-right"></i>
                                         prendre rendez-vous</a>
                                 </div>
 
@@ -1346,9 +1455,9 @@
                             <div class="col-lg-6 col-md-12">
 
                                 <div class="get-in-touch3">
-                                    <div class="get-in-touch3-media"><img src="images/home/call.jpg"
-                                            alt="" style="height: 350px; ;width: 545px;"></div>
-                                    <div class="get-in-touch3-info"><span> Assistance ouverte 24h/24 et 7j/7 pour
+                                    <div class="get-in-touch3-media"><img src="images/home/call.jpg" alt=""
+                                            style="height: 350px; ;width: 545px;"></div>
+                                    <div class="get-in-touch3-info"><span> Assistance ouverte et 7j/7j pour
                                             obtenir de l'aide</span><strong>01 83 63 94 80
                                         </strong></div>
                                 </div>
@@ -1356,9 +1465,11 @@
                             <div class="col-lg-6 col-md-12">
                                 <div class="get-in-touch3-detail m-b30">
 
-                                    <h2 class="wt-title m-b40">
-                                        Nous faisons de votre maison un design et une qualité complets
-                                    </h2>
+                                    <h3 class="wt-title m-b40">
+                                        Vous souhaitez faire appel à un professionnel de la vente et la pose de
+                                        menuiseries de qualité ? Demandez votre devis fenêtres en ligne. Gratuit et sans
+                                        engagement
+                                    </h3>
                                     <ul class="description-list p-b20">
                                         <li><i class="flaticon-right"></i> Conception et précision complètes</li>
                                         <li><i class="flaticon-right"></i>Produits de qualité</li>
@@ -1379,345 +1490,424 @@
                     </div>
                 </div>
 
+
             </div>
 
-            <!DOCTYPE html>
-            <html lang="en">
-            <head>
-                <meta charset="UTF-8">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <title>Document</title>
-                <link rel="stylesheet" href="contact-us.css">
-            </head>
-            <body>
-                
+            
+            <!-- </div> -->
+
+
+        </div>
+
+
+
+
+
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+            <link rel="stylesheet" href="contact-us.css">
+        </head>
+
+        <body>
+
             <!-- CONTACT US START -->
-         
-          <div id="fix" onclick="contactPageDisplay()">
-             <a href="javascript:void(0)" id="link">
-                 <ul>
-                     <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
-                     <li id="hider">Contactez</li>
-                     <li id="hider" class="text-center"> nous</li>
-                 </ul>
-             </a>
-         </div>
+
+            <div id="fix" onclick="contactPageDisplay()">
+                <a href="javascript:void(0)" id="link">
+                    <ul>
+                        <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+                        <li id="hider">Contactez</li>
+                        <li id="hider" class="text-center"> nous</li>
+                    </ul>
+                </a>
+            </div>
 
 
-         <!-- CONTACT US END -->
+            <!-- CONTACT US END -->
 
-            </body>
-            </html>
-                <!-- CONTACT MODAL START  -->
-    <div class="modal fade" id="myModal2" role="dialog">
-        <div class="modal-dialog modal-md">
+        </body>
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
-                    <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
-                </div>
-                <div class="modal-body">
-             
-                    <form action="oneTimeContactModal.php" method="post" id="form_modal">
-                        <!-- <p>Civilite <span class="text-danger">*</span></p> -->
-                        <input type="radio" name="civility" id="female" value="female" class="female" required>
-                        <label for="female">Madame</label>
-                        <input type="radio" name="civility" id="male" value="male" required class="male">
-                        <label for="male">Monsieur</label> <br>
-                        <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Nom" name="name" id="name1" required style="width: 100%;"><br><br>
-                        <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Prenom" name="initial" id="initial" required  style="width: 100%;"><br><br>
-                        <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Portable" name="mobile" id="mobile1" required  style="width: 100%;" maxlength="10" minlength="10"><br><br>
-                        <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
-                        <input type="email" placeholder="Email" name="email" id="email1" required  style="width: 100%;"><br><br>
-                        <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
-                        <textarea name="text" id="text_box" placeholder="Description de votre projet" cols="" rows="3" style="width: 100%;" required class="text_box"></textarea>
-                        <input type="checkbox" name="subscribe" id="sub" required>
-                        <label for="sub">I subscribe to the newsletter.</label> <br>
-                        <input type="submit"  value="Envoyer" class="btn rounded-5 text-white" style="background-color: #db5200;">
-                    </form>
-                    <!-- <div>
+        </html>
+        <!-- CONTACT MODAL START  -->
+        <div class="modal fade" id="myModal2" role="dialog">
+            <div class="modal-dialog modal-md">
+
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
+                        <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
+                    </div>
+                    <div class="modal-body">
+
+                        <form action="oneTimeContactModal.php" method="post" id="form_modal">
+                            <!-- <p>Civilite <span class="text-danger">*</span></p> -->
+                            <input type="radio" name="civility" id="female" value="female" class="female" required>
+                            <label for="female">Madame</label>
+                            <input type="radio" name="civility" id="male" value="male" required class="male">
+                            <label for="male">Monsieur</label> <br>
+                            <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Nom" name="name" id="name1" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Prenom" name="initial" id="initial" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
+                            <input type="text" placeholder="Portable" name="mobile" id="mobile1" required
+                                style="width: 100%;" maxlength="10" minlength="10"><br><br>
+                            <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
+                            <input type="email" placeholder="Email" name="email" id="email1" required
+                                style="width: 100%;"><br><br>
+                            <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
+                            <textarea name="text" id="text_box" placeholder="Description de votre projet" cols=""
+                                rows="3" style="width: 100%;" required class="text_box"></textarea>
+                            <input type="checkbox" name="subscribe" id="sub" required>
+                            <label for="sub">I subscribe to the newsletter.</label> <br>
+                            <input type="submit" value="Envoyer" class="btn rounded-5 text-white"
+                                style="background-color: #db5200;">
+                        </form>
+                        <!-- <div>
                         <div class="spinner-border  my-3 " id="spinner"></div>
                         <div id="spin-content" class="mt-3">please wait...</div>
                     </div> -->
-                </div>
-                <!-- <div class="modal-footer">
+                    </div>
+                    <!-- <div class="modal-footer">
               <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
             </div> -->
+                </div>
+
             </div>
 
+
+
+
         </div>
-    </div>
-    <!-- CONTACT MODAL END  -->
+        <!-- CONTACT MODAL END  -->
 
 
-            <!-- FOOTER START -->
-            <footer class="site-footer footer-dark ">
+        <!-- FOOTER START -->
+        <footer class="site-footer footer-dark ">
 
-                <!-- FOOTER BLOCKES START -->
-                <div class="footer-top">
+            <!-- FOOTER BLOCKES START -->
+            <div class="footer-top">
 
-                    <div class="container ">
+                <div class="container ">
+                    <div class="row">
+
+                        <div class="col-lg-3 col-md-6">
+
+                            <div class="widget widget_about">
+                                <div class="logo-footer clearfix bg-white">
+                                    <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
+                                </div>
+                                <p>Simple, gratuite et sans engagement.</p>
+                                <ul style="margin-left: 1.5rem;">
+                                    <li>Tarif sur-mesure selon votre projet</li>
+                                    <li>Des conseils d'experts</li>
+                                </ul>
+                                <div class="call-us">
+                                    <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget n-letter">
+                                <h3 class="widget-title"> Abonnez-vous</h3>
+                                <div class="n-letter-content">
+                                    <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et
+                                        nouvelles</p>
+                                    <div class="nl-type">
+                                        <form role="search" method="post" id="check" action="emailCheck.php">
+                                            <div class="nl-form">
+                                                <input name="news-letter" class="form-control text-white"
+                                                    placeholder="Enter email address" type="text" id="mail">
+                                                <button type="submit" class="s-btn">
+                                                    S'abonner</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                                <ul class="social-icons">
+                                    <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                                    <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget">
+                                <h3 class="widget-title">Contactez-nous</h3>
+                                <p>Notre technicien disponible</p>
+                                <p>pour vous 7 sur 7 jours </p>
+
+                                <ul class="widget_address">
+                                    <li><i class="flaticon-location"></i> 4 rue SCHOTTEN <br> 91560 CROSNE</li>
+                                    <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-6">
+                            <div class="widget widget_services">
+                                <h3 class="widget-title">Liens d'entreprise</h3>
+                                <ul>
+                                    <li><a href="propos.html">A propos</a></li>
+                                    <li><a href="ProjectSM.html">Déroulement du Projet</a></li>
+                                    <li><a href="Garante.html">Conditions générales de vente</a></li>
+                                    <li><a href="Gar-Table.html">Garantie</a></li>
+                                    <li><a href="parrainage.html">Parrainage</a></li>
+                                    <li data-toggle="modal" data-target="#myModal2"><a
+                                            href="javascript:void(0);">Recrutement</a></li>
+                                </ul>
+                            </div>
+                        </div>
+
+
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- FOOTER COPYRIGHT -->
+
+            <div class="footer-bottom bg-light p-1">
+                <div class="container">
+                    <div class="footer-bottom-light">
+
+                        <div class="footer-copy-right">
+                            <div class="row">
+                                <div class="col-sm-9">
+                                    <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous
+                                        droits réservés Sergent Menuiserie</span>
+                                </div>
+
+                                <div class="col-sm-3">
+                                    <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
+                                    <span class="site-text-primary float-end"><img
+                                            src="images/all-products/garage-door/Asset 19@2x.png" alt="" height="80px"
+                                            width="100px"></span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </footer>
+        <!-- FOOTER END -->
+        <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
+
+
+
+
+        <!-- JAVASCRIPT  FILES ========================================= -->
+        <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
+        <script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
+        <script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
+
+        <script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
+        <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
+        <script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
+        <script src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
+        <script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
+        <script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
+        <script src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
+        <script src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
+        <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
+        <script src="js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
+        <script src="js/bootstrap-slider.min.js"></script><!-- Form js -->
+        <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
+
+
+
+        <!-- REVOLUTION JS FILES -->
+
+        <script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
+        <script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
+
+        <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
+        <script src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
+
+        <!-- REVOLUTION SLIDER SCRIPT FILES -->
+        <script src="js/rev-script-3.js"></script>
+        <script src="js/emailCheck.js"></script>
+        <script src="js/contact.js"></script>
+        <script src="js/contactModalValidation.js"></script>
+
+        <!-- <Cookies start> -->
+        <!DOCTYPE html>
+        <html lang="en">
+
+        <head>
+            <meta charset="UTF-8">
+            <title>Cookie Constent Box | Sergent Menuiserie</title>
+            <!-- <link rel="stylesheet" href="style1.css"> -->
+        </head>
+
+        <body>
+           
+            <!-- <Cookies start> -->
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4" id="cookie">
                         <div class="row">
+                            <div class="col-sm-4"></div>
 
-                            <div class="col-lg-3 col-md-6">
-
-                                <div class="widget widget_about">
-                                    <div class="logo-footer clearfix bg-white">
-                                        <a href="index.html"><img src="images/footerlogo1.svg" alt=""></a>
-                                    </div>
-                                    <p>Simple, gratuite et sans engagement.</p>
-                                    <ul style="margin-left: 1.5rem;">
-                                        <li>Tarif sur-mesure selon votre projet</li>
-                                        <li>Des conseils d'experts</li>
-                                    </ul>
-                                    <div class="call-us">
-                                        <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
-                                    </div>
-
-                                </div>
-
+                            <div class="col-sm-4">
+                                <img src="images/SM_258x74 (1).svg" alt="" style="height: 40px;width: 60px;"> 
                             </div>
+                            <div class="col-sm-4"></div>
 
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget n-letter">
-                                    <h3 class="widget-title"> Abonnez-vous</h3>
-                                    <div class="n-letter-content">
-                                        <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
-                                        <div class="nl-type">
-                                            <form role="search" method="post" id="check" action="emailCheck.php">
-                                                <div class="nl-form">
-                                                    <input name="news-letter" class="form-control text-white"
-                                                        placeholder="Enter email address" type="text" id="mail">
-                                                    <button type="submit" class="s-btn">
-                                                        S'abonner</button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                    <ul class="social-icons">
-                                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-twitter"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-pinterest"></a></li>
-                                    </ul>
+                            <!-- <div class="col-sm-2"></div> -->
+                            <div class="col-sm-12 mb-3">
+                                <p class="text-dark">Ce site Web utilise ses propres cookies et ceux de tiers pour améliorer nos
+                                    services et vous montrer des publicités liées à vos préférences en analysant vos habitudes
+                                    de navigation. Pour donner votre consentement à son utilisation, appuyez sur le bouton
+                                    Accepter.
+                                 </p>
+                                 <div class="buttons mx-5">
+                                    <button  class="item btn btn-lg text-white" style="background-color: #db5200;" onclick="CookieAccept()">J’ACCEPTE</button>
+                                    <button class="item btn btn-lg text-white" style="background-color: #db5200;" onclick="CookieClose()">JE REFUSE</button>
                                 </div>
                             </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget">
-                                    <h3 class="widget-title">Contactez-nous</h3>
-                                    <p>Notre technicien disponible</p>
-                                    <p>pour vous 7 sur 7 jours </p>
-
-                                    <ul class="widget_address">
-                                        <li><i class="flaticon-location"></i> 4 rue SCHOTTEN <br> 91560 CROSNE</li>
-                                        <li><i class="flaticon-mail"></i>contact@sergentmenuiserie.com</li>
-                                    </ul>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-6">
-                                <div class="widget widget_services">
-                                    <h3 class="widget-title">Liens d'entreprise</h3>
-                                    <ul>
-                                        <li><a href="propos.html">A propos</a></li>
-                                        <li><a href="ProjectSM.html">Déroulement du Projet</a></li>
-                                        <li><a href="Garante.html">Conditions générales de vente</a></li>
-                                        <li><a href="Gar-Table.html">Garantie</a></li>
-                                        <li><a href="parrainage.html">Parrainage</a></li>
-                                        <li  data-toggle="modal" data-target="#myModal2"><a href="javascript:void(0);" >Recrutement</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                </div>
-                <!-- FOOTER COPYRIGHT -->
-
-                <div class="footer-bottom bg-light p-1">
-                    <div class="container">
-                        <div class="footer-bottom-light">
-
-                            <div class="footer-copy-right">
-                                <div class="row">
-                                    <div class="col-sm-9">
-                                        <span class="copyrights-text text-dark align-content-center">Copyright ©2023 Tous
-                                            droits réservés Sergent Menuiserie</span>
-                                    </div>
-
-                                    <div class="col-sm-3">
-                                        <span class="float-end text-dark " style="margin-left:40px">Conçu par</span>
-                                        <span class="site-text-primary float-end"><img
-                                                src="images/all-products/garage-door/Asset 19@2x.png" alt=""
-                                                height="80px" width="100px"></span>
-                                    </div>
-                                </div>
-                            </div>
-
+                            <!-- <div class="col-sm-2"></div> -->
                         </div>
                     </div>
-                </div>
+                    <div class="col-sm-6"></div>
 
-            </footer>
-            <!-- FOOTER END -->
-            <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
-
-
-
-
-            <!-- JAVASCRIPT  FILES ========================================= -->
-            <script src="js/jquery-3.6.0.min.js"></script><!-- JQUERY.MIN JS -->
-            <script src="js/popper.min.js"></script><!-- POPPER.MIN JS -->
-            <script src="js/bootstrap.min.js"></script><!-- BOOTSTRAP.MIN JS -->
-
-            <script src="js/magnific-popup.min.js"></script><!-- MAGNIFIC-POPUP JS -->
-            <script src="js/waypoints.min.js"></script><!-- WAYPOINTS JS -->
-            <script src="js/counterup.min.js"></script><!-- COUNTERUP JS -->
-            <script src="js/waypoints-sticky.min.js"></script><!-- STICKY HEADER -->
-            <script src="js/isotope.pkgd.min.js"></script><!-- MASONRY  -->
-            <script src="js/owl.carousel.min.js"></script><!-- OWL  SLIDER  -->
-            <script src="js/theia-sticky-sidebar.js"></script><!-- STICKY SIDEBAR  -->
-            <script src="js/jquery.bootstrap-touchspin.js"></script><!-- FORM JS -->
-            <script src="js/custom.js"></script><!-- CUSTOM FUCTIONS  -->
-            <script src="js/lc_lightbox.lite.js"></script><!-- IMAGE POPUP -->
-            <script src="js/bootstrap-slider.min.js"></script><!-- Form js -->
-            <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
-
-
-
-            <!-- REVOLUTION JS FILES -->
-
-            <script src="plugins/revolution/revolution/js/jquery.themepunch.tools.min.js"></script>
-            <script src="plugins/revolution/revolution/js/jquery.themepunch.revolution.min.js"></script>
-
-            <!-- SLIDER REVOLUTION 5.0 EXTENSIONS  (Load Extensions only on Local File Systems !  The following part can be removed on Server for On Demand Loading) -->
-            <script src="plugins/revolution/revolution/js/extensions/revolution-plugin.js"></script>
-
-            <!-- REVOLUTION SLIDER SCRIPT FILES -->
-            <script src="js/rev-script-3.js"></script>
-            <script src="js/emailCheck.js"></script>
-            <script src="js/contact.js"></script>
-            <script src="js/contactModalValidation.js"></script>
-
-      <!-- <Cookies start> -->
-             <!DOCTYPE html>
-                <html lang="en">
-                    <head>
-                    <meta charset="UTF-8">
-                    <title>Cookie Constent Box | Sergent Menuiserie</title>
-                    <!-- <link rel="stylesheet" href="style1.css"> -->
-                    </head>
-                        <body>
-                        <!-- <div class="wrapper">
-                            <img src="images/req-img-1/cookie.png" alt="">
-                            <div class="content">
-                            <header class="text-dark">Consentement aux cookies</header>
-                            <p class="text-dark">Ce site utilise des cookies pour vous garantir la meilleure expérience sur notre site.</p>
-                            <div class="buttons">
-                                <button class="item">Je comprends</button>
-                                <a href="#" class="item ">Learn more</a>
-                            </div>
-                            </div>
-                        </div> -->
-<!-- 
-                        <script>
-                            const cookieBox = document.querySelector(".wrapper"),
-                            acceptBtn = cookieBox.querySelector("button");
-
-                            acceptBtn.onclick = ()=>{
-                            setting cookie for 1 month, after one month it'll be expired automatically
-                            document.cookie = "Cookie by Sergent Menuiserie; max-age="+60*60*24*30;
-                            if(document.cookie){ 
-                                cookieBox.classList.add("hide"); 
-                            }else{ 
-                                alert("Cookie can't be set! Please unblock this site from the cookie setting of your browser.");
-                            }
-                            }
-                            let checkCookie = document.cookie.indexOf("CookieBy=SergentMenuiserie"); //checking our cookie
-                       
-                            checkCookie != -1 ? cookieBox.classList.add("hide") : cookieBox.classList.remove("hide");
-                        </script> -->
-  <!-- <Cookies start> -->
-    <link rel="stylesheet" href="cookiesStyle.css">
-    <div id="cookieNotice" class="wrapper">   
-        <img src="images/SM_258x74 (1).svg" alt="">   
-        <div class="content"> 
-             <!-- <h4 class="text-dark">LOGO SOCIETE</h4> -->
-        </div>
-        <div class="content-wrap">
-            <div class="content">
-                <p class="text-dark">Ce site Web utilise ses propres cookies et ceux de tiers pour améliorer nos services et vous montrer des publicités liées à vos préférences en analysant vos habitudes de navigation. Pour donner votre consentement à son utilisation, appuyez sur le bouton Accepter. </p>
-                <div class="buttons">
-                    <button class="item" onclick="acceptCookieConsent()">J’ACCEPTE</button>
-                    <button class="item" onclick="acceptCookieConsent()">JE REFUSE</button>    
                 </div>
             </div>
-        </div>
-    </div>
-    <script>
-        <!-- // Create cookie -->
- function setCookie(cname, cvalue, exdays) {
-    const d = new Date();
-    d.setTime(d.getTime() + (exdays*24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
-} 
 
-// Delete cookie -->
- function deleteCookie(cname) {
-    const d = new Date();
-    d.setTime(d.getTime() + (24*60*60*1000));
-    let expires = "expires="+ d.toUTCString();
-    document.cookie = cname + "=;" + expires + ";path=/";
-} 
 
-// Read cookie
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
+          
+
+            <!-- <link rel="stylesheet" href="cookiesStyle.css">
+            <div id="cookieNotice" class="wrapper">
+                <img src="images/SM_258x74 (1).svg" alt="">
+                <div class="content"> -->
+                    <!-- <h4 class="text-dark">LOGO SOCIETE</h4> -->
+                <!-- </div> -->
+
+                <!-- <div class="content-wrap">
+                    <div class="content">
+                        <p class="text-dark">Ce site Web utilise ses propres cookies et ceux de tiers pour améliorer nos
+                            services et vous montrer des publicités liées à vos préférences en analysant vos habitudes
+                            de navigation. Pour donner votre consentement à son utilisation, appuyez sur le bouton
+                            Accepter. </p>
+                        <div class="buttons">
+                            <button class="item" onclick="acceptCookieConsent()">J’ACCEPTE</button>
+                            <button class="item" onclick="acceptCookieConsent()">JE REFUSE</button>
+                        </div>
+                    </div>
+                </div> -->
+            <!-- </div> -->
+            <script>
+                 // Create cookie -->
+                function setCookie(cname, cvalue, exdays) {
+                    const d = new Date();
+                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                    let expires = "expires=" + d.toUTCString();
+                    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+                }
+
+                // Delete cookie -->
+                function deleteCookie(cname) {
+                    const d = new Date();
+                    d.setTime(d.getTime() + (24 * 60 * 60 * 1000));
+                    let expires = "expires=" + d.toUTCString();
+                    document.cookie = cname + "=;" + expires + ";path=/";
+                }
+
+                function  indexDivView(){
+                    // console.log("clicked")
+                    document.getElementById("noneDisplay").style.display = "block";
+                 }
+                
+                function  indexDivNone(){
+                    // console.log("clicked")
+                    document.getElementById("noneDisplay").style.display = "none";
+                 }
+
+                 function  CookieAccept(){
+                    // console.log("clicked")
+                    document.getElementById("cookie").style.display = "none";
+                 }
+                
+                function  CookieClose(){
+                    // console.log("clicked")
+                    document.getElementById("cookie").style.display = "none";
+                 }
+
+                // Read cookie
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let decodedCookie = decodeURIComponent(document.cookie);
+                    let ca = decodedCookie.split(';');
+                    for (let i = 0; i < ca.length; i++) {
+                        let c = ca[i]; while (c.charAt(0) == ' ') { c = c.substring(1); } if (c.indexOf(name) == 0) { return c.substring(name.length, c.length); }
+                    } return "";
+                } 
+                // Set cookie consent function
+                acceptCookieConsent()
+                 {
+                    // deleteCookie('user_cookie_consent'); setCookie('user_cookie_consent', 1, 30);
+                    document.getElementById("cookieNotice").style.display = "none";
+                } 
+                let
+                    cookie_consent = getCookie("user_cookie_consent");
+                     if (cookie_consent != "") {
+                        document.getElementById("cookieNotice").style.display = "none";
+                    }
+                     else {
+                    document.getElementById("cookieNotice").style.display = "block";
+                } 
+                 function getValues() { 
+                console.log("hai"); 
+                }
+                 </script>
+               
+            
+
+
+        </body>
+        <style>
+
+            #noneDisplay{
+                position: fixed;
+                top: 180px;
+                z-index: 30;
+               margin-left: 60px;
+                /* left: 70px !important; */
+                /* border-radius: 2%; */
+                }
+          #cookie{
+            background-color: #e5e2e2;
+            opacity: .8;
+            /* width: 100px; */
+            position: fixed;
+            top: 280px;
+            left: 10px;
+            border-radius: 25px;
+          }
+          @media screen and (min-width: 750px) and (max-width: 1440px) {
+        .noneDisplay{
+    
+            margin-left:-50px !important;
+  }
 }
 
- // Set cookie consent
-function acceptCookieConsent(){
-    deleteCookie('user_cookie_consent');
-    setCookie('user_cookie_consent', 1, 30);
-    document.getElementById("cookieNotice").style.display = "none";
-} 
-
-
-let cookie_consent = getCookie("user_cookie_consent");
-if(cookie_consent != ""){
-    document.getElementById("cookieNotice").style.display = "none";
-}else{
-    document.getElementById("cookieNotice").style.display = "block";
-}
-
-// function getValues() {
-//     console.log("hai");
-// }
-    </script> 
-<!-- <Cookies end> -->        
-
-</body>
-
-</html>
+        </style>
+      
+        </html>
