@@ -121,7 +121,7 @@
 
     @media screen and (min-width:2300px) {
         .photo {
-            margin-right: -200px !important;
+            margin-right: -500px !important;
         }
     }
 
@@ -267,7 +267,7 @@
 </style>
 
 
-<body onload="loading();">
+<body onload="loading();indexDivView();">
     <!-- LOADING AREA START ===== -->
     <div class="loading-area">
         <div class="loading-box"></div>
@@ -1890,6 +1890,20 @@
                 </div>
             </div>
             <script>
+
+                // photo img
+                function indexDivView(){
+                document.getElementById("noneDisplay").style.display ="block";
+                setTimeout(indexDivNone,5000)
+               }
+               function indexDivNone(){
+                document.getElementById("noneDisplay").style.display ="none";
+               }
+
+
+
+
+
                 // Create cookie
                 function setCookie(cname, cvalue, exdays) {
                     const d = new Date();
@@ -1922,6 +1936,8 @@
                     }
                     return "";
                 }
+
+
 
                 // Set cookie consent
                 function acceptCookieConsent() {
