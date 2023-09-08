@@ -778,11 +778,21 @@
             .location1 {
               border: 1px solid;
             }
+            #city_field ,#code_field{
+              width: 20rem;
+            }
+            @media screen and (max-width:320px) {
+              #city_field ,#code_field{
+              width: 14rem;
+            }
+            }
+           
 
             #city-name,
             #postal-name {
               color: black;
             }
+          
           </style>
 
           <div class="container" id="page-5">
@@ -838,21 +848,22 @@
                       >
                     </form> -->
                 <div>
-                  <span id="city-name">Commune</span>
-                  <span class="location text-dark p-1" style="display: block;height: 35px;"></span>
+                  <span id="city-name">Commune</span><br>
+                  <!-- <span class="location text-dark p-1" style="display: block;height: 35px;"></span> -->
+                  <input type="text" id="city_field" placeholder="Please Enter Your Commune" onkeyup="locationPrinter()"><br>
                   <span class="mt-2" id="postal-name">Code Postal</span>
-                  <span class="location1 text-dark mt-2 p-1" style="display: block;height: 35px;"></span>
+                  <span class="location1 text-dark mt-2 p-1" id="code_field" style="display: block;height: 35px;"></span>
                   <p class="mt-2" id="error-msg"></p>
                   <span style="display: block;"> <br>
 
-                    <span
-                      onclick="locationActive();setTimeout(locationPrint,2000);setTimeout(errOff,1000);colorChanger()"
+                    <span 
+                      onclick="locationActive();setTimeout(locationPrint,2000);setTimeout(errOff,1000);colorChanger();"
                       class="text-white btn btn-info" id="hov"> <svg xmlns="http://www.w3.org/2000/svg" width="20"
                         height="26" fill="currentColor" class="bi bi-geo-alt text-white" viewBox="0 0 16 16">
                         <path
                           d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
                         <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
-                      </svg> OBTENEZ VOTRE EMPLACEMENT</span>
+                      </svg>OBTENEZ VOTRE CODE POSTAL</span>
                   </span>
                   <a href="appointment2.html" id="eventCheck1"><button class="btn mt-3 text-white"
                       style="background-color:#ea5702" onclick="getMaterials()">Suivante</button></a>
@@ -1216,6 +1227,7 @@
 
 
   <script>
+   
     let inner = document.querySelector(".inner-text").innerHTML;
 
     var first_value = "",
@@ -1641,18 +1653,22 @@
 
 
     function locationPrint() {
-      let a = document.querySelector('.location').innerHTML;
-      let city1 = a.split(" ");
-      city1.pop();
-      let city2 = 'Commune: ';
-      for (let i of city1) {
-        city2 += i;
-      }
-      if (city2.length > 10) {
-        document.getElementById('value6').innerHTML = city2;
-        document.getElementById('value7').innerHTML = 'Code Postal: ' +
-          document.querySelector('.location1').innerHTML;
-      }
+      let city_name = document.getElementById('city_field').value;
+      let postal_code =  document.querySelector('.location1').innerHTML;
+
+
+      // let a = document.querySelector('.location').innerHTML;
+      // let city1 = a.split(" ");
+      // city1.pop();
+      // let city2 = 'Commune: ';
+      // for (let i of city1) {
+      //   city2 += i;
+      // }
+      // if (city2.length > 10) {
+        // document.getElementById('value6').innerHTML = 'Commune : ';
+        document.getElementById('value7').innerHTML = 'Code Postal: ' + postal_code;
+         
+      // }
 
     }
     // PREVIOUS CODE START
@@ -1752,15 +1768,12 @@
           document.getElementById("page-4").style.display = "block";
           document.getElementById("page-5").style.display = "none";
           document.getElementById("value5").innerHTML = "";
-          document.querySelector(".location").innerHTML = "";
           document.querySelector(".location1").innerHTML = "";
           document.getElementById("value6").innerHTML = "";
           document.getElementById("value7").innerHTML = "";
-          // document.getElementById("error-msg").innerHTML = "";
           document.getElementById("city-name").style.color = "black";
           document.getElementById("postal-name").style.color = "black";
-          document.querySelector('.location').style.borderColor = 'black';
-          document.querySelector('.location1').style.borderColor = 'black';
+          document.getElementById('city_field').value = '';
           break;
 
         case "initial":
@@ -1819,7 +1832,7 @@
     // PREVIOUS CODE END
     // GEO-LOCATION CODE START
     function locationActive() {
-      var $locationText = $(".location");
+      var $locationText = $(".locatio");
       var $locationTexts = $(".location1");
 
       // Check for geolocation browser support and execute success method
@@ -1885,8 +1898,22 @@
 
     let btn = document.querySelector("#eventCheck1");
     btn.addEventListener('click', e => {
-      let a = document.querySelector(".location").innerHTML;
+      let a = document.querySelector("#city_field").value;
       let b = document.querySelector(".location1").innerHTML;
+
+      if(a.trim() == '' && b.trim() != ''){
+        e.preventDefault();
+        alert('Veuillez saisir votre ville');
+      }
+      if(b.trim() == '' && a.trim() != ''){
+        e.preventDefault();
+        alert("Veuillez appuyer sur le bouton Obtenir votre code postal");
+      }
+      if(a.trim() == '' && b.trim() == ''){
+        e.preventDefault();
+        alert('Veuillez saisir les informations valides');
+      }
+
       if (a.trim() == '' || b.trim() == '') {
         e.preventDefault();
         document.getElementById("city-name").style.color = "red";
@@ -1894,7 +1921,7 @@
         document.querySelector('.location').style.borderColor = 'red';
         document.querySelector('.location1').style.borderColor = 'red';
         // document.getElementById("error-msg").style.color = "red" ;
-        alert("Veuillez appuyer sur le bouton obtenir votre position                         ")
+        // alert("Veuillez appuyer sur le bouton obtenir votre position")
         // document.getElementById("error-msg").innerHTML = "Veuillez appuyer sur le bouton obtenir votre position";
       }
       document.querySelector(".location").innerHTML = "";
