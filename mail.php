@@ -33,13 +33,13 @@ $mail->SetFrom($fname);
     $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
     $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);
-$mail->Subject ='MAIL received from RAPPELEZ-MOI in SERGENT MENUISERIE';
+$mail->Subject ='Mail reçu de RAPPELEZ-MOI dans SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
-$mail->Body .='<h3>FIRST NAME : ' . strtoupper($fname) . "</h3>";
-$mail->Body .='<h3>LAST NAME : ' .  strtoupper($lname) . "</h3>";
-$mail->Body .='<h3>CONTACT NO : ' . $mobile . "</h3>";
-$mail->Body .='<h3>LOCATION : ' .  strtoupper($location) . "</h3>";
+$mail->Body .='<h3>PRÉNOM : ' . strtoupper($fname) . "</h3>";
+$mail->Body .='<h3>NOM: ' .  strtoupper($lname) . "</h3>";
+$mail->Body .='<h3>NUMÉRO DE CONTACT: ' . $mobile . "</h3>";
+$mail->Body .='<h3>LIEU : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {

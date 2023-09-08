@@ -29,10 +29,10 @@ $mail->SetFrom($email);
     // $email = isset($_POST['news-letter']) ? preg_match("/^([a-z0-9\+_\-]+)(\. [a-z0-9\+_\-]+)*@([a-z0-9\-]+\.)+[ a-z]{2,6}$/ix", "", $_POST['news-letter']) : "";    
    
 $mail->isHTML(true);  
-$mail->Subject = 'Mail received from User E-mail in SERGENT MENUISERIE';
+$mail->Subject = "Courrier reçu de l'E-mail de l'utilisateur dans SERGENT MENUISERIE";
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
-$mail->Body .='<h2>User e-mail is : ' .strtolower($email ) . "</h2>";
+$mail->Body .="<h2>L'e-mail de l'utilisateur est : " .strtolower($email ) . "</h2>";
 
 
 $mail->WordWrap = 50;
