@@ -119,9 +119,9 @@
         }
     }
 
-    @media screen and (min-width:2300px) {
+    @media screen and (min-width:2150px) {
         .photo {
-            margin-right: -500px !important;
+            margin-left: 700px !important;
         }
     }
 
@@ -131,6 +131,7 @@
             width: 300px !important;
             height: 100% !important;
             font-size: small;
+            top:-60px;
         }
 
         .top {
@@ -1882,9 +1883,9 @@
                                     Accepter.
                                 </p>
                                 <div class="buttons mx-5">
-                                    <button class="item btn btn-lg text-white" style="background-color: #db5200;"
+                                    <button class="item btn btn-lg text-white next" style="background-color: #db5200;"
                                         onclick="acceptCookieConsent()">J’ACCEPTE</button>
-                                    <button class="item btn btn-lg text-white" style="background-color: #db5200;"
+                                    <button class="item btn btn-lg text-white next" style="background-color: #db5200;"
                                         onclick="acceptCookieConsent()">JE REFUSE</button>
                                 </div>
                             </div>
@@ -1985,7 +1986,7 @@
                     width: 400px;
                     position: fixed;
                     /* top: 360px; */
-                    top: 501px;
+                    top: 451px;
                     left: 10px;
                     border-radius: 25px;
                     z-index: 32;
@@ -2000,9 +2001,41 @@
                     position: fixed;
                     /* top: 360px; */
                     top: 501px;
-                    left: 500px;
+                    left: 100px;
                     border-radius: 25px;
                     z-index: 32;
+                }
+            }
+            @media screen and (max-width:500px) {
+                .cookie {
+                    background-color: #e5e2e2;
+                    opacity: .9;
+                    width: 340px;
+                    position: fixed;
+                    /* top: 360px; */
+                    top: 420px;
+                    left: 20px;
+                    border-radius: 25px;
+                    z-index: 32;
+                }
+                .next{
+                    margin:2%;
+                }
+            }
+            @media screen and (max-width:400px) {
+                .cookie {
+                    background-color: #e5e2e2;
+                    opacity: .9;
+                    width: 340px;
+                    position: fixed;
+                    /* top: 360px; */
+                    top: 280px;
+                    left: 20px;
+                    border-radius: 25px;
+                    z-index: 32;
+                }
+                .next{
+                    margin:2%;
                 }
             }
 
