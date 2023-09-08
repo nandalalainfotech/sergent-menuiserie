@@ -39,12 +39,12 @@ $mail->SetFrom($email);
 $mail->SetFrom($text_box);
 
 $mail->isHTML(true);
-$mail->Subject = 'Mail received from One Time Contact Model in SERGENT MENUISERIE';
-$mail->Body .='<h3>Civility : ' .strtoupper($gender)  . "</h3>";
+$mail->Subject = 'Courrier reçu du modèle de contact unique de SERGENT MENUISERIE';
+$mail->Body .='<h3>Civilité : ' .strtoupper($gender)  . "</h3>";
 $mail->Body .='<h3>Nom : ' .strtoupper($firstName)  . "</h3>";
-$mail->Body .='<h3>Prenom : ' .strtoupper($lastName ) . "</h3>";
-$mail->Body .='<h3>Phone no.: ' . $mobile . "</h3>";
-$mail->Body .='<h3>Email.: ' .strtolower( $email ). "</h3>";
+$mail->Body .='<h3>Prénom : ' .strtoupper($lastName ) . "</h3>";
+$mail->Body .='<h3>Numéro de téléphone: ' . $mobile . "</h3>";
+$mail->Body .='<h3>Courriel: ' .strtolower( $email ). "</h3>";
 $mail->Body .='<h3>Description : ' .strtoupper($text_box)  . "</h3>";
 
 $mail->WordWrap = 50;
