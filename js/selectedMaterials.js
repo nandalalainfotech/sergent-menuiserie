@@ -1,4 +1,5 @@
 function getMaterials(){
+  var city = $("#city_field").val();
     $.ajax({
         method: "POST",
         url: "getMaterialsMail.php",
@@ -8,7 +9,7 @@ function getMaterials(){
                textFour:  $("p.unbroken3").text(),
                textFive:  $("p.unbroken4").text(),
                textSix:  $("p.unbroken5").text(),
-               textSeven:  $("p.unbroken6").text(),
+               textSeven: 'Commune : ' + city,
                textEight:  $("p.unbroken7").text(),
               },
       }).done(function (response) {
