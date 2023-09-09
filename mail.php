@@ -24,7 +24,7 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("sergentmenuiserie40@gmail.com","");
-$mail->addCC('karthiad05@gmail.com','');
+ 
 $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 $mail->SetFrom($fname);
