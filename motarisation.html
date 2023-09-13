@@ -1277,6 +1277,82 @@
         </div>
     </div>
     <!-- CONTACT MODAL END  -->
+
+
+     <!-- CONTACT US START -->
+     <style>
+        @keyframes blink {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        #fix:hover {
+            animation-play-state: paused;
+        }
+
+        #fix {
+            height: 4rem;
+            z-index: 4;
+            position: fixed;
+            bottom: 5rem;
+            right: 15px;
+            font-size: 12px;
+            animation: blink 2s infinite ease-in;
+        }
+
+        #fix ul li img {
+            width: 4rem;
+            border-radius: 25%;
+        }
+
+        #fix ul {
+            list-style-type: none;
+        }
+
+        #fix:hover #hider {
+            visibility: visible;
+        }
+
+        #hider {
+            visibility: hidden;
+            color: rgb(233, 134, 63);
+        }
+
+        #main1 {
+            background-color: rgb(245, 245, 245);
+            color: #040404;
+        }
+
+        #main1 input:focus,
+        textarea:focus {
+            outline: none;
+        }
+
+        .sub {
+            background-color: #db5200;
+            color: #fff;
+        }
+    </style>
+    <div id="fix">
+        <a href="contactUs.html">
+            <ul>
+                <li><img src="images//req-img-1/contact-us2.png" alt=""></li>
+                <li id="hider">Contactez</li>
+                <li id="hider" class="text-center">nous</li>
+            </ul>
+        </a>
+    </div>
+    <!-- CONTACT US END -->
+
     <!-- FOOTER START -->
     <footer class="site-footer footer-dark ">
 

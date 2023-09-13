@@ -59,7 +59,7 @@ if(!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
     echo 'Message has been sent.';
-    echo '<script>alert("Your message sent successfully!!")</script>';
+    // echo '<script>alert("Your message sent successfully!!")</script>';
     }
-    // header("Location:make-an-appointment.html");
+    header("Location:thankyou.html");
     ?>
