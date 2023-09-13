@@ -26,8 +26,8 @@ $mail->Port = 587;
 $mail->SMTPAuth = true; 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("sergentmenuiserie40@gmail.com","");
- 
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+$mail->AddAddress('nitheeshkumarmurugesan281199@gmail.com',"");
 $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 
@@ -47,7 +47,7 @@ $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 $mail->Body .='<h3>Civilité : ' .strtoupper($gender)  . "</h3>";
 $mail->Body .='<h3>Nom : ' . strtoupper($name) .  "</h3>";
 $mail->Body .='<h3>Prénom : ' . strtoupper($fullname) .  "</h3>";
-$mail->Body .='<h3Numéro de téléphone : ' . $mobile .  "</h3>";
+$mail->Body .='<h3>Numéro de téléphone : ' . $mobile .  "</h3>";
 $mail->Body .='<h3>Courriel : ' . strtolower($email) .  "</h3>";
 // $mail->Body .='Ville :' . $city . "\n";
 $mail->Body .='<h3>DescDescriptionription : ' . strtoupper($text) .  "</h3>";
@@ -61,5 +61,5 @@ if(!$mail->Send()) {
     echo 'Message has been sent.';
     echo '<script>alert("Your message sent successfully!!")</script>';
     }
-    header("Location:make-an-appointment.html");
+    // header("Location:make-an-appointment.html");
     ?>
