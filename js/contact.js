@@ -16,6 +16,6 @@ function loading(){
  function contactPageDisplay(){
     if(count!=1) {
         let parent = document.querySelector('#fix');
-        parent.querySelector("a").href= 'appointment2.html';
+        parent.querySelector("a").href= 'contactUs.html';
     }
 }
