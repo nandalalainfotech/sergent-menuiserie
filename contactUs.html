@@ -13,10 +13,9 @@
     <!-- FAVICONS ICON -->
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <link rel="shortcut icon" type="image/x-icon" href="images/Fav_Sm.png" />
-    <!-- <script src="//cdnjs.cloudflare.com/ajax/li bs/jquery/2.1.3/jquery.min.js"></script> -->
 
     <!-- PAGE TITLE HERE -->
-    <title>Sergent Menuiserie</title>
+    <title>Sergent Menuiserie| DEVIS GRATUIT</title>
 
     <!-- MOBILE SPECIFIC -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -115,7 +114,8 @@
         //     return flag;
         // }
 
-    </script>	
+    </script>
+
 </head>
 <style>
     #spinner {
@@ -163,6 +163,7 @@
 
 
 
+
     .s-btn {
         border: none;
         background-color: #db5200;
@@ -180,10 +181,6 @@
 
     .s-btn:hover {
         box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
-    }
-
-    #main {
-        background-color: #000000;
     }
 </style>
 
@@ -233,9 +230,11 @@
                         <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
                             title="entrez l' Emplacement valide."> <br>
                         <br>
+
                         <button type="submit" class="s-btn mt-3"
-                        onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
-                        Soumettre</button>
+                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+                            Soumettre</button>
+
                         <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
                     </form>
                     <div>
@@ -253,288 +252,202 @@
 
     <!-- POPUP END  -->
 
-                <!-- HEADER START -->
-                <!-- HEADER START -->
-                <header class="site-header header-style-3 mobile-sider-drawer-menu">
+    <!-- HEADER START -->
+    <header class="site-header header-style-3 mobile-sider-drawer-menu">
 
-                    <div class="top-bar site-bg-primary">
-                        <div class="container">
+        <div class="top-bar site-bg-primary">
+            <div class="container">
 
-                            <div class="d-flex justify-content-between">
-                                <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
-                                    <ul class="wt-topbar-info e-p-bx text-white">
-                                        <li><span class="fonts"> LUNDI AU SAMEDI 09H00 à 19H00</span><span>|</span><span
-                                                class="fonts"> DIMANCHE 09H00 à 17H00</span></li>
-                                    </ul>
-                                </div>
+                <div class="d-flex justify-content-between">
+                    <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                        <ul class="wt-topbar-info e-p-bx text-white">
+                            <li><span class="fonts"> LUNDI AU SAMEDI 09H00 à 19H00</span><span>|</span><span
+                                    class="fonts"> DIMANCHE 09H00 à 17H00</span></li>
+                        </ul>
+                    </div>
 
-                                <div class="wt-topbar-right d-flex flex-wrap align-content-center">
-                                    <ul class="wt-topbar-info-2 e-p-bx text-white">
-                                        <li id="modal"><a href="javascript:void(0)" class="text-white"><i
-                                                    class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
-                                        <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS
-                                                GRATUIT</a></li>
-                                    </ul>
+                    <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                        <ul class="wt-topbar-info-2 e-p-bx text-white">
+                            <li id="modal"><a href="javascript:void(0)" class="text-white"><i
+                                        class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
+                            <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS
+                                    GRATUIT</a></li>
+                        </ul>
 
-                                    <ul class="social-icons">
-                                        <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
-                                        <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-                                    </ul>
+                        <ul class="social-icons">
+                            <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
+                            <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                        </ul>
 
-                                </div>
-                            </div>
+                    </div>
+                </div>
 
+            </div>
+        </div>
+
+
+        <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+            <div class="main-bar">
+
+                <div class="container clearfix">
+
+                    <div class="logo-header" style="height: 75px;width: 110px;">
+                        <div class="logo-header" style="height: 75px;width: 110px;">
+                            <a href="index.html">
+                                <img src="images/SM_258x74.svg" style="height: 70px; width: 110px;">
+
+                            </a>
                         </div>
                     </div>
 
+                    <!-- NAV Toggle Button -->
+                    <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
+                        class="navbar-toggler collapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-first"></span>
+                        <span class="icon-bar icon-bar-two"></span>
+                        <span class="icon-bar icon-bar-three"></span>
+                    </button>
 
-                    <div class="sticky-header main-bar-wraper  navbar-expand-lg">
-                        <div class="main-bar">
+                    <!-- MAIN Vav -->
+                    <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
 
-                            <div class="container clearfix">
+                        <ul class=" nav navbar-nav menu-size">
+                            <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
+                                <ul class="sub-menu">
+                                    <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
+                                        <ul class="sub-menu">
 
-                                <div class="logo-header" style="height: 75px;width: 110px;">
-                                    <div class="logo-header" style="height: 75px;width: 110px;">
-                                        <a href="index.html">
-                                            <img src="images/SM_258x74.svg" style="height: 70px; width: 110px;">
+                                            <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
+                                            <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
+                                            <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
+                                            <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="TrendRange.html">GAMME TENDANCE</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="PVCWindow.html">FENETRE PVC</a></li>
+                                            <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="WoodenWindow.html">FENETRE BOIS</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
 
-                                        </a>
-                                    </div>
-                                </div>
+                            </li>
 
-                                <!-- NAV Toggle Button -->
-                                <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
-                                    class="navbar-toggler collapsed">
-                                    <span class="sr-only">Toggle navigation</span>
-                                    <span class="icon-bar icon-bar-first"></span>
-                                    <span class="icon-bar icon-bar-two"></span>
-                                    <span class="icon-bar icon-bar-three"></span>
-                                </button>
+                            <li class="has-child">
+                                <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
+                                <ul class="sub-menu">
+                                    <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
+                                            <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
+                                            <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
+                                        </ul>
+                                    </li>
 
-                                <!-- MAIN Vav -->
-                                <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
+                                    <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
+                                            <li><a href="zibaie component.html">VOLET ROULANT ALU</a></li>
+                                            <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
+                                        </ul>
+                                    </li>
+                                   <li><a href="javascript:;">VOLETS PERSIENNES</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
 
-                                    <ul class=" nav navbar-nav menu-size">
-                                        <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
-                                                    <ul class="sub-menu">
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
 
-                                                        <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
-                                                        <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
-                                                        <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
-                                                        <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="TrendRange.html">GAMME TENDANCE</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="PVCWindow.html">FENETRE PVC</a></li>
-                                                        <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="WoodenWindow.html">FENETRE BOIS</a></li>
-                                                    </ul>
-                                                </li>
-                                            </ul>
+                            <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
+                                    D'ENTREE</a>
+                                <ul class="sub-menu">
+                                    <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
+                                    </li>
+                                    <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
+                                            ALU</a></li>
+                                    <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
+                                    <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
+                                    <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
+                                    </li>
+                                    <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
+                                </ul>
 
-                                        </li>
+                            </li>
 
-                                        <li class="has-child">
-                                            <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                                                        <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
-                                                        <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
-                                                    </ul>
-                                                </li>
+                            <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
+                                    GARAGE</a>
+                                <ul class="sub-menu">
 
-                                                <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
-                                                        <li><a href="zibaie component.html">VOLET ROULANT ALU</a></li>
-                                                        <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
-                                                    </ul>
-                                                </li>
-                                            <li><a href="javascript:;">VOLETS PERSIENNES</a>
-                                                    <ul class="sub-menu">
-                                                        <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
+                                    <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
+                                    <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
+                                    <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li>
+                                    <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
+                                </ul>
+                            </li>
 
-                                                    </ul>
-                                                </li>
-                                            </ul>
-                                        </li>
+                            <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
+                                    CLOTURES</a>
+                                <ul class="sub-menu">
+                                    <li><a href="portalPVC.html">PORTAIL PVC</a></li>
+                                    <li><a href="portalALU.html">PORTAIL ALU</a></li>
+                                    <li><a href="cloture.html">CLÔTURES</a></li>
+                                    <li><a href="gardeCrops.html">GARDE CORPS</a></li>
+                                    <li><a href="motarisation.html">MOTORISATION</a></li>
+                                </ul>
 
-                                        <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
-                                                D'ENTREE</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
-                                                </li>
-                                                <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
-                                                        ALU</a></li>
-                                                <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
-                                                <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
-                                                <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
-                                                </li>
-                                                <li><a href="harmony-product.html">HARMONIE |L'EXCLUSIVITE PRODUITS</a></li>
-                                            </ul>
+                            </li>
+                            <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
+                                    PERGOLAS</a>
+                                <ul class="sub-menu">
 
-                                        </li>
-
-                                        <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
-                                                GARAGE</a>
-                                            <ul class="sub-menu">
-
-                                                <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
-                                                <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
-                                                <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li>
-                                                <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
-                                                CLOTURES</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="portalPVC.html">PORTAIL PVC</a></li>
-                                                <li><a href="portalALU.html">PORTAIL ALU</a></li>
-                                                <li><a href="cloture.html">CLÔTURES</a></li>
-                                                <li><a href="gardeCrops.html">GARDE CORPS</a></li>
-                                                <li><a href="motarisation.html">MOTORISATION</a></li>
-                                            </ul>
-
-                                        </li>
-                                        <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
-                                                PERGOLAS</a>
-                                            <ul class="sub-menu">
-
-                                                <li><a href="interior blind.html">STORE INTERIEUR</a></li>
-                                                <li><a href="awning.html">STORE BANNE</a></li>
-                                                <li><a href="pergola.html">PERGOLA</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-child">
-                                            <a href="javascript:;" style="font-size: .9rem;">VERANDAS</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="Verandas.html">VERANDAS</a></li>
-                                            </ul>
-                                        </li>
-                                        <li class="has-child">
-                                            <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- SITE Search -->
-                        <div id="search">
-                            <span class="close"></span>
-                            <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-                                <div class="input-group">
-                                    <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
-                                    <span class="input-group-append"><button type="button" class="search-btn"><i
-                                                class="fa fa-paper-plane"></i></button></span>
-                                </div>
-                            </form>
-                        </div>
+                                    <li><a href="interior blind.html">STORE INTERIEUR</a></li>
+                                    <li><a href="awning.html">STORE BANNE</a></li>
+                                    <li><a href="pergola.html">PERGOLA</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="javascript:;" style="font-size: .9rem;">VERANDAS</a>
+                                <ul class="sub-menu">
+                                    <li><a href="Verandas.html">VERANDAS</a></li>
+                                </ul>
+                            </li>
+                            <li class="has-child">
+                                <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                            </li>
+                        </ul>
                     </div>
+                </div>
+            </div>
+
+            <!-- SITE Search -->
+            <div id="search">
+                <span class="close"></span>
+                <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                    <div class="input-group">
+                        <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
+                        <span class="input-group-append"><button type="button" class="search-btn"><i
+                                    class="fa fa-paper-plane"></i></button></span>
+                    </div>
+                </form>
+            </div>
+        </div>
 
 
-                </header>
-<!-- HEADER END -->
+    </header>
     <!-- HEADER END -->
 
 
-    <!-- <style>
-           @media only screen and (max-width: 600px) {
-                
-            }          
-        </style> -->
-
-    <!-- CONTENT START -->
-    <div class="container mb-5 mt-5">
-        <div class="row">
-            <div class="col-sm-2"></div>
-            <div class="col-sm-8 ">
-                <div class="container py-3" id="main1">
-                    <div class="container  ">
-                        <form action="thankyou.html" method="post" id="makeAnAppointmentForm">
-                            <div class="row p-3">
-                                <div class="col-sm-4 p-1">
-                                    Rendez-vous?
-                                </div>
-                                <div class="col-sm-2 p-1">
-                                    <input type="radio" name="place" id="home" value="Domicile" required>
-                                    <label for="home">Domicile</label>
-                                </div>
-                                <div class="col-sm-3 p-1">
-                                    <input type="radio" name="place" id="Work" value="Telephonique" required>
-                                    <label for="Work"> Telephonique</label>
-                                </div>
-                                <!-- <div class="col-sm-3 p-1">
-                                    <input type="radio" name="place" id="distance" value="From a Distance">
-                                    <label for="distance">De loin</label>
-                                </div> -->
-                                <!-- <div class="col-sm-3"></div> -->
-                            </div>
-                            <div class="row p-3">
-                                <div class="col-sm-4 p-1">À quelle date voulez-vous rencontrer?</div>
-                                <div class="col-sm-3 p-3">
-                                    <input type="date" id="myDate" onchange="dateFun(this.id)" name="date" required>
-                                </div>
-                                <div class="col-sm-5 p-3">
-                                    <input type="text" name="" id="getDate" size="27rem" readonly>
-                                </div>
-                            </div>
-                            <div class="row p-3">
-                                <div class="col-sm-3 p-1">
-                                    Quelle session souhaitez-vous rencontrer ?
-                                </div>
-                                <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="morn" value="Matin" required>
-                                    <label for="morn">Matin</label>
-                                </div>
-                                <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="after" value="Après-midi" required>
-                                    <label for="after"> Après-midi</label>
-                                </div>
-                                <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="eve" value="Soir" required>
-                                    <label for="eve">Soir</label>
-                                </div>
-                                <div class="col-sm-4"></div>
-                            </div>
-                            
-                            <div class="row">
-                                <div class="col-sm-5"></div>
-                                <div class="col-sm-2">
-                                    <!-- <button data-target="thankyou.html" class="btn  sub m-t20">Soumettre</button> -->
-                                    <input type="submit" value="Soumettre" class="btn rounded-5 text-white"
-                                    style="background-color: #db5200;">
-                                </div>
-                                <div class="col-sm-4"></div>
-                            </div>
-                    </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-2"></div>
-    </div>
-    </div>
-
-
-    <div>
-        <pre></pre>
-    </div>
-
-    <!-- CONTENT END -->
-    <!-- CONTACT US START -->
+   
     <style>
         @keyframes blink {
             0% {
@@ -582,19 +495,9 @@
             color: rgb(233, 134, 63);
         }
 
-        #main1 {
+        #shadow {
             background-color: rgb(245, 245, 245);
-            color: #040404;
-        }
-
-        #main1 input:focus,
-        textarea:focus {
-            outline: none;
-        }
-
-        .sub {
-            background-color: #db5200;
-            color: #fff;
+            /* box-shadow: 5px 10px 8px 10px  rgba(112, 105, 102, 0.6); */
         }
     </style>
     <div id="fix">
@@ -607,58 +510,103 @@
         </a>
     </div>
     <!-- CONTACT US END -->
+    <style>
+       
+        input:focus,
+        textarea:focus {
+            outline: none;
+        }
+    </style>
+    <!-- CONTENT END -->
 
-    <!-- CONTACT MODAL START  -->
-    <div class="modal fade" id="myModal2" role="dialog">
-        <div class="modal-dialog modal-md">
+    <div class="container px-5 py-3" id="gradient">
+        <div class="row">
+            <div class="col-sm-3"></div>
+            <div class="col-sm-6 text-dark">
+                <div class="container-fluid p-5" id="shadow">
+                    <form action="appointment2.php" method="post" id="contact_form">
+                        <div class="row ">
+                            <div class="col-sm-12">
+                                <!-- <p>Civilite <span class="text-danger">*</span></p>  -->
+                            </div>
+                            <div class="col-sm-3">
 
-            <!-- Modal content-->
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA</h5>
-                    <button type="button" class="close" data-dismiss="modal" onclick="">&times;</button>
-                </div>
-                <div class="modal-body">
+                                <input type="radio" name="civility" id="female" value="Madame" required>
+                                <label for="female">Madame</label>
+                            </div>
+                            <div class="col-sm-3">
 
-                    <form action="oneTimeContactModal.php" method="post" id="form_modal">
-                        <!-- <p>Civilite <span class="text-danger">*</span></p> -->
-                        <input type="radio" name="civility" id="female" value="female" class="female" required>
-                        <label for="female">Madame</label>
-                        <input type="radio" name="civility" id="male" value="male" required class="male">
-                        <label for="male">Monsieur</label> <br>
-                        <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Nom" name="name" id="name1" required
-                            style="width: 100%;"><br><br>
-                        <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Prenom" name="initial" id="initial" required
-                            style="width: 100%;"><br><br>
-                        <!-- <label for="mobile">Phone number <span class="text-danger">*</span></label> <br> -->
-                        <input type="text" placeholder="Portable" name="mobile" id="mobile1" required
-                            style="width: 100%;" maxlength="10" minlength="10"><br><br>
-                        <!-- <label for="text">Email <span class="text-danger">*</span></label> <br> -->
-                        <input type="email" placeholder="Email" name="email" id="email1" required
-                            style="width: 100%;"><br><br>
-                        <!-- <label for="text">Description de votre projet <span class="text-danger">*</span></label> <br> -->
-                        <textarea name="text" id="text_box" placeholder="Description de votre projet" cols="" rows="3"
-                            style="width: 100%;" required class="text_box"></textarea>
-                        <input type="checkbox" name="subscribe" id="sub" required>
-                        <label for="sub">I subscribe to the newsletter.</label> <br>
-                        <input type="submit" value="Envoyer" class="btn rounded-5 text-white"
-                            style="background-color: #db5200;">
+                                <input type="radio" name="civility" id="male" value="Monsieur" required>
+                                <label for="male">Monsieur</label>
+                            </div>
+                            <div class="col-sm-7"></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <!-- <label for="name">Nom <span class="text-danger">*</span></label> <br> -->
+                                <input type="text" placeholder="Nom" name="name" id="name1" required
+                                    style="width: 100%;">
+                            </div><br><br>
+                            <div class="col-sm-6">
+                                <!-- <label for="initial">Prenom <span class="text-danger">*</span></label> <br> -->
+                                <input type="text" placeholder="Prenom" name="initial" id="initial" required
+                                    style="width: 100%;">
+                            </div><br><br>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-6">
+
+                                <!-- <label for="city">Portable <span class="text-danger">*</span></label> <br> -->
+                                <input type="email" placeholder="Email" name="email" id="email1" required
+                                    style="width: 100%;">
+                            </div><br><br>
+                            <div class="col-sm-6">
+                                <!-- <label for="mobile">Email<span class="text-danger">*</span></label> <br> -->
+                                <input type="text" placeholder="Portable" name="mobile" id="mobile1" required
+                                    style="width: 100%;">
+                            </div><br><br>
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <label for="text">Description de votre projet <span class="text-danger">*</span></label>
+                                <br>
+                                <textarea name="text" id="text_box" cols="" rows="3" style="width: 100%;"
+                                    required></textarea>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-sm-12">
+                               <p> <input type="checkbox" name="subscribe" id="sub1" required ><span style="margin-left: 10px;">Je souhaite recevoir des informations complémentaires
+                                 de Sergent Menuiserie par e-mail ou téléphone</span> </p>
+                                <!-- <label for="sub"></label>  -->
+                                 <p> <input type="checkbox" name="subscribe" id="sub2" required ><span style="margin-left: 10px;"> Je souhaite recevoir les offres des partenaires
+                                    de Sergent Menuiserie par e-mail ou téléphone
+                                </span> </p>
+                                <p>
+                                    Après nous avoir transmis vos coordonnées téléphoniques via ce 
+                                    formulaire, notre appel aura comme objectif de vous proposer un rendez-vous 
+                                    avec l'un de nos conseillers, à votre domicile, pour étudier votre projet.
+                                </p>
+                                <br>
+                                <!-- <input type="checkbox" name="subscribe" id="sub" required>
+                                <label for="sub"></label> <br> -->
+                                <input type="submit" value="Envoyer" class="btn rounded-5 text-white"
+                                    style="background-color: #db5200;">
+                            </div>
+                        </div>
                     </form>
-                    <!-- <div>
-                                        <div class="spinner-border  my-3 " id="spinner"></div>
-                                        <div id="spin-content" class="mt-3">please wait...</div>
-                                    </div> -->
                 </div>
-                <!-- <div class="modal-footer">
-                              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-                            </div> -->
             </div>
-
+            <div class="col-sm-3"></div>
         </div>
     </div>
-    <!-- CONTACT MODAL END  -->
+
+    <div>
+        <pre></pre>
+    </div>
+
 
     <!-- CONTACT MODAL START  -->
     <div class="modal fade" id="myModal2" role="dialog">
@@ -743,7 +691,8 @@
                         <div class="widget n-letter">
                             <h3 class="widget-title"> Abonnez-vous</h3>
                             <div class="n-letter-content">
-                               <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles</p>
+                                <p>Abonnez-vous à notre newsletter pour recevoir nos dernières mises à jour et nouvelles
+                                </p>
                                 <div class="nl-type">
                                     <form role="search" method="post" id="check" action="emailCheck.php">
                                         <div class="nl-form">
@@ -768,7 +717,7 @@
                         <div class="widget">
                             <h3 class="widget-title">Contactez-nous</h3>
                             <p>Notre technicien disponible</p>
-                            <p> pour vous 7 sur 7 jours </p>
+                            <p>pour vous 7 sur 7 jours</p>
                             <ul class="widget_address">
                                 <li><i class="flaticon-location"></i> 4 rue SCHOTTEN <br>
                                     91560
@@ -827,9 +776,17 @@
 
     </footer>
     <!-- FOOTER END -->
+
     <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
 
+
     </div>
+    <!-- <div class="row py-3">
+        
+        </div>
+        <div class="row py-3">
+        
+        </div> -->
 
 
     <style>
@@ -866,7 +823,8 @@
     <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
     <script src="js/emailCheck.js"></script>
-    <script src="js/makeAnAppointment.js"></script>
+    <script src="js/contactUs.js"></script>
+
     <script>
         function dateFun(id) {
             let date = new Date(document.getElementById(id).value);
