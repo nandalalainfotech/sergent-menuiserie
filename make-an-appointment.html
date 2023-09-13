@@ -463,17 +463,17 @@
             <div class="col-sm-8 ">
                 <div class="container py-3" id="main1">
                     <div class="container  ">
-                        <form action="appointment.php" method="post">
+                        <form action="thankyou.html" method="post" id="makeAnAppointmentForm">
                             <div class="row p-3">
                                 <div class="col-sm-4 p-1">
                                     Rendez-vous?
                                 </div>
                                 <div class="col-sm-2 p-1">
-                                    <input type="radio" name="place" id="home" value="Home">
+                                    <input type="radio" name="place" id="home" value="Domicile" required>
                                     <label for="home">Domicile</label>
                                 </div>
                                 <div class="col-sm-3 p-1">
-                                    <input type="radio" name="place" id="Work" value="Work Place">
+                                    <input type="radio" name="place" id="Work" value="Telephonique" required>
                                     <label for="Work"> Telephonique</label>
                                 </div>
                                 <!-- <div class="col-sm-3 p-1">
@@ -485,7 +485,7 @@
                             <div class="row p-3">
                                 <div class="col-sm-4 p-1">À quelle date voulez-vous rencontrer?</div>
                                 <div class="col-sm-3 p-3">
-                                    <input type="date" id="myDate" onchange="dateFun(this.id)" name="date">
+                                    <input type="date" id="myDate" onchange="dateFun(this.id)" name="date" required>
                                 </div>
                                 <div class="col-sm-5 p-3">
                                     <input type="text" name="" id="getDate" size="27rem" readonly>
@@ -496,15 +496,15 @@
                                     Quelle session souhaitez-vous rencontrer ?
                                 </div>
                                 <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="morn" value="Morning">
+                                    <input type="radio" name="session" id="morn" value="Matin" required>
                                     <label for="morn">Matin</label>
                                 </div>
                                 <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="after" value="Afternoon">
+                                    <input type="radio" name="session" id="after" value="Après-midi" required>
                                     <label for="after"> Après-midi</label>
                                 </div>
                                 <div class="col-sm-2 p-1">
-                                    <input type="radio" name="session" id="eve" value="Evening">
+                                    <input type="radio" name="session" id="eve" value="Soir" required>
                                     <label for="eve">Soir</label>
                                 </div>
                                 <div class="col-sm-4"></div>
@@ -513,7 +513,9 @@
                             <div class="row">
                                 <div class="col-sm-5"></div>
                                 <div class="col-sm-2">
-                                    <button data-target="thankyou.html" class="btn  sub m-t20">Soumettre</button>
+                                    <!-- <button data-target="thankyou.html" class="btn  sub m-t20">Soumettre</button> -->
+                                    <input type="submit" value="Soumettre" class="btn rounded-5 text-white"
+                                    style="background-color: #db5200;">
                                 </div>
                                 <div class="col-sm-4"></div>
                             </div>
@@ -864,6 +866,7 @@
     <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
     <script src="js/emailCheck.js"></script>
+    <script src="js/makeAnAppointment.js"></script>
     <script>
         function dateFun(id) {
             let date = new Date(document.getElementById(id).value);

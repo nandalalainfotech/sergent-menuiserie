@@ -1,6 +1,3 @@
-// function getValues() {
-//     console.log("hai");
-// }
 let form1 = document.getElementById('form_modal');
 
 let male = document.getElementById('male');
@@ -13,7 +10,7 @@ let text_box = document.getElementById('text_box');
 let chckBox = document.getElementById('sub');
 
 form1.addEventListener('submit', function (e) {
-
+    console.log("called");
     if (!mobValidator(mobile.value)) {
         e.preventDefault();
         alert("Numéro de portable invalide");
@@ -36,6 +33,14 @@ form1.addEventListener('submit', function (e) {
         }
 
     }, 3000);
+    let gender = document.getElementsByName('civility');
+    sessionStorage.setItem('gender',gender[0].checked ? gender[0].value : gender[1].value);
+    sessionStorage.setItem('name',name1.value);
+    sessionStorage.setItem('initial',initial.value);
+    sessionStorage.setItem('mobile',mobile.value);
+    sessionStorage.setItem('email',email.value);
+    sessionStorage.setItem('text_box',text_box.value);
+
 });
 function mobValidator(value) {
     let validRegex = /^[0-9]{10}$/;
