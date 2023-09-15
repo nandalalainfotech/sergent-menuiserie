@@ -602,7 +602,7 @@
             <div class="col-sm-3"></div>
             <div class="col-sm-6 text-dark">
                 <div class="container-fluid p-5" id="shadow">
-                    <form action="make-an-appointment.html" method="post" id="form_modal">
+                    <form action="make-an-appointment.html" method="post" id="appointment2Form">
                         <div class="row ">
                             <div class="col-sm-12">
                                 <!-- <p>Civilite <span class="text-danger">*</span></p>  -->
@@ -901,9 +901,60 @@
     <script src="js/jquery.bgscroll.js"></script><!-- BACKGROUND SCROLL -->
 
     <script src="js/emailCheck.js"></script>
-    <script src="js/contactModalValidation.js"></script>
+    <!-- <script src="js/contactModalValidation.js"></script> -->
 
     <script>
+                // contactModalMail
+// =============================================================== 
+let appointment2Form = document.getElementById('appointment2Form');
+
+let appointment2Formmale = document.getElementById('male');
+let appointment2Formfemale = document.getElementById('female');
+let appointment2Formname1 = document.getElementById('name1');
+let appointment2Forminitial = document.getElementById('initial');
+let appointment2Formmobile = document.getElementById('mobile1');
+let appointment2Formemail = document.getElementById('email1');
+let appointment2Formtext_box = document.getElementById('text_box');
+let appointment2FormchckBox = document.getElementById('sub');
+console.log("called");
+appointment2Form.addEventListener('submit', function (e) {
+    console.log("called");
+    if (!mobValidator(appointment2Formmobile.value)) {
+        e.preventDefault();
+        alert("Numéro de portable invalide");
+    }
+
+    setTimeout(() => {
+        if (mobValidator(appointment2Formmobile.value)) {
+            $("#myModal2").modal("hide");
+            name1.value = '';
+            initial.value = '';
+            mobile.value = '';
+            email.value = '';
+            text_box.value = '';
+            chckBox.checked = false
+
+            if (male.checked == true)
+                male.checked = false;
+            else
+                female.checked = false;
+        }
+
+    }, 3000);
+    let gender = document.getElementsByName('civility');
+    sessionStorage.setItem('gender',gender[0].checked ? gender[0].value : gender[1].value);
+    sessionStorage.setItem('name',appointment2Formname1.value);
+    sessionStorage.setItem('initial',appointment2Forminitial.value);
+    sessionStorage.setItem('mobile',appointment2Formmobile.value);
+    sessionStorage.setItem('email',appointment2Formemail.value);
+    sessionStorage.setItem('text_box',appointment2Formtext_box.value);
+
+});
+function mobValidator(value) {
+    let validRegex = /^[0-9]{10}$/;
+    return String(value).match(validRegex);
+}
+// ------------------------------------------------------------- 
         function dateFun(id) {
             let date = new Date(document.getElementById(id).value);
             document.getElementById("getDate").value = `${zero(date.getDate())} - ${months[date.getMonth()]} - ${date.getFullYear()} - ${days[date.getDay()]} `;

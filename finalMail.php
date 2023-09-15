@@ -34,16 +34,15 @@ $mail->Mailer = "smtp";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 587;
 $mail->SMTPAuth = true; 
-// $mail->SMTPSecure = 'ssl';
 $mail->SMTPKeepAlive = true;
 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 // $mail->AddAddress("sergentmenuiserie40@gmail.com","");
 $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-// $mail->AddAddress('nivedhavenkat16@gmail.com',"");
-$mail->AddAddress('moorthy@nandalalainfotech.com',"");
-// $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
+$mail->AddAddress('nivedhavenkat16@gmail.com',"");
+$mail->AddAddress('kalaimathi.kannadhasan@gmail.com',"");
+$mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
 $mail->addBCC('karthikeyan16599@gmail.com','');
 $mail->AddAddress('moorthyp2096@gmail.com',"");
 
@@ -52,15 +51,10 @@ $mail->SetFrom($date);
 $mail->SetFrom($session);
 $mail->SetFrom($mob);
 
-    // $meetingAt = isset($_POST['place']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['place']) : "";    
-    // $date = isset($_POST['date']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['date']) : "";  
-    // $session = isset($_POST['session']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['session']) : "";
-    // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);  
 $mail->Subject = 'Courrier reçu de Meeting Place in SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
-
 
 $mail->Body .= '<h3>'. strtoupper($MaterialOne) . '</h3>';
 $mail->Body .= '<h3>'. strtoupper($MaterialTwo) . '</h3>';

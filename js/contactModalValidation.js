@@ -1,4 +1,4 @@
-let form1 = document.getElementById('form_modal');
+let form1 = document.getElementById('appointment2Form');
 
 let male = document.getElementById('male');
 let female = document.getElementById('female');
