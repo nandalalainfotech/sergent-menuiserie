@@ -39,13 +39,9 @@ $mail->SMTPKeepAlive = true;
 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
-$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-// $mail->AddAddress('nivedhavenkat16@gmail.com',"");
-$mail->AddAddress('moorthy@nandalalainfotech.com',"");
-// $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
-$mail->addBCC('karthikeyan16599@gmail.com','');
-$mail->AddAddress('moorthyp2096@gmail.com',"");
+$mail->AddAddress("sergentmenuiserie40@gmail.com","");
+$mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
+
 
 $mail->SetFrom($meetingAt);
 $mail->SetFrom($date);
