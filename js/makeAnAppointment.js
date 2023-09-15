@@ -2,9 +2,9 @@ let appointmentForm = document.getElementById('makeAnAppointmentForm');
 let appointment = document.getElementsByName('place');
 let date = document.getElementById('myDate');
 let sessionArr = document.getElementsByName('session');
-
+console.log("called11");
 appointmentForm.addEventListener('submit',()=>{
-    console.log("called");
+    console.log("called22");
     let session = '';
    for(let i of sessionArr){
     if(i.checked){
@@ -14,7 +14,8 @@ appointmentForm.addEventListener('submit',()=>{
   
     $.ajax({
         method: "POST",
-        url: "appointment.php",
+        // url: "appointment.php",
+        url: 'finalMail.php',
         data: { textOne: sessionStorage.getItem('materialOne'),
                 textTwo: sessionStorage.getItem('materialTwo'),
                 textThree: sessionStorage.getItem('materialThree'),
