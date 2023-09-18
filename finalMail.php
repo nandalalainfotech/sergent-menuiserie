@@ -14,7 +14,7 @@ $MaterialThree = $_POST['textThree'];
 $MaterialFour = $_POST['textFour'];
 $MaterialFive = $_POST['textFive'];
 $MaterialSix = $_POST['textSix'];
-$moMaterialSeven = $_POST['textSeven'];
+$MaterialSeven = $_POST['textSeven'];
 $MaterialEight = $_POST['textEight'];
 $gender = $_POST['textNine'];
 $name = $_POST['textTen'];
@@ -38,7 +38,9 @@ $mail->SMTPKeepAlive = true;
 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("sergentmenuiserie40@gmail.com","");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+$mail->AddAddress("karthikeyan16599@gmail.com","");
+$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
 $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
 
 
@@ -76,7 +78,7 @@ if(!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
     echo 'Message has been sent.';
-    echo '<script>alert("Your message sent successfully!!")</script>';
+    // echo '<script>alert("Your message sent successfully!!")</script>';
     }
     header("Location:thankyou.html");
     ?>

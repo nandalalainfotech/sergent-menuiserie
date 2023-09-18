@@ -49,6 +49,17 @@
   <!-- JQUERY LINK   -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script>
+    function reDirect(){
+      let fname = document.getElementById("fname");
+      let lname = document.getElementById("lname");
+      let mobile = document.getElementById("mobile");
+      let location = document.getElementById("location");
+      if(fname.value.trim() != '' && lname.value.trim() != '' 
+         && mobile.value.trim() != '' && location.value.trim() != '')
+      window.location.href='https://sergentmenuiserie.com/thankyou.html';
+      else
+        alert('Veuillez remplir tous les détails');
+    }
     function clearForm() {
       let fname = document.getElementById("fname").value;
       let lname = document.getElementById("lname").value;
@@ -206,7 +217,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="mail.php" method="post">
+          <form action="" method="post">
             <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
             <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
               title="entrez a-z ouA-z." />
@@ -229,7 +240,7 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-              onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+              onclick='reDirect()'>
               Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
@@ -1812,7 +1823,6 @@
   <script src="js/jquery.bgscroll.js"></script>
   <!-- BACKGROUND SCROLL -->
 
-  <script src="js/emailCheck.js"></script>
   <script src="js/emailCheck.js"></script>
 
   <!-- Product thumbnail carousel-->
