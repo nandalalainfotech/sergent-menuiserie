@@ -29,7 +29,7 @@ $session = $_POST['textSeventeen'];
 
 $mail = new PHPMailer();
 $mail->IsSMTP();  
-$mail->SMTPDebug = 2;
+$mail->SMTPDebug = 0;
 $mail->Mailer = "smtp";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 587;
@@ -38,10 +38,13 @@ $mail->SMTPKeepAlive = true;
 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","sm");
+$mail->AddAddress("contact@sergentmenuiserie.com","sm");
+
 $mail->AddAddress("karthikeyan16599@gmail.com","");
-$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-$mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
+// $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
+// $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
+// $mail->AddAddress('priyadarshini@nandalalainfotech.com',"");
 
 
 $mail->SetFrom($meetingAt);

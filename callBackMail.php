@@ -9,6 +9,11 @@ require_once 'PHPMailer/src/Exception.php';
 require_once 'PHPMailer/src/PHPMailer.php';
 require_once 'PHPMailer/src/SMTP.php';
 
+// $fname =  $_POST['textOne'];
+// $lname =  $_POST['textTwo'];
+// $mobile =  $_POST['textThree'];
+// $location = $_POST['textFour'];
+
 $fname = htmlentities($_POST['fname']);
 $lname = htmlentities($_POST['lname']);
 $mobile = htmlentities($_POST['mobile']);
@@ -24,7 +29,8 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("sergentmenuiserie40@gmail.com","");
- 
+
+// $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
 $mail->AddAddress("karthikeyan16599@gmail.com","");
 $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
@@ -49,7 +55,7 @@ if(!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
     echo 'Message has been sent.';
-    // echo '<script>alert("Your message sent successfully!!")</script>';
+    echo '<script>window.location = "https://sergentmenuiserie.com/thankyou.html"</script>';
     }
-    header("Location:thankyou.html");
+    header("Location:https://sergentmenuiserie.com/thankyou.html");
     ?>
