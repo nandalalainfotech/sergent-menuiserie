@@ -1,5 +1,7 @@
 function getMaterials(){
   var city = $("#city_field").val();
+  var postal = $("#postal_code").val();
+
     // $.ajax({
     //     method: "POST",
     //     url: "getMaterialsMail.php",
@@ -23,5 +25,5 @@ function getMaterials(){
       sessionStorage.setItem('materialFive',$("p.unbroken4").text());
       sessionStorage.setItem('materialSix',$("p.unbroken5").text());
       sessionStorage.setItem('materialSeven','Commune : ' + city);
-      sessionStorage.setItem('materialEight',$("p.unbroken7").text());
+      sessionStorage.setItem('materialEight','Code Postal : ' + postal);
 }

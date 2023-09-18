@@ -39,7 +39,9 @@ $mail->SMTPKeepAlive = true;
 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("sergentmenuiserie40@gmail.com","");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+$mail->AddAddress("karthikeyan16599@gmail.com","");
+
 $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
 
 
