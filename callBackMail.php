@@ -29,10 +29,8 @@ $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 // $mail->AddAddress("sergentmenuiserie40@gmail.com","");
-// $mail->AddAddress("contact@sergentmenuiserie.com","sm");
-$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-$mail->AddAddress("karthikeyan16599@gmail.com","");
-$mail->addBCC('abinayaselvaraj26.04@gmail.com','');
+$mail->AddAddress("contact@sergentmenuiserie.com","sm");
+$mail->AddAddress("karthiad05@gmail.com","");
 
 $mail->SetFrom($fname);
     // $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
