@@ -1,8 +1,8 @@
-let emailForm = document.getElementById('check');
+let eForm = document.getElementById('check');
 let mail = document.getElementById('mail');
 
 
-emailForm.addEventListener('submit',function(event){
+eForm.addEventListener('submit',function(event){
     if(!validationInputs()){
         event.preventDefault();
     }

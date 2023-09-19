@@ -46,12 +46,12 @@ $mail->Body .='<h3>LIEU : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {
-    echo 'Message was not sent.';
-    echo 'Mailer error: ' . $mail->ErrorInfo;
+   // echo 'Message was not sent.';
+  //  echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-    echo 'Message has been sent.';
+   // echo 'Message has been sent.';
     // echo '<script>alert("Your message sent successfully!!")</script>';
     echo '<script>window.location = "https://sergentmenuiserie.com/thankyou.html"</script>';
     }
-    header("Location:https://sergentmenuiserie.com/thankyou.html");
+  //  header("Location:https://sergentmenuiserie.com/thankyou.html");
     ?>

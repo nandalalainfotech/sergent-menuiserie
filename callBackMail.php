@@ -9,15 +9,15 @@ require_once 'PHPMailer/src/Exception.php';
 require_once 'PHPMailer/src/PHPMailer.php';
 require_once 'PHPMailer/src/SMTP.php';
 
-// $fname =  $_POST['textOne'];
-// $lname =  $_POST['textTwo'];
-// $mobile =  $_POST['textThree'];
-// $location = $_POST['textFour'];
+$fname =  $_POST['textOne'];
+$lname =  $_POST['textTwo'];
+$mobile =  $_POST['textThree'];
+$location = $_POST['textFour'];
 
-$fname = htmlentities($_POST['fname']);
-$lname = htmlentities($_POST['lname']);
-$mobile = htmlentities($_POST['mobile']);
-$location = htmlentities($_POST['location']);
+// $fname = htmlentities($_POST['fname']);
+// $lname = htmlentities($_POST['lname']);
+// $mobile = htmlentities($_POST['mobile']);
+// $location = htmlentities($_POST['location']);
 
 $mail = new PHPMailer();
 $mail->IsSMTP();  
@@ -28,17 +28,17 @@ $mail->Port = 587;
 $mail->SMTPAuth = true; 
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("sergentmenuiserie40@gmail.com","");
-
-// $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+// $mail->AddAddress("contact@sergentmenuiserie.com","sm");
+$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
 $mail->AddAddress("karthikeyan16599@gmail.com","");
 $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 $mail->SetFrom($fname);
-    $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
-    $lname = isset($_POST['lname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['lname']) : "";  
-    $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
-    $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
+    // $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
+    // $lname = isset($_POST['lname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['lname']) : "";  
+    // $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
+    // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
 $mail->isHTML(true);
 $mail->Subject ='Mail reçu de RAPPELEZ-MOI dans SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
@@ -50,12 +50,14 @@ $mail->Body .='<h3>NUMÉRO DE CONTACT : ' . $mobile . "</h3>";
 $mail->Body .='<h3>LIEU : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
+$mail->clearAllRecipients();
+$mail->clearAttachments();
 if(!$mail->Send()) {
-    echo 'Message was not sent.';
-    echo 'Mailer error: ' . $mail->ErrorInfo;
+   // echo 'Message was not sent.';
+  //  echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-    echo 'Message has been sent.';
+    //echo 'Message has been sent.';
     echo '<script>window.location = "https://sergentmenuiserie.com/thankyou.html"</script>';
     }
-    header("Location:https://sergentmenuiserie.com/thankyou.html");
+  //  header("Location:https://sergentmenuiserie.com/thankyou.html");
     ?>

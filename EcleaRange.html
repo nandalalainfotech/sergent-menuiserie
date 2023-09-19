@@ -54,6 +54,14 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
   <script src="js/callBack.js"></script>
   <script>
+// ================================================== 
+
+
+ 
+// ================================================== 
+
+
+
     function clearForm() {
         let fname = document.getElementById("fname").value;
         let lname = document.getElementById("lname").value;
@@ -211,7 +219,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="callBackMail.php" method="post"  id="callBackForm">
+          <form action="thankyou.html" method="post"  id="callBackForm">
             <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
             <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
               title="entrez a-z ouA-z." />
@@ -234,7 +242,7 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-                           >
+                       onclick="getCallBackMail()"    >
                             Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
