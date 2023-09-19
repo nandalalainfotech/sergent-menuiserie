@@ -110,7 +110,7 @@
     // }
 
   </script>
-
+<script src="js/callBack.js"></script>
 </head>
 <style>
   #spinner {
@@ -207,7 +207,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="mail.php" method="post">
+          <form action="thankyou.html" method="post"  id="callBackForm">
             <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
             <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
               title="entrez a-z ouA-z." />
@@ -220,8 +220,8 @@
             <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
             <br />
 
-            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10" placeholder="Portable"
-              pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+             <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
+                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
             <br />
             <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
             <br />
@@ -230,8 +230,8 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-              onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
-              Soumettre</button>
+                       onclick="getCallBackMail()"    >
+                            Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
           <div>

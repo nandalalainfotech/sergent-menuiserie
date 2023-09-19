@@ -218,7 +218,7 @@
       0 17px 50px 0 rgba(0, 0, 0, 0.19);
   }
 </style>
-
+<script src="js/callBack.js"></script>
 <body>
   <!-- LOADING AREA START ===== -->
   <div class="loading-area">
@@ -247,7 +247,7 @@
           </button>
         </div>
         <div class="modal-body">
-          <form action="mail.php" method="post">
+          <form action="thankyou.html" method="post"  id="callBackForm">
             <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
             <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
               title="entrez a-z ouA-z." />
@@ -270,7 +270,7 @@
             <br />
             <br />
             <button type="submit" class="s-btn mt-3"
-                            onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,3000)'>
+                       onclick="getCallBackMail()"    >
                             Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
