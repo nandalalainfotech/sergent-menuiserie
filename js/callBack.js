@@ -3,7 +3,7 @@ function getCallBackMail(){
  let lname = document.getElementById("lname").value;
  let mobile = document.getElementById("mobile").value;
  let locations = document.getElementById("location").value;
-//  console.log("methodCall",fname.value);
+ console.log("methodCall",fname);
          $.ajax({
             method: "POST",
             url: 'callBackMail.php',
