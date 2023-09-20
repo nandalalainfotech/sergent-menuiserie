@@ -205,7 +205,7 @@
           <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
         </div>
         <div class="modal-body">
-          <form action="thankyou.html" method="post"  id="callBackForm">
+          <form action="thankyou.html" method="post" id="callBackForm">
             <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
             <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
               title="entrez a-z ouA-z." />
@@ -218,8 +218,8 @@
             <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
             <br />
 
-             <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
-                            placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10" placeholder="Portable"
+              pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
             <br />
             <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
             <br />
@@ -227,9 +227,8 @@
               title="entrez l' Emplacement valide." />
             <br />
             <br />
-            <button type="submit" class="s-btn mt-3"
-                       onclick="getCallBackMail()"    >
-                            Soumettre</button>
+            <button type="submit" class="s-btn mt-3" onclick="getCallBackMail()">
+              Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
           <div>
@@ -270,7 +269,7 @@
               <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
               <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
               <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-          </ul>
+            </ul>
 
           </div>
         </div>
@@ -310,7 +309,7 @@
                   <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
                     <ul class="sub-menu">
 
-                      <li><a href="compositeWindow.html">FENETRE COMPOSITE</a></li>
+                      <li><a href="compositeWindow.html">FENETRE PVC</a></li>
                       <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
                       <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
                       <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
@@ -349,7 +348,7 @@
                       <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
                     </ul>
                   </li>
-                 <li><a href="javascript:;">VOLETS PERSIENNES</a>
+                  <li><a href="javascript:;">VOLETS PERSIENNES</a>
                     <ul class="sub-menu">
                       <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
 
@@ -376,11 +375,11 @@
               <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
                   GARAGE</a>
                 <ul class="sub-menu">
-
+                  <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
                   <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
                   <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
-                  <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li>
-                  <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
+                  <!-- <li><a href="slidingGarageDoor.html">PORTE DE GARAGE COULISSSANTE</a></li> -->
+               
                 </ul>
               </li>
 
@@ -477,8 +476,7 @@
       margin-left: 1rem;
       cursor: pointer;
 
-      /* justify-content: center;
-  align-items: center; */
+
       >p {
         color: black;
       }
@@ -522,7 +520,8 @@
     #portal-page-1,
     #pergola-page-1,
     #show2,
-    #show3 {
+    #show3,
+    #Veranda_counter {
       display: none;
     }
 
@@ -530,6 +529,94 @@
       #div1 {
         /* margin-left: 5rem; */
         text-align: center;
+      }
+    }
+
+    @media screen and (min-width:1400px) and (max-width:1500px) {
+
+      #list1,
+      #list2 {
+        margin-left: -10px;
+      }
+    }
+
+    @media screen and (min-width:1500px) and (max-width:1600px) {
+
+      #list1,
+      #list2 {
+        margin-left: -20px;
+      }
+    }
+
+    @media screen and (min-width:1600px) and (max-width:1700px) {
+
+      #list1,
+      #list2 {
+        margin-left: -40px;
+      }
+    }
+
+    @media screen and (min-width:1700px) and (max-width:1800px) {
+
+      #list1,
+      #list2 {
+        margin-left: -60px;
+      }
+    }
+
+    @media screen and (min-width:1800px) and (max-width:1900px) {
+
+      #list1,
+      #list2 {
+        margin-left: -70px;
+      }
+    }
+
+    @media screen and (min-width:1900px) and (max-width:2000px) {
+
+      #list1,
+      #list2 {
+        margin-left: -90px;
+      }
+    }
+
+    @media screen and (min-width:2000px) and (max-width:2100px) {
+
+      #list1,
+      #list2 {
+        margin-left: -110px;
+      }
+    }
+
+    @media screen and (min-width:2100px) and (max-width:2200px) {
+
+      #list1,
+      #list2 {
+        margin-left: -130px;
+      }
+    }
+
+    @media screen and (min-width:2200px) and (max-width:2300px) {
+
+      #list1,
+      #list2 {
+        margin-left: -150px;
+      }
+    }
+
+    @media screen and (min-width:2300px) and (max-width:2400px) {
+
+      #list1,
+      #list2 {
+        margin-left: -170px;
+      }
+    }
+
+    @media screen and (min-width:2400px) and (max-width:2500px) {
+
+      #list1,
+      #list2 {
+        margin-left: -190px;
       }
     }
 
@@ -708,6 +795,61 @@
                         font-size: larger;
                         font-weight: 600;
                       " onclick="windowCount6()">
+                  more than 5 
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container" id="Veranda_counter">
+            <div class="container second p-1">
+              <button class="btn btn-md text-light" style="background-color: #db5200"
+                onclick="windowPrev(this.parentElement.parentElement.id)">
+                Page précédente
+              </button>
+              <br /><br />
+              <!-- <h3 class="form">demande de citation</h3> -->
+              <p class="text-dark">Combien en cherchez-vous ?</p>
+              <div class="flex-container" id="btn">
+                <div class="window-hover number text-dark" id="number1" style="
+                        padding: 3.6rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount1()">
+                  1
+                </div>
+                <div class="shutter-hover number text-dark" id="number2" style="
+                        padding: 3.6rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount2()">
+                  2
+                </div>
+                <div class="door-hover number text-dark" id="number3" style="
+                        padding: 3.6rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount3()">
+                  3
+                </div>
+                <div class="garage-hover number text-dark" id="number4" style="
+                        padding: 3.6rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount4()">
+                  4
+                </div>
+                <div class="portal-hover number text-dark" id="number5" style="
+                        padding: 3.6rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount5()">
+                  5
+                </div>
+                <div class="pergola-hover number text-dark" id="number6" style="
+                        padding: 2.4rem;
+                        font-size: larger;
+                        font-weight: 600;
+                      " onclick="windowCount6()">
                   more than 5
                 </div>
               </div>
@@ -778,21 +920,25 @@
             .location1 {
               border: 1px solid;
             }
-            #city_field ,#postal_code{
+
+            #city_field,
+            #postal_code {
               width: 20rem;
             }
+
             @media screen and (max-width:320px) {
-              #city_field ,#postal_code{
-              width: 14rem;
+
+              #city_field,
+              #postal_code {
+                width: 14rem;
+              }
             }
-            }
-           
+
 
             #city-name,
             #postal-name {
               color: black;
             }
-          
           </style>
 
           <div class="container" id="page-5">
@@ -850,7 +996,8 @@
                 <div class="text-dark">
                   <label for="city_field">Adresse</label> <br>
                   <!-- <span class="location text-dark p-1" style="display: block;height: 35px;"></span> -->
-                  <input type="text" id="city_field" placeholder="Veuillez renseigner votre adresse" onkeyup="locationPrinter()"><br>
+                  <input type="text" id="city_field" placeholder="Veuillez renseigner votre adresse"
+                    onkeyup="locationPrinter()"><br>
                   <label for="postal_code">Code postal et commune</label> <br>
                   <input type="text" name="" id="postal_code" placeholder="Code postal et commune">
                   <p class="mt-2" id="error-msg"></p>
@@ -865,8 +1012,8 @@
                         <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
                       </svg>OBTENEZ VOTRE CODE POSTAL</span>
                   </span> -->
-                  <a href="appointment2.html" id="eventCheck1"><button class="btn mt-3 text-white"
-                      style="background-color:#ea5702" onclick="getMaterials()">Suivante</button></a>
+                    <a href="appointment2.html" id="eventCheck1"><button class="btn mt-3 text-white"
+                        style="background-color:#ea5702" onclick="getMaterials()">Suivante</button></a>
                 </div>
               </div>
             </div>
@@ -1054,12 +1201,12 @@
             <!-- <h3 class="form">demande de citation</h3> -->
             <p class="text-dark">Quel type de pergola recherchez-vous ?</p>
             <div class="flex-container">
-              <div class="shutter-hover" onclick="countPergola1()">
+              <!-- <div class="shutter-hover" onclick="countPergola1()">
                 <img src="images/req-img-1/pergola-1.jpg" width="100px" alt="" />
                 <p style="font-size: medium" id="pergola-page-3">
                   Vérandas
                 </p>
-              </div>
+              </div> -->
               <div class="window-hover" onclick="countPergola()">
                 <img src="images/req-img-1/pergola-1.1.png" width="100px" alt="" />
                 <p style="font-size: medium" id="pergola-page-2">
@@ -1227,7 +1374,7 @@
 
 
   <script>
-   
+
     let inner = document.querySelector(".inner-text").innerHTML;
 
     var first_value = "",
@@ -1281,49 +1428,104 @@
     }
 
     function windowCount1() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number1").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "none";
       //  document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = " Nombre de matériaux :" + val4;
       print3();
     }
     function windowCount2() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number2").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+
+      document.getElementById("Veranda_counter").style.display = "none";
       //  document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = "Nombre de matériaux :" + val4;
       print3();
     }
     function windowCount3() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number3").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "none";
       //  document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = " Nombre de matériaux :" + val4;
       print3();
     }
     function windowCount4() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number4").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "none";
       //  document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = " Nombre de matériaux :" + val4;
       print3();
     }
     function windowCount5() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number6").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "none";
       // document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = " Nombre de matériaux :" + val4;
       print3();
     }
     function windowCount6() {
+      if (flag) {
+        document.getElementById("for2").style.display = "none";
+        document.getElementById("for3").style.display = "none";
+      }
+      else{
+        document.getElementById("for2").style.display = "block";
+        document.getElementById("for3").style.display = "block";
+      }
       val4 = document.getElementById("number6").innerText;
       document.getElementById("page-2").style.display = "none";
       document.getElementById("page-3").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "none";
       // document.querySelector(".inner-text").innerHTML += "<br> type de materiau :" + val4;
       third_value = " Nombre de matériaux :" + val4;
       print3();
@@ -1356,17 +1558,20 @@
     // }
 
     // Shutter Code Start
-
+    let flag = false;
     function getVeranda() {
       val1 = document.getElementById("veranda").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
-      document.getElementById("window-page-1").style.display = "block";
+      document.getElementById("Veranda_counter").style.display = "block";
+      flag = true;
       first_value = val1;
       print1();
       document.querySelector(".inner-text").classList.add("border");
     }
     function getWindow() {
+      flag = false;
+
       val1 = document.getElementById("window-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1415,6 +1620,7 @@
     // Shutter Code Start
 
     function getShutter() {
+      flag = false;
       val1 = document.getElementById("shutter-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1453,6 +1659,7 @@
 
     //  Door Start
     function getDoor() {
+      flag = false;
       val1 = document.getElementById("door-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1492,6 +1699,7 @@
     //  Garage Start
 
     function getGarage() {
+      flag = false;
       val1 = document.getElementById("garage-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1539,6 +1747,7 @@
     //  Portal Start
 
     function getPortal() {
+      flag = false;
       val1 = document.getElementById("portal-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1589,6 +1798,7 @@
     //  Garage Start
 
     function getPergola() {
+      flag = false;
       val1 = document.getElementById("pergola-page").innerHTML;
       document.getElementById("choice").style.display = "none";
       document.getElementById("head-div").style.display = "none";
@@ -1654,7 +1864,7 @@
 
     function locationPrint() {
       let city_name = document.getElementById('city_field').value;
-      let postal_code =  document.querySelector('.location1').innerHTML;
+      let postal_code = document.querySelector('.location1').innerHTML;
 
 
       // let a = document.querySelector('.location').innerHTML;
@@ -1665,9 +1875,9 @@
       //   city2 += i;
       // }
       // if (city2.length > 10) {
-        // document.getElementById('value6').innerHTML = 'Commune : ';
-        document.getElementById('value7').innerHTML = 'Code Postal: ' + postal_code;
-         
+      // document.getElementById('value6').innerHTML = 'Commune : ';
+      document.getElementById('value7').innerHTML = 'Code Postal: ' + postal_code;
+
       // }
 
     }
@@ -1684,13 +1894,11 @@
           break;
         case "page-2":
           let two = document.getElementById("value2").innerHTML;
-
           if (
             two.includes("les fenêtres") ||
             two.includes("Des portes") ||
             two.includes("Fenêtre de toit")
           ) {
-            console.log("true");
             document.getElementById("window-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
@@ -1702,7 +1910,6 @@
             two.includes("Roulants") ||
             two.includes("Battants")
           ) {
-            console.log("true");
             document.getElementById("shutter-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
@@ -1714,7 +1921,6 @@
             two.includes("Blindé") ||
             two.includes("Porte de service")
           ) {
-            console.log("true");
             document.getElementById("door-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
@@ -1726,7 +1932,6 @@
             two.includes("Latérale") ||
             two.includes("Enroulable") || two.includes("battants")
           ) {
-            console.log("true");
             document.getElementById("garage-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
@@ -1737,7 +1942,6 @@
             two.includes("Plein") || two.includes("Semi-ajouré") ||
             two.includes("Ajouré") || two.includes("Clôture")
           ) {
-            console.log("true");
             document.getElementById("portal-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
@@ -1745,16 +1949,35 @@
           }
 
           if (two.includes("Pergolas") || two.includes("Store banne") || two.includes("Vérandas")) {
-            console.log("true");
             document.getElementById("pergola-page-1").style.display = "block";
             document.getElementById("page-2").style.display = "none";
             document.getElementById("value2").innerHTML = "";
             break;
           }
+          if (one.includes("Vérandas")) {
+            document.getElementById("page-2").style.display = "block";
+            document.getElementById("choice").style.display = "flex";
+            document.getElementById("head-div").style.display = "block";
+            document.getElementById("Veranda_counter").style.display = "none";
+            document.getElementById("value2").innerHTML = "";
+          }
+
 
         case "page-3":
-          document.getElementById("page-2").style.display = "block";
+          if (flag) {
+            document.getElementById("Veranda_counter").style.display = "block";
+          }
+          else {
+            document.getElementById("page-2").style.display = "block";
+          }
           document.getElementById("page-3").style.display = "none";
+          document.getElementById("value3").innerHTML = "";
+          break;
+
+        case "Veranda_counter":
+          document.getElementById("Veranda_counter").style.display = "none";
+          document.getElementById("choice").style.display = "flex";
+          document.getElementById("head-div").style.display = "block";
           document.getElementById("value3").innerHTML = "";
           break;
 
@@ -1901,15 +2124,15 @@
       let a = document.querySelector("#city_field").value;
       let b = document.querySelector(".location1").innerHTML;
 
-      if(a.trim() == '' && b.trim() != ''){
+      if (a.trim() == '' && b.trim() != '') {
         e.preventDefault();
         alert('Veuillez saisir votre ville');
       }
-      if(b.trim() == '' && a.trim() != ''){
+      if (b.trim() == '' && a.trim() != '') {
         e.preventDefault();
         alert("Veuillez appuyer sur le bouton Obtenir votre code postal");
       }
-      if(a.trim() == '' && b.trim() == ''){
+      if (a.trim() == '' && b.trim() == '') {
         e.preventDefault();
         alert('Veuillez saisir les informations valides');
       }
@@ -1943,7 +2166,7 @@
         document.getElementById("error-msg").innerHTML = '';
     }
 
-      // GEO-LOCATION CODE END
+    // GEO-LOCATION CODE END
   </script>
 
 
@@ -2043,7 +2266,7 @@
                 <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
                 <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
                 <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-            </ul>
+              </ul>
             </div>
           </div>
 
