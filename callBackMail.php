@@ -33,10 +33,7 @@ $mail->AddAddress("contact@sergentmenuiserie.com","sm");
 $mail->AddAddress("karthiad05@gmail.com","");
 
 $mail->SetFrom($fname);
-    // $fname = isset($_POST['fname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['fname']) : "";    
-    // $lname = isset($_POST['lname']) ? preg_replace("/[^\.\-\' a-zA-Z0-9]/", "", $_POST['lname']) : "";  
-    // $mobile = isset($_POST['mobile']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['mobile']) : "";
-    // $location = isset($_POST['location']) ? preg_replace("/[^\.\-\_\@a-zA-Z0-9]/", "", $_POST['location']) : "";
+   
 $mail->isHTML(true);
 $mail->Subject ='Mail reçu de RAPPELEZ-MOI dans SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
@@ -48,14 +45,15 @@ $mail->Body .='<h3>NUMÉRO DE CONTACT : ' . $mobile . "</h3>";
 $mail->Body .='<h3>LIEU : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
-$mail->clearAllRecipients();
-$mail->clearAttachments();
+
 if(!$mail->Send()) {
-   // echo 'Message was not sent.';
-  //  echo 'Mailer error: ' . $mail->ErrorInfo;
+   echo 'Message was not sent.';
+   echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
-    //echo 'Message has been sent.';
-    echo '<script>window.location = "https://sergentmenuiserie.com/thankyou.html"</script>';
+    echo 'Message has been sent.';
+    // echo '<script>window.location = "https://sergentmenuiserie.com/thankyou.html"</script>';
     }
   //  header("Location:https://sergentmenuiserie.com/thankyou.html");
+  $mail->clearAllRecipients();
+  $mail->clearAttachments();
     ?>
