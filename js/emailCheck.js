@@ -1,5 +1,5 @@
-let eForm = document.getElementById('check');
-let mail = document.getElementById('mail');
+var eForm = document.getElementById('check');
+var mail = document.getElementById('mail');
 
 
 eForm.addEventListener('submit',function(event){
