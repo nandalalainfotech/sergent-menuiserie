@@ -3617,7 +3617,7 @@ ol.comment-list {
 	width: 49px;
 	margin: 49px auto;
 	position: relative;
-	animation: cssload-invert 2.3s infinite steps(2, end);
+	animation: cssload-invert 2.3s infinite steps(0, end);
 }
 .cssload-ball {
 	height: 100%;

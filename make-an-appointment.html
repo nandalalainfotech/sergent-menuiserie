@@ -510,7 +510,7 @@
                             <div class="row">
                                 <div class="col-sm-5"></div>
                                 <div class="col-sm-2">
-                                    <button data-target="thankyou.html" class="btn  sub m-t20"  onclick="mailSubmit()">Soumettre</button>
+                                    <button data-target="thankyou.html" class="btn  sub m-t20"  onclick="mailSubmit(event)">Soumettre</button>
                                     <!-- <input type="submit" value="Soumettre" class="btn rounded-5 text-white" onclick="mailSubmit()"
                                         style="background-color: #db5200;"> -->
                                 </div>
@@ -872,16 +872,21 @@ let makeAnAppointmentForm = document.getElementById('makeAnAppointmentForm');
 let appointment = document.getElementsByName('place');
 let date = document.getElementById('myDate');
 let sessionArr = document.getElementsByName('session');
-function mailSubmit(){
-    console.log("called22");
+function mailSubmit(e){
     let session = '';
    for(let i of sessionArr){
     if(i.checked){
         session = i.value;
     }
    }
-  
-    $.ajax({
+   
+   if((!appointment[0].checked && !appointment[1].checked )||
+      date.value.trim() == '' || session === ''){
+        e.preventDefault();
+        alert('Veuillez remplir les détails');
+     }
+     else{
+         $.ajax({
         method: "POST",
         url: 'finalMail.php',
         data: { textOne: sessionStorage.getItem('materialOne'),
@@ -905,6 +910,8 @@ function mailSubmit(){
       }).done(function (response) {
         $("p.broken").html(response);
       });
+     }
+   
      
 }
 
