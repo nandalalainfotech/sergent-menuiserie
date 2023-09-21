@@ -59,7 +59,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         $(window).on('load', function () {
-            $('#onLoadModal').modal('show');
+            if(sessionStorage.getItem('popup') != 'shown'){
+                $('#onLoadModal').modal('show');
+                sessionStorage.setItem('popup','shown');
+            }
+         
         });
         function clearForm() {
             let fname = document.getElementById("fname").value;
