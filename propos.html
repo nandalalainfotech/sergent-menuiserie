@@ -56,17 +56,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
     <script>
         function clearForm() {
-            let fname = document.getElementById("fname").value;
-            let lname = document.getElementById("lname").value;
-            let mobile = document.getElementById("mobile").value;
-            let location = document.getElementById("location").value;
-            if (fname !== "" && lname !== '' && mobile !== '' && location !== '' && mobValidator(mobile)) {
                 document.getElementById('fname').value = "";
                 document.getElementById('lname').value = "";
                 document.getElementById('mobile').value = "";
                 document.getElementById('location').value = "";
             }
-        }
+        
 
         function mobValidator(value) {
             let validRegex = /^[0-9]{10}$/;
@@ -247,7 +242,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA </h5>
-                    <button type="button" class="close" data-dismiss="modal" onclick="clearing()">&times;</button>
+                    <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
                 </div>
                 <div class="modal-body">
                     <form action="thankyou.html" method="post"  id="callBackForm">
