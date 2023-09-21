@@ -1,7 +1,12 @@
-function getMaterials(){
+function getMaterials(event){
   var city = $("#city_field").val();
   var postal = $("#postal_code").val();
 
+  console.log("event====>",event);
+  if(city.trim()=='' || postal.trim()==''){
+    event.preventDefault();
+    alert('Veuillez remplir les détails');
+  }
     // $.ajax({
     //     method: "POST",
     //     url: "getMaterialsMail.php",

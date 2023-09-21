@@ -222,7 +222,7 @@
               title="entrez l' Emplacement valide." />
             <br />
             <br />
-            <button type="submit" class="s-btn mt-3" onclick="getCallBackMail()">
+            <button type="submit" class="s-btn mt-3" onclick="getCallBackMail(event)">
               Soumettre</button>
             <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
           </form>
@@ -1000,15 +1000,15 @@
                   <label for="city_field">Adresse</label> <br>
                   <!-- <span class="location text-dark p-1" style="display: block;height: 35px;"></span> -->
                   <input type="text" id="city_field" placeholder="Veuillez renseigner votre adresse"
-                    onkeyup="locationPrinter()"><br>
+                    ><br>
                   <label for="postal_code">Code postal et commune</label> <br>
-                  <input type="text" name="" id="postal_code" placeholder="Code postal et commune">
+                  <input type="text" name="" id="postal_code" placeholder="Code postal et commune" >
                   <p class="mt-2" id="error-msg"></p>
                   <span style="display: block;"> <br>
 
                     <!-- <span 
                       onclick="locationActive();setTimeout(locationPrint,2000);setTimeout(errOff,1000);colorChanger();"
-                      class="text-white btn btn-info" id="hov"> <svg xmlns="http://www.w3.org/2000/svg" width="20"
+                      class="text-white btn btn-info" id="hov"> getMaterials<svg xmlns="http://www.w3.org/2000/svg" width="20"
                         height="26" fill="currentColor" class="bi bi-geo-alt text-white" viewBox="0 0 16 16">
                         <path
                           d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z" />
@@ -1016,7 +1016,7 @@
                       </svg>OBTENEZ VOTRE CODE POSTAL</span>
                   </span> -->
                     <a href="appointment2.html" id="eventCheck1"><button class="btn mt-3 text-white"
-                        style="background-color:#ea5702" onclick="getMaterials()">Suivante</button></a>
+                        style="background-color:#ea5702" onclick="getMaterials(event)">Suivante</button></a>
                 </div>
               </div>
             </div>
