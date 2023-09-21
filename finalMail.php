@@ -29,28 +29,37 @@ $session = $_POST['textSeventeen'];
 
 $mail = new PHPMailer();
 $mail->IsSMTP();  
-$mail->SMTPDebug = 0;
+$mail->SMTPDebug = 2;
 $mail->Mailer = "smtp";
 $mail->Host = "smtp.gmail.com";
 $mail->Port = 587;
 $mail->SMTPAuth = true; 
-$mail->SMTPKeepAlive = true;
-
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-// $mail->AddAddress("sergentmenuiserie40@gmail.com","sm");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
 $mail->AddAddress("contact@sergentmenuiserie.com","sm");
 $mail->AddAddress("karthiad05@gmail.com","");
 // $mail->AddAddress("karthikeyan16599@gmail.com","");
-// $mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
-// $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
-// $mail->AddAddress('priyadarshini@nandalalainfotech.com',"");
+// $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 
-$mail->SetFrom($meetingAt);
+$mail->SetFrom($MaterialOne);
+$mail->SetFrom($MaterialTwo);
+$mail->SetFrom($MaterialThree);
+$mail->SetFrom($MaterialFour);
+$mail->SetFrom($MaterialFive);
+$mail->SetFrom($MaterialSix);
+$mail->SetFrom($MaterialSeven);
+$mail->SetFrom($MaterialEight);
+$mail->SetFrom($gender);
+$mail->SetFrom($name);
+$mail->SetFrom($initial);
+$mail->SetFrom($mobile);
+$mail->SetFrom($email);
+$mail->SetFrom($text_box);
+$mail->SetFrom($appointment);
 $mail->SetFrom($date);
 $mail->SetFrom($session);
-$mail->SetFrom($mob);
 
 $mail->isHTML(true);  
 $mail->Subject = 'Courrier reçu de Meeting Place in SERGENT MENUISERIE';
@@ -83,5 +92,5 @@ if(!$mail->Send()) {
     echo 'Message has been sent.';
     // echo '<script>alert("Your message sent successfully!!")</script>';
     }
-    header("Location:thankyou.html");
+    // header("Location:thankyou.html");
     ?>
