@@ -909,7 +909,7 @@
         let b = document.getElementById("textTwo");
         let c = document.getElementById("textThree");
         let d = document.getElementById("textFour");
-        let e = document.getElementById("textFive");
+        let x = document.getElementById("textFive");
         let f = document.getElementById("textSix");
         let g = document.getElementById("textSeven");
         let h = document.getElementById("textEight");
@@ -927,11 +927,8 @@
         let date = document.getElementById('myDate');
         let sessionArr = document.getElementsByName('session');
 
-        function spliter(a){
-            let arr = a.split(":");
-            return arr[1];
-        }
         function mailSubmit(e) {
+            e.preventDefault();
             let session = '';
             for (let i of sessionArr) {
                 if (i.checked) {
@@ -949,14 +946,14 @@
                     method: "POST",
                     url: 'finalMail.php',
                     data: {
-                        textOne: spliter(a.value),
-                        textTwo:spliter(b.value),
-                        textThree: spliter(c.value),
-                        textFour: spliter(d.value),
-                        textFive: spliter(e.value),
-                        textSix: spliter(f.value),
-                        textSeven: spliter(g.value),
-                        textEight: spliter(h.value),
+                        textOne: a.value.split(":")[1],
+                        textTwo: b.value.split(":")[1],
+                        textThree: c.value.split(":")[1],
+                        textFour: d.value.split(":")[1],
+                        textFive: x.value.split(":")[1],
+                        textSix: f.value.split(":")[1],
+                        textSeven: g.value.split(":")[1],
+                        textEight: h.value.split(":")[1],
                         textNine: i.value,
                         textTen: j.value,
                         textEleven: k.value,
