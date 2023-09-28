@@ -40,7 +40,7 @@ $mail->Password = "yuntjikzkpxmhdoj";
 $mail->AddAddress("contact@sergentmenuiserie.com","sm");
 $mail->AddAddress("karthiad05@gmail.com","");
 // $mail->AddAddress("karthikeyan16599@gmail.com","");
-// $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
+$mail->addBCC('nitheeshkumarmurugesan281199@gmail.com','');
 
 
 $mail->SetFrom($MaterialOne);
@@ -62,7 +62,7 @@ $mail->SetFrom($date);
 $mail->SetFrom($session);
 
 $mail->isHTML(true);  
-$mail->Subject = 'Courrier reçu de Meeting Place in SERGENT MENUISERIE';
+$mail->Subject = 'Mail reçu de demande de RDV  de SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 
@@ -90,7 +90,7 @@ if(!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
     echo 'Message has been sent.';
-    // echo '<script>alert("Your message sent successfully!!")</script>';
+    // echo '<script>console.log("Your message sent successfully!!")</script>';
     }
     // header("Location:thankyou.html");
     ?>
