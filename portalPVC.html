@@ -218,7 +218,16 @@
             <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
               title="entrez l' Emplacement valide." />
             <br />
-            <br />
+            <div class="mt-2">
+              <p> <input type="checkbox" name="subscribe" id="sub2" required ><span style="margin-left: 10px;"> Je souhaite recevoir les offres des partenaires
+                  de Sergent Menuiserie par e-mail ou téléphone
+              </span> </p>
+              <p>
+                  Après nous avoir transmis vos coordonnées téléphoniques via ce 
+                  formulaire, notre appel aura comme objectif de vous proposer un rendez-vous 
+                  avec l'un de nos conseillers, à votre domicile, pour étudier votre projet.
+              </p>   
+          </div>
             <button type="submit" class="s-btn mt-3"
                        onclick="getCallBackMail(event)"    >
                             Soumettre</button>
@@ -240,190 +249,194 @@
   <div class="page-wraper">
     <!-- HEADER START -->
     <header class="site-header header-style-3 mobile-sider-drawer-menu">
+
       <div class="top-bar site-bg-primary">
-        <div class="container">
-          <div class="d-flex justify-content-between">
-            <div class="wt-topbar-left d-flex flex-wrap align-content-start">
-              <ul class="wt-topbar-info e-p-bx text-white">
-                <li>
-                  <span class="fonts"> LUNDI AU SAMEDI 09H00 à 19H00</span><span>|</span><span class="fonts"> DIMANCHE
-                    09H00 à 17H00</span>
-                </li>
-              </ul>
-            </div>
+          <div class="container">
 
-            <div class="wt-topbar-right d-flex flex-wrap align-content-center">
-              <ul class="wt-topbar-info-2 e-p-bx text-white">
-                <li id="modal">
-                  <a href="javascript:void(0)" class="text-white"><i class="fa fa-phone"></i>RAPPELEZ-MOI</a>
-                </li>
-                <li>
-                  <a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS GRATUIT</a>
-                </li>
-              </ul>
+              <div class="d-flex justify-content-between">
+                  <div class="wt-topbar-left d-flex flex-wrap align-content-start ">
+                      <ul class="wt-topbar-info e-p-bx text-white">
+                          <li><span class="fonts"> LUNDI AU SAMEDI 09H00 à 19H00</span><span>|</span><span
+                                  class="fonts"> DIMANCHE 09H00 à 17H00</span></li>
+                      </ul>
+                  </div>
 
-              <ul class="social-icons">
-                <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
-                <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
-                <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
-                <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
-            </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+                  <div class="wt-topbar-right d-flex flex-wrap align-content-center">
+                      <ul class="wt-topbar-info-2 e-p-bx text-white">
+                          <li id="modal"><a href="javascript:void(0)" class="text-white"><i
+                                      class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
+                          <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS
+                                  GRATUIT</a></li>
+                      </ul>
 
-      <div class="sticky-header main-bar-wraper navbar-expand-lg">
-        <div class="main-bar">
+                      <ul class="social-icons">
+                          <li><a href="javascript:void(0);" class="fa fa-facebook"></a></li>
+                          <li><a href="javascript:void(0);" class="fa fa-instagram"></a></li>
+                          <li><a href="javascript:void(0);" class="fa fa-youtube"></a></li>
+                          <li><a href="javascript:void(0);" class="fa fa-linkedin"></a></li>
+                      </ul>
 
-          <div class="container clearfix">
-
-            <div class="logo-header" style="height: 75px;width: 110px;">
-              <div class="logo-header" style="height: 75px;width: 110px;">
-                <a href="index.html">
-                  <img src="images/SM_258x74.svg" style="height: 70px; width: 110px;">
-
-                </a>
+                  </div>
               </div>
-            </div>
 
-            <!-- NAV Toggle Button -->
-            <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
-              class="navbar-toggler collapsed">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar icon-bar-first"></span>
-              <span class="icon-bar icon-bar-two"></span>
-              <span class="icon-bar icon-bar-three"></span>
-            </button>
-
-            <!-- MAIN Vav -->
-          <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
-          
-            <ul class=" nav navbar-nav menu-size">
-              <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
-                <ul class="sub-menu">
-                  <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
-                    <ul class="sub-menu">
-          
-                      <li><a href="compositeWindow.html">FENETRE PVC</a></li>
-                      <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
-                      <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
-                      <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="TrendRange.html">GAMME TENDANCE</a>
-                    <ul class="sub-menu">
-                      <li><a href="PVCWindow.html">FENETRE PVC</a></li>
-                      <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
-                    <ul class="sub-menu">
-                      <li><a href="WoodenWindow.html">FENETRE BOIS</a></li>
-                    </ul>
-                  </li>
-                </ul>
-          
-              </li>
-          
-              <li class="has-child">
-                <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
-                <ul class="sub-menu">
-                  <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
-                    <ul class="sub-menu">
-                      <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                      <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
-                      <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
-                    </ul>
-                  </li>
-          
-                  <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
-                    <ul class="sub-menu">
-                      <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
-                      <li><a href="zibaie component.html">VOLET ROULANT ALU</a></li>
-                      <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
-                    </ul>
-                  </li>
-                 <li><a href="javascript:;">VOLETS PERSIENNES</a>
-                    <ul class="sub-menu">
-                      <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
-          
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-          
-              <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
-                  D'ENTREE</a>
-                <ul class="sub-menu">
-                  <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
-                  </li>
-                  <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
-                      ALU</a></li>
-                  <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
-                  <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
-                  <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
-                  </li>
-                </ul>
-          
-              </li>
-          
-              <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
-                  GARAGE</a>
-                <ul class="sub-menu">
-                  <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
-                  <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
-                  <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
-                </ul>
-              </li>
-          
-              <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
-                  CLOTURES</a>
-                <ul class="sub-menu">
-                  <li><a href="portalPVC.html">PORTAIL PVC</a></li>
-                  <li><a href="portalALU.html">PORTAIL ALU</a></li>
-                  <li><a href="cloture.html">CLÔTURES</a></li>
-                  <li><a href="gardeCrops.html">GARDE CORPS</a></li>
-                  <li><a href="motarisation.html">MOTORISATION</a></li>
-                </ul>
-          
-              </li>
-              <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
-                  PERGOLAS</a>
-                <ul class="sub-menu">
-          
-                  <li><a href="interior blind.html">STORE INTERIEUR</a></li>
-                  <li><a href="awning.html">STORE BANNE</a></li>
-                  <li><a href="pergola.html">PERGOLA</a></li>
-                </ul>
-              </li>
-              <li class="has-child">
-                <a href="javascript:;" style="font-size: .9rem;">VERANDAS</a>
-                <ul class="sub-menu">
-                  <li><a href="Verandas.html">VERANDAS</a></li>
-                </ul>
-              </li>
-              <li class="has-child">
-                                                <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
-              </li>
-            </ul>
           </div>
-          </div>
-        </div>
-
-        <!-- SITE Search -->
-        <div id="search">
-          <span class="close"></span>
-          <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
-            <div class="input-group">
-              <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
-              <span class="input-group-append"><button type="button" class="search-btn">
-                  <i class="fa fa-paper-plane"></i></button></span>
-            </div>
-          </form>
-        </div>
       </div>
-    </header>
+
+
+      <div class="sticky-header main-bar-wraper  navbar-expand-lg">
+          <div class="main-bar">
+
+              <div class="container clearfix">
+
+                  <div class="logo-header" style="height: 75px;width: 110px;">
+                      <div class="logo-header" style="height: 75px;width: 110px;">
+                          <a href="index.html">
+                              <img src="images/SM_258x74.svg" style="height: 70px; width: 110px;">
+
+                          </a>
+                      </div>
+                  </div>
+
+                  <!-- NAV Toggle Button -->
+                  <button id="mobile-side-drawer" data-target=".header-nav" data-toggle="collapse" type="button"
+                      class="navbar-toggler collapsed">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="icon-bar icon-bar-first"></span>
+                      <span class="icon-bar icon-bar-two"></span>
+                      <span class="icon-bar icon-bar-three"></span>
+                  </button>
+
+                  <!-- MAIN Vav -->
+                  <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
+
+                      <ul class=" nav navbar-nav menu-size">
+                          <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
+                              <ul class="sub-menu">
+                                  <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
+                                      <ul class="sub-menu">
+
+                                          <li><a href="compositeWindow.html">FENETRE PVC</a></li>
+                                          <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
+                                          <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
+                                          <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="TrendRange.html">GAMME TENDANCE</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="PVCWindow.html">FENETRE PVC</a></li>
+                                          <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="WoodWindowRange.html">GAMME FENETRE BOIS</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="WoodenWindow.html">FENETRE BOIS</a></li>
+                                      </ul>
+                                  </li>
+                              </ul>
+
+                          </li>
+
+                          <li class="has-child">
+                              <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
+                              <ul class="sub-menu">
+                                  <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
+                                          <li><a href="zibaie component.html">VOLET ROULANT ALU</a></li>
+                                          <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
+                                      </ul>
+                                  </li>
+                                  <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
+                                          <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
+                                          <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
+                                      </ul>
+                                  </li>
+
+                               
+                                  <li><a href="javascript:;">VOLETS PERSIENNES</a>
+                                      <ul class="sub-menu">
+                                          <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
+
+                                      </ul>
+                                  </li>
+                              </ul>
+                          </li>
+
+                          <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
+                                  D'ENTREE</a>
+                              <ul class="sub-menu">
+                                  <li><a href="one-pieceAluEntranceDoors.html">PORTES D'ENTREE MONOBLOC ALU </a>
+                                  </li>
+                                  <li><a href="alu-parclosedEntranceDoors.html">PORTES D'ENTREE PARCLOSEES
+                                          ALU</a></li>
+                                  <li><a href="alu-glazedEntranceDoors.html">PORTES D'ENTREE VITREES ALU</a></li>
+                                  <li><a href="steel-EntranceDoors.html">PORTES D'ENTREE ACIER</a></li>
+                                  <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
+                                  </li>
+                              </ul>
+
+                          </li>
+
+                          <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
+                                  GARAGE</a>
+                              <ul class="sub-menu">
+                                  <li><a href="sectionalGarageDoor.html">PORTE DE GARAGE SECTIONNELLE</a></li>
+                                  <li><a href="sideGarageDoor.html">PORTE DE GARAGE LATERALE</a></li>
+                                  <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
+                              </ul>
+                          </li>
+
+                          <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
+                                  CLOTURES</a>
+                              <ul class="sub-menu">
+                                  <li><a href="portalPVC.html">PORTAIL PVC</a></li>
+                                  <li><a href="portalALU.html">PORTAIL ALU</a></li>
+                                  <li><a href="cloture.html">CLÔTURES</a></li>
+                                  <li><a href="gardeCrops.html">GARDE CORPS</a></li>
+                                  <li><a href="motarisation.html">MOTORISATION</a></li>
+                              </ul>
+
+                          </li>
+                          <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
+                                  PERGOLAS</a>
+                              <ul class="sub-menu">
+
+                                  <li><a href="interior blind.html">STORE INTERIEUR</a></li>
+                                  <li><a href="awning.html">STORE BANNE</a></li>
+                                  <li><a href="pergola.html">PERGOLA</a></li>
+                              </ul>
+                          </li>
+                          <li class="has-child">
+                              <a href="javascript:;" style="font-size: .9rem;">VERANDAS</a>
+                              <ul class="sub-menu">
+                                  <li><a href="Verandas.html">VERANDAS</a></li>
+                              </ul>
+                          </li>
+                          <li class="has-child">
+                              <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                          </li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+
+          <!-- SITE Search -->
+          <div id="search">
+              <span class="close"></span>
+              <form role="search" id="searchform" action="/search" method="get" class="radius-xl">
+                  <div class="input-group">
+                      <input class="form-control" value="" name="q" type="search" placeholder="Type to search" />
+                      <span class="input-group-append"><button type="button" class="search-btn"><i
+                                  class="fa fa-paper-plane"></i></button></span>
+                  </div>
+              </form>
+          </div>
+      </div>
+
+
+  </header>
     <!-- HEADER END -->
 
     <!-- CONTENT START -->
@@ -1043,7 +1056,7 @@
                   <li>Des conseils d'experts</li>
                 </ul>
                 <div class="call-us">
-                  <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
+                  <i class="flaticon-phone-call"></i><a href="tel:+01-83-63-94-80">01 83 63 94 80</a>
                 </div>
 
               </div>
