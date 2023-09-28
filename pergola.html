@@ -227,7 +227,16 @@
                         <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
                           title="entrez l' Emplacement valide." />
                         <br />
-                        <br />
+                        <div class="mt-2">
+                            <p> <input type="checkbox" name="subscribe" id="sub2" required ><span style="margin-left: 10px;"> Je souhaite recevoir les offres des partenaires
+                                de Sergent Menuiserie par e-mail ou téléphone
+                            </span> </p>
+                            <p>
+                                Après nous avoir transmis vos coordonnées téléphoniques via ce 
+                                formulaire, notre appel aura comme objectif de vous proposer un rendez-vous 
+                                avec l'un de nos conseillers, à votre domicile, pour étudier votre projet.
+                            </p>   
+                        </div>
                         <button type="submit" class="s-btn mt-3"
                                    onclick="getCallBackMail(event)"    >
                                         Soumettre</button>
@@ -269,7 +278,6 @@
                                             class="fa fa-phone"></i>RAPPELEZ-MOI</a></li>
                                 <li><a href="request.html" class="text-white"><i class="fa fa-envelope"></i>DEVIS
                                         GRATUIT</a></li>
-
                             </ul>
 
                             <ul class="social-icons">
@@ -311,20 +319,20 @@
 
                         <!-- MAIN Vav -->
                         <div class="nav-animation header-nav navbar-collapse collapse d-flex justify-content-center ">
-                        
+
                             <ul class=" nav navbar-nav menu-size">
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;"> FENETRES</a>
                                     <ul class="sub-menu">
                                         <li><a href="EcleaRange.html">GAMME CLASSIQUE</a>
                                             <ul class="sub-menu">
-                        
+
                                                 <li><a href="compositeWindow.html">FENETRE PVC</a></li>
                                                 <li><a href="AluStrikeWindow.html">FENETRE FRAPPE ALU</a></li>
                                                 <li><a href="AluSlidingWindow.html">COULISSANT ALU</a></li>
                                                 <li><a href="AluBrickPartition.html">GALANDAGE ALU</a></li>
                                             </ul>
                                         </li>
-                                          <li><a href="TrendRange.html">GAMME TENDANCE</a>
+                                        <li><a href="TrendRange.html">GAMME TENDANCE</a>
                                             <ul class="sub-menu">
                                                 <li><a href="PVCWindow.html">FENETRE PVC</a></li>
                                                 <li><a href="RangeAluStrike.html">FENETRE FRAPPE ALU</a></li>
@@ -336,20 +344,12 @@
                                             </ul>
                                         </li>
                                     </ul>
-                        
+
                                 </li>
-                        
+
                                 <li class="has-child">
                                     <a href="javascript:;" style="font-size: .9rem;">VOLETS</a>
                                     <ul class="sub-menu">
-                                        <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
-                                                <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
-                                                <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
-                                            </ul>
-                                        </li>
-                        
                                         <li><a href="rollerShutters.html">VOLETS ROULANTS</a>
                                             <ul class="sub-menu">
                                                 <li><a href="zenithShutter.html">VOLET ROULANT PVC</a></li>
@@ -357,15 +357,24 @@
                                                 <li><a href="vr4a component.html">VOLET ROULANT TRADI</a></li>
                                             </ul>
                                         </li>
-                                       <li><a href="javascript:;">VOLETS PERSIENNES</a>
+                                        <li><a href="swing Shutter.html">VOLETS BATTANTS</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="aluSwing.html">VOLET BATTANT ALU</a></li>
+                                                <li><a href="woodenShutters.html">VOLET BATTANT BOIS</a></li>
+                                                <li><a href="pvcShutters.html">VOLET BATTANT PVC</a></li>
+                                            </ul>
+                                        </li>
+
+                                     
+                                        <li><a href="javascript:;">VOLETS PERSIENNES</a>
                                             <ul class="sub-menu">
                                                 <li><a href="VoletPersiennes.html">VOLET PERSIENNES</a></li>
-                        
+
                                             </ul>
                                         </li>
                                     </ul>
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES
                                         D'ENTREE</a>
                                     <ul class="sub-menu">
@@ -378,9 +387,9 @@
                                         <li><a href="pvc-parclosedEntranceDoor.html">PORTES D'ENTREE PARCLOSEES PVC</a>
                                         </li>
                                     </ul>
-                        
+
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTES DE
                                         GARAGE</a>
                                     <ul class="sub-menu">
@@ -389,7 +398,7 @@
                                         <li><a href="rollUpGarageDoor.html">PORTE DE GARAGE ENROULABLE</a></li>
                                     </ul>
                                 </li>
-                        
+
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">PORTAILS &
                                         CLOTURES</a>
                                     <ul class="sub-menu">
@@ -399,12 +408,12 @@
                                         <li><a href="gardeCrops.html">GARDE CORPS</a></li>
                                         <li><a href="motarisation.html">MOTORISATION</a></li>
                                     </ul>
-                        
+
                                 </li>
                                 <li class="has-child"><a href="javascript:;" style="font-size: .9rem;">STORE &
                                         PERGOLAS</a>
                                     <ul class="sub-menu">
-                        
+
                                         <li><a href="interior blind.html">STORE INTERIEUR</a></li>
                                         <li><a href="awning.html">STORE BANNE</a></li>
                                         <li><a href="pergola.html">PERGOLA</a></li>
@@ -417,7 +426,7 @@
                                     </ul>
                                 </li>
                                 <li class="has-child">
-                                                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
+                                    <a href="request.html" style="color: #db5200;font-size: .9rem;">DEVIS GRATUIT</a>
                                 </li>
                             </ul>
                         </div>
@@ -1224,7 +1233,7 @@
                                 <li>Des conseils d'experts</li>
                             </ul>
                             <div class="call-us">
-                                <i class="flaticon-phone-call"></i><a href="tel:+216-761-8331">01 83 63 94 80</a>
+                                <i class="flaticon-phone-call"></i><a href="tel:+01-83-63-94-80">01 83 63 94 80</a>
                             </div>
 
                         </div>
