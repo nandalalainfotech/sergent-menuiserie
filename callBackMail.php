@@ -39,10 +39,10 @@ $mail->Subject ='Mail reçu de RAPPELEZ-MOI dans SERGENT MENUISERIE';
 $mail->AddEmbeddedImage('images/sm2x.jpg','SM_LOGO');
 $mail->Body .='<img src="cid:SM_LOGO" alt="sm_logo" /> <br/>';
 
-$mail->Body .='<h3>PRENOM :' . strtoupper($fname) . "</h3>";
-$mail->Body .='<h3>NOM :' .  strtoupper($lname) . "</h3>";
-$mail->Body .='<h3>NUMERO DE CONTACT : ' . $mobile . "</h3>";
-$mail->Body .='<h3>CODE POSTALE :' .  strtoupper($location) . "</h3>";
+$mail->Body .='<h3>PRÉNOM : ' . strtoupper($fname) . "</h3>";
+$mail->Body .='<h3>NOM : ' .  strtoupper($lname) . "</h3>";
+$mail->Body .='<h3>NUMÉRO DE CONTACT : ' . $mobile . "</h3>";
+$mail->Body .='<h3>LIEU : ' .  strtoupper($location) . "</h3>";
 
 $mail->WordWrap = 50;
 

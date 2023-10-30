@@ -42,12 +42,12 @@ $mail->SetFrom($text_box);
 
 $mail->isHTML(true);
 $mail->Subject = 'Courrier reçu du modèle de contact unique de SERGENT MENUISERIE';
-$mail->Body .='<h3>CIVILITE :' .strtoupper($gender)  . "</h3>";
-$mail->Body .='<h3>NOM : ' .strtoupper($firstName)  . "</h3>";
-$mail->Body .='<h3>PRENOM : ' .strtoupper($lastName ) . "</h3>";
-$mail->Body .='<h3>NUMERO DE CONTACT : ' . $mobile . "</h3>";
-$mail->Body .='<h3>COURRRIEL : ' .strtolower( $email ). "</h3>";
-$mail->Body .='<h3>DESCRIPTION : ' .strtoupper($text_box)  . "</h3>";
+$mail->Body .='<h3>Civilité : ' .strtoupper($gender)  . "</h3>";
+$mail->Body .='<h3>Nom : ' .strtoupper($firstName)  . "</h3>";
+$mail->Body .='<h3>Prénom : ' .strtoupper($lastName ) . "</h3>";
+$mail->Body .='<h3>Numéro de téléphone: ' . $mobile . "</h3>";
+$mail->Body .='<h3>Courriel: ' .strtolower( $email ). "</h3>";
+$mail->Body .='<h3>Description : ' .strtoupper($text_box)  . "</h3>";
 
 $mail->WordWrap = 50;
 if(!$mail->Send()) {
@@ -55,7 +55,7 @@ if(!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
     } else {
     echo 'Message has been sent.';
-    // echo '<script>alert("Your message sent successfully!!")</script>';
+    echo '<script>alert("Your message sent successfully!!")</script>';
     }
     header("Location:thankyou.html");
     ?>
