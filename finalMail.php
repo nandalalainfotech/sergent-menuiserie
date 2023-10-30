@@ -23,7 +23,7 @@ $mobile = $_POST['textTwelve'];
 $email = $_POST['textThirteen'];
 $text_box = $_POST['textFourteen'];
 $appointment = $_POST['textFifteen'];
-$date = $_POST['textSixteen'];
+// $date = $_POST['textSixteen'];
 $session = $_POST['textSeventeen'];
 
 
@@ -58,7 +58,7 @@ $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text_box);
 $mail->SetFrom($appointment);
-$mail->SetFrom($date);
+// $mail->SetFrom($date);
 $mail->SetFrom($session);
 
 $mail->isHTML(true);  
@@ -81,7 +81,7 @@ $mail->Body .= '<h3> Numéro de téléphone : '. strtoupper($mobile) . '</h3>';
 $mail->Body .= '<h3> Courriel : '. strtoupper($email) . '</h3>';
 $mail->Body .= '<h3> Description de votre projet : '. strtoupper($text_box) . '</h3>';
 $mail->Body .= '<h3> Rendez-vous : '. strtoupper($appointment) . '</h3>';
-$mail->Body .= '<h3> Date de rendez-vous : '. strtoupper($date) . '</h3>';
+// $mail->Body .= '<h3> Date de rendez-vous : '. strtoupper($date) . '</h3>';
 $mail->Body .= '<h3> Session : '. strtoupper($session) . '</h3>';
 
 $mail->WordWrap = 50;

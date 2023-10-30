@@ -471,7 +471,7 @@
                     <div class="container  ">
                         <form action="thankyou.html" method="post" id="makeAnAppointmentForm">
                             <div class="row p-3">
-                                <div class="col-sm-4 p-1">
+                                <div class="col-sm-3 p-1">
                                     Rendez-vous?
                                 </div>
                                 <div class="col-sm-2 p-1">
@@ -926,10 +926,11 @@
         //  ================================================ 
         let makeAnAppointmentForm = document.getElementById('makeAnAppointmentForm');
         let appointment = document.getElementsByName('place');
-        let date = document.getElementById('myDate');
+        // let date = document.getElementById('myDate');
         let sessionArr = document.getElementsByName('session');
 
         function mailSubmit(e) {
+            console.log("finalMail------------>",e)
             let session = '';
             for (let i of sessionArr) {
                 if (i.checked) {
@@ -938,11 +939,12 @@
             }
 
             if ((!appointment[0].checked && !appointment[1].checked) ||
-                date.value.trim() == '' || session === '') {
+                 session === '') {
                 e.preventDefault();
                 alert('Veuillez remplir les détails');
             }
             else {
+                console.log("finalMail------------>",e)
                 $.ajax({
                     method: "POST",
                     url: 'finalMail.php',
@@ -962,7 +964,7 @@
                         textThirteen: m.value,
                         textFourteen: n.value,
                         textFifteen: appointment[0].checked ? appointment[0].value : appointment[1].value,
-                        textSixteen: date.value,
+                        // textSixteen: date.value,
                         textSeventeen: session
                     }, beforeSend: function () {
                     },
