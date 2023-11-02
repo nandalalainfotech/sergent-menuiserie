@@ -39,7 +39,7 @@ $mail->Password = "yuntjikzkpxmhdoj";
 // $mail->AddAddress("sergentmenuiserie40@gmail.com","");
 $mail->AddAddress("contact@sergentmenuiserie.com","sm");
 $mail->AddAddress("karthiad05@gmail.com","");
-// $mail->AddAddress("karthikeyan16599@gmail.com","");
+$mail->AddAddress("nitheeshkumarmurugesan281199@gmail.com","");
 // $mail->addBCC('abinayaselvaraj26.04@gmail.com','');
 
 
@@ -88,9 +88,10 @@ $mail->WordWrap = 50;
 if(!$mail->Send()) {
     echo 'Message was not sent.';
     echo 'Mailer error: ' . $mail->ErrorInfo;
+    // echo '<script>alert("not received" + ErrorInfo)</script>';
     } else {
     echo 'Message has been sent.';
-    // echo '<script>alert("Your message sent successfully!!")</script>';
+    echo '<script>alert("Your message sent successfully!!")</script>';
     }
     // header("Location:thankyou.html");
     ?>
