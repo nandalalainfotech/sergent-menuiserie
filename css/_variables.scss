@@ -1,0 +1,26 @@
+$heading-font: 'Mulish', sans-serif;
+$common-font: 'Mulish', sans-serif;
+$common-font-size: 16px;
+$common-font-color:#626262;
+$clr-black:#000;
+$clr-dark:#000;
+$clr-bg-light:#fff9f0;
+$clr-white:#fff;
+$clr-primary:#db5200;
+$clr-gray:#e7e7e7;
+$clr-gray-light:#f9f9f9;
+$clr-white-bg-dark:#acacac;
+$transition: .5s all ease;
+$outline-none:0px none;
+$inherit:inherit;
+$none:none;
+
+@mixin reset-list{
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#000000+22,000000+22,000000+100&0+22,0.65+100 */
+background: -moz-linear-gradient(top,  rgba(0,0,0,0) 22%, rgba(0,0,0,0.65) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(0,0,0,0) 22%,rgba(0,0,0,0.65) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(0,0,0,0) 22%,rgba(0,0,0,0.65) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#a6000000',GradientType=0 ); /* IE6-9 */
+
+
+}
