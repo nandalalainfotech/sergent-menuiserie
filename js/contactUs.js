@@ -48,6 +48,7 @@ contactForm.addEventListener('submit', function (e) {
 
     setTimeout(() => {
         if (mobValidator(contactMobile.value) && currentCaptcha === userCaptchaInput.value) {
+              window.location.href = "thankyou.html";
             $("#myModal2").modal("hide");
             contactName.value = '';
             contactInitial.value = '';
@@ -63,6 +64,7 @@ contactForm.addEventListener('submit', function (e) {
             else
                 contactFemale.checked = false;
         }
+      
 
     }, 3000);
 });

@@ -611,8 +611,8 @@
                             </div>
                             <div class="col-sm-3">
 
-                                <input type="radio" name="civility" id="male" value="Monsieur" required>
-                                <label for="male">Monsieur</label>
+                                <input class="radio1" type="radio" name="civility" id="male" value="Monsieur" required>
+                                <label class="name1 " for="male">Monsieur</label>
                             </div>
                             <div class="col-sm-7"></div>
                         </div>
@@ -668,13 +668,14 @@
                         </div> -->
 
                         <div class="row">
-                            <input
-                                style=" margin-left: 15px; text-align: center; padding-right: 95px !important; margin-top:5px; height:30px !important; width: 220px;"
+                            <input class="captcha_form1"
+                                style="  "
                                 type="text" id="userCaptchaInput" name="captcha" placeholder="Enter CAPTCHA" required>
-                            <div id="captcha"
-                                style=" background-image: url(images/captcha2.png) !important; height:30px; background-size: 100px 50px; font-weight: 900;  margin-left: 265px; text-align: center; margin-top: -32px; width: 150px;">
+                            <div id="captcha" class="captcha2"
+                                style="   background-image: url(images/captcha2.png) !important; 
+                               ">
                             </div>
-                            <button type="button" onclick="refreshCaptcha()"
+                            <button type="button" class ="refresh"  onclick="refreshCaptcha()"
                                 style="height:50px; border: 1px solid rgb(196, 194, 194) !important; width:50px; border-radius: 40px; margin-left:20px; margin-top:-40px"><svg
                                     width="20" height="20" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">

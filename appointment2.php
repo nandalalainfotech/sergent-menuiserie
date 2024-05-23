@@ -25,7 +25,7 @@ $mail->Port = 587;
 $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("kalaimathikarthik2225@gmail.com", "");
+$mail->AddAddress("Contact@sergentmenuiserie.com", "");
 
 // Set email content
 $mail->SetFrom($email, $name);
@@ -45,7 +45,8 @@ if (!$mail->Send()) {
     echo 'Mailer error: ' . $mail->ErrorInfo;
 } else {
     echo 'Message has been sent.';
+    header("Location: thankyou.html");
 }
 
-header("Location: thankyou.html");
+
 ?>
