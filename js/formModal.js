@@ -1,16 +1,16 @@
-let contactForm = document.getElementById('contact_form');
+let contactForm = document.getElementById('form_modal');
 
 let contactMale = document.getElementById('male');
 let contactFemale = document.getElementById('female');
-let contactName = document.getElementById('name');
+let contactName = document.getElementById('name1');
 let contactInitial = document.getElementById('initial');
-let contactMobile = document.getElementById('mobiles');
-let contactEmail = document.getElementById('email');
+let contactMobile = document.getElementById('mobile1');
+let contactEmail = document.getElementById('email1');
 let contactText_box = document.getElementById('text_box');
 let contactChckBox1 = document.getElementById('sub1');
 let contactChckBox2 = document.getElementById('sub2');
 let userCaptchaInput = document.getElementById('userCaptchaInput');
-let currentCaptcha = document.getElementById('captcha').innerHTML;
+let currentCaptcha = document.getElementById('captcha')?.innerHTML;
 
 contactForm?.addEventListener('submit', function (e) {
     currentCaptcha = document.getElementById('captcha').innerHTML;
@@ -21,11 +21,16 @@ contactForm?.addEventListener('submit', function (e) {
         messageElement.style.color = 'red';
         e.preventDefault();
     }
+    else if(currentCaptcha == userCaptchaInput.value){
+        
+        const messageElement = document.getElementById('message');
+        messageElement.innerText = '';
+    }
     // console.log("contactName===>", contactName.value);
     // console.log("contactInitial===>", contactInitial.value);
     // console.log("contactMobile===>", contactMobile.value);
     // console.log("contactEmail===>", contactEmail.value);
-    console.log("userCaptchaInput===>", userCaptchaInput.value);
+    // console.log("userCaptchaInput===>", userCaptchaInput.value);
     if (!mobValidator(contactMobile.value)) {
         e.preventDefault();
         alert("Numéro de portable invalide www");

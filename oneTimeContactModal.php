@@ -8,11 +8,12 @@ require_once 'PHPMailer/src/Exception.php';
 require_once 'PHPMailer/src/PHPMailer.php';
 require_once 'PHPMailer/src/SMTP.php';
 
+$captcha = htmlentities($_POST['captcha']); 
 $gender = htmlentities($_POST['civility']);    
-$firstName = htmlentities($_POST['name']);
+$firstName = htmlentities($_POST['name1']);
 $lastName = htmlentities($_POST['initial']);
-$mobile = htmlentities($_POST['mobile']);
-$email = htmlentities($_POST['email']);
+$mobile = htmlentities($_POST['mobile1']);
+$email = htmlentities($_POST['email1']);
 $text_box = htmlentities($_POST['text']);
 
 
@@ -39,6 +40,7 @@ $mail->SetFrom($lastName);
 $mail->SetFrom($mobile);
 $mail->SetFrom($email);
 $mail->SetFrom($text_box);
+$mail->SetFrom($captcha);
 
 $mail->isHTML(true);
 $mail->Subject = 'Courrier reçu du modèle de contact unique de SERGENT MENUISERIE';

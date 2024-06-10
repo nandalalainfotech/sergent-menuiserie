@@ -650,7 +650,8 @@
                             border-width:0px; font-family: 'Mulish', sans-serif;">
                                 C’est le moment
                                 de
-                                rénover vos menuiseries <br> Une remise exceptionnelle et la TVA réduite <br> Sur l’ensemble de votre
+                                rénover vos menuiseries <br> Une remise exceptionnelle et la TVA réduite <br> Sur
+                                l’ensemble de votre
                                 projet</div>
 
                             <!-- LAYER NR. 5 [ for see all service botton ] -->
@@ -1818,6 +1819,22 @@
                         style="width: 100%;" required class="text_box"></textarea>
                     <!-- <input type="checkbox" name="subscribe" id="sub" required>
                             <label for="sub">I subscribe to the newsletter.</label> <br> -->
+                    <div class="row">
+                        <input class="captcha_form1" style="  " type="text" id="userCaptchaInput" name="captcha"
+                            placeholder="Enter CAPTCHA" required>
+                        <div id="captcha" class="captcha2" style="   background-image: url(images/captcha2.png) !important; 
+                                   ">
+                        </div>
+                        <button type="button" class="refresh" onclick="refreshCaptcha()"
+                            style="height:50px; border: 1px solid rgb(196, 194, 194) !important; width:50px; border-radius: 40px; margin-left:20px; margin-top:-40px"><svg
+                                width="20" height="20" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M84.539 21.586C84.5367 21.309 84.4585 21.0379 84.3129 20.8022C84.1672 20.5666 83.9598 20.3753 83.7131 20.2493C83.4663 20.1234 83.1898 20.0674 82.9135 20.0876C82.6372 20.1079 82.3718 20.2034 82.146 20.364L76.202 24.625L75.734 24.962C69.329 18.57 60.538 14.573 50.797 14.573C31.262 14.573 15.37 30.467 15.37 50.001C15.37 69.535 31.263 85.429 50.797 85.429C56.5977 85.43 62.3099 84.0064 67.4317 81.2832C72.5535 78.56 76.928 74.6205 80.171 69.811C80.3018 69.6183 80.3934 69.4016 80.4403 69.1735C80.4873 68.9453 80.4887 68.7101 80.4446 68.4814C80.4005 68.2527 80.3116 68.0349 80.1832 67.8406C80.0547 67.6463 79.8892 67.4792 79.696 67.349L70.833 61.198C70.4161 60.9192 69.9058 60.8165 69.4135 60.9125C68.9212 61.0084 68.4868 61.2951 68.205 61.71C64.287 67.502 57.795 70.96 50.83 70.96C39.272 70.96 29.868 61.558 29.868 50.003C29.868 38.448 39.272 29.046 50.83 29.046C55.708 29.046 60.182 30.742 63.744 33.546L62.743 34.266L56.795 38.526C56.5707 38.6886 56.3954 38.9097 56.2881 39.1652C56.1808 39.4206 56.1458 39.7006 56.1867 39.9746C56.2277 40.2486 56.3431 40.5061 56.5204 40.719C56.6976 40.9319 56.9299 41.0921 57.192 41.182L82.638 49.851C83.099 50.012 83.604 49.934 84.006 49.648C84.405 49.358 84.635 48.901 84.633 48.417L84.539 21.586Z"
+                                    fill="rgb(49, 48, 48)" />
+                            </svg></button>
+                        <p id="message"></p>
+                    </div>
                     <div class="mt-2">
                         <p> <input type="checkbox" name="subscribe" id="sub2" required><span style="margin-left: 10px;">
                                 Je souhaite recevoir les offres
@@ -1973,7 +1990,43 @@
 <!-- FOOTER END -->
 <div><button class="scroltop"><span class="fa fa-angle-up  relative" id="btn-vibrate"></span></button></div>
 
+<script>
+    // Function to generate a random CAPTCHA code
+    function generateCaptcha() {
+        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+        let captcha = '';
+        for (let i = 0; i < 6; i++) {
+            captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+        }
+        sessionStorage.setItem('captcha', captcha)
+        return captcha;
+    }
 
+    function displayCaptcha() {
+        const captchaCode = generateCaptcha();
+        document.getElementById('captcha').innerText = captchaCode;
+        window.currentCaptchaCode = captchaCode;
+    }
+
+    // Function to refresh the CAPTCHA code
+    function refreshCaptcha() {
+        displayCaptcha();
+        document.getElementById('message').innerText = '';
+        document.getElementById('userInput').value = '';
+    }
+
+
+    function validateCaptcha() {
+        const userInput = document.getElementById('userInput').value;
+        const currentCaptcha = document.getElementById('captcha').value;
+        const messageElement = document.getElementById('message');
+        const captchaCode = window.currentCaptchaCode;
+        return false
+    }
+    document.addEventListener('DOMContentLoaded', (event) => {
+        displayCaptcha();
+    });
+</script>
 
 
 <!-- JAVASCRIPT  FILES ========================================= -->
@@ -2009,6 +2062,7 @@
 <script src="js/emailCheck.js"></script>
 <script src="js/contact.js"></script>
 <script src="js/callBack.js"></script>
+<script src="js/formModal.js"></script>
 
 
 <!-- <Cookies start> -->
@@ -2216,12 +2270,145 @@
         }
     }
 
-    /* @media screen and (min-width: 750px) and (max-width: 1440px) {
-        .noneDisplay{
-    
-            margin-left:-50px !important;
-  }
-} */
+    @media (min-width:1035px) and (max-width:1450) {
+        .captcha_form1 {
+            margin-left: 15px !important;
+            text-align: center;
+            padding-right: 95px !important;
+            margin-top: 24px;
+            height: 30px !important;
+            width: 220px;
+        }
+
+    }
+
+    @media (min-width:2401px) and (max-width:2570px) {
+        .captcha_form1 {
+            margin-left: 18px !important;
+            margin-top: 5px !important;
+        }
+
+        .captcha2 {
+            margin-left: 40px !important;
+            margin-top: 10px !important;
+           
+        }
+
+        .refresh {
+            height: 50px;
+            border: 1px solid rgb(196, 194, 194) !important;
+            width: 50px;
+            border-radius: 40px;
+            margin-left: 39px !important;
+            margin-top: 0px !important;
+
+        }
+    }
+
+    @media (min-width:2201px) and (max-width:2400px) {
+        .captcha2 {
+            margin-left: 18px;
+            margin-top: 5px;
+        }
+    }
+
+    @media (min-width:1801px) and (max-width:2200px) {
+        .captcha2 {
+            margin-left: 18px;
+            margin-top: 5px;
+        }
+    }
+
+
+    @media (min-width:1551px) and (max-width:1800px) {
+        .captcha2 {
+            margin-left: 18px;
+            margin-top: 5px;
+        }
+    }
+
+    @media (min-width:787px) and (max-width: 1034px) {
+        .captcha2 {
+            background-image: url(images/captcha2.png) !important;
+            height: 30px !important;
+            background-size: 100px 50px !important;
+            font-weight: 900 !important;
+            margin-left: 33px !important;
+            text-align: center !important;
+            margin-top: 4px !important;
+            width: 108px !important;
+            padding-top: 5px;
+        }
+
+        .refresh {
+            height: 50px;
+            border: 1px solid rgb(196, 194, 194) !important;
+            width: 50px;
+            border-radius: 40px;
+            margin-left: 20px;
+            margin-top: 0px !important;
+
+        }
+
+        .modal-content {
+            width: 115% !important;
+            margin-left: 10px !important;
+        }
+    }
+
+    @media (min-width: 436px) and (max-width: 786px) {
+        .captcha2 {
+            background-image: url(images/captcha2.png) !important;
+            height: 26px !important;
+            background-size: 100px 50px !important;
+            font-weight: 900 !important;
+            margin-left: 35px !important;
+            text-align: center !important;
+            margin-top: 3px !important;
+            width: 95px !important;
+        }
+
+        .refresh {
+            height: 30px !important;
+            border: 1px solid rgb(196, 194, 194) !important;
+            width: 30px !important;
+            border-radius: 40px;
+            margin-left: 30px !important;
+            margin-top: 0px !important;
+        }
+    }
+
+    @media screen and (min-width: 0px) and (max-width: 435px) {
+        .captcha_form1 {
+            margin-left: 15px;
+            text-align: center;
+            padding-right: 30px !important;
+            margin-top: 5px;
+            height: 30px !important;
+            width: 90px !important;
+            font-size: 12px;
+        }
+
+        .captcha2 {
+            background-image: url(images/captcha2.png) !important;
+            height: 30px !important;
+            background-size: 62px 50px !important;
+            font-weight: 900 !important;
+            margin-left: 20px !important;
+            text-align: center !important;
+            margin-top: 6px !important;
+            width: 95px !important;
+        }
+
+        .refresh {
+            height: 30px !important;
+            border: 1px solid rgb(196, 194, 194) !important;
+            width: 30px !important;
+            border-radius: 40px;
+            margin-left: 245px !important;
+            margin-top: -30px !important;
+        }
+    }
 </style>
 <!-- <Cookies start> -->
 
