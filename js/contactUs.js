@@ -12,8 +12,11 @@ let contactChckBox2 = document.getElementById('sub2');
 let userCaptchaInput = document.getElementById('userCaptchaInput');
 let currentCaptcha = document.getElementById('captcha').innerHTML;
 
-contactForm?.addEventListener('submit', function (e) {
+console.log("currentCaptcha===>", currentCaptcha);
+contactForm.addEventListener('submit', function (e) {
+    // console.log("called");
     currentCaptcha = document.getElementById('captcha').innerHTML;
+    console.log("currentCaptcha====>", currentCaptcha);
 
     if (currentCaptcha != userCaptchaInput.value) {
         const messageElement = document.getElementById('message');
