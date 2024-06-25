@@ -41,9 +41,10 @@ $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
 // $mail->AddAddress("sergentmenuiserie40@gmail.com","");
 // $mail->AddAddress("karthikeyan16599@gmail.com","");
-$mail->AddAddress("contact@sergentmenuiserie.com","sm");
+// $mail->AddAddress("contact@sergentmenuiserie.com","sm");
 // $mail->AddAddress('abinayaselvaraj26.04@gmail.com',"");
-// $mail->AddAddress("karthiad05@gmail.com","");
+// $mail->AddAddress("kalaimathi@nandalalainfotech.com","");
+$mail->AddAddress("invoicefree.in@gmail.com","");
 
 $mail->SetFrom($meetingAt);
 $mail->SetFrom($date);

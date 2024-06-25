@@ -25,7 +25,10 @@ $mail->Port = 587;
 $mail->SMTPAuth = true;
 $mail->Username = "noreply.nandalalainfotech@gmail.com";
 $mail->Password = "yuntjikzkpxmhdoj";
-$mail->AddAddress("Contact@sergentmenuiserie.com", "");
+// $mail->AddAddress("contact@sergentmenuiserie.com", "");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
+// $mail->AddAddress("kalaimathi@nandalalainfotech.com","");
+$mail->AddAddress("invoicefree.in@gmail.com","");
 
 // Set email content
 $mail->SetFrom($email, $name);

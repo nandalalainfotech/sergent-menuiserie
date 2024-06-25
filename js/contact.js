@@ -1,4 +1,4 @@
-var count = 1;
+var count = 2;
 
 
 function loading(){

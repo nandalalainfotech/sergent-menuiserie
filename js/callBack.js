@@ -3,8 +3,9 @@ function getCallBackMail(e){
  let lname = document.getElementById("lname").value;
  let mobile = document.getElementById("mobile").value;
  let locations = document.getElementById("location").value;
+ let captcha = document.getElementById("captcha").value;
 
-if(fname.trim() == "" || lname.trim() == '' || mobile.trim() == '' || locations.trim() == ''){
+if(fname.trim() == "" || lname.trim() == '' || mobile.trim() == '' || locations.trim() == '' || mobile.trim() == '' ){
   e.preventDefault();
   alert('Veuillez remplir les détails');
 }
@@ -17,6 +18,7 @@ else{
                     textTwo: lname,
                     textThree: mobile,
                     textFour: locations,
+                    textFive: captcha,
                   },
           }).done(function (response) {
             $("p.broken").html(response);

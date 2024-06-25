@@ -213,64 +213,64 @@
   <!-- POPUP START  -->
   <div class="modal fade" id="myModal" role="dialog">
     <div class="modal-dialog modal-md">
-      <!-- Modal content-->
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">
-            LE CONSEILLER SERGENT MENUISERIE VOUS RAPPELLERA
-          </h5>
-          <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">
-            &times;
-          </button>
-        </div>
-        <div class="modal-body">
-          <form action="thankyou.html" method="post" id="callBackForm">
-            <!-- <label for="fname" class="pb-2">Prénom</label><br> -->
-            <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
-              title="entrez a-z ouA-z." />
-            <br />
-            <!-- <label for="lname" class="pb-2">Nom de famille</label><br><br> -->
-            <br />
-            <input class="w-50" type="text" name="lname" id="lname" required placeholder="Nom"
-              title="entrez a-z ouA-z." />
-            <br />
-            <!-- <label for="mobile" class="pb-2">Entrez votre numéro de mobile</label> <br> -->
-            <br />
-
-            <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10" placeholder="Portable"
-              pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
-            <br />
-            <!-- <label for="location" class="pb-2"> Emplacement</label><br> -->
-            <br />
-            <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
-              title="entrez l' Emplacement valide." />
-            <br />
-            <div class="mt-2">
-              <p> <input type="checkbox" name="subscribe" id="sub2" required><span style="margin-left: 10px;"> Je
-                  souhaite recevoir les offres
-                  de Sergent Menuiserie par e-mail ou téléphone
-                </span> </p>
-              <p>
-                Après nous avoir transmis vos coordonnées téléphoniques via ce
-                formulaire, notre appel aura comme objectif de vous proposer un rendez-vous
-                avec l'un de nos conseillers, à votre domicile, pour étudier votre projet.
-              </p>
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">LE CONSEILLER SERGENT MENUISERIE <br> VOUS RAPPELLERA </h5>
+                <button type="button" class="close" data-dismiss="modal" onclick="clearForm()">&times;</button>
             </div>
-            <button type="submit" class="s-btn mt-3" onclick="getCallBackMail(event)">
-              Soumettre</button>
-            <!-- <input class="bg-success text-white mt-2 w-25" type="submit" value="Soumettre" onclick='setTimeout(clearForm,4000);showSpin();setTimeout(showOffSpin,4000);setTimeout(()=>$("#myModal").modal("hide"),4000)'> -->
-          </form>
-          <div>
-            <div class="spinner-border my-3" id="spinner"></div>
-            <div id="spin-content" class="mt-3">please wait...</div>
-          </div>
+            <div class="modal-body">
+                <form action="thankyou.html" method="post" id="callBackForm" onsubmit="return validateCaptcha()">
+                    <input class="w-50" type="text" name="fname" id="fname" required placeholder="Prénom"
+                        title="entrez a-z ou A-z." />
+                    <br /><br />
+                    <input class="w-50" type="text" name="lname" id="lname" required placeholder="Nom"
+                        title="entrez a-z ou A-z." />
+                    <br /><br />
+                    <input class="w-50" type="text" name="mobile" id="mobile" required maxlength="10"
+                        placeholder="Portable" pattern=".[0-9]{9}" title="Saisissez un numéro de mobile valide.">
+                    <br /><br />
+                    <input class="w-50" type="text" name="location" id="location" required placeholder="Code postal"
+                        title="entrez l' Emplacement valide." />
+                    <br /><br />
+                    <div class="row">
+                        <input class="captcha_form1" style="width:230px" type="text" id="userCaptchaInput"
+                            name="captcha" placeholder="Enter CAPTCHA" required>
+                        <div id="captcha" class="captcha2"
+                            style="background-image: url(images/captcha2.png) !important;"></div>
+                        <button type="button" class="refresh" onclick="refreshCaptcha()"
+                            style="height:50px; border: 1px solid rgb(196, 194, 194) !important; width:50px; border-radius: 40px; margin-left:20px; margin-top:-40px">
+                            <svg width="20" height="20" viewBox="0 0 100 100" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M84.539 21.586C84.5367 21.309 84.4585 21.0379 84.3129 20.8022C84.1672 20.5666 83.9598 20.3753 83.7131 20.2493C83.4663 20.1234 83.1898 20.0674 82.9135 20.0876C82.6372 20.1079 82.3718 20.2034 82.146 20.364L76.202 24.625L75.734 24.962C69.329 18.57 60.538 14.573 50.797 14.573C31.262 14.573 15.37 30.467 15.37 50.001C15.37 69.535 31.263 85.429 50.797 85.429C56.5977 85.43 62.3099 84.0064 67.4317 81.2832C72.5535 78.56 76.928 74.6205 80.171 69.811C80.3018 69.6183 80.3934 69.4016 80.4403 69.1735C80.4873 68.9453 80.4887 68.7101 80.4446 68.4814C80.4005 68.2527 80.3116 68.0349 80.1832 67.8406C80.0547 67.6463 79.8892 67.4792 79.696 67.349L70.833 61.198C70.4161 60.9192 69.9058 60.8165 69.4135 60.9125C68.9212 61.0084 68.4868 61.2951 68.205 61.71C64.287 67.502 57.795 70.96 50.83 70.96C39.272 70.96 29.868 61.558 29.868 50.003C29.868 38.448 39.272 29.046 50.83 29.046C55.708 29.046 60.182 30.742 63.744 33.546L62.743 34.266L56.795 38.526C56.5707 38.6886 56.3954 38.9097 56.2881 39.1652C56.1808 39.4206 56.1458 39.7006 56.1867 39.9746C56.2277 40.2486 56.3431 40.5061 56.5204 40.719C56.6976 40.9319 56.9299 41.0921 57.192 41.182L82.638 49.851C83.099 50.012 83.604 49.934 84.006 49.648C84.405 49.358 84.635 48.901 84.633 48.417L84.539 21.586Z"
+                                    fill="rgb(49, 48, 48)" />
+                            </svg>
+                        </button>
+                        <p style="color: red;" id="message"></p>
+                    </div>
+                    <div class="mt-2">
+                        <p>
+                            <input type="checkbox" name="subscribe" id="sub2" required>
+                            <span style="margin-left: 10px;"> Je souhaite recevoir les offres de Sergent Menuiserie
+                                par e-mail ou téléphone</span>
+                        </p>
+                        <p>
+                            Après nous avoir transmis vos coordonnées téléphoniques via ce formulaire, notre appel
+                            aura comme objectif de vous proposer un rendez-vous avec l'un de nos conseillers, à
+                            votre domicile, pour étudier votre projet.
+                        </p>
+                    </div>
+                    <button type="submit" class="s-btn mt-2">Soumettre</button>
+                </form>
+                <div>
+                    <div class="spinner-border my-3" id="spinner"></div>
+                    <div id="spin-content" class="mt-3">Patientez s'il-vous-plait...</div>
+                </div>
+            </div>
         </div>
-        <!-- <div class="modal-footer">
-              <button type="button" class="btn btn-default" data-dismiss="modal" onclick="clearForm()">Fermer</button>
-            </div> -->
-      </div>
     </div>
-  </div>
+</div>
 
   <!-- POPUP END  -->
   <div class="page-wraper">
@@ -506,7 +506,7 @@
 
         <div class="page-content">
           <!-- INNER PAGE BANNER -->
-          <!-- <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url(images/banner/1.jpg);">
+          <!-- <div class="wt-bnr-inr overlay-wraper bg-center" style="background-image:url();">
                     <div class="overlay-main site-bg-black opacity-07"></div>
                     <div class="container">
                         <div class="wt-bnr-inr-entry">
@@ -547,7 +547,7 @@
                                 style="width: 1060px; height: 450px" />
                               <div class="product-view">
                                 <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
-                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-1.jpg">
+                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="">
                                                             <i class="fa fa-search-plus"></i>     
                                                             </a>  -->
                               </div>
@@ -564,7 +564,7 @@
                                 style="width: 1060px; height: 450px" />
                               <div class="product-view">
                                 <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
-                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-8.jpg">
+                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="">
                                                             <i class="fa fa-search-plus"></i>     
                                                             </a>  -->
                               </div>
@@ -581,10 +581,7 @@
                                 src="images/Interior-img/widehome-01-timeless-store-design-jewelry-shop-luxury-interior-design.webp"
                                 alt="" style="width: 1060px; height: 450px" />
                               <div class="product-view">
-                                <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
-                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-9.jpg">
-                                                            <i class="fa fa-search-plus"></i>     
-                                                            </a>  -->
+                               
                               </div>
                             </div>
                           </div>
@@ -598,10 +595,7 @@
                               <img src="images/Interior-img/Chango-and-co-brooklyn-store_01.webp" alt=""
                                 style="width: 1060px; height: 450px" />
                               <div class="product-view">
-                                <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
-                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-13.jpg">
-                                                            <i class="fa fa-search-plus"></i>     
-                                                            </a>  -->
+                              
                               </div>
                             </div>
                           </div>
@@ -612,10 +606,10 @@
                                             <div class="mfp-gallery">
                                                 <div class="wt-box">
                                                     <div class="wt-thum-bx wt-img-overlay1 ">
-                                                        <img src="images/sidegaragedoor/side-gar-5.jpg" alt="">
+                                                        <img src="" alt="">
                                                         <div class="product-view"> -->
                       <!-- <a class="elem pic-long product-view-btn" href="images/sampleImages/img-1.png" title="" 
-                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="images/products/pic-14.jpg">
+                                                            data-lcl-txt="" data-lcl-author="" data-lcl-thumb="">
                                                             <i class="fa fa-search-plus"></i>     
                                                             </a>  -->
                       <!-- </div>
@@ -653,7 +647,7 @@
                       </div>
                       <!-- <div class="item">
                                             <div class="wt-media">
-                                                <img src="images/sidegaragedoor/side-gar-5.jpg" alt="">
+                                                <img src="" alt="">
                                             </div>
                                         </div> -->
                     </div>
@@ -1019,7 +1013,7 @@
                                   <div class="row">
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-1.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-1.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1031,7 +1025,7 @@
                                     </div>
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-2.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-2.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1043,7 +1037,7 @@
                                     </div>
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-3.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-3.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1055,7 +1049,7 @@
                                     </div>
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-4.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-4.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1067,7 +1061,7 @@
                                     </div>
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-5.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-5.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1079,7 +1073,7 @@
                                     </div>
                                     <div class="d-flex">
                                       <div style="
-                                                            background-image: url(images/SlidingGarageDoor/compo-6.jpg);
+                                                            background-image: url(images/SlidingGarageDoor/compo-6.webp);
                                                             border-radius: 50%;
                                                             width: 50px;
                                                             height: 50px;
@@ -1207,11 +1201,11 @@
         <div class="row">
           <div class="col-sm-2"></div>
           <div class="col-sm-4">
-            <img src="images/Interior-pages/STORE-INTERIEUR-SLIDER1.jpg" alt="" width=""
+            <img src="" alt="" width=""
               style="width: 1000px; height: 300px" />
           </div>
           <div class="col-sm-4">
-            <img src="images/Interior-pages/retail-store-clothing-racks.jpg" alt=""
+            <img src="" alt=""
               style="width: 1000px; height: 300px" />
           </div>
           <div class="col-sm-2"></div>
@@ -1433,7 +1427,7 @@
                 <li><a href="#">Conditions générales de vente</a></li>
                 <li><a href="#">Garantie</a></li>
                 <li><a href="#">Parrainage</a></li>
-                <li data-toggle="modal" data-target="#myModal2"><a href="javascript:void(0);">Recrutement</a></li>
+                <li data-toggle="modal" data-target="#myModal"><a href="javascript:void(0);">Recrutement</a></li>
               </ul>
             </div>
           </div>
@@ -1604,6 +1598,55 @@
       });
     });
   </script>
+
+<script>
+  function generateCaptcha() {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let captcha = '';
+      for (let i = 0; i < 6; i++) {
+          captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      sessionStorage.setItem('captcha', captcha);
+      return captcha;
+  }
+
+  // Function to display the CAPTCHA code
+  function displayCaptcha() {
+      const captchaCode = generateCaptcha();
+      document.getElementById('captcha').innerText = captchaCode;
+      console.log("Generated CAPTCHA:", captchaCode);
+  }
+
+  // Function to refresh the CAPTCHA code
+  function refreshCaptcha() {
+      displayCaptcha();
+      document.getElementById('message').innerText = '';
+      document.getElementById('userCaptchaInput').value = '';
+      reset();
+  }
+
+  // Function to validate the CAPTCHA input by the user
+  function validateCaptcha() {
+      const userInput = document.getElementById('userCaptchaInput').value;
+      const storedCaptcha = sessionStorage.getItem('captcha');
+      const messageElement = document.getElementById('message');
+
+      if (userInput === storedCaptcha) {
+          messageElement.innerText = "";
+          return true;
+      } else {
+          messageElement.innerText = "CAPTCHA incorrect. Veuillez réessayer.";
+          return false;
+      }
+  }
+
+  // Ensure the script runs after the DOM is fully loaded
+  document.addEventListener('DOMContentLoaded', (event) => {
+      displayCaptcha();
+  });
+</script>
+
+
   <script src="js/callBack.js"></script>
 </body>
 

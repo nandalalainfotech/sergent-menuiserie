@@ -98,7 +98,7 @@ All JavaScript fuctions Start
 			if (scroll > 900) {
 				jQuery("button.scroltop").fadeIn(1000);
 			} else {
-				jQuery("button.scroltop").fadeOut(1000);
+				jQuery("button.scroltop").fadeOut(100);
 			}
 		});
 	}
@@ -758,7 +758,7 @@ $.fn.owlFilter = function(data, callback) {
 
 // > page loader function by = custom.js ========================= //		
 	function page_loader() {
-		$('.loading-area').fadeOut(1000);
+		$('.loading-area').fadeOut(100);
 	}
 
 /*--------------------------------------------------------------------------------------------
