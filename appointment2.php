@@ -6,7 +6,7 @@ require_once 'PHPMailer/src/Exception.php';
 require_once 'PHPMailer/src/PHPMailer.php';
 require_once 'PHPMailer/src/SMTP.php';
 
-$captcha = htmlentities($_POST['captcha']);
+$captcha = htmlentities($_POST['captcha1']);
 $gender = htmlentities($_POST['civility']);
 $name = htmlentities($_POST['name']);
 $fullname = htmlentities($_POST['initial']);

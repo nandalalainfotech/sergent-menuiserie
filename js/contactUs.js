@@ -9,17 +9,17 @@ let contactEmail = document.getElementById('email');
 let contactText_box = document.getElementById('text_box');
 let contactChckBox1 = document.getElementById('sub1');
 let contactChckBox2 = document.getElementById('sub2');
-let userCaptchaInput = document.getElementById('userCaptchaInput');
-let currentCaptcha = document.getElementById('captcha').innerHTML;
+let userCaptchaInput = document.getElementById('userCaptchaInput1');
+let currentCaptcha = document.getElementById('captcha1').innerHTML;
 
 console.log("currentCaptcha===>", currentCaptcha);
 contactForm.addEventListener('submit', function (e) {
     // console.log("called");
-    currentCaptcha = document.getElementById('captcha').innerHTML;
+    currentCaptcha = document.getElementById('captcha1').innerHTML;
     console.log("currentCaptcha====>", currentCaptcha);
 
-    if (currentCaptcha != userCaptchaInput.value) {
-        const messageElement = document.getElementById('message');
+    if (currentCaptcha != userCaptchaInput1.value) {
+        const messageElement = document.getElementById('message1');
         messageElement.innerText = 'Invalid CAPTCHA. Please try again.';
         messageElement.style.color = 'red';
         e.preventDefault();
@@ -28,7 +28,7 @@ contactForm.addEventListener('submit', function (e) {
     // console.log("contactInitial===>", contactInitial.value);
     // console.log("contactMobile===>", contactMobile.value);
     // console.log("contactEmail===>", contactEmail.value);
-    console.log("userCaptchaInput===>", userCaptchaInput.value);
+    console.log("userCaptchaInput===>", userCaptchaInput1.value);
     if (!mobValidator(contactMobile.value)) {
         e.preventDefault();
         alert("Numéro de portable invalide www");
@@ -47,7 +47,7 @@ contactForm.addEventListener('submit', function (e) {
     }
 
     setTimeout(() => {
-        if (mobValidator(contactMobile.value) && currentCaptcha === userCaptchaInput.value) {
+        if (mobValidator(contactMobile.value) && currentCaptcha === userCaptchaInput1.value) {
               window.location.href = "thankyou.html";
             $("#myModal2").modal("hide");
             contactName.value = '';
@@ -55,7 +55,7 @@ contactForm.addEventListener('submit', function (e) {
             contactMobile.value = '';
             contactEmail.value = '';
             contactText_box.value = '';
-            userCaptchaInput.value = '';
+            userCaptchaInput1.value = '';
             contactChckBox1.checked = false;
             contactChckBox2.checked = false;
 
