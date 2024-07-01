@@ -23,8 +23,7 @@ else{
           }).done(function (response) {
             $("p.broken").html(response);
           });
-}
-
-//  console.log("methodCall",fname);
-       
+}    
  }
+
+ document.getElementById("callBackForm").addEventListener('submit',(e)=>getCallBackMail(e))

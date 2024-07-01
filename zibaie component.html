@@ -253,6 +253,13 @@
       </div>
     </div>
   </div>
+  <script>
+    
+    var loadingDuration = 500; 
+    setTimeout(function() {
+        document.getElementById('loading-area').style.display = 'none';
+    }, loadingDuration);
+</script>
   <!-- LOADING AREA  END ====== -->
   <!-- POPUP START  -->
   <div class="modal fade" id="myModal" role="dialog">
@@ -278,12 +285,11 @@
                         title="entrez l' Emplacement valide." />
                     <br /><br />
                     <div class="row">
-                        <input class="captcha_form1" style="width:230px" type="text" id="userCaptchaInput"
+                        <input class=" captcha_formm " style="width:230px" type="text" id="userCaptchaInput"
                             name="captcha" placeholder="Enter CAPTCHA" required>
-                        <div id="captcha" class="captcha2"
+                        <div id="captcha" class="  ee "
                             style="background-image: url(images/captcha2.png) !important;"></div>
-                        <button type="button" class="refresh" onclick="refreshCaptcha()"
-                            style="height:50px; border: 1px solid rgb(196, 194, 194) !important; width:50px; border-radius: 40px; margin-left:20px; margin-top:-40px">
+                        <button type="button" class="refre callback ref" onclick="refreshCaptcha()" style="">
                             <svg width="20" height="20" viewBox="0 0 100 100" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path

@@ -222,6 +222,13 @@
             </div>
         </div>
     </div>
+    <script>
+    
+        var loadingDuration = 500; 
+        setTimeout(function() {
+            document.getElementById('loading-area').style.display = 'none';
+        }, loadingDuration);
+    </script>
     <!-- LOADING AREA  END ====== -->
     <!-- POPUP START  -->
     <div class="modal fade" id="myModal" role="dialog">
@@ -247,12 +254,11 @@
                             title="entrez l' Emplacement valide." />
                         <br /><br />
                         <div class="row">
-                            <input class="captcha_form1" style="width:230px" type="text" id="userCaptchaInput"
+                            <input class=" captcha_formm " style="width:230px" type="text" id="userCaptchaInput"
                                 name="captcha" placeholder="Enter CAPTCHA" required>
-                            <div id="captcha" class="captcha2"
+                            <div id="captcha" class="  ee "
                                 style="background-image: url(images/captcha2.png) !important;"></div>
-                            <button type="button" class="refresh" onclick="refreshCaptcha()"
-                                style="height:50px; border: 1px solid rgb(196, 194, 194) !important; width:50px; border-radius: 40px; margin-left:20px; margin-top:-40px">
+                            <button type="button" class="refre callback ref" onclick="refreshCaptcha()" style="">
                                 <svg width="20" height="20" viewBox="0 0 100 100" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -534,7 +540,7 @@
                                                     <img src="images/GlazedEntrance/img-8.webp" alt=""
                                                         style="width: 1060px; height: 450px;">
                                                     <div class="product-view">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -548,7 +554,7 @@
                                                     <img src="images/GlazedEntrance/img-9.webp" alt=""
                                                         style="width: 1060px; height: 450px;">
                                                     <div class="product-view">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -562,7 +568,7 @@
                                                     <img src="images/GlazedEntrance/img-10.webp" alt=""
                                                         style="width: 1060px; height: 450px;">
                                                     <div class="product-view">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -576,7 +582,7 @@
                                                     <img src="images/GlazedEntrance/img-11.webp" alt=""
                                                         style="width: 1060px; height: 450px;">
                                                     <div class="product-view">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -590,7 +596,7 @@
                                                     <img src="images/GlazedEntrance/img-12.webp" alt=""
                                                         style="width: 1060px; height: 450px;">
                                                     <div class="product-view">
-                                                       
+
                                                     </div>
                                                 </div>
                                             </div>
@@ -1701,52 +1707,52 @@
         });
     </script>
 
-<script>
-    function generateCaptcha() {
-        const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-        let captcha = '';
-        for (let i = 0; i < 6; i++) {
-            captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+    <script>
+        function generateCaptcha() {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let captcha = '';
+            for (let i = 0; i < 6; i++) {
+                captcha += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            sessionStorage.setItem('captcha', captcha);
+            return captcha;
         }
-        sessionStorage.setItem('captcha', captcha);
-        return captcha;
-    }
 
-    // Function to display the CAPTCHA code
-    function displayCaptcha() {
-        const captchaCode = generateCaptcha();
-        document.getElementById('captcha').innerText = captchaCode;
-        console.log("Generated CAPTCHA:", captchaCode);
-    }
-
-    // Function to refresh the CAPTCHA code
-    function refreshCaptcha() {
-        displayCaptcha();
-        document.getElementById('message').innerText = '';
-        document.getElementById('userCaptchaInput').value = '';
-        reset();
-    }
-
-    // Function to validate the CAPTCHA input by the user
-    function validateCaptcha() {
-        const userInput = document.getElementById('userCaptchaInput').value;
-        const storedCaptcha = sessionStorage.getItem('captcha');
-        const messageElement = document.getElementById('message');
-
-        if (userInput === storedCaptcha) {
-            messageElement.innerText = "";
-            return true;
-        } else {
-            messageElement.innerText = "CAPTCHA incorrect. Veuillez réessayer.";
-            return false;
+        // Function to display the CAPTCHA code
+        function displayCaptcha() {
+            const captchaCode = generateCaptcha();
+            document.getElementById('captcha').innerText = captchaCode;
+            console.log("Generated CAPTCHA:", captchaCode);
         }
-    }
 
-    // Ensure the script runs after the DOM is fully loaded
-    document.addEventListener('DOMContentLoaded', (event) => {
-        displayCaptcha();
-    });
-</script>
+        // Function to refresh the CAPTCHA code
+        function refreshCaptcha() {
+            displayCaptcha();
+            document.getElementById('message').innerText = '';
+            document.getElementById('userCaptchaInput').value = '';
+            reset();
+        }
+
+        // Function to validate the CAPTCHA input by the user
+        function validateCaptcha() {
+            const userInput = document.getElementById('userCaptchaInput').value;
+            const storedCaptcha = sessionStorage.getItem('captcha');
+            const messageElement = document.getElementById('message');
+
+            if (userInput === storedCaptcha) {
+                messageElement.innerText = "";
+                return true;
+            } else {
+                messageElement.innerText = "CAPTCHA incorrect. Veuillez réessayer.";
+                return false;
+            }
+        }
+
+        // Ensure the script runs after the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', (event) => {
+            displayCaptcha();
+        });
+    </script>
 
 </body>
 

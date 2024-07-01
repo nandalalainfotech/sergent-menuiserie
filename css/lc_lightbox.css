@@ -972,6 +972,8 @@
 		max-width: 66.6%;	
 	}
 }
+
+
 @media screen and (max-width:780px) { 
 	.lcl_fullscreen_mode.lcl_force_txt_over #lcl_txt,
 	.lcl_fullscreen_mode.lcl_txt_over #lcl_txt {

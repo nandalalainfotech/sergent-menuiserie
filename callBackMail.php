@@ -9,11 +9,11 @@ require 'PHPMailer/src/SMTP.php';
 ob_start();
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    $fname = $_POST['fname'];
-    $lname = $_POST['lname'];
-    $mobile = $_POST['mobile'];
-    $location = $_POST['location'];
-    $captcha = $_POST['captcha'];
+    $fname = $_POST['textOne'];
+    $lname = $_POST['textTwo'];
+    $mobile = $_POST['textThree'];
+    $location = $_POST['textFour'];
+    $captcha = $_POST['textFive'];
 
     $mail = new PHPMailer();
     $mail->isSMTP();
@@ -25,7 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Username = "noreply.nandalalainfotech@gmail.com";
     $mail->Password = "yuntjikzkpxmhdoj";
     $mail->SMTPSecure = 'tls';  // Use 'tls' instead of 'ssl'
-    $mail->AddAddress("invoicefree.in@gmail.com");
+    // $mail->AddAddress("invoicefree.in@gmail.com");
+    $mail->AddAddress("contact@sergentmenuiserie.com", "");
+// $mail->AddAddress("sergentmenuiserie40@gmail.com","");
 
     $mail->SetFrom('noreply.nandalalainfotech@gmail.com', 'Sergent Menuiserie');
 
@@ -37,7 +39,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     $mail->Body .= '<h3>NOM : ' . strtoupper($lname) . '</h3>';
     $mail->Body .= '<h3>NUMÉRO DE CONTACT : ' . $mobile . '</h3>';
     $mail->Body .= '<h3>LIEU : ' . strtoupper($location) . '</h3>';
-    $mail->Body .= '<h3>Captcha : ' . strtoupper($captcha) . '</h3>';
+  
 
     $mail->WordWrap = 50;
     if (!$mail->Send()) {
